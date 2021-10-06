@@ -1,4 +1,4 @@
-name: cd
+name: deploy-to-branch
 
 on: [push, pull_request]
 
