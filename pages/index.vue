@@ -35,7 +35,14 @@
       <Button text="Learn more about MCL-ACM" />
     </div>
     <div class="flex flex-col container mx-auto px-5 lg:px-20">
-      <EventItem  v-for="(preview, index) in eventPreviews" :key="index" :details="preview" alignment="left"/>
+      <div class="px-20">
+        <EventItem
+          v-for="(preview, index) in eventPreviews"
+          :key="index"
+          :details="preview"
+          alignment="left"
+        />
+      </div>
     </div>
   </div>
 </template>
