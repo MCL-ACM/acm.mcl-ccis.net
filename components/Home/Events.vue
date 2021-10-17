@@ -9,7 +9,7 @@
       </p>
     </div>
     <div class="flex flex-col gap-10 w-full">
-      <EventItem
+      <HomeEventItem
         v-for="(preview, index) in eventPreviews"
         :key="index"
         :details="preview"
