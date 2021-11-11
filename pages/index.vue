@@ -1,6 +1,6 @@
 <template>
   <main class="flex flex-col">
-    <div class="lg:px-32 hero-section pb-10 pt-20 min-h-screen">
+    <div class="lg:px-32 hero-section pb-10 pt-20">
       <HomeHeroSection />
     </div>
     <div class="lg:px-32 p-10">

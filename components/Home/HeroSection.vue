@@ -1,5 +1,5 @@
 <template>
-  <div class="h-full">
+  <div class="min-h-screen">
     <div class="sm:mt-20 z-20">
       <div>
         <img
@@ -21,26 +21,19 @@
       </div>
     </div>
 
-    <img
-      src="@/assets/svg/solid-diamond-1.svg"
-      class="left-diamond bg-detail"
-    />
-    <img
-      src="@/assets/svg/solid-diamond-2.svg"
-      class="right-diamond-solid-1 bg-detail"
-    />
-    <img
-      src="@/assets/svg/solid-diamond-3.svg"
-      class="right-diamond-solid-2 bg-detail"
-    />
-    <img
-      src="@/assets/svg/outline-diamond.svg"
-      class="right-diamond-outline-1 bg-detail"
-    />
-    <img
-      src="@/assets/svg/outline-diamond.svg"
-      class="right-diamond-outline-2 bg-detail"
-    />
+    <div class="bg-details">
+      <img id="left-diamond" src="@/assets/svg/solid-diamond-1.svg" />
+      <img id="right-diamond-solid-1" src="@/assets/svg/solid-diamond-2.svg" />
+      <img id="right-diamond-solid-2" src="@/assets/svg/solid-diamond-3.svg" />
+      <img
+        id="right-diamond-outline-1"
+        src="@/assets/svg/outline-diamond.svg"
+      />
+      <img
+        id="right-diamond-outline-2"
+        src="@/assets/svg/outline-diamond.svg"
+      />
+    </div>
   </div>
 </template>
 
@@ -49,33 +42,33 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-.bg-detail {
+.bg-details > * {
   position: absolute;
   margin: 0;
   z-index: -1;
 }
 
-.left-diamond {
+#left-diamond {
   top: 30%;
   left: 0;
 }
 
-.right-diamond-solid-1 {
+#right-diamond-solid-1 {
   top: 5%;
   right: 0%;
 }
 
-.right-diamond-solid-2 {
+#right-diamond-solid-2 {
   top: 30%;
   right: 0%;
 }
 
-.right-diamond-outline-1 {
+#right-diamond-outline-1 {
   top: 15%;
   right: 5%;
 }
 
-.right-diamond-outline-2 {
+#right-diamond-outline-2 {
   top: 45%;
   right: 15%;
 }
