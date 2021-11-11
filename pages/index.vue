@@ -25,7 +25,7 @@ export default {};
 <style lang="scss" scoped>
 .hero-section{
   
-   background-image: linear-gradient(to bottom, rgba(44,193,199,1) 0%,rgba(217,237,146,0.20) 70%,rgba(217,237,146,0) 100%);
+   background-image: linear-gradient(to bottom, rgba(44,193,199,.8) 0%,rgba(217,237,146,0.25) 70%,rgba(217,237,146,0) 100%);
 }
 
 .contact-us{
