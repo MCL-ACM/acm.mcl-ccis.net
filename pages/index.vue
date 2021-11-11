@@ -10,7 +10,7 @@
     <div class="lg:px-32 p-10">
       <HomeEvents />
     </div>
-    <div class="lg:px-32 p-20 our-members ">
+    <div class="lg:px-32 p-20 our-members">
       <HomeMembers />
     </div>
     <div class="lg:px-32 p-10 contact-us relative">
@@ -35,15 +35,16 @@ export default {};
 
 .about-us {
   backdrop-filter: blur(9px);
-  background-image: linear-gradient(
-    304.9deg,
-    #0085ff 6.73%,
-    rgba(0, 161, 206, 0.770759) 22.41%,
-    rgba(0, 164, 200, 0.743331) 26.79%,
-    rgba(0, 198, 141, 0.466623) 46.16%,
-    rgba(0, 255, 41, 0) 77.97%,
-    rgba(0, 148, 255, 0) 77.97%
-  );
+  background-image: url("@/assets/img/mcl-bg.png"),
+    linear-gradient(
+      304.9deg,
+      #0085ff 6.73%,
+      rgba(0, 161, 206, 0.770759) 22.41%,
+      rgba(0, 164, 200, 0.743331) 26.79%,
+      rgba(0, 198, 141, 0.466623) 46.16%,
+      rgba(0, 255, 41, 0) 77.97%,
+      rgba(0, 148, 255, 0) 77.97%
+    );
   border-radius: 0 0 200px 0;
 }
 
@@ -59,7 +60,7 @@ export default {};
   background-image: linear-gradient(
     to top,
     rgba(44, 193, 199, 0.8) 0%,
-    rgba(217, 237, 146, 0.20) 75%,
+    rgba(217, 237, 146, 0.2) 75%,
     rgba(217, 237, 146, 0) 100%
   );
 }

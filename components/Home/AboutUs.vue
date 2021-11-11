@@ -10,7 +10,7 @@
         </svg>
       </div>
       <div class="text-bg"></div>
-      <div class="my-auto">
+      <div class="my-auto main-content">
         <p class="font-bold text-3xl text-dark-blue">About Us</p>
         <p class="max-w-4xl text-xl p-4 mt-4 mb-6">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ultricies
@@ -29,9 +29,10 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-.about-us-parent {
-  overflow: hidden;
+.about-us-parent{
+  
 }
+
 .about-us-wave {
   position: absolute;
   width: 100%;
