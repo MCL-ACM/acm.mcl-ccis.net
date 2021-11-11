@@ -12,8 +12,8 @@
           ACM Student Chapter
         </p>
       </div>
-      <div class="">
-        <p class="text-lg font-bold">Est. 2018</p>
+      <div class="est p-1 pr-2 pl-8 inline-block text-white">
+        <p class="text-xl">est. 2018</p>
       </div>
       <div class="text-right mt-20">
         <p class="text-xl">Promoting Excellence in Modern Computing</p>
@@ -42,6 +42,12 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+.est {
+  background-color: rgba(52, 160, 164, 0.4);
+  position: relative;
+  left: -24px;
+}
+
 .bg-details > * {
   position: absolute;
   margin: 0;
