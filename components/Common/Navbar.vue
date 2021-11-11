@@ -66,12 +66,12 @@
         <div class="flex-1 flex flex-row">
           <div class="flex-shrink-0 flex items-center">
             <img
-              class="block lg:hidden h-10 w-auto"
+              class="block lg:hidden h-10 w-auto logo-shadow"
               src="@/assets/mcl-acm-logo.png"
               alt="MCL-ACM Logo"
             />
             <img
-              class="hidden lg:block h-10 w-auto"
+              class="hidden lg:block h-10 w-auto logo-shadow"
               src="@/assets/mcl-acm-logo.png"
               alt="MCL-ACM Logo"
             />
@@ -79,7 +79,6 @@
 
           <div class="hidden sm:block ml-auto">
             <div class="flex space-x-4">
-              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
               <a
                 v-for="(navitem, index) in navitems"
                 :key="index"
@@ -92,8 +91,11 @@
                   rounded-md
                   text-base
                   font-medium
+                  drop-shadow-lg
+                  text-shadow
                 "
-                >{{ navitem.title }}
+              >
+                {{ navitem.title }}
               </a>
             </div>
           </div>
@@ -155,4 +157,11 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.logo-shadow{
+  filter: drop-shadow(4px 4px 7px rgba(0, 0, 0, 0.2));
+}
+.text-shadow {
+  text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.2);
+}
+</style>

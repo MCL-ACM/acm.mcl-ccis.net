@@ -1,6 +1,6 @@
 <template>
   <main class="flex flex-col">
-    <div class="lg:px-32 bg-gradient-to-b from-sea-green to-transparent pb-10 pt-20">
+    <div class="lg:px-32 hero-section pb-10 pt-20 min-h-screen">
       <HomeHeroSection />
     </div>
     <div class="lg:px-32 p-10">
@@ -24,7 +24,8 @@ export default {};
 
 <style lang="scss" scoped>
 .hero-section{
-   background-image: linear-gradient(to bottom, rgba(44, 193, 199, 1), rgba(217, 237, 146, 0));
+  
+   background-image: linear-gradient(to bottom, rgba(44,193,199,1) 0%,rgba(217,237,146,0.20) 70%,rgba(217,237,146,0) 100%);
 }
 
 .contact-us{
