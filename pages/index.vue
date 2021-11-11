@@ -10,7 +10,7 @@
     <div class="lg:px-32 p-10">
       <HomeEvents />
     </div>
-    <div class="lg:px-32 p-20">
+    <div class="lg:px-32 p-20 our-members ">
       <HomeMembers />
     </div>
     <div class="lg:px-32 p-10 contact-us">
@@ -52,6 +52,15 @@ export default {};
     to right,
     rgba(31, 97, 153, 1),
     rgba(139, 210, 189, 1)
+  );
+}
+
+.our-members {
+  background-image: linear-gradient(
+    to top,
+    rgba(44, 193, 199, 0.8) 0%,
+    rgba(217, 237, 146, 0.20) 75%,
+    rgba(217, 237, 146, 0) 100%
   );
 }
 </style>
