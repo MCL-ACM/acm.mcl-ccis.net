@@ -1,5 +1,11 @@
 <template>
-  <div class="flex flex-row ml-auto h-40 flex flex-row">
+  <div class="flex flex-row ml-auto h-52 flex flex-row">
+    <img
+      src="@/assets/svg/contact-us-diamond.svg"
+      alt=""
+      class="contact-us-detail"
+    />
+
     <div class="ml-auto mr-14 my-auto">
       <a
         href="/contact"
@@ -18,7 +24,6 @@
             clip-rule="evenodd"
           />
         </svg>
- 
       </a>
     </div>
   </div>
@@ -28,4 +33,11 @@
 export default {};
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.contact-us-detail {
+  position: absolute;
+  left: 2%;
+  top: 0;
+  height: 80%;
+}
+</style>

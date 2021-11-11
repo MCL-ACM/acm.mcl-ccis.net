@@ -13,7 +13,7 @@
     <div class="lg:px-32 p-20 our-members ">
       <HomeMembers />
     </div>
-    <div class="lg:px-32 p-10 contact-us">
+    <div class="lg:px-32 p-10 contact-us relative">
       <HomeContactUs />
     </div>
   </main>
