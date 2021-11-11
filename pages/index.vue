@@ -3,9 +3,10 @@
     <div class="lg:px-32 hero-section pb-10 pt-20">
       <HomeHeroSection />
     </div>
-    <div class="lg:px-32 p-10">
+    <div class="lg:px-32 about-us">
       <HomeAboutUs />
     </div>
+
     <div class="lg:px-32 p-10">
       <HomeEvents />
     </div>
@@ -23,12 +24,34 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-.hero-section{
-  
-   background-image: linear-gradient(to bottom, rgba(44,193,199,.8) 0%,rgba(217,237,146,0.25) 70%,rgba(217,237,146,0) 100%);
+.hero-section {
+  background: linear-gradient(
+    to bottom,
+    rgba(44, 193, 199, 0.8) 0%,
+    rgba(217, 237, 146, 0.25) 70%,
+    rgba(217, 237, 146, 0) 100%
+  );
 }
 
-.contact-us{
-   background-image: linear-gradient(to right, rgba(31, 97, 153, 1), rgba(139, 210, 189, 1));
+.about-us {
+  backdrop-filter: blur(9px);
+  background-image: linear-gradient(
+    304.9deg,
+    #0085ff 6.73%,
+    rgba(0, 161, 206, 0.770759) 22.41%,
+    rgba(0, 164, 200, 0.743331) 26.79%,
+    rgba(0, 198, 141, 0.466623) 46.16%,
+    rgba(0, 255, 41, 0) 77.97%,
+    rgba(0, 148, 255, 0) 77.97%
+  );
+  border-radius: 0 0 200px 0;
+}
+
+.contact-us {
+  background: linear-gradient(
+    to right,
+    rgba(31, 97, 153, 1),
+    rgba(139, 210, 189, 1)
+  );
 }
 </style>
