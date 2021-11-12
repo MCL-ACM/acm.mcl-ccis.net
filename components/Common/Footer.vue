@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="flex flex-col my-4 px-8 sm:flex-row sm:my-20 lg:px-32">
+      <!-- Contact Information -->
       <div
         class="
           flex flex-col
@@ -11,6 +12,7 @@
           mb-8
         "
       >
+        <!-- Information -->
         <img src="@/assets/mcl-acm-logo.png" alt="" class="w-auto h-16 mb-3" />
         <p class="font-bold text-lg">
           Malayan Colleges Laguna ACM Student Chapter
@@ -19,14 +21,20 @@
           Pulo Diezmo Rd, Pulo, Cabuyao, Laguna 4026, Philippines
         </p>
         <p class="font-thin">mcl.acmstudchapter@gmail.com</p>
-        <div class="flex flex-row mt-2 space-x-4">
+
+        <!-- Sockal Icons -->
+        <div class="flex flex-row mt-2 space-x-6 mt-4">
           <div v-for="(item, index) in socialItems" :key="index">
-            <a :href="item.link">
-              <img :src="item.icon" alt="" class="w-20 h-20" />
-            </a>
+            <div class="bg-blue h-14 w-14 p-4 rounded-full">
+              <a :href="item.link">
+                <img :src="item.icon" :alt="item.name" class="h-full w-auto" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
+
+      <!-- Navigation Links -->
       <div class="sm:ml-auto sm:mr-20 text-center sm:text-left">
         <ul class="flex flex-col flex-wrap">
           <p
@@ -39,6 +47,8 @@
         </ul>
       </div>
     </div>
+
+    <!-- Copyright -->
     <div class="text-center py-2 bg-gray-800 text-white">
       © 2021 Malayan Colleges Laguna ACM Student Chapter
     </div>
@@ -72,16 +82,19 @@ export default {
     ],
     socialItems: [
       {
+        name: "Facebook",
         link: "https://fb.me/acmMCL",
         icon: "/icons/facebook.svg",
       },
       {
+        name: "Instagram",
         link: "https://www.instagram.com/acm_mcl/",
-        icon: "/icons/facebook.svg",
+        icon: "/icons/instagram.svg",
       },
       {
+        name: "Twitter",
         link: "https://twitter.com/MCL_ACM",
-        icon: "/icons/facebook.svg",
+        icon: "/icons/twitter.svg",
       },
     ],
   }),
