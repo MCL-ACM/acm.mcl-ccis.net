@@ -12,7 +12,7 @@
           ACM Student Chapter
         </p>
       </div>
-      <div class="est inline-block text-white mt-2 p-1 pr-2 pl-8">
+      <div class="est inline-block text-white mt-3 p-1 pr-2 pl-8">
         <p class="text-xl">est. 2018</p>
       </div>
       <div class="text-right mt-20">

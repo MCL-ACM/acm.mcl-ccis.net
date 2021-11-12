@@ -9,7 +9,16 @@
     <div class="mx-auto my-auto sm:ml-auto sm:mr-14">
       <a
         href="/contact"
-        class="flex flex-row items-center font-bold text-white text-4xl"
+        class="
+          flex flex-row
+          items-center
+          font-bold
+          text-white
+          rounded-lg
+          text-4xl
+          p-4
+          hover:bg-gray-200 hover:bg-opacity-10
+        "
       >
         <p class="mr-2 z-20">Contact Us</p>
         <svg
