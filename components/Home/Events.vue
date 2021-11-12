@@ -1,5 +1,6 @@
 <template>
   <div class="flex flex-col items-center gap-10 mt-8">
+    <!-- Header -->
     <div>
       <p class="font-bold text-3xl text-dark-blue mb-4">Events</p>
       <p class="text-lg">
@@ -8,6 +9,8 @@
         tortor, et libero a elementum enim.
       </p>
     </div>
+
+    <!-- Event Items -->
     <div class="flex flex-col w-full gap-10 mb-2">
       <HomeEventItem
         v-for="(preview, index) in eventPreviews"
@@ -17,6 +20,8 @@
         alignment="left"
       />
     </div>
+
+    <!-- Show More -->
     <Button text="Show More" class="px-10" />
   </div>
 </template>

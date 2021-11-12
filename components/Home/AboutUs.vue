@@ -1,6 +1,7 @@
 <template>
   <div class="h-screen overflow-hidden">
     <div class="flex flex-col items-center text-center h-full">
+      <!-- Wave on top -->
       <div class="about-us-wave">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
@@ -9,7 +10,10 @@
           />
         </svg>
       </div>
+      <!-- Background of text -->
       <div class="text-bg"></div>
+
+      <!-- Main Content of About Us -->
       <div class="my-auto">
         <p class="font-bold text-3xl text-dark-blue">About Us</p>
         <p class="text-xl max-w-4xl p-4 mt-4 mb-6">

@@ -1,11 +1,14 @@
 <template>
   <div class="flex flex-row ml-auto h-52 z-10">
+
+    <!-- Diamond Decoration -->
     <img
       src="@/assets/svg/contact-us-diamond.svg"
       alt=""
       class="contact-us-detail h-28 sm:h-56"
     />
 
+    <!-- Main Content of Contact Us -->
     <div class="mx-auto my-auto sm:ml-auto sm:mr-14">
       <a
         href="/contact"
@@ -20,7 +23,7 @@
           hover:bg-gray-200 hover:bg-opacity-10
         "
       >
-        <p class="mr-2 z-20">Contact Us</p>
+        <p class="mr-2 z-20 mt-0">Contact Us</p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-8 w-auto"

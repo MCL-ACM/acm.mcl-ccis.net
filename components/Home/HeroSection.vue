@@ -1,6 +1,8 @@
 <template>
   <div class="min-h-screen p-4">
+    <!-- Main Content -->
     <div class="z-20 sm:mt-20">
+      <!-- Logo and Title -->
       <div>
         <img
           src="@/assets/mcl-acm-logo.png"
@@ -12,15 +14,20 @@
           ACM Student Chapter
         </p>
       </div>
+
+      <!-- Established -->
       <div class="est inline-block text-white mt-3 p-1 pr-2 pl-8">
         <p class="text-xl">est. 2018</p>
       </div>
+
+      <!-- Quips -->
       <div class="text-right mt-20">
         <p class="text-xl">Promoting Excellence in Modern Computing</p>
         <p class="text-lg">A platform for students and enthusiasts alike</p>
       </div>
     </div>
 
+    <!-- Background Decorations -->
     <div class="bg-details">
       <img
         id="left-diamond"

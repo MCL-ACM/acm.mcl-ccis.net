@@ -1,5 +1,6 @@
 <template>
   <div class="flexmax-h-screen my-14">
+    <!-- Main Content of Members -->
     <div class="my-auto">
       <p class="font-bold text-4xl text-dark-blue">Our Members</p>
       <p class="max-w-xl text-xl my-12">
