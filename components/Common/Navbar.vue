@@ -31,7 +31,7 @@
         </a>
       </div>
 
-      <CommonNavbarHamburger class="sm:hidden" @Clicked="toggleMobileMenu()" />
+      <CommonNavitemHamburger class="sm:hidden" @Clicked="toggleMobileMenu()" />
     </div>
 
     <div v-show="mobileMenuVisible" class="sm:hidden bg-gray-500">

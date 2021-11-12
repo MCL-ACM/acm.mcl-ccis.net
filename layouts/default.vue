@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CommonNavBar class="absolute w-full"/>
+    <CommonNavbar class="absolute w-full"/>
     <Nuxt />
     <CommonFooter />
   </div>
