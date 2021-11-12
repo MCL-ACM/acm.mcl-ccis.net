@@ -1,18 +1,18 @@
 <template>
-  <div class="min-h-screen">
+  <div class="min-h-screen p-4">
     <div class="sm:mt-20 z-20">
       <div>
         <img
           src="@/assets/mcl-acm-logo.png"
           alt="MCL-ACM Logo"
-          class="sm:w-80 h-auto w-72"
+          class="sm:w-80 h-auto w-60"
         />
-        <p class="font-bold text-5xl leading-tight text-dark-blue">
+        <p class="font-bold text-4xl sm:text-5xl leading-tight text-dark-blue">
           Malayan Colleges Laguna <br />
           ACM Student Chapter
         </p>
       </div>
-      <div class="est p-1 pr-2 pl-8 inline-block text-white">
+      <div class="est mt-2 p-1 pr-2 pl-8 inline-block text-white">
         <p class="text-xl">est. 2018</p>
       </div>
       <div class="text-right mt-20">
@@ -22,12 +22,17 @@
     </div>
 
     <div class="bg-details">
-      <img id="left-diamond" src="@/assets/svg/solid-diamond-1.svg" />
+      <img
+        id="left-diamond"
+        class="hidden sm:block"
+        src="@/assets/svg/solid-diamond-1.svg"
+      />
       <img id="right-diamond-solid-1" src="@/assets/svg/solid-diamond-2.svg" />
       <img id="right-diamond-solid-2" src="@/assets/svg/solid-diamond-3.svg" />
       <img
         id="right-diamond-outline-1"
         src="@/assets/svg/outline-diamond.svg"
+        class="hidden sm:block"
       />
       <img
         id="right-diamond-outline-2"

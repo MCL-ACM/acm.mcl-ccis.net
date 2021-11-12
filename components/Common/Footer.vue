@@ -23,7 +23,7 @@
         </div>
       </div>
       <div class="sm:ml-auto sm:mr-20 text-center sm:text-left order-1 sm:order-2 mb-6">
-        <h3 class="font-medium text-xl mb-3">Navigate</h3>
+        <h3 class="font-bold text-xl mb-3">Navigate</h3>
         <ul class="flex flex-col flex-wrap">
           <p
             v-for="(item, index) in footerItems"

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col gap-10 items-center">
+  <div class="flex flex-col gap-10 items-center mt-8">
     <div>
       <p class="text-3xl font-bold mb-4 text-dark-blue">Events</p>
       <p class="text-lg">

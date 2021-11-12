@@ -1,5 +1,5 @@
 <template>
-  <div class="max-h-screen my-20 flex">
+  <div class="max-h-screen my-14 flex">
     <div class="my-auto">
       <p class="font-bold text-4xl text-dark-blue">Our Members</p>
       <p class="max-w-xl text-xl my-12">

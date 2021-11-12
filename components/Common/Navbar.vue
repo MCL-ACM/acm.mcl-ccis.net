@@ -1,7 +1,7 @@
 <template>
   <nav>
     <div
-      class="mx-auto max-w-7xl h-16 flex flex-row items-center justify-between"
+      class="mx-2 sm:mx-auto max-w-7xl h-16 flex flex-row items-center justify-between"
     >
       <div>
         <img
