@@ -1,5 +1,6 @@
 <template>
   <nav>
+    <!-- Navbar -->
     <div
       class="
         flex flex-row
@@ -11,6 +12,7 @@
         sm:mx-auto
       "
     >
+    <!-- Logo -->
       <div>
         <img
           class="block h-10 w-auto logo-shadow"
@@ -18,6 +20,8 @@
           alt="MCL-ACM Logo"
         />
       </div>
+
+      <!-- Wide Links -->
       <div class="flex flex-row content-evenly ml-auto hidden sm:block">
         <a
           v-for="(navitem, index) in navitems"
@@ -39,9 +43,11 @@
         </a>
       </div>
 
+      <!-- Hamburger Button -->
       <CommonNavitemHamburger class="sm:hidden" @Clicked="toggleMobileMenu()" />
     </div>
 
+    <!-- Mobile Links -->
     <div
       v-show="mobileMenuVisible"
       class="bg-light-green text-center p-2 sm:hidden"
@@ -63,6 +69,7 @@
         >{{ navitem.title }}
       </a>
     </div>
+
   </nav>
 </template>
 

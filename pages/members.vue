@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1>Members</h1>
+    <main class="flex flex-col lg:px-32">
+        sdfsdf
+    </main>
   </div>
 </template>
 
