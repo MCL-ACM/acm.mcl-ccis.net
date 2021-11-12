@@ -7,7 +7,7 @@
         <img
           src="@/assets/mcl-acm-logo.png"
           alt="MCL-ACM Logo"
-          class="sm:w-80 h-auto w-60"
+          class="sm:w-80 h-auto w-60 mb-3"
         />
         <p class="font-bold text-4xl leading-tight text-dark-blue sm:text-5xl">
           Malayan Colleges Laguna <br />
@@ -16,7 +16,7 @@
       </div>
 
       <!-- Established -->
-      <div class="est inline-block text-white mt-3 p-1 pr-2 pl-8">
+      <div class="est inline-block text-white mt-6 p-1 pr-2 pl-8">
         <p class="text-xl">est. 2018</p>
       </div>
 

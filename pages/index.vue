@@ -59,7 +59,7 @@ export default {};
   background-image: linear-gradient(
     to top,
     rgba(44, 193, 199, 0.8) 0%,
-    rgba(217, 237, 146, 0.2) 75%,
+    rgba(217, 237, 146, 0.15) 60%,
     rgba(217, 237, 146, 0) 100%
   );
 }
