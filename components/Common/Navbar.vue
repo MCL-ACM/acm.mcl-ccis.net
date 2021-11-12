@@ -34,7 +34,7 @@
       <CommonNavitemHamburger class="sm:hidden" @Clicked="toggleMobileMenu()" />
     </div>
 
-    <div v-show="mobileMenuVisible" class="sm:hidden bg-gray-500">
+    <div v-show="mobileMenuVisible" class="sm:hidden bg-light-green text-center p-2">
       <a
         v-for="(navitem, index) in navitems"
         :key="index"
@@ -47,6 +47,8 @@
           rounded-md
           text-base
           font-medium
+          text-lg
+          mb-2
         "
         >{{ navitem.title }}
       </a>

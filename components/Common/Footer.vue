@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="flex flex-col sm:flex-row lg:px-32 my-4 sm:my-20 px-8">
-      <div class="flex flex-col items-start sm:text-left mb-3 items-center text-center sm:text-left sm:items-start order-2 sm:order-1">
+      <div class="flex flex-col items-start sm:text-left mb-3 items-center text-center sm:text-left sm:items-start mb-12">
         <img src="@/assets/mcl-acm-logo.png" alt="" class="w-auto h-20 mb-3" />
         <p class="font-bold text-lg">
           Malayan Colleges Laguna ACM Student Chapter
@@ -22,8 +22,7 @@
           </div>
         </div>
       </div>
-      <div class="sm:ml-auto sm:mr-20 text-center sm:text-left order-1 sm:order-2 mb-6">
-        <h3 class="font-bold text-xl mb-3">Navigate</h3>
+      <div class="sm:ml-auto sm:mr-20 text-center sm:text-left">
         <ul class="flex flex-col flex-wrap">
           <p
             v-for="(item, index) in footerItems"

@@ -7,13 +7,13 @@
       <HomeAboutUs />
     </div>
 
-    <div class="lg:px-32 p-10">
+    <div class="lg:px-32 p-6">
       <HomeEvents />
     </div>
-    <div class="lg:px-32 p-10 our-members">
+    <div class="lg:px-32 p-6 our-members">
       <HomeMembers />
     </div>
-    <div class="lg:px-32 p-10 contact-us relative">
+    <div class="lg:px-32 p-6 contact-us relative">
       <HomeContactUs />
     </div>
   </main>
