@@ -34,7 +34,7 @@
         </ul>
       </div>
     </div>
-    <div class="text-center py-2 bg-gray-700 text-white">
+    <div class="text-center py-2 bg-gray-800 text-white">
       © 2021 Malayan Colleges Laguna ACM Student Chapter
     </div>
   </div>
