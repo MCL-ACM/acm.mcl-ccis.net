@@ -1,8 +1,19 @@
 <template>
   <div>
     <div class="flex flex-col sm:flex-row lg:px-32 my-4 sm:my-20 px-8">
-      <div class="flex flex-col items-start sm:text-left mb-3 items-center text-center sm:text-left sm:items-start mb-12">
-        <img src="@/assets/mcl-acm-logo.png" alt="" class="w-auto h-20 mb-3" />
+      <div
+        class="
+          flex flex-col
+          items-start
+          sm:text-left
+          items-center
+          text-center
+          sm:text-left sm:items-start
+          mt-4
+          mb-8
+        "
+      >
+        <img src="@/assets/mcl-acm-logo.png" alt="" class="w-auto h-16 mb-3" />
         <p class="font-bold text-lg">
           Malayan Colleges Laguna ACM Student Chapter
         </p>
