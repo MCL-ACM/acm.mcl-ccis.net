@@ -1,7 +1,15 @@
 <template>
   <nav>
     <div
-      class="mx-2 sm:mx-auto max-w-7xl h-16 flex flex-row items-center justify-between"
+      class="
+        flex flex-row
+        items-center
+        justify-between
+        max-w-7xl
+        mx-2
+        h-16
+        sm:mx-auto
+      "
     >
       <div>
         <img
@@ -10,7 +18,7 @@
           alt="MCL-ACM Logo"
         />
       </div>
-      <div class="ml-auto hidden sm:block flex flex-row content-evenly">
+      <div class="flex flex-row content-evenly ml-auto hidden sm:block">
         <a
           v-for="(navitem, index) in navitems"
           :key="index"
@@ -34,21 +42,23 @@
       <CommonNavitemHamburger class="sm:hidden" @Clicked="toggleMobileMenu()" />
     </div>
 
-    <div v-show="mobileMenuVisible" class="sm:hidden bg-light-green text-center p-2">
+    <div
+      v-show="mobileMenuVisible"
+      class="bg-light-green text-center p-2 sm:hidden"
+    >
       <a
         v-for="(navitem, index) in navitems"
         :key="index"
         :href="navitem.link"
         class="
-          hover:bg-gray-700 hover:bg-opacity-40 hover:text-white
           block
+          text-base text-lg
+          font-medium
+          rounded-md
           px-3
           py-2
-          rounded-md
-          text-base
-          font-medium
-          text-lg
           mb-2
+          hover:bg-gray-700 hover:bg-opacity-40 hover:text-white
         "
         >{{ navitem.title }}
       </a>

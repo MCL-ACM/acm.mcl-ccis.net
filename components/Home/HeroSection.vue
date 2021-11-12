@@ -1,18 +1,18 @@
 <template>
   <div class="min-h-screen p-4">
-    <div class="sm:mt-20 z-20">
+    <div class="z-20 sm:mt-20">
       <div>
         <img
           src="@/assets/mcl-acm-logo.png"
           alt="MCL-ACM Logo"
           class="sm:w-80 h-auto w-60"
         />
-        <p class="font-bold text-4xl sm:text-5xl leading-tight text-dark-blue">
+        <p class="font-bold text-4xl leading-tight text-dark-blue sm:text-5xl">
           Malayan Colleges Laguna <br />
           ACM Student Chapter
         </p>
       </div>
-      <div class="est mt-2 p-1 pr-2 pl-8 inline-block text-white">
+      <div class="est inline-block text-white mt-2 p-1 pr-2 pl-8">
         <p class="text-xl">est. 2018</p>
       </div>
       <div class="text-right mt-20">

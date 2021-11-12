@@ -1,19 +1,19 @@
 <template>
   <main class="flex flex-col">
-    <div class="lg:px-32 hero-section pb-10 pt-20">
+    <div class="hero-section pb-10 pt-20 lg:px-32">
       <HomeHeroSection />
     </div>
-    <div class="lg:px-32 about-us rounded-br-4xl sm:rounded-br-5xl">
+    <div class="about-us rounded-br-4xl sm:rounded-br-5xl lg:px-32">
       <HomeAboutUs />
     </div>
 
-    <div class="lg:px-32 p-6">
+    <div class="p-6 lg:px-32">
       <HomeEvents />
     </div>
-    <div class="lg:px-32 p-6 our-members">
+    <div class="p-6 our-members lg:px-32">
       <HomeMembers />
     </div>
-    <div class="lg:px-32 p-6 contact-us relative">
+    <div class="p-6 contact-us relative lg:px-32">
       <HomeContactUs />
     </div>
   </main>

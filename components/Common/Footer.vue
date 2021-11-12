@@ -1,12 +1,10 @@
 <template>
   <div>
-    <div class="flex flex-col sm:flex-row lg:px-32 my-4 sm:my-20 px-8">
+    <div class="flex flex-col my-4 px-8 sm:flex-row sm:my-20 lg:px-32">
       <div
         class="
           flex flex-col
-          items-start
-          sm:text-left
-          items-center
+          items-start items-center
           text-center
           sm:text-left sm:items-start
           mt-4
@@ -22,14 +20,10 @@
         </p>
         <p class="font-thin">mcl.acmstudchapter@gmail.com</p>
         <div class="flex flex-row mt-2 space-x-4">
-          <div
-            v-for="(item, index) in socialItems"
-            :key="index"
-            class="bg-black"
-          >
-            <a :href="item.link"
-              ><div :src="item.icon" alt="" class="w-20 h-20"
-            /></a>
+          <div v-for="(item, index) in socialItems" :key="index">
+            <a :href="item.link">
+              <img :src="item.icon" alt="" class="w-20 h-20" />
+            </a>
           </div>
         </div>
       </div>

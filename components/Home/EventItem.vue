@@ -1,6 +1,9 @@
 <template>
   <div
-    :class="['h-52 p-4 pb-8 sm:p-14 overflow-clip bg-center bg-no-repeat bg-gray-600 w-full', borderRadius]"
+    :class="[
+      'bg-center bg-no-repeat bg-gray-600 overflow-clip w-full h-52 p-4 pb-8 sm:p-14',
+      borderRadius,
+    ]"
     :style="{
       'background-image': `linear-gradient(${gradient}, rgba(0, 0, 0, 0), rgba(31, 97, 153, 1)), url('${details.image}')`,
     }"
@@ -40,14 +43,13 @@ export default {
         return "left-0";
       }
     },
-    borderRadius(){
+    borderRadius() {
       if (this.orientation === "right") {
-        return 'rounded-br-3xl sm:rounded-br-4xl';
+        return "rounded-br-3xl sm:rounded-br-4xl";
       } else {
-        return 'rounded-bl-3xl sm:rounded-bl-4xl';
+        return "rounded-bl-3xl sm:rounded-bl-4xl";
       }
-      
-    }
+    },
   },
 };
 </script>
