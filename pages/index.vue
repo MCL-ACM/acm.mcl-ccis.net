@@ -3,14 +3,14 @@
     <div class="lg:px-32 hero-section pb-10 pt-20">
       <HomeHeroSection />
     </div>
-    <div class="lg:px-32 about-us">
+    <div class="lg:px-32 about-us rounded-br-4xl sm:rounded-br-5xl">
       <HomeAboutUs />
     </div>
 
     <div class="lg:px-32 p-10">
       <HomeEvents />
     </div>
-    <div class="lg:px-32 p-20 our-members">
+    <div class="lg:px-32 p-10 our-members">
       <HomeMembers />
     </div>
     <div class="lg:px-32 p-10 contact-us relative">
@@ -45,7 +45,6 @@ export default {};
       rgba(0, 255, 41, 0) 77.97%,
       rgba(0, 148, 255, 0) 77.97%
     );
-  border-radius: 0 0 200px 0;
 }
 
 .contact-us {

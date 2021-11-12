@@ -11,7 +11,8 @@ module.exports = {
         "sea-green": "#2CC1C7",
       },
       borderRadius: {
-        "4xl":"5rem"
+        "4xl":"5rem",
+        "5xl":"10rem"
       }
     },
   },

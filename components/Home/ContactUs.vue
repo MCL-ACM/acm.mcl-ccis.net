@@ -1,17 +1,17 @@
 <template>
-  <div class="flex flex-row ml-auto h-52 flex flex-row">
+  <div class="flex flex-row ml-auto h-52 flex flex-row z-10">
     <img
       src="@/assets/svg/contact-us-diamond.svg"
       alt=""
-      class="contact-us-detail"
+      class="contact-us-detail h-28 sm:h-56"
     />
 
-    <div class="ml-auto mr-14 my-auto">
+    <div class="mx-auto sm:ml-auto sm:mr-14 my-auto">
       <a
         href="/contact"
         class="font-bold text-4xl text-white flex flex-row items-center"
       >
-        <p class="mr-2">Contact Us</p>
+        <p class="mr-2 z-20">Contact Us</p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-8 w-auto"
@@ -38,6 +38,5 @@ export default {};
   position: absolute;
   left: 2%;
   top: 0;
-  height: 80%;
 }
 </style>
