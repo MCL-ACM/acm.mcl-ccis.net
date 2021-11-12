@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="flex flex-row lg:px-32 my-20">
-      <div>
-        <img src="@/assets/mcl-acm-logo.png" alt="" class="w-auto h-24 mb-3" />
+    <div class="flex flex-col sm:flex-row lg:px-32 my-4 sm:my-20 px-8">
+      <div class="flex flex-col items-start sm:text-left mb-3 items-center text-center sm:text-left sm:items-start order-2 sm:order-1">
+        <img src="@/assets/mcl-acm-logo.png" alt="" class="w-auto h-20 mb-3" />
         <p class="font-bold text-lg">
           Malayan Colleges Laguna ACM Student Chapter
         </p>
@@ -10,11 +10,11 @@
           Pulo Diezmo Rd, Pulo, Cabuyao, Laguna 4026, Philippines
         </p>
         <p class="font-thin">mcl.acmstudchapter@gmail.com</p>
-        <div class="flex flex-row mt-2">
+        <div class="flex flex-row mt-2 space-x-4">
           <div
             v-for="(item, index) in socialItems"
             :key="index"
-            class="bg-black mr-6"
+            class="bg-black"
           >
             <a :href="item.link"
               ><div :src="item.icon" alt="" class="w-20 h-20"
@@ -22,15 +22,16 @@
           </div>
         </div>
       </div>
-      <div class="ml-auto sm:mr-20">
-        <ul>
-          <li
+      <div class="sm:ml-auto sm:mr-20 text-center sm:text-left order-1 sm:order-2 mb-6">
+        <h3 class="font-medium text-xl mb-3">Navigate</h3>
+        <ul class="flex flex-col flex-wrap">
+          <p
             v-for="(item, index) in footerItems"
             :key="index"
-            class="text-lg underline mb-3 text-light-blue"
+            class="text-lg underline mb-4 font-medium text-blue"
           >
             <a :href="item.link">{{ item.name }}</a>
-          </li>
+          </p>
         </ul>
       </div>
     </div>

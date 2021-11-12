@@ -5,7 +5,7 @@
         <img
           src="@/assets/mcl-acm-logo.png"
           alt="MCL-ACM Logo"
-          class="w-80 h-auto"
+          class="sm:w-80 h-auto w-72"
         />
         <p class="font-bold text-5xl leading-tight text-dark-blue">
           Malayan Colleges Laguna <br />
