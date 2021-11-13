@@ -1,10 +1,43 @@
 <template>
   <div>
     <main class="flex flex-col lg:px-32">
-      <h1 class="text-dark-blue text-4xl font-bold">Members</h1>
-      <MembersExecutiveCard :members="details.commitees[0].members" />
-      <MembersCommitteeCard :details="details.commitees[1]" />
-      <MembersAlumniCard :names="details.alumni" />
+      <h1 class="text-dark-blue text-4xl font-bold mb-4">Members</h1>
+
+      <MembersCollapsibleItem class="collapse-item">
+        <template #header> <p class="collapse-header">Committees</p> </template>
+        <template #content>
+          <MembersCollapsibleItem class="ml-4 collapse-item">
+            <template #header>
+              <p class="collapse-header">Executive Committee</p>
+            </template>
+            <template #content>
+              <MembersExecutiveCard
+                :members="details.executiveCommittee"
+                class="collapse-content"
+              />
+            </template>
+          </MembersCollapsibleItem>
+          <div v-for="(committee, index) in details.committees" :key="index">
+            <MembersCollapsibleItem class="collapse-item">
+              <template #header>
+                <p class="collapse-header">{{ committee.title }}</p>
+              </template>
+              <template #content>
+                <MembersCommitteeCard
+                  :details="committee"
+                  class="collapse-content"
+                />
+              </template>
+            </MembersCollapsibleItem>
+          </div>
+        </template>
+      </MembersCollapsibleItem>
+      <MembersCollapsibleItem class="ml-4 collapse-item">
+        <template #header> <p class="collapse-header">Alumni</p> </template>
+        <template #content>
+          <MembersAlumniCard :names="details.alumni" class="collapse-content" />
+        </template>
+      </MembersCollapsibleItem>
     </main>
   </div>
 </template>
@@ -13,35 +46,45 @@
 export default {
   data: () => ({
     details: {
-      commitees: [
+      executiveCommittee: [
         {
-          title: "Executive Committee",
+          fullName: "Khristian Kikiuchi",
+          image: "/images/president.png",
+          title: "Adviser",
+        },
+        {
+          fullName: "Paz, James Michael E. ",
+          image: "/images/president.png",
+          title: "President",
+        },
+        {
+          fullName: "Palisoc, Karlo Miguel F.",
+          image: "/images/president.png",
+          title: "Vice President",
+        },
+        {
+          fullName: "Mapote, Jayvee N.",
+          image: "/images/president.png",
+          title: "Secretary",
+        },
+        {
+          fullName: "Mediodia, Patrick V.",
+          image: "/images/president.png",
+          title: "Treasurer",
+        },
+      ],
+      committees: [
+        {
+          title: "Membership Committee",
+          committeeChair: {
+            fullName: "Panti, John Arthur G.",
+            image: "/images/president.png",
+            title: "Committee Chair",
+          },
           members: [
-            {
-              fullName: "Khristian Kikiuchi",
-              image: "/images/president.png",
-              title: "Adviser",
-            },
-            {
-              fullName: "Paz, James Michael E. ",
-              image: "/images/president.png",
-              title: "President",
-            },
-            {
-              fullName: "Palisoc, Karlo Miguel F.",
-              image: "/images/president.png",
-              title: "Vice President",
-            },
-            {
-              fullName: "Mapote, Jayvee N.",
-              image: "/images/president.png",
-              title: "Secretary",
-            },
-            {
-              fullName: "Mediodia, Patrick V.",
-              image: "/images/president.png",
-              title: "Treasurer",
-            },
+            "Adante, John Rieven P.",
+            "Manrique, Alain Moses Q.",
+            "Pomperada, Jon Peter P.",
           ],
         },
         {
@@ -52,29 +95,67 @@ export default {
             title: "Committee Chair",
           },
           members: [
-            "Garcia, Elijah Raphael F.",
             "Ayson, Cyril Justin B.",
             "Cobar, Joachim Elijah V.",
+            "Garcia, Elijah Raphael F.",
           ],
         },
+        {
+          title: "Finance Committee",
+          committeeChair: {
+            fullName: "Mediodia, Patrick V.",
+            image: "/images/president.png",
+            title: "Committee Chair",
+          },
+          members: ["Gurion, Sherald Ryoj O.", "Melchor, Carlos Lorenzo M."],
+        },
+        {
+          title: "Publication Committee",
+          committeeChair: {
+            fullName: "Hermoso, Vivien Ericca I.",
+            image: "/images/president.png",
+            title: "Committee Chair",
+          },
+          members: ["Bautista, Roigene Marc J.", "Rabano, Charmaine Eunice I."],
+        },
       ],
+
       alumni: [
         "Abadines, Marc Fernan H.",
         "Adanza, Raymond Alfred T.",
         "Alejandro, Arviejhay D.",
         "Alvarez, Andre Gabriel V.",
         "Alvarez, Angelo D.",
-        "Balane, Daphne P. ",
         "Corpuz, John Noel J.",
         "Cortez, John Derick D.",
         "Daraman, Allan ",
         "Disonglo, John M.",
         "Escarda, Gwyneth A.",
         "France, Jeffrey, B",
+        "Iligan, Marco C.",
+        "Mababangloob, Miguel",
+        "Malabayas, Chantal Jem B.",
+        "Mañalac, Russell Jacob (.)",
+        "Manloctao, Genald Christian N.",
+        "Punay, Mark Nicholo J.",
+        "Tejano, Jereh A.",
+        "Velandres, Juan Matthew V.",
       ],
     },
   }),
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.collapse-header {
+  @apply text-xl mb-3;
+}
+
+.collapse-item {
+  @apply ml-12 mb-2;
+}
+
+.collapse-content {
+  @apply mb-12;
+}
+</style>
