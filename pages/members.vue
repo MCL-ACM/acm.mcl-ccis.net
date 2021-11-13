@@ -1,7 +1,7 @@
 <template>
   <div class="px-4">
     <main class="flex flex-col lg:px-32">
-      <h1 class="text-dark-blue text-4xl font-bold mb-4">Members</h1>
+      <h1 class="text-dark-blue text-4xl font-bold mb-6">Members</h1>
 
       <MembersCollapsibleItem class="collapse-item">
         <template #header> <p class="collapse-header">Committees</p> </template>
@@ -52,7 +52,7 @@ export default {
     details: {
       executiveCommittee: [
         {
-          fullName: "Khristian Kikiuchi",
+          fullName: "Kikuchi, Khristian",
           image: "/images/president.png",
           title: "Adviser",
         },
@@ -140,7 +140,6 @@ export default {
         "Mababangloob, Miguel",
         "Malabayas, Chantal Jem B.",
         "Mañalac, Russell Jacob (.)",
-        "Manloctao, Genald Christian N.",
         "Punay, Mark Nicholo J.",
         "Tejano, Jereh A.",
         "Velandres, Juan Matthew V.",
