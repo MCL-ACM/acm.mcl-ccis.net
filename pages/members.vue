@@ -8,7 +8,9 @@
         <template #content>
           <MembersCollapsibleItem class="collapse-item">
             <template #header>
-              <p class="collapse-header">Executive Committee</p>
+              <p class="collapse-header">
+                Executive Committee
+              </p>
             </template>
             <template #content>
               <MembersExecutiveCard
@@ -20,7 +22,9 @@
           <div v-for="(committee, index) in details.committees" :key="index">
             <MembersCollapsibleItem class="collapse-item">
               <template #header>
-                <p class="collapse-header text-left">{{ committee.title }}</p>
+                <p class="collapse-header text-left">
+                  {{ committee.title }}
+                </p>
               </template>
               <template #content>
                 <MembersCommitteeCard
@@ -148,7 +152,7 @@ export default {
 
 <style lang="scss" scoped>
 .collapse-header {
-  @apply text-xl mb-3;
+  @apply text-xl;
 }
 
 .collapse-item {
