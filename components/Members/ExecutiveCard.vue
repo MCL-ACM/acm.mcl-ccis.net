@@ -4,7 +4,7 @@
       <MembersIconedMember
         v-for="(member, index) in members"
         :key="index"
-        :class="[`w-32 sm:w-54 ${index === 0 ? 'full-width' : ''}`]"
+        :class="[`max-w-54`, `${index === 0 ? 'full-width' : ''}`]"
         v-bind="member"
       />
     </div>
