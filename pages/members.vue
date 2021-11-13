@@ -156,10 +156,10 @@ export default {
 }
 
 .collapse-item {
-  @apply mx-2 sm:ml-8 mb-2;
+  @apply mx-2  sm:ml-8 mb-2;
 }
 
 .collapse-content {
-  @apply mb-12;
+  @apply mb-12 sm:ml-6;
 }
 </style>
