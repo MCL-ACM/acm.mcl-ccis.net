@@ -12,13 +12,15 @@
         sm:mx-auto
       "
     >
-    <!-- Logo -->
+      <!-- Logo -->
       <div>
-        <img
-          class="block h-10 w-auto logo-shadow"
-          src="@/assets/mcl-acm-logo.png"
-          alt="MCL-ACM Logo"
-        />
+        <a href="/">
+          <img
+            class="block h-10 w-auto logo-shadow"
+            src="@/assets/mcl-acm-logo.png"
+            alt="MCL-ACM Logo"
+          />
+        </a>
       </div>
 
       <!-- Wide Links -->
@@ -69,7 +71,6 @@
         >{{ navitem.title }}
       </a>
     </div>
-
   </nav>
 </template>
 
