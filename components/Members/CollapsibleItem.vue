@@ -12,9 +12,11 @@
 
       <slot name="header">Collapse</slot>
     </button>
-    <div v-if="!collapsed">
-      <slot name="content"></slot>
-    </div>
+    <transition name="content-transition">
+      <div v-if="!collapsed">
+        <slot name="content"></slot>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -34,11 +36,24 @@ export default {
 <style lang="scss" scoped>
 .show-chevron {
   transform: rotate(0deg);
-  transition: transform .1s ease;
+  transition: transform 0.08s ease;
 }
 
 .hide-chevron {
   transform: rotate(-90deg);
-  transition: transform .1s ease;
+  transition: transform 0.08s ease;
+}
+
+.content-transition-enter-active,
+.content-transition-leave-active {
+  transition: max-height 0.8s ease;
+  max-height: 1000px;
+  overflow: hidden;
+}
+
+.content-transition-enter,
+.content-transition-leave-to {
+  max-height: 0;
+  overflow: hidden;
 }
 </style>
