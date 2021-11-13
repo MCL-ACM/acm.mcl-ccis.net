@@ -2,7 +2,7 @@
   <div class="flex flex-col items-center text-center p-3">
     <img
       :src="image"
-      class="max-h-20 max-w-20 mb-3 rounded-full overflow-hidden"
+      class="max-h-28 max-w-28 mb-3 rounded-full overflow-hidden"
       alt=""
     />
     <p class="text-lg font-medium">{{ fullName }}</p>
