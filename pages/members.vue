@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div class="px-4">
     <main class="flex flex-col lg:px-32">
       <h1 class="text-dark-blue text-4xl font-bold mb-4">Members</h1>
 
       <MembersCollapsibleItem class="collapse-item">
         <template #header> <p class="collapse-header">Committees</p> </template>
         <template #content>
-          <MembersCollapsibleItem class="ml-4 collapse-item">
+          <MembersCollapsibleItem class="collapse-item">
             <template #header>
               <p class="collapse-header">Executive Committee</p>
             </template>
@@ -20,7 +20,7 @@
           <div v-for="(committee, index) in details.committees" :key="index">
             <MembersCollapsibleItem class="collapse-item">
               <template #header>
-                <p class="collapse-header">{{ committee.title }}</p>
+                <p class="collapse-header text-left">{{ committee.title }}</p>
               </template>
               <template #content>
                 <MembersCommitteeCard
@@ -32,7 +32,7 @@
           </div>
         </template>
       </MembersCollapsibleItem>
-      <MembersCollapsibleItem class="ml-4 collapse-item">
+      <MembersCollapsibleItem class="collapse-item">
         <template #header> <p class="collapse-header">Alumni</p> </template>
         <template #content>
           <MembersAlumniCard :names="details.alumni" class="collapse-content" />
@@ -152,7 +152,7 @@ export default {
 }
 
 .collapse-item {
-  @apply ml-12 mb-2;
+  @apply mx-2 sm:ml-8 mb-2;
 }
 
 .collapse-content {

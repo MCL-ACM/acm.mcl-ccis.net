@@ -1,8 +1,8 @@
 <template>
-  <div class="flex flex-row bg-opacity-50 p-8 card-bg">
+  <div class="bg-opacity-50 p-8 card-bg">
     <div
       class="
-        grid grid-cols-4
+        grid sm:grid-cols-4
         justify-evenly
         content-start
         flex-grow
