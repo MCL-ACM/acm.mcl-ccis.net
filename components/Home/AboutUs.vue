@@ -1,6 +1,7 @@
 <template>
-  <div class="h-screen max-h-screen overflow-hidden about-us-parent">
-    <div class="flex flex-col items-center text-center flex h-full">
+  <div class="h-screen overflow-hidden">
+    <div class="flex flex-col items-center text-center h-full">
+      <!-- Wave on top -->
       <div class="about-us-wave">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
@@ -9,10 +10,13 @@
           />
         </svg>
       </div>
+      <!-- Background of text -->
       <div class="text-bg"></div>
-      <div class="my-auto main-content">
+
+      <!-- Main Content of About Us -->
+      <div class="my-auto">
         <p class="font-bold text-3xl text-dark-blue">About Us</p>
-        <p class="max-w-4xl text-xl p-4 mt-4 mb-6">
+        <p class="text-xl max-w-4xl p-4 mt-4 mb-6">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ultricies
           habitant id porttitor etiam sem commodo, blandit sit. Fringilla est
           amet pellentesque massa purus vel pretium velit. Ipsum varius urna
@@ -29,10 +33,6 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-.about-us-parent{
-  
-}
-
 .about-us-wave {
   position: absolute;
   width: 100%;

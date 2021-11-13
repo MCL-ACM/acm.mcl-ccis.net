@@ -1,16 +1,30 @@
 <template>
   <nav>
+    <!-- Navbar -->
     <div
-      class="mx-auto max-w-7xl h-16 flex flex-row items-center justify-between"
+      class="
+        flex flex-row
+        items-center
+        justify-between
+        max-w-7xl
+        mx-2
+        h-16
+        sm:mx-auto
+      "
     >
+      <!-- Logo -->
       <div>
-        <img
-          class="block h-10 w-auto logo-shadow"
-          src="@/assets/mcl-acm-logo.png"
-          alt="MCL-ACM Logo"
-        />
+        <a href="/">
+          <img
+            class="block h-10 w-auto logo-shadow"
+            src="@/assets/mcl-acm-logo.png"
+            alt="MCL-ACM Logo"
+          />
+        </a>
       </div>
-      <div class="ml-auto hidden sm:block flex flex-row content-evenly">
+
+      <!-- Wide Links -->
+      <div class="flex flex-row content-evenly ml-auto hidden sm:block">
         <a
           v-for="(navitem, index) in navitems"
           :key="index"
@@ -31,22 +45,28 @@
         </a>
       </div>
 
-      <CommonNavbarHamburger class="sm:hidden" @Clicked="toggleMobileMenu()" />
+      <!-- Hamburger Button -->
+      <CommonNavitemHamburger class="sm:hidden" @Clicked="toggleMobileMenu()" />
     </div>
 
-    <div v-show="mobileMenuVisible" class="sm:hidden bg-gray-500">
+    <!-- Mobile Links -->
+    <div
+      v-show="mobileMenuVisible"
+      class="bg-light-green text-center p-2 sm:hidden"
+    >
       <a
         v-for="(navitem, index) in navitems"
         :key="index"
         :href="navitem.link"
         class="
-          hover:bg-gray-700 hover:bg-opacity-40 hover:text-white
           block
+          text-base text-lg
+          font-medium
+          rounded-md
           px-3
           py-2
-          rounded-md
-          text-base
-          font-medium
+          mb-2
+          hover:bg-gray-700 hover:bg-opacity-40 hover:text-white
         "
         >{{ navitem.title }}
       </a>
