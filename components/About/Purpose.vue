@@ -1,13 +1,15 @@
 <template>
-  <article class="flex md:flex-row flex-col tracking-wider">
-      <section>
-          <header class="text-5xl font-bold mb-14">
+  <article class="flex md:flex-row flex-col-reverse tracking-wider">
+    
+      <section class="flex-auto">
+          <header class="text-5xl font-bold mb-14 text-dark-blue ">
               <h1>Purpose</h1>
           </header>
           <ol class="
               list-decimal 
               list-inside 
               text-xl 
+              text-justify
               font-extralight
               leading-9
               ml-2
@@ -25,14 +27,12 @@
               <li>The Chapter is chartered by ACM.</li>
           </ol>
       </section>
-        <img class="min-w-0 object-scale-down" src="../../assets/img/placeholder_4x3.png">
+        <img class="max-w-lg object-scale-down flex-auto" src="../../assets/img/placeholder_4x3.png">
   </article>
 </template>
 
 <script>
-export default {
 
-}
 </script>
 
 <style>

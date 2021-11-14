@@ -1,14 +1,14 @@
 <template>
   <article class="flex md:flex-row flex-col-reverse tracking-wider">
-      <img class="min-w-0 object-scale-down" src="../../assets/img/placeholder_4x3.png">
-      <section>
-          <header class="text-5xl font-bold mb-14 text-right">
+      <img class="max-w-lg object-scale-down flex-auto" src="../../assets/img/placeholder_4x3.png">
+      <section class="flex-auto">
+          <header class="text-5xl font-bold mb-14 text-right text-dark-blue ">
               <h1>Background</h1>
           </header>
           <p class="
               font-extralight
               text-xl
-              text-right
+              text-justify
               leading-9
               mr-2
               ml-28
