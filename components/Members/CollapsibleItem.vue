@@ -47,8 +47,8 @@ export default {
 .content-transition-enter-active,
 .content-transition-leave-active {
   transition: max-height 0.4s ease;
-  max-height: 1000px;
   overflow: hidden;
+  max-height: 200rem;
 }
 
 .content-transition-enter,
@@ -56,4 +56,6 @@ export default {
   max-height: 0;
   overflow: hidden;
 }
+
+
 </style>

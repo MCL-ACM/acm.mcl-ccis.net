@@ -145,6 +145,12 @@ export default {
       ],
     },
   }),
+  head() {
+    return {
+      title: "Members - MCL-ACM"
+    };
+  },
+
 };
 </script>
 

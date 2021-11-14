@@ -27,6 +27,8 @@ export default {};
 
 .about-us {
   backdrop-filter: blur(9px);
+  background-repeat: no-repeat;
+  background-size: auto;
   background-image: url("@/assets/img/mcl-bg.png"),
     linear-gradient(
       304.9deg,
