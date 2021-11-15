@@ -97,7 +97,7 @@ export default {
       },
       {
         title: "Contact",
-        link: "/contact",
+        link: "/contact-us",
       },
     ],
   }),

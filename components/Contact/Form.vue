@@ -27,6 +27,7 @@
         <textarea name="message"></textarea><br>
 
         <input type="submit" value="Send"><br>
+        <p class="text-sm">By using this email service, the user agrees that no official transactions will be declared using this service.*</p>
     </form>
 </template>
 
