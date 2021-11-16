@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  props: ["members"],
+  props: { members: { type: Array, default: () => [] } },
 };
 </script>
 

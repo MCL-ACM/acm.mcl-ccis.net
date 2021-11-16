@@ -23,7 +23,12 @@
 
 <script>
 export default {
-  props: ["names"],
+  props: {
+    names: {
+      type: Array,
+      default: () => [],
+    },
+  },
 };
 </script>
 

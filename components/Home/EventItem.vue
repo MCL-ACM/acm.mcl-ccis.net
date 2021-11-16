@@ -29,7 +29,16 @@
 
 <script>
 export default {
-  props: ["details", "orientation"],
+  props: {
+    details: {
+      type: String,
+      default: "",
+    },
+    orientation: {
+      type: String,
+      default: "",
+    },
+  },
   computed: {
     gradient() {
       if (this.orientation === "right") {

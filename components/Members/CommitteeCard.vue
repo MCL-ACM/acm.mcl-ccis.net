@@ -29,7 +29,15 @@
 
 <script>
 export default {
-  props: ["details"],
+  props: {
+    details: {
+      type: Object,
+      default: () => ({
+        committeeChair: "",
+        members: [],
+      }),
+    },
+  },
 };
 </script>
 

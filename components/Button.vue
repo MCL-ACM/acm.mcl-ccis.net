@@ -19,18 +19,7 @@
 </template>
 
 <script>
-export default {
-  props: {
-    text: {
-      default: "",
-      type: String,
-    },
-    color: {
-      default: "#122F45",
-      type: String,
-    },
-  },
-};
+export default {};
 </script>
 
 <style lang="scss" scoped></style>
