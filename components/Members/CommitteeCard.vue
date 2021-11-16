@@ -12,8 +12,8 @@
         content-start
         flex-grow
         mx-8
-        text-center
         mt-4
+        text-center
       "
     >
       <p

@@ -13,7 +13,7 @@
       <slot name="header">Collapse</slot>
     </button>
     <transition name="content-transition">
-      <div v-if="!collapsed">
+      <div v-show="!collapsed">
         <slot name="content"></slot>
       </div>
     </transition>
@@ -56,6 +56,4 @@ export default {
   max-height: 0;
   overflow: hidden;
 }
-
-
 </style>
