@@ -20,7 +20,7 @@
         <p class="font-thin my-2">
           Pulo Diezmo Rd, Pulo, Cabuyao, Laguna 4026, Philippines
         </p>
-        <p class="font-thin">mcl.acmstudchapter@gmail.com</p>
+        <p class="font-thin">acm.mclstudchapter@gmail.com</p>
 
         <!-- Sockal Icons -->
         <div class="flex flex-row mt-2 space-x-6 mt-4">

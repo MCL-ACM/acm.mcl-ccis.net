@@ -1,19 +1,6 @@
 <template>
-    <!-- <form>
-        <label for="name">Name</label><br>
-        <input type="text" id="name" name="name"><br>
 
-        <label for="email">Email</label><br>
-        <input type="text" id="email" name="email"><br>
-
-        <label for="subject">Subject</label><br>
-        <input type="text" id="subject" name="subject"><br>
-
-        <label for="message">Message</label><br>
-        <input type="text" id="message" name="message"><br>
-        <button class="font-bold py-2 px-8 rounded-full bg-blue text-white">Send</button>
-    </form> -->
-    <section class="mr-36">
+    <section>
         <form ref="form" @submit.prevent="sendEmail">
             <div>
                 <label class="font-extralight">Name<span class="text-red-500"> *</span></label><br>
