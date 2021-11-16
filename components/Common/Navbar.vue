@@ -114,8 +114,15 @@ export default {
 
 <style lang="scss" scoped>
 .logo-shadow {
+  transition: filter .1s ease;
   filter: drop-shadow(4px 4px 7px rgba(0, 0, 0, 0.2));
 }
+.logo-shadow:hover{
+  transition: filter .1s ease;
+  filter: drop-shadow(4px 4px 7px rgba(0, 0, 0, 0.3));
+
+}
+
 .text-shadow {
   text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.2);
 }

@@ -11,7 +11,7 @@
       </div>
       
       <article class="relative px-32 py-48 ">
-          <div class="absolute inset-0 w-full bg-gradient-to-tr from-sea-green to-light-green opacity-"/>
+          <div class="absolute inset-0 w-full bg-gradient-to-tr from-sea-green to-light-green opacity-80"/>
           <div class="relative">
               <AboutACM/>
           </div>
