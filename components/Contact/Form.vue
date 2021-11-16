@@ -23,7 +23,7 @@
             </div>
 
             <div class="mt-4 float-right">
-                <input type="submit" class=" cursor-pointer hover:bg-purple-700 text-lg font-medium bg-blue text-white rounded-full px-8 py-2 mt-2" value="Send"><br>
+                <input type="submit" class=" cursor-pointer hover:bg-purple-700 text-lg font-medium bg-blue text-white rounded-full px-12 py-2 mt-2" value="Send"><br>
             </div>
 
             <div class="mt-4">
