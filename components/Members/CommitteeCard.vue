@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col sm:flex-row bg-opacity-50 p-8 card-bg">
+  <div class="flex flex-col sm:flex-row bg-opacity-50 p-8 card-bg rounded-lg">
     <MembersIconedMember
       class="sm:w-64 my-auto"
       v-bind="details.committeeChair"
