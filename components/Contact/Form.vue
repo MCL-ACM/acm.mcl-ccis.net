@@ -23,6 +23,8 @@
             </div>
 
             <div class="mt-4 float-right">
+                <div class="g-recaptcha" data-sitekey="6LdXlDkdAAAAAL7N1ImCSAEaCpISFOeEX10rGjVU"></div>
+                
                 <input type="submit" class=" cursor-pointer hover:bg-purple-700 text-lg font-medium bg-blue text-white rounded-full px-12 py-2 mt-2" value="Send"><br>
             </div>
 
