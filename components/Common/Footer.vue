@@ -22,7 +22,7 @@
         </p>
         <p class="font-thin">acm.mclstudchapter@gmail.com</p>
 
-        <!-- Sockal Icons -->
+        <!-- Social Icons -->
         <div class="flex flex-row mt-2 space-x-6 mt-4">
           <div v-for="(item, index) in socialItems" :key="index">
             <div class="bg-blue h-14 w-14 p-4 rounded-full">

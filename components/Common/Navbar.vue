@@ -24,21 +24,24 @@
       </div>
 
       <!-- Wide Links -->
-      <div class="flex flex-row content-evenly ml-auto hidden sm:block">
+      <div class="flex-row content-evenly ml-auto hidden sm:flex gap-3">
         <a
           v-for="(navitem, index) in navitems"
           :key="index"
           :href="navitem.link"
           class="
             text-white
-            hover:bg-gray-500 hover:bg-opacity-30
+            transition
+            duration-100
+            ease-in-out
+            hover:bg-gray-400 hover:bg-opacity-30
             px-3
             py-2
             rounded-md
             text-base
             font-medium
             drop-shadow-lg
-            text-shadow
+            text-shadow text-center
           "
         >
           {{ navitem.title }}
@@ -60,7 +63,7 @@
         :href="navitem.link"
         class="
           block
-          text-base text-lg
+          text-lg
           font-medium
           rounded-md
           px-3
