@@ -9,6 +9,7 @@ module.exports = {
         "light-blue": "#00A4C8",
         "light-green": "#D9ED92",
         "sea-green": "#2CC1C7",
+        "opaque-light-green":"#D6F2E1"
       },
       borderRadius: {
         "4xl":"5rem",
