@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="z-50">
     <!-- Navbar -->
     <div
       class="
@@ -14,21 +14,21 @@
     >
       <!-- Logo -->
       <div>
-        <a href="/">
+        <NuxtLink to="/">
           <img
             class="block h-10 w-auto logo-shadow"
             src="@/assets/mcl-acm-logo.png"
             alt="MCL-ACM Logo"
           />
-        </a>
+        </NuxtLink>
       </div>
 
       <!-- Wide Links -->
       <div class="flex-row content-evenly ml-auto hidden sm:flex gap-3">
-        <a
+        <NuxtLink
           v-for="(navitem, index) in navitems"
           :key="index"
-          :href="navitem.link"
+          :to="navitem.link.toString()"
           class="
             text-white
             transition
@@ -45,7 +45,7 @@
           "
         >
           {{ navitem.title }}
-        </a>
+        </NuxtLink>
       </div>
 
       <!-- Hamburger Button -->
@@ -57,10 +57,10 @@
       v-show="mobileMenuVisible"
       class="bg-light-green text-center p-2 sm:hidden"
     >
-      <a
+      <NuxtLink
         v-for="(navitem, index) in navitems"
         :key="index"
-        :href="navitem.link"
+        :to="navitem.link.toString()"
         class="
           block
           text-lg
@@ -72,7 +72,7 @@
           hover:bg-gray-700 hover:bg-opacity-40 hover:text-white
         "
         >{{ navitem.title }}
-      </a>
+      </NuxtLink>
     </div>
   </nav>
 </template>
@@ -114,13 +114,12 @@ export default {
 
 <style lang="scss" scoped>
 .logo-shadow {
-  transition: filter .1s ease;
+  transition: filter 0.1s ease;
   filter: drop-shadow(4px 4px 7px rgba(0, 0, 0, 0.2));
 }
-.logo-shadow:hover{
-  transition: filter .1s ease;
+.logo-shadow:hover {
+  transition: filter 0.1s ease;
   filter: drop-shadow(4px 4px 7px rgba(0, 0, 0, 0.3));
-
 }
 
 .text-shadow {

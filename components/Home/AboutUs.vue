@@ -22,9 +22,9 @@
           amet pellentesque massa purus vel pretium velit. Ipsum varius urna
           varius iaculis massa quis. Diam molestie nisl ultricies ultrices.
         </p>
-        <a href="about">
+        <NuxtLink to="about">
           <Button text="Learn more about MCL-ACM" />
-        </a>
+        </NuxtLink>
       </div>
     </div>
   </div>

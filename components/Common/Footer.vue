@@ -42,7 +42,7 @@
             :key="index"
             class="text-lg underline mb-4 font-medium text-blue"
           >
-            <a :href="item.link">{{ item.name }}</a>
+            <NuxtLink :to="item.link.toString()">{{ item.name }}</NuxtLink>
           </p>
         </ul>
       </div>

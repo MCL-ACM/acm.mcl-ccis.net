@@ -10,8 +10,8 @@
 
     <!-- Main Content of Contact Us -->
     <div class="mx-auto my-auto sm:ml-auto sm:mr-14">
-      <a
-        href="/contact"
+      <NuxtLink
+        to="/contact"
         class="
           flex flex-row
           items-center
@@ -36,7 +36,7 @@
             clip-rule="evenodd"
           />
         </svg>
-      </a>
+      </NuxtLink>
     </div>
   </div>
 </template>

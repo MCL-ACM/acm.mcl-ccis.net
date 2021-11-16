@@ -22,9 +22,9 @@
     </div>
 
     <!-- Show More -->
-    <a href="events">
+    <NuxtLink to="events">
       <Button text="Show More" class="px-10" />
-    </a>
+    </NuxtLink>
   </div>
 </template>
 
@@ -37,11 +37,13 @@ export default {
           id: 1,
           title: "CodeX",
           image: "/content/codex-logo.png",
+          link:"",
         },
         {
           id: 2,
           title: "Hour of Code",
           image: "/content/hour-of-code.png",
+          link:"",
         },
       ],
     };
