@@ -15,14 +15,16 @@
 
       <!-- Main Content of About Us -->
       <div class="my-auto">
-        <p class="font-bold text-3xl text-dark-blue">About Us</p>
+        <p class="font-bold text-4xl text-dark-blue">About Us</p>
         <p class="text-xl max-w-4xl p-4 mt-4 mb-6">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ultricies
           habitant id porttitor etiam sem commodo, blandit sit. Fringilla est
           amet pellentesque massa purus vel pretium velit. Ipsum varius urna
           varius iaculis massa quis. Diam molestie nisl ultricies ultrices.
         </p>
-        <Button text="Learn more about MCL-ACM" />
+        <a href="about">
+          <Button text="Learn more about MCL-ACM" />
+        </a>
       </div>
     </div>
   </div>

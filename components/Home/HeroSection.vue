@@ -9,7 +9,7 @@
           alt="MCL-ACM Logo"
           class="sm:w-80 h-auto w-60 mb-3"
         />
-        <p class="font-bold text-4xl leading-tight text-dark-blue sm:text-5xl">
+        <p class="font-bold text-4xl text-dark-blue sm:text-5xl">
           Malayan Colleges Laguna <br />
           ACM Student Chapter
         </p>

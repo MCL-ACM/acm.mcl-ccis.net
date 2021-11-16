@@ -9,7 +9,9 @@
         pellentesque massa purus vel pretium velit. Ipsum varius urna varius
         iaculis massa quis. Diam molestie nisl ultricies ultrices.
       </p>
-      <Button text="View our Members" class="px-14" />
+      <a href="members">
+        <Button text="View our Members" class="px-14" />
+      </a>
     </div>
   </div>
 </template>
