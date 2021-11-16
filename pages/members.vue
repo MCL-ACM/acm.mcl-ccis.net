@@ -1,5 +1,5 @@
 <template>
-  <div class="px-4">
+  <div class="relative">
     <main class="flex flex-col lg:px-32">
       <h1 class="text-dark-blue text-4xl font-bold mb-6">Members</h1>
       <MembersCollapsibleItem class="collapse-item">
@@ -42,6 +42,7 @@
         </template>
       </MembersCollapsibleItem>
     </main>
+    <div class="gradient-bg-reverse absolute bottom-0 h-screen w-full" style="z-index: -1;"></div>
   </div>
 </template>
 
