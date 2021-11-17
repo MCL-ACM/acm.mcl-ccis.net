@@ -34,13 +34,11 @@ export default {
     return {
       eventPreviews: [
         {
-          id: 1,
           title: "CodeX",
           image: "/content/codex-logo.png",
           link:"",
         },
         {
-          id: 2,
           title: "Hour of Code",
           image: "/content/hour-of-code.png",
           link:"",
