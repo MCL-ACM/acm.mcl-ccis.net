@@ -1,8 +1,8 @@
 <template>
-  <section class="relative px-32 py-20">
+  <section class="relative px-32 pb-20">
       <div class="absolute inset-0 w-full bg-gradient-to-t from-sea-green via-opaque-light-green to-transparent opacity-70"/>
         <div class="relative flex flex-row justify-evenly">
-            <div class="mr-36">
+            <div class="mr-36 flex-grow">
                 <h1 class="text-5xl font-bold mb-8 text-dark-blue ">Contact Us</h1>
                 <ContactForm/>
             </div>
@@ -14,8 +14,7 @@
                     <ContactMap/>
                 </div>
             </div>
-        </div>
-        
+      </div>
   </section>
 </template>
 
