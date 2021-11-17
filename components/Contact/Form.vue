@@ -52,7 +52,7 @@ export default {
         },
 
         checkForm(){
-            if(this.emailAuth() && this.user_name && this.message) {
+            if(this.user_email && this.user_name && this.message) {
                 return true
             }
             return false
