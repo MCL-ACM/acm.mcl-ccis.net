@@ -31,12 +31,16 @@
 export default {
   props: {
     details: {
-      type: String,
-      default: "",
+      type: Object,
+      default: () => ({
+        title: "Placeholder Title",
+        image: "",
+        link: "/",
+      }),
     },
     orientation: {
       type: String,
-      default: "",
+      default: "right",
     },
   },
   computed: {
