@@ -1,7 +1,7 @@
 <template>
-  <div class="min-h-screen p-4">
+  <div class="h-screen p-4">
     <!-- Main Content -->
-    <div class="z-20 sm:mt-20">
+    <div class="z-20 sm:mt-20 h-full relative">
       <!-- Logo and Title -->
       <div>
         <img
@@ -21,7 +21,7 @@
       </div>
 
       <!-- Quips -->
-      <div class="text-right mt-20">
+      <div class="sm:absolute sm:bottom-64 mt-20 sm:mt-0 w-full text-right">
         <p class="text-xl">Promoting Excellence in Modern Computing</p>
         <p class="text-lg">A platform for students and enthusiasts alike</p>
       </div>
