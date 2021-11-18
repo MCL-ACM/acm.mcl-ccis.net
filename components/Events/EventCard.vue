@@ -1,6 +1,15 @@
 <template>
   <NuxtLink to="">
-    <div class="event-card flex flex-col justify-end h-96 w-72 p-7 rounded-3xl hover:shadow-2xl">
+    <div class="event-card 
+                relative 
+                flex 
+                flex-col 
+                justify-end 
+                h-full w-full 
+                px-7 pb-7 pt-80 
+                rounded-3xl 
+                hover:shadow-2xl 
+                block">
       <div>
         <p class="font-extralight text-lg">Jan. 1, 2021</p>
         <h2 class="font-bold text-2xl">Event Title Event Title Event Title</h2>

@@ -1,5 +1,5 @@
 <template>
-  <section class="event-sec px-6 py-36">
+  <section class="event-sec px-6 py-16 md:py-36">
       <div class="flex flex-col max-w-6xl mx-auto gap-y-28 items-center">
         <!-- Info -->
         <div>
