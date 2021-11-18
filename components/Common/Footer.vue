@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex flex-col my-4 px-8 sm:flex-row sm:my-20 lg:px-32">
+    <div class="container flex flex-col my-4 sm:flex-row sm:my-20">
       <!-- Contact Information -->
       <div
         class="

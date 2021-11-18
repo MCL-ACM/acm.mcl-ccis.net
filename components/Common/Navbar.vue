@@ -3,20 +3,19 @@
     <!-- Navbar -->
     <div
       class="
+        sm:container
         flex flex-row
         items-center
         justify-between
-        max-w-7xl
-        mx-2
-        h-16
-        sm:mx-auto
+        h-20
+        px-4 sm:px-0
       "
     >
       <!-- Logo -->
       <div>
         <NuxtLink to="/">
           <img
-            class="block h-10 w-auto logo-shadow"
+            class="block h-12 w-auto logo-shadow"
             src="@/assets/mcl-acm-logo.png"
             alt="MCL-ACM Logo"
           />
@@ -38,7 +37,6 @@
             px-3
             py-2
             rounded-md
-            text-base
             font-medium
             drop-shadow-lg
             text-shadow text-center
