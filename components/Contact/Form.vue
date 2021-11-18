@@ -25,6 +25,7 @@
             <div class="mt-4 float-right">
                 <input type="submit" class=" cursor-pointer hover:bg-purple-700 text-lg font-medium bg-blue text-white rounded-full px-12 py-2 mt-2" value="Send"><br>
             </div>
+            <p class="pt-4"> Name, Email, and Message must be filled! </p>
         </form>
     </section>
 </template>
@@ -44,18 +45,20 @@ export default {
     },
 
     methods: {
-        emailAuth(){
-            if (/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/.test(this.user_email)){
-                return true
-            }
-            return false
+        onlyWS(input){
+            return(!input.replace(/\s/g, '').length)
         },
 
         checkForm(){
-            if(this.user_email && this.user_name && this.message) {
-                return true
-            }
-            return false
+            return(
+                this.user_name 
+            && this.user_email 
+            && this.message
+            && !this.onlyWS(this.user_name) 
+            && !this.onlyWS(this.user_email) 
+            && !this.onlyWS(this.message)
+            )
+            
         },
 
         sendEmail() {
