@@ -6,10 +6,11 @@
         flex flex-row
         items-center
         justify-between
-        max-w-7xl
         mx-2
         h-16
         sm:mx-auto
+        sm:px-8
+        lg:px-32
       "
     >
       <!-- Logo -->
