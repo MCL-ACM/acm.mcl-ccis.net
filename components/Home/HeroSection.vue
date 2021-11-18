@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen p-4">
+  <div class="h-screen">
     <!-- Main Content -->
     <div class="z-20 sm:mt-20 h-full relative">
       <!-- Logo and Title -->

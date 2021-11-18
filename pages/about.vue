@@ -1,7 +1,7 @@
 <template>
 
-  <section>
-      <div class="px-32 bg-white">
+  <section class="bg-white">
+      <div class="container">
             <article class="pt-32">
                 <AboutPurpose/>
             </article>
@@ -10,9 +10,9 @@
             </article>
       </div>
       
-      <article class="relative px-32 py-48 ">
+      <article class="relative py-48">
           <div class="absolute inset-0 w-full bg-gradient-to-tr from-sea-green to-light-green opacity-80"/>
-          <div class="relative">
+          <div class="container relative">
               <AboutACM/>
           </div>
       </article>

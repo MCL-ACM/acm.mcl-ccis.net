@@ -5,3 +5,4 @@
 .gradient-bg {
   @apply bg-gradient-to-b from-sea-green via-opaque-light-green to-transparent opacity-70;
 }
+

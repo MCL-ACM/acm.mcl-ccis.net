@@ -3,14 +3,11 @@
     <!-- Navbar -->
     <div
       class="
+        sm:container
         flex flex-row
         items-center
         justify-between
-        mx-2
         h-20
-        sm:mx-auto
-        sm:px-8
-        lg:px-32
       "
     >
       <!-- Logo -->

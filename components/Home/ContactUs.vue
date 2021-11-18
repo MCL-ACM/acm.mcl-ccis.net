@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-row ml-auto h-52 z-10">
+  <div class="flex flex-row ml-auto h-64 z-10 relative">
 
     <!-- Diamond Decoration -->
     <img
@@ -7,7 +7,6 @@
       alt=""
       class="contact-us-detail h-28 sm:h-56"
     />
-
     <!-- Main Content of Contact Us -->
     <div class="mx-auto my-auto sm:ml-auto sm:mr-14">
       <NuxtLink
