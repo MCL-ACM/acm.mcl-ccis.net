@@ -21,7 +21,7 @@
       </div>
 
       <!-- Quips -->
-      <div class="sm:absolute sm:bottom-64 mt-20 sm:mt-0 w-full text-right">
+      <div class="sm:absolute sm:bottom-72 mt-20 sm:mt-0 w-full text-right">
         <p class="text-xl">Promoting Excellence in Modern Computing</p>
         <p class="text-lg">A platform for students and enthusiasts alike</p>
       </div>

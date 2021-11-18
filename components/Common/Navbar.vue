@@ -7,7 +7,7 @@
         items-center
         justify-between
         mx-2
-        h-16
+        h-20
         sm:mx-auto
         sm:px-8
         lg:px-32
@@ -17,7 +17,7 @@
       <div>
         <NuxtLink to="/">
           <img
-            class="block h-10 w-auto logo-shadow"
+            class="block h-12 w-auto logo-shadow"
             src="@/assets/mcl-acm-logo.png"
             alt="MCL-ACM Logo"
           />
@@ -39,7 +39,6 @@
             px-3
             py-2
             rounded-md
-            text-base
             font-medium
             drop-shadow-lg
             text-shadow text-center
