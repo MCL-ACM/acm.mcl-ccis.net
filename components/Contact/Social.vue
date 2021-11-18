@@ -9,7 +9,7 @@
                     </a>
                     
                 </div>
-                <a class="font-extralight" :href="item.link">{{item.link}}</a>
+                <a class="font-extralight tracking-widest " :href="item.link">{{item.link}}</a>
             </div>
         </div>
   </section>
