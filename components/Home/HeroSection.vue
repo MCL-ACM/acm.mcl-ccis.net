@@ -1,7 +1,7 @@
 <template>
   <div class="h-screen">
     <!-- Main Content -->
-    <div class="z-20 sm:mt-20 h-full relative">
+    <div class="z-20 sm:mt-20 h-full relative mt-8">
       <!-- Logo and Title -->
       <div>
         <img
