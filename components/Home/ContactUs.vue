@@ -11,7 +11,7 @@
     <!-- Main Content of Contact Us -->
     <div class="mx-auto my-auto sm:ml-auto sm:mr-14">
       <NuxtLink
-        to="/contact"
+        to="/contact-us"
         class="
           flex flex-row
           items-center
