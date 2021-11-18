@@ -1,6 +1,6 @@
 <template>
   <div class="relative">
-    <main class="flex flex-col lg:px-32">
+    <main class="flex flex-col lg:px-32 min-h-screen">
       <h1 class="text-dark-blue text-4xl font-bold mb-6">Members</h1>
       <MembersCollapsibleItem class="collapse-item">
         <template #header>
