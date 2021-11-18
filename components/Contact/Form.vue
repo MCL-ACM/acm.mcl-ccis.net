@@ -25,8 +25,7 @@
             <div class="mt-4 float-right">
                 <input type="submit" class=" cursor-pointer hover:bg-purple-700 text-lg font-medium bg-blue text-white rounded-full px-12 py-2 mt-2" value="Send"><br>
             </div>
-            <ul class="list-item list-disc">
-                
+            <ul v-if="checkForm() == false && trySent" class="list-item list-disc">
                 <li  class="pt-4">Name, Email, and Message must be filled!</li>
             </ul>
         </form>
@@ -44,21 +43,25 @@ export default {
             user_name: null,
             user_email: null,
             message: null,
-            animated: false,
+            trySent: false
         }
     },
 
     methods: {
         onlyWS(input){
-            return(!input.replace(/\s/g, '').length)
+            if(input){
+                return(!input.replace(/\s/g, '').length)
+            }
         },
 
         checkForm(){
             return(
+                this.user_email&&
+                this.message &&
                 this.user_email &&
-            !this.onlyWS(this.user_name) 
-            && !this.onlyWS(this.user_email) 
-            && !this.onlyWS(this.message)
+                !this.onlyWS(this.user_name) 
+                && !this.onlyWS(this.user_email) 
+                && !this.onlyWS(this.message)
             )
             
         },
@@ -70,7 +73,8 @@ export default {
         },
 
         sendEmail() {
-            
+           console.log(this.checkForm())
+           console.log(this.checkEmail())
             if(this.checkForm() && this.checkEmail()) {
                 sendForm('service_h4nxt1g', 'template_xozr0ko', this.$refs.form, 'user_HjRyAOakAT9wan4erehrS')
                     .then((result) => {
@@ -79,6 +83,9 @@ export default {
                         console.log('FAILED...', error.text)
                     })
                 this.showModal()
+                this.trySent = false
+            } else{
+                this.trySent = true
             }
         },
         
