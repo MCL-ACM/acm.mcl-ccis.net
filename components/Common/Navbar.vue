@@ -8,7 +8,8 @@
         items-center
         justify-between
         h-20
-        px-4 sm:px-0
+        px-4
+        sm:px-0
       "
     >
       <!-- Logo -->
@@ -51,27 +52,29 @@
     </div>
 
     <!-- Mobile Links -->
-    <div
-      v-show="mobileMenuVisible"
-      class="bg-light-green text-center p-2 sm:hidden"
-    >
-      <NuxtLink
-        v-for="(navitem, index) in navitems"
-        :key="index"
-        :to="navitem.link.toString()"
-        class="
-          block
-          text-lg
-          font-medium
-          rounded-md
-          px-3
-          py-2
-          mb-2
-          hover:bg-gray-700 hover:bg-opacity-40 hover:text-white
-        "
-        >{{ navitem.title }}
-      </NuxtLink>
-    </div>
+    <transition name="nav-slide">
+      <div
+        v-show="mobileMenuVisible"
+        class="bg-light-green text-center p-2 sm:hidden"
+      >
+        <NuxtLink
+          v-for="(navitem, index) in navitems"
+          :key="index"
+          :to="navitem.link.toString()"
+          class="
+            block
+            text-lg
+            font-medium
+            rounded-md
+            px-3
+            py-2
+            mb-2
+            hover:bg-gray-700 hover:bg-opacity-40 hover:text-white
+          "
+          >{{ navitem.title }}
+        </NuxtLink>
+      </div>
+    </transition>
   </nav>
 </template>
 
@@ -122,5 +125,18 @@ export default {
 
 .text-shadow {
   text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.2);
+}
+
+.nav-slide-enter-active,
+.nav-slide-leave-active {
+  transition: max-height 0.5s ease;
+  overflow: hidden;
+  max-height: 200rem;
+}
+
+.nav-slide-enter,
+.nav-slide-leave-to {
+  max-height: 0;
+  overflow: hidden;
 }
 </style>
