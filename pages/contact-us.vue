@@ -10,7 +10,7 @@
     <h1 class="text-5xl font-bold mb-8 text-dark-blue">Contact Us</h1>
 
     <div class="relative flex lg:flex-row flex-col gap-10 lg:gap-20 flex-wrap">
-      <div class="lg:w-1/3 flex-grow">
+      <div class="lg:w-1/2">
         <ContactForm />
       </div>
       <div class="flex-grow">
