@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center gap-10 mt-8">
+  <div class="flex flex-col gap-10 mt-8">
     <!-- Header -->
     <div>
       <p class="font-bold text-4xl text-dark-blue mb-4">Events</p>
@@ -22,7 +22,7 @@
     </div>
 
     <!-- Show More -->
-    <NuxtLink to="events">
+    <NuxtLink to="events" class="mx-auto">
       <Button text="Show More" class="px-10" />
     </NuxtLink>
   </div>
