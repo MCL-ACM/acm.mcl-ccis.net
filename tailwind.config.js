@@ -19,7 +19,7 @@ module.exports = {
         lg: '960px',
         xl: '1140px',
         '2xl': '1320px',
-        '3xl': '1700px',
+        '3xl': '1600px',
       },
       padding:"1rem"
     },
