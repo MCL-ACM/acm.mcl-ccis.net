@@ -25,7 +25,10 @@
             <div class="mt-4 float-right">
                 <input type="submit" class=" cursor-pointer hover:bg-purple-700 text-lg font-medium bg-blue text-white rounded-full px-12 py-2 mt-2" value="Send"><br>
             </div>
-            <p class="pt-4"> Name, Email, and Message must be filled! </p>
+            <ul class="list-item list-disc">
+                
+                <li  class="pt-4">Name, Email, and Message must be filled!</li>
+            </ul>
         </form>
     </section>
 </template>
@@ -41,6 +44,7 @@ export default {
             user_name: null,
             user_email: null,
             message: null,
+            animated: false,
         }
     },
 
@@ -51,18 +55,23 @@ export default {
 
         checkForm(){
             return(
-                this.user_name 
-            && this.user_email 
-            && this.message
-            && !this.onlyWS(this.user_name) 
+                this.user_email &&
+            !this.onlyWS(this.user_name) 
             && !this.onlyWS(this.user_email) 
             && !this.onlyWS(this.message)
             )
             
         },
 
+        checkEmail(){
+            const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            
+            return re.test(this.user_email);
+        },
+
         sendEmail() {
-            if(this.checkForm()) {
+            
+            if(this.checkForm() && this.checkEmail()) {
                 sendForm('service_h4nxt1g', 'template_xozr0ko', this.$refs.form, 'user_HjRyAOakAT9wan4erehrS')
                     .then((result) => {
                         console.log('SUCCESS!', result.text)
@@ -72,6 +81,7 @@ export default {
                 this.showModal()
             }
         },
+        
         showModal() {
             this.isModalVisible = true;
         },
