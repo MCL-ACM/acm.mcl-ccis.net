@@ -5,7 +5,7 @@
             <article class="pt-32">
                 <AboutPurpose/>
             </article>
-            <article class="pt-72 pb-20">
+            <article class="pt-40 pb-20">
                 <AboutVBackground/>
             </article>
       </div>
