@@ -7,38 +7,33 @@
     flex
     justify-center
     items-center
+    z-40
   ">
-    <div class="">
-      <header class="">
+    <div class=" bg-white flex flex-col space-y-8 md:p-20 p-10 m-16 max-w-2xl rounded-3xl ">
+      <header class="text-xl md:text-5xl font-bold md:mb-4 text-dark-blue">
         <slot name="header">
-          This is the default title!
+          Thank you for contacting us!
         </slot>
-        <button
-          type="button"
-          class="btn-close"
-          @click="close"
-        >
-          x
-        </button>
+        
       </header>
 
-      <section class="">
+      <section class="md:text-2xl">
         <slot name="body">
-          This is the default body!
+          There will be no official transactions using this service. For formal transactions and possible partnerships, we will reply with the email you have provided.
+          If you have not received a reply from us, please make sure that you have provided the correct email address.
         </slot>
        </section>
 
       <footer class="">
         <slot name="footer">
-          This is the default footer!
+          
         </slot>
-        <button
-          type="button"
-          class="btn-green"
-          @click="close"
+        <Button
+          @clicked="close()"
+          text="I agree"
         >
-          Close Modal
-        </button>
+          I agree
+        </Button>
       </footer>
     </div>
   </div>
