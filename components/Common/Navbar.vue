@@ -53,11 +53,8 @@
 
     <!-- Mobile Links -->
     <transition name="nav-slide">
-      <div class="h-screen flex flex-col">
-        <div
-          v-show="mobileMenuVisible"
-          class="bg-light-green text-center p-2 sm:hidden"
-        >
+      <div v-show="mobileMenuVisible" class="h-screen flex flex-col">
+        <div class="bg-light-green text-center p-2 sm:hidden">
           <NuxtLink
             v-for="(navitem, index) in navitems"
             :key="index"
@@ -75,7 +72,7 @@
             >{{ navitem.title }}
           </NuxtLink>
         </div>
-        
+
         <!-- Toggle Area -->
         <div class="flex-grow" @click="toggleMobileMenu()" />
       </div>
