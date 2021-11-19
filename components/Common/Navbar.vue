@@ -53,26 +53,31 @@
 
     <!-- Mobile Links -->
     <transition name="nav-slide">
-      <div
-        v-show="mobileMenuVisible"
-        class="bg-light-green text-center p-2 sm:hidden"
-      >
-        <NuxtLink
-          v-for="(navitem, index) in navitems"
-          :key="index"
-          :to="navitem.link.toString()"
-          class="
-            block
-            text-lg
-            font-medium
-            rounded-md
-            px-3
-            py-2
-            mb-2
-            hover:bg-gray-700 hover:bg-opacity-40 hover:text-white
-          "
-          >{{ navitem.title }}
-        </NuxtLink>
+      <div class="h-screen flex flex-col">
+        <div
+          v-show="mobileMenuVisible"
+          class="bg-light-green text-center p-2 sm:hidden"
+        >
+          <NuxtLink
+            v-for="(navitem, index) in navitems"
+            :key="index"
+            :to="navitem.link.toString()"
+            class="
+              block
+              text-lg
+              font-medium
+              rounded-md
+              px-3
+              py-2
+              mb-2
+              hover:bg-gray-700 hover:bg-opacity-40 hover:text-white
+            "
+            >{{ navitem.title }}
+          </NuxtLink>
+        </div>
+        
+        <!-- Toggle Area -->
+        <div class="flex-grow" @click="toggleMobileMenu()" />
       </div>
     </transition>
   </nav>
