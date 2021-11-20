@@ -19,6 +19,7 @@
               v-for="(event, index) in computedEvents" 
               :key="index" 
               :details="event" 
+              @open-modal="openModal"
             />
         </div>
 
@@ -43,6 +44,12 @@
             Load More
           </button>
         </div>
+
+        <!-- Event Modal -->
+        <EventsEventModal v-if="toggleModal" :details="modalDetails" @close-modal="closeModal" />
+        
+        <!-- Modal Background -->
+        <div v-if="toggleModal" class="fixed inset-0 z-40 opacity-90 bg-gray-50"></div>
         
       </div>
   </section>
@@ -59,8 +66,10 @@ export default {
           cover: '/content/hoc.jpg',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
           images: [
-            '../../assets/img/placeholder_4x3.png',
-            '../../assets/img/placeholder_2.39x1.png'
+            '/content/hoc.jpg',
+            '/content/codex-logo.png',
+            '/content/hoc.jpg',
+            '/content/codex-logo.png',
           ]
         },
         {
@@ -69,8 +78,10 @@ export default {
           cover: '/content/codex-logo.png',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
           images: [
-            '../../assets/img/placeholder_4x3.png',
-            '../../assets/img/placeholder_2.39x1.png'
+            '/content/hoc.jpg',
+            '/content/codex-logo.png',
+            '/content/hoc.jpg',
+            '/content/codex-logo.png',
           ]
         },
         {
@@ -79,8 +90,10 @@ export default {
           cover: '/content/hoc.jpg',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
           images: [
-            '../../assets/img/placeholder_4x3.png',
-            '../../assets/img/placeholder_2.39x1.png'
+            '/content/hoc.jpg',
+            '/content/codex-logo.png',
+            '/content/hoc.jpg',
+            '/content/codex-logo.png',
           ]
         },
         {
@@ -89,8 +102,10 @@ export default {
           cover: '/content/codex-logo.png',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
           images: [
-            '../../assets/img/placeholder_4x3.png',
-            '../../assets/img/placeholder_2.39x1.png'
+            '/content/hoc.jpg',
+            '/content/codex-logo.png',
+            '/content/hoc.jpg',
+            '/content/codex-logo.png',
           ]
         },
         {
@@ -99,8 +114,10 @@ export default {
           cover: '/content/hoc.jpg',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
           images: [
-            '../../assets/img/placeholder_4x3.png',
-            '../../assets/img/placeholder_2.39x1.png'
+            '/content/hoc.jpg',
+            '/content/codex-logo.png',
+            '/content/hoc.jpg',
+            '/content/codex-logo.png',
           ]
         },
         {
@@ -109,8 +126,10 @@ export default {
           cover: '/content/codex-logo.png',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
           images: [
-            '../../assets/img/placeholder_4x3.png',
-            '../../assets/img/placeholder_2.39x1.png'
+            '/content/hoc.jpg',
+            '/content/codex-logo.png',
+            '/content/hoc.jpg',
+            '/content/codex-logo.png',
           ]
         },
         {
@@ -119,8 +138,10 @@ export default {
           cover: '/content/hoc.jpg',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
           images: [
-            '../../assets/img/placeholder_4x3.png',
-            '../../assets/img/placeholder_2.39x1.png'
+            '/content/hoc.jpg',
+            '/content/codex-logo.png',
+            '/content/hoc.jpg',
+            '/content/codex-logo.png',
           ]
         },
         {
@@ -129,17 +150,30 @@ export default {
           cover: '/content/codex-logo.png',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
           images: [
-            '../../assets/img/placeholder_4x3.png',
-            '../../assets/img/placeholder_2.39x1.png'
+            '/content/hoc.jpg',
+            '/content/codex-logo.png',
+            '/content/hoc.jpg',
+            '/content/codex-logo.png',
           ]
         },
       ],
-      limit: 3
+      limit: 3,
+      toggleModal: false,
+      modalDetails: {},
     }
   },
   computed: {
     computedEvents() {
       return this.limit ? this.events.slice(0,this.limit) : this.events
+    }
+  },
+  methods: {
+    openModal(details) {
+      this.modalDetails = details;
+      this.toggleModal = true;
+    },
+    closeModal() {
+      this.toggleModal = false;
     }
   }
 }

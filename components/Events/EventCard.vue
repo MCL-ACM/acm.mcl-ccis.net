@@ -1,9 +1,7 @@
 <template>
-  <NuxtLink @click.native="toggleModal = !toggleModal" to="">
+  <div @click="openModal(details)">
     <!-- Event Card -->
-    <div class="flex 
-                flex-col 
-                justify-end 
+    <div class="justify-end 
                 h-full w-full 
                 px-7 pb-7 pt-80 
                 rounded-3xl 
@@ -20,22 +18,11 @@
         <h2 class="font-bold text-2xl">{{ details.title }}</h2>
       </div>
     </div>
-    
-    <!-- Event Modal -->
-    <EventsEventModal v-if="toggleModal" :details="details" />
-    
-    <!-- Modal Background -->
-    <div v-if="toggleModal" class="fixed inset-0 z-40 opacity-90 bg-gray-50"></div>
-  </NuxtLink>
+  </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      toggleModal: false
-    };
-  },
   props: {
     details: {
       type: Object,
@@ -48,6 +35,11 @@ export default {
             ''
           ]
         })
+    }
+  },
+  methods: {
+    openModal(details) {
+      this.$emit('open-modal', details)
     }
   }
 }

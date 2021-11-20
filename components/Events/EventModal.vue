@@ -15,9 +15,13 @@
                     flex flex-col 
                     text-white 
                     p-12">
-            <div class="max-x-2xl">
-                <h2 class="text-4xl font-bold mb-6">{{ details.title }}</h2>
-                <p class="mb-6">{{ details.description }}</p>
+
+            <div class="max-x-2xl flex flex-col justify-center content-center">
+              <button @click="closeModal" class="font-bold self-end">X</button>
+              
+              <h2 class="text-4xl font-bold mb-6">{{ details.title }}</h2>
+              <p class="mb-6">{{ details.description }}</p>
+
             </div>
             
         </div>
@@ -27,7 +31,7 @@
 
 <script>
 export default {
-    props: {
+  props: {
     details: {
       type: Object,
       default: () => ({
@@ -40,10 +44,14 @@ export default {
           ]
         })
     }
+  },
+  methods: {
+    closeModal() {
+      this.$emit('close-modal')
+    }
   }
 }
 </script>
 
 <style>
-
 </style>
