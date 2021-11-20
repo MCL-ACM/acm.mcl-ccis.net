@@ -37,6 +37,7 @@ import {sendForm} from 'emailjs-com';
 
 
 export default {
+    
     data(){
         return{
             isModalVisible: false,
@@ -76,7 +77,7 @@ export default {
            console.log(this.checkForm())
            console.log(this.checkEmail())
             if(this.checkForm() && this.checkEmail()) {
-                sendForm('service_h4nxt1g', 'template_xozr0ko', this.$refs.form, 'user_HjRyAOakAT9wan4erehrS')
+                sendForm(process.env.SERVICE_KEY, process.env.TEMPLATE_KEY, this.$refs.form, process.env.USER_KEY)
                     .then((result) => {
                         console.log('SUCCESS!', result.text)
                     }, (error) => {

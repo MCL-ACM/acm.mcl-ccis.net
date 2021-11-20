@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button class="flex items-center mb-4" @click="toggleCollapse()">
+    <button class="flex items-center py-3 w-full rounded-lg" @click="toggleCollapse()">
       <!-- icon from https://www.iconfinder.com/icons/293663/down_chevron_icon -->
       <transition name="slide-fade">
         <img
