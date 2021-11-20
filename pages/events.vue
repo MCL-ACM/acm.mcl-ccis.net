@@ -56,7 +56,7 @@ export default {
         {
           title: 'Hello Programming: Hour of Code',
           date: 'January 1, 2021',
-          cover: '../../assets/img/hoc.jpg',
+          cover: '/content/hoc.jpg',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
           images: [
             '../../assets/img/placeholder_4x3.png',
@@ -66,7 +66,7 @@ export default {
         {
           title: 'CodeX',
           date: 'March 2021',
-          cover: '../../assets/img/placeholder_4x3.png',
+          cover: '/content/codex-logo.png',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
           images: [
             '../../assets/img/placeholder_4x3.png',
@@ -74,9 +74,9 @@ export default {
           ]
         },
         {
-          title: 'Hello Programming: Hour of Code 2',
+          title: 'Hello Programming: Hour of Code',
           date: 'January 1, 2021',
-          cover: '../../assets/img/hoc.jpg',
+          cover: '/content/hoc.jpg',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
           images: [
             '../../assets/img/placeholder_4x3.png',
@@ -84,9 +84,9 @@ export default {
           ]
         },
         {
-          title: 'CodeX 2',
+          title: 'CodeX',
           date: 'March 2021',
-          cover: '../../assets/img/placeholder_4x3.png',
+          cover: '/content/codex-logo.png',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
           images: [
             '../../assets/img/placeholder_4x3.png',
@@ -94,9 +94,9 @@ export default {
           ]
         },
         {
-          title: 'Hello Programming: Hour of Code 3',
+          title: 'Hello Programming: Hour of Code',
           date: 'January 1, 2021',
-          cover: '../../assets/img/hoc.jpg',
+          cover: '/content/hoc.jpg',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
           images: [
             '../../assets/img/placeholder_4x3.png',
@@ -104,9 +104,9 @@ export default {
           ]
         },
         {
-          title: 'CodeX 3',
+          title: 'CodeX',
           date: 'March 2021',
-          cover: '../../assets/img/placeholder_4x3.png',
+          cover: '/content/codex-logo.png',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
           images: [
             '../../assets/img/placeholder_4x3.png',
@@ -114,9 +114,9 @@ export default {
           ]
         },
         {
-          title: 'Hello Programming: Hour of Code 4',
+          title: 'Hello Programming: Hour of Code',
           date: 'January 1, 2021',
-          cover: '../../assets/img/hoc.jpg',
+          cover: '/content/hoc.jpg',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
           images: [
             '../../assets/img/placeholder_4x3.png',
@@ -124,15 +124,15 @@ export default {
           ]
         },
         {
-          title: 'CodeX 4',
+          title: 'CodeX',
           date: 'March 2021',
-          cover: '../../assets/img/placeholder_4x3.png',
+          cover: '/content/codex-logo.png',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
           images: [
             '../../assets/img/placeholder_4x3.png',
             '../../assets/img/placeholder_2.39x1.png'
           ]
-        }
+        },
       ],
       limit: 3
     }

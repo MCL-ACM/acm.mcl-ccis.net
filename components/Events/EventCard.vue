@@ -1,16 +1,19 @@
 <template>
   <NuxtLink @click.native="toggleModal = !toggleModal" to="">
     <!-- Event Card -->
-    <div class="event-card 
-                relative 
-                flex 
+    <div class="flex 
                 flex-col 
                 justify-end 
                 h-full w-full 
                 px-7 pb-7 pt-80 
                 rounded-3xl 
                 hover:shadow-2xl 
+                bg-cover
+                bg-center
                 block"
+        :style="{
+          'background-image': `linear-gradient(rgba(44, 193, 199, 0) 0%, rgba(44, 193, 199, 0.45) 30%, rgba(217, 237, 146, 1) 100%), url('${details.cover}')`,
+        }"
                 >
       <div>
         <p class="font-extralight text-lg">{{ details.date }}</p>
@@ -51,13 +54,4 @@ export default {
 </script>
 
 <style>
-.event-card {
-  background-image: linear-gradient(
-    rgba(44, 193, 199, 0) 0%, 
-    rgba(44, 193, 199, 0.45) 30%, 
-    rgba(217, 237, 146, 1) 100%),
-    url('../../assets/img/hoc.jpg');
-  background-size: cover;
-  background-position: center;
-}
 </style>
