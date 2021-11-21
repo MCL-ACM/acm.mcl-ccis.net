@@ -23,11 +23,12 @@
             </div>
 
             <div class="mt-4 float-right">
-                <input type="submit" class=" cursor-pointer hover:bg-purple-700 text-lg font-medium bg-blue text-white rounded-full px-12 py-2 mt-2" value="Send"><br>
+                <Button :type="submit" text="Send" class="px-10" value="Send"></Button><br>
             </div>
             <ul v-if="checkForm() == false && trySent" class="list-item list-disc">
                 <li  class="pt-4">Name, Email, and Message must be filled!</li>
             </ul>
+            
         </form>
     </section>
 </template>
