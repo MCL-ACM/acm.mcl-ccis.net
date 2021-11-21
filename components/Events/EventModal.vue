@@ -32,7 +32,10 @@
                     :key="index" 
                     :index="index"
                     :visibleImage="visibleImage" >
-                    <img :src="image" alt="" class="object-cover max-h-80 w-full">
+                    <a :href="image" target="_blank">
+                      <img :src="image" alt="" class="object-cover max-h-80 w-full">
+                    </a>
+                    
                   </EventsSlideshowImage>
                 </EventsSlideshow>
               </div>
