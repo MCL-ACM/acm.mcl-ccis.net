@@ -1,5 +1,5 @@
 <template>
-  <nav class="z-50">
+  <nav class="z-20">
     <!-- Navbar -->
     <div
       class="
