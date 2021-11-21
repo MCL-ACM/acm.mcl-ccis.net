@@ -22,6 +22,21 @@
               <h2 class="text-4xl font-bold mb-6">{{ details.title }}</h2>
               <p class="mb-6">{{ details.description }}</p>
 
+              <!-- Slideshow -->
+              <div class="m-auto w-full md:w-1/2">
+                <EventsSlideshow
+                  @prev="prevImage"
+                  @next="nextImage"
+                >
+                  <EventsSlideshowImage v-for="(image, index) in details.images" 
+                    :key="index" 
+                    :index="index"
+                    :visibleImage="visibleImage" >
+                    <img :src="image" alt="" class="object-cover max-h-80 w-full">
+                  </EventsSlideshowImage>
+                </EventsSlideshow>
+              </div>
+
             </div>
             
         </div>
@@ -31,6 +46,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      visibleImage: 0,
+    }
+  },
   props: {
     details: {
       type: Object,
@@ -45,9 +65,31 @@ export default {
         })
     }
   },
+  computed: {
+    imagesLen() {
+      return Object.keys(this.details.images).length;
+    }
+  },
   methods: {
     closeModal() {
       this.$emit('close-modal')
+    },
+    prevImage() {
+      console.log(typeof(this.details.images));
+      if(this.visibleImage === 0) {
+        this.visibleImage = this.imagesLen - 1;
+      }
+      else {
+        this.visibleImage--;
+      }
+    },
+    nextImage() {
+      if(this.visibleImage >= this.imagesLen - 1) {
+        this.visibleImage = 0;
+      }
+      else {
+        this.visibleImage++;
+      }
     }
   }
 }
