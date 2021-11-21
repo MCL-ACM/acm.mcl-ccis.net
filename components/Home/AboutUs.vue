@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="relative max-w-full overflow-hidden">
     <!-- Wave on top -->
     <div class="about-us-wave">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -38,6 +38,13 @@
         <Button text="Learn more about MCL-ACM" />
       </NuxtLink>
     </div>
+
+    <!-- Background Decorations -->
+    <div class="bg-details overflow-hidden">
+      <img id="dots-diamond" src="@/assets/svg/dots-diamond.svg" />
+      <img id="line-diamond-1" src="@/assets/svg/line-diamond-1.svg" />
+      <img id="line-diamond-2" src="@/assets/svg/line-diamond-2.svg" />
+    </div>
   </div>
 </template>
 
@@ -69,5 +76,26 @@ export default {};
     rgba(68, 64, 248, 0.138) 59.9%,
     rgba(0, 255, 209, 0) 100%
   );
+}
+
+.bg-details {
+  overflow: hidden;
+}
+
+.bg-details > * {
+  position: absolute;
+}
+
+#dots-diamond {
+  top: 5%;
+  right: 0;
+}
+#line-diamond-1 {
+  top: 20%;
+  right: 0;
+}
+#line-diamond-2 {
+  top: 45%;
+  right: 0;
 }
 </style>
