@@ -1,7 +1,7 @@
 <template>
-  <div class="min-h-screen p-4">
+  <div class="h-screen">
     <!-- Main Content -->
-    <div class="z-20 sm:mt-20">
+    <div class="z-20 sm:mt-20 h-full relative mt-8">
       <!-- Logo and Title -->
       <div>
         <img
@@ -9,7 +9,7 @@
           alt="MCL-ACM Logo"
           class="sm:w-80 h-auto w-60 mb-3"
         />
-        <p class="font-bold text-4xl leading-tight text-dark-blue sm:text-5xl">
+        <p class="font-bold text-4xl text-dark-blue sm:text-5xl">
           Malayan Colleges Laguna <br />
           ACM Student Chapter
         </p>
@@ -21,7 +21,7 @@
       </div>
 
       <!-- Quips -->
-      <div class="text-right mt-20">
+      <div class="sm:absolute sm:bottom-72 mt-20 sm:mt-0 w-full text-right">
         <p class="text-xl">Promoting Excellence in Modern Computing</p>
         <p class="text-lg">A platform for students and enthusiasts alike</p>
       </div>

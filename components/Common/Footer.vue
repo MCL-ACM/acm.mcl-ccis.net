@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div class="flex flex-col my-4 px-8 sm:flex-row sm:my-20 lg:px-32">
+    <div class="container flex flex-col my-4 sm:flex-row sm:my-20">
       <!-- Contact Information -->
       <div
         class="
           flex flex-col
-          items-start items-center
+          items-center
           text-center
           sm:text-left sm:items-start
           mt-4
@@ -20,10 +20,10 @@
         <p class="font-thin my-2">
           Pulo Diezmo Rd, Pulo, Cabuyao, Laguna 4026, Philippines
         </p>
-        <p class="font-thin">mcl.acmstudchapter@gmail.com</p>
+        <p class="font-thin">acm.mclstudchapter@gmail.com</p>
 
-        <!-- Sockal Icons -->
-        <div class="flex flex-row mt-2 space-x-6 mt-4">
+        <!-- Social Icons -->
+        <div class="flex flex-row space-x-6 mt-4">
           <div v-for="(item, index) in socialItems" :key="index">
             <div class="bg-blue h-14 w-14 p-4 rounded-full">
               <a :href="item.link">
@@ -42,7 +42,7 @@
             :key="index"
             class="text-lg underline mb-4 font-medium text-blue"
           >
-            <a :href="item.link">{{ item.name }}</a>
+            <NuxtLink :to="item.link.toString()">{{ item.name }}</NuxtLink>
           </p>
         </ul>
       </div>

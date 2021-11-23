@@ -1,5 +1,5 @@
 <template>
-  <div class="card-bg p-8">
+  <div class="card-bg p-8 rounded-lg">
     <div class="flex flex-row flex-wrap justify-center gap-4 bg-opacity-50">
       <MembersIconedMember
         v-for="(member, index) in members"
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  props: ["members"],
+  props: { members: { type: Array, default: () => [] } },
 };
 </script>
 

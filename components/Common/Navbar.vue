@@ -1,48 +1,50 @@
 <template>
-  <nav>
+  <nav class="z-20">
     <!-- Navbar -->
     <div
       class="
+        sm:container
         flex flex-row
         items-center
         justify-between
-        max-w-7xl
-        mx-2
-        h-16
-        sm:mx-auto
+        h-20
+        px-4
+        sm:px-0
       "
     >
       <!-- Logo -->
       <div>
-        <a href="/">
+        <NuxtLink to="/">
           <img
-            class="block h-10 w-auto logo-shadow"
+            class="block h-12 w-auto logo-shadow"
             src="@/assets/mcl-acm-logo.png"
             alt="MCL-ACM Logo"
           />
-        </a>
+        </NuxtLink>
       </div>
 
       <!-- Wide Links -->
-      <div class="flex flex-row content-evenly ml-auto hidden sm:block">
-        <a
+      <div class="flex-row content-evenly ml-auto hidden sm:flex gap-3">
+        <NuxtLink
           v-for="(navitem, index) in navitems"
           :key="index"
-          :href="navitem.link"
+          :to="navitem.link.toString()"
           class="
             text-white
-            hover:bg-gray-500 hover:bg-opacity-30
+            transition
+            duration-100
+            ease-in-out
+            hover:bg-gray-400 hover:bg-opacity-30
             px-3
             py-2
             rounded-md
-            text-base
             font-medium
             drop-shadow-lg
-            text-shadow
+            text-shadow text-center
           "
         >
           {{ navitem.title }}
-        </a>
+        </NuxtLink>
       </div>
 
       <!-- Hamburger Button -->
@@ -50,27 +52,31 @@
     </div>
 
     <!-- Mobile Links -->
-    <div
-      v-show="mobileMenuVisible"
-      class="bg-light-green text-center p-2 sm:hidden"
-    >
-      <a
-        v-for="(navitem, index) in navitems"
-        :key="index"
-        :href="navitem.link"
-        class="
-          block
-          text-base text-lg
-          font-medium
-          rounded-md
-          px-3
-          py-2
-          mb-2
-          hover:bg-gray-700 hover:bg-opacity-40 hover:text-white
-        "
-        >{{ navitem.title }}
-      </a>
-    </div>
+    <transition name="nav-slide">
+      <div v-show="mobileMenuVisible" class="h-screen flex flex-col">
+        <div class="bg-light-green text-center p-2 sm:hidden">
+          <NuxtLink
+            v-for="(navitem, index) in navitems"
+            :key="index"
+            :to="navitem.link.toString()"
+            class="
+              block
+              text-lg
+              font-medium
+              rounded-md
+              px-3
+              py-2
+              mb-2
+              hover:bg-gray-700 hover:bg-opacity-40 hover:text-white
+            "
+            >{{ navitem.title }}
+          </NuxtLink>
+        </div>
+
+        <!-- Toggle Area -->
+        <div class="flex-grow" @click="toggleMobileMenu()" />
+      </div>
+    </transition>
   </nav>
 </template>
 
@@ -97,7 +103,7 @@ export default {
       },
       {
         title: "Contact",
-        link: "/contact",
+        link: "/contact-us",
       },
     ],
   }),
@@ -111,9 +117,28 @@ export default {
 
 <style lang="scss" scoped>
 .logo-shadow {
+  transition: filter 0.1s ease;
   filter: drop-shadow(4px 4px 7px rgba(0, 0, 0, 0.2));
 }
+.logo-shadow:hover {
+  transition: filter 0.1s ease;
+  filter: drop-shadow(4px 4px 7px rgba(0, 0, 0, 0.3));
+}
+
 .text-shadow {
   text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.2);
+}
+
+.nav-slide-enter-active,
+.nav-slide-leave-active {
+  transition: max-height 0.5s ease;
+  overflow: hidden;
+  max-height: 200rem;
+}
+
+.nav-slide-enter,
+.nav-slide-leave-to {
+  max-height: 0;
+  overflow: hidden;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button class="flex items-center mb-4" @click="toggleCollapse()">
+    <button class="flex items-center py-3 w-full rounded-lg" @click="toggleCollapse()">
       <!-- icon from https://www.iconfinder.com/icons/293663/down_chevron_icon -->
       <transition name="slide-fade">
         <img
@@ -13,7 +13,7 @@
       <slot name="header">Collapse</slot>
     </button>
     <transition name="content-transition">
-      <div v-if="!collapsed">
+      <div v-show="!collapsed">
         <slot name="content"></slot>
       </div>
     </transition>
@@ -47,8 +47,8 @@ export default {
 .content-transition-enter-active,
 .content-transition-leave-active {
   transition: max-height 0.4s ease;
-  max-height: 1000px;
   overflow: hidden;
+  max-height: 200rem;
 }
 
 .content-transition-enter,

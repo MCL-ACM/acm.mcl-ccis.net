@@ -1,5 +1,5 @@
 <template>
-  <div class="flexmax-h-screen my-14">
+  <div class="flex my-32">
     <!-- Main Content of Members -->
     <div class="my-auto">
       <p class="font-bold text-4xl text-dark-blue">Our Members</p>
@@ -9,7 +9,9 @@
         pellentesque massa purus vel pretium velit. Ipsum varius urna varius
         iaculis massa quis. Diam molestie nisl ultricies ultrices.
       </p>
-      <Button text="View our Members" class="px-14" />
+      <NuxtLink to="members">
+        <Button text="View our Members" class="px-14" />
+      </NuxtLink>
     </div>
   </div>
 </template>

@@ -1,20 +1,19 @@
 <template>
   <main class="flex flex-col">
-    <div class="hero-section pb-10 pt-20 lg:px-32">
-      <HomeHeroSection />
+    <div class="hero-section pb-10 pt-20">
+      <HomeHeroSection class="container"/>
     </div>
-    <div class="about-us rounded-br-4xl sm:rounded-br-5xl lg:px-32">
-      <HomeAboutUs />
+    <div class="about-us-bg">
+      <HomeAboutUs class="container"/>
     </div>
-
-    <div class="p-6 lg:px-32">
-      <HomeEvents />
+    <div class="pt-16">
+      <HomeEvents class="container"/>
     </div>
-    <div class="p-6 our-members lg:px-32">
-      <HomeMembers />
+    <div class="our-members">
+      <HomeMembers class="container"/>
     </div>
-    <div class="p-6 contact-us relative lg:px-32">
-      <HomeContactUs />
+    <div class="contact-us-bg">
+      <HomeContactUs class="container"/>
     </div>
   </main>
 </template>
@@ -25,8 +24,11 @@ export default {};
 
 <style lang="scss" scoped>
 
-.about-us {
+.about-us-bg {
+  @apply rounded-br-4xl sm:rounded-br-5xl;
   backdrop-filter: blur(9px);
+  background-repeat: no-repeat;
+  background-size: cover;
   background-image: url("@/assets/img/mcl-bg.png"),
     linear-gradient(
       304.9deg,
@@ -39,7 +41,7 @@ export default {};
     );
 }
 
-.contact-us {
+.contact-us-bg {
   background: linear-gradient(
     to right,
     rgba(31, 97, 153, 1),

@@ -1,6 +1,6 @@
 <template>
-  <div class="px-4">
-    <main class="flex flex-col lg:px-32">
+  <div class="relative">
+    <main class="container flex flex-col min-h-screen">
       <h1 class="text-dark-blue text-4xl font-bold mb-6">Members</h1>
       <MembersCollapsibleItem class="collapse-item">
         <template #header>
@@ -42,6 +42,10 @@
         </template>
       </MembersCollapsibleItem>
     </main>
+    <div
+      class="gradient-bg-reverse absolute bottom-0 h-screen w-full"
+      style="z-index: -1"
+    ></div>
   </div>
 </template>
 
@@ -52,27 +56,27 @@ export default {
       executiveCommittee: [
         {
           fullName: "Kikuchi, Khristian",
-          image: "/images/president.png",
+          image: "/images/members/sirian.png",
           title: "Adviser",
         },
         {
           fullName: "Paz, James Michael E. ",
-          image: "/images/president.png",
+          image: "/images/members/james.jpg",
           title: "President",
         },
         {
           fullName: "Palisoc, Karlo Miguel F.",
-          image: "/images/president.png",
+          image: "/images/members/karlo.jpg",
           title: "Vice President",
         },
         {
           fullName: "Mapote, Jayvee N.",
-          image: "/images/president.png",
+          image: "/images/members/jv.jpg",
           title: "Secretary",
         },
         {
           fullName: "Mediodia, Patrick V.",
-          image: "/images/president.png",
+          image: "/images/members/pat.jpg",
           title: "Treasurer",
         },
       ],
@@ -81,7 +85,8 @@ export default {
           title: "Membership Committee",
           committeeChair: {
             fullName: "Panti, John Arthur G.",
-            image: "/images/president.png",
+            image: "/images/members/arthur.jpg",
+
             title: "Committee Chair",
           },
           members: [
@@ -94,7 +99,7 @@ export default {
           title: "Research and Development Committee",
           committeeChair: {
             fullName: "Lipat, Job J.",
-            image: "/images/president.png",
+            image: "/images/members/job.jpg",
             title: "Committee Chair",
           },
           members: [
@@ -107,7 +112,7 @@ export default {
           title: "Finance Committee",
           committeeChair: {
             fullName: "Mediodia, Patrick V.",
-            image: "/images/president.png",
+            image: "/images/members/pat.jpg",
             title: "Committee Chair",
           },
           members: ["Gurion, Sherald Ryoj O.", "Melchor, Carlos Lorenzo M."],
@@ -116,7 +121,7 @@ export default {
           title: "Publication Committee",
           committeeChair: {
             fullName: "Hermoso, Vivien Ericca I.",
-            image: "/images/president.png",
+            image: "/images/members/vivien.jpg",
             title: "Committee Chair",
           },
           members: ["Bautista, Roigene Marc J.", "Rabano, Charmaine Eunice I."],
@@ -145,6 +150,11 @@ export default {
       ],
     },
   }),
+  head() {
+    return {
+      title: "Members - MCL-ACM",
+    };
+  },
 };
 </script>
 

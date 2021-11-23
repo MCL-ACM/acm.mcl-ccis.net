@@ -1,8 +1,11 @@
 <template>
-  <div class="bg-opacity-50 p-8 card-bg">
+  <div class="bg-opacity-50 p-8 card-bg rounded-lg">
     <div
       class="
-        grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4
+        grid
+        sm:grid-cols-2
+        md:grid-cols-3
+        lg:grid-cols-4
         justify-evenly
         content-start
         flex-grow
@@ -20,7 +23,12 @@
 
 <script>
 export default {
-  props: ["names"],
+  props: {
+    names: {
+      type: Array,
+      default: () => [],
+    },
+  },
 };
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col sm:flex-row bg-opacity-50 p-8 card-bg">
+  <div class="flex flex-col sm:flex-row bg-opacity-50 p-8 card-bg rounded-lg">
     <MembersIconedMember
       class="sm:w-64 my-auto"
       v-bind="details.committeeChair"
@@ -12,8 +12,8 @@
         content-start
         flex-grow
         mx-8
-        text-center
         mt-4
+        text-center
       "
     >
       <p
@@ -29,7 +29,15 @@
 
 <script>
 export default {
-  props: ["details"],
+  props: {
+    details: {
+      type: Object,
+      default: () => ({
+        committeeChair: "",
+        members: [],
+      }),
+    },
+  },
 };
 </script>
 

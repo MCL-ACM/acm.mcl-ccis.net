@@ -1,5 +1,21 @@
 <template>
-  <button class="text-lg font-medium bg-blue text-white rounded-full px-5 py-3">
+  <button
+    class="
+      text-lg
+      font-medium
+      bg-blue
+      text-white
+      rounded-full
+      px-5
+      py-3
+      transition
+      duration-75
+      transform
+      hover:scale-105 hover:shadow-lg
+    "
+    @click="$emit('clicked')"
+    
+  >
     {{ text }}
   </button>
 </template>
@@ -8,16 +24,11 @@
 export default {
   props: {
     text: {
+      type: String,
       default: "",
-      type: String
     },
-    color: {
-      default: "#122F45",
-      type: String
-    }
-  }
+  },
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
