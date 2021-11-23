@@ -1,7 +1,7 @@
 <template>
-  <div class="relative bg-white ">
+  <div class="relative bg-white rounded-3xl">
     <main class="container flex flex-col min-h-screen">
-      <h1 class="text-dark-blue text-5xl font-bold mb-6">Members</h1>
+      <h1 class="text-dark-blue text-5xl font-bold mb-6 pt-10 ">Members</h1>
       <MembersCollapsibleItem class="collapse-item">
         <template #header>
           <p class="collapse-header">Committees</p>

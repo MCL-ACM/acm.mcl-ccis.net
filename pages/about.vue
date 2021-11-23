@@ -10,7 +10,7 @@
             </article>
       </div>
       
-      <article class="relative lg:py-48">
+      <article class="relative lg:py-24">
           <div class="rounded-t-3xl absolute inset-0 w-full bg-gradient-to-tr from-sea-green to-light-green opacity-80"/>
           <div class="container relative">
               <AboutACM/>
