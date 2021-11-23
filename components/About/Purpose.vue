@@ -1,17 +1,18 @@
 <template>
   <article class="flex md:flex-row flex-col-reverse tracking-wider">
     <section class="flex-auto">
-      <header class="text-5xl font-bold mb-14 text-dark-blue">
+      <header class="text-5xl font-bold mt-4 mb-4 lg:mb-14 text-dark-blue">
         <h1>Purpose</h1>
       </header>
       <ol
         class="
           list-decimal list-inside
-          text-xl text-justify
+          text-sm
+          lg:text-xl text-justify
           font-extralight
-          leading-9
+          lg:leading-9
           ml-2
-          mr-28
+          lg:mr-28
         "
       >
         <li>
@@ -36,7 +37,7 @@
       </ol>
     </section>
     <img
-      class="max-w-lg object-scale-down flex-auto"
+      class="rounded-3xl lg:rounded-none max-w-lg object-scale-down flex-auto"
       src="../../assets/img/placeholder_4x3.png"
     />
   </article>
