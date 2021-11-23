@@ -23,7 +23,7 @@
             </div>
 
             <div class="mt-4 float-right">
-                <Button :type="submit" text="Send" class="px-10" value="Send"></Button><br>
+                <Button type="submit" text="Send" class="px-10" value="Send"></Button><br>
             </div>
             <ul v-if="checkForm() == false && trySent" class="list-item list-disc">
                 <li  class="pt-4">Name, Email, and Message must be filled!</li>
