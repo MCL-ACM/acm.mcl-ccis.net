@@ -8,10 +8,7 @@
       rounded-full
       px-5
       py-3
-      transition
-      duration-75
-      transform
-      hover:scale-105 hover:shadow-lg
+      hover-shadow
     "
     @click="$emit('clicked')"
     

@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="bg-white p-10 rounded-3xl shadow-xl">
         <h1 class="text-2xl font-bold mb-6 text-black">Address</h1>
         
         <div class="relative h-full">

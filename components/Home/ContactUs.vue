@@ -17,15 +17,15 @@
           font-bold
           text-white
           rounded-lg
-          text-4xl
+          text-5xl
           p-4
           hover:bg-gray-200 hover:bg-opacity-10
         "
       >
-        <p class="mr-2 z-20 mt-0">Contact Us</p>
+        <h1 class="mr-2 z-20 mt-0">Contact Us</h1>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-8 w-auto"
+          class="h-12 w-auto"
           viewBox="0 0 20 20"
           fill="currentColor"
         >

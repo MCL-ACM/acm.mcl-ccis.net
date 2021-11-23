@@ -2,7 +2,7 @@
   <div class="flex flex-col gap-10 mt-8">
     <!-- Header -->
     <div>
-      <p class="font-bold text-4xl text-dark-blue mb-4">Events</p>
+      <h1 class="font-bold text-5xl text-dark-blue mb-4">Events</h1>
       <p class="text-lg">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere proin
         at a elementum egestas morbi mauris. At pellentesque lacus pulvinar
@@ -40,7 +40,7 @@ export default {
         },
         {
           title: "Hour of Code",
-          image: "/content/hour-of-code.png",
+          image: "/content/hoc.jpg",
           link:"",
         },
       ],

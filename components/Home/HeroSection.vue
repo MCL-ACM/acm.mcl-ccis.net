@@ -1,7 +1,7 @@
 <template>
   <div class="h-screen">
     <!-- Main Content -->
-    <div class="z-20 sm:mt-20 h-full relative mt-8">
+    <div class="sm:mt-20 h-full relative mt-8">
       <!-- Logo and Title -->
       <div>
         <img
@@ -9,10 +9,10 @@
           alt="MCL-ACM Logo"
           class="sm:w-80 h-auto w-60 mb-3"
         />
-        <p class="font-bold text-4xl text-dark-blue sm:text-5xl">
+        <h1 class="font-bold text-5xl text-dark-blue sm:text-5xl">
           Malayan Colleges Laguna <br />
           ACM Student Chapter
-        </p>
+        </h1>
       </div>
 
       <!-- Established -->

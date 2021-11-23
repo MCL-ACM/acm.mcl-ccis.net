@@ -1,13 +1,13 @@
 <template>
   <article class="flex flex-col items-center justify-center">
-    <h1 class="text-5xl font-bold mb-14 text-center text-dark-blue">
+    <h1 class="text-3xl mt-10 mb-10 lg:text-5xl font-bold lg:mb-14 text-center text-dark-blue">
       Association for Computing Machinery
     </h1>
     <img
-      class="object-scale-down h-96 w-full"
+      class="object-scale-down lg:h-96 w-full mb-10 lg:mb-0"
       src="../../assets/img/placeholder_2.39x1.png"
     />
-    <p class="text-center pt-16 font-extralight text-xl leading-9">
+    <p class="text-center lg:pt-16 font-extralight text-lg leading-9 mb-10 lg:mb-10">
       The Association for Computing Machinery is an international learned
       society for computing founded in 1947. It is a non-profit professional
       membership group with nearly 100,000 student and professional members. ACM

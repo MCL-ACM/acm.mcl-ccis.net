@@ -6,3 +6,6 @@
   @apply bg-gradient-to-b from-sea-green via-opaque-light-green to-transparent opacity-70;
 }
 
+.hover-shadow{
+  @apply transition duration-75 transform hover:scale-105 hover:shadow-lg
+}

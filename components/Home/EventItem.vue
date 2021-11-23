@@ -1,27 +1,24 @@
 <template>
   <NuxtLink to="link">
     <div
-      :class="[
-        'bg-center bg-no-repeat bg-gray-600 overflow-clip w-full h-52 p-4 pb-8 sm:p-14',
-        borderRadius,
-      ]"
-      :style="{
-        'background-image': `linear-gradient(${gradient}, rgba(0, 0, 0, 0), rgba(31, 97, 153, 1)), url('${details.image}')`,
-      }"
+      :class="`bg-center bg-no-repeat bg-gray-600 overflow-clip w-full h-52 overflow-hidden ${borderRadius} bg-grow`"
+      :style="`background-image: url('${details.image}')`"
     >
-      <div class="w-full h-full relative">
-        <p
-          :class="[
-            'absolute',
-            'bottom-0',
-            textPosition,
-            'text-white',
-            'text-3xl',
-            'font-bold',
-          ]"
-        >
-          {{ details.title }}
-        </p>
+      <div :class="`p-4 pb-8 sm:p-14 h-full w-full ${gradient}`">
+        <div class="w-full h-full relative">
+          <p
+            :class="[
+              'absolute',
+              'bottom-0',
+              textPosition,
+              'text-white',
+              'text-3xl',
+              'font-bold',
+            ]"
+          >
+            {{ details.title }}
+          </p>
+        </div>
       </div>
     </div>
   </NuxtLink>
@@ -46,9 +43,9 @@ export default {
   computed: {
     gradient() {
       if (this.orientation === "right") {
-        return "to right";
+        return "gradient-right";
       } else {
-        return "to left";
+        return "gradient-left";
       }
     },
     textPosition() {
@@ -69,4 +66,29 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.gradient-left {
+  background-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0),
+    rgba(31, 97, 153, .8)
+  );
+}
+
+.gradient-right {
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(31, 97, 153, .8)
+  );
+}
+
+.bg-grow{
+  transition: all .5s ease;
+}
+
+.bg-grow:hover{
+}
+
+
+</style>

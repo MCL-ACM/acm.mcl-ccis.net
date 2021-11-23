@@ -6,6 +6,8 @@
                 px-7 pb-7 pt-80 
                 rounded-3xl 
                 cursor-pointer
+                transition
+                duration-100
                 hover:shadow-2xl 
                 bg-cover
                 bg-center
