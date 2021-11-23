@@ -42,7 +42,7 @@
     <!-- Background Decorations -->
     <div class="bg-details overflow-hidden">
       <img id="dots-diamond" src="@/assets/svg/dots-diamond.svg" />
-      <img id="line-diamond-1" src="@/assets/svg/line-diamond-1.svg" />
+      <img id="line-diamond-1 sm:relative hidden" src="@/assets/svg/line-diamond-1.svg" />
       <img id="line-diamond-2" src="@/assets/svg/line-diamond-2.svg" />
     </div>
   </div>
