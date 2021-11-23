@@ -7,9 +7,10 @@
                     <a :href="item.link">
                         <img :src="item.icon" :alt="item.name" class="h-full w-auto" />
                     </a>
-                    
                 </div>
-                <p class="font-extralight tracking-widest space-x-4 sm:flex hidden">{{item.link}}</p>
+                <a :href="item.link" class="font-extralight tracking-widest space-x-4 sm:flex hidden">
+                    {{ item.link }}
+                </a>
             </div>
         </div>
   </section>

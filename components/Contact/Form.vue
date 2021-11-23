@@ -19,7 +19,7 @@
 
             <div class="mt-4">
                 <label class="font-extralight">Message<span class="text-red-500"> *</span></label><br>
-                <textarea v-model="message" required name="message" class="w-full h-56 p-2 rounded-xl text-xl mt-2 border-solid border-2" style="resize: none;" placeholder="Please enter your message here"></textarea><br>
+                <textarea v-model="message" required name="message" class="w-full h-56 p-2 rounded-xl mt-2 border-solid border-2" style="resize: none;" placeholder="Please enter your message here"></textarea><br>
             </div>
 
             <div class="mt-4 float-right">
