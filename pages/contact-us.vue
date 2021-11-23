@@ -14,7 +14,7 @@
         <ContactForm />
       </div>
       <div class="flex-grow">
-          <ContactSocial class="mb-10"/>
+          <ContactSocial class="mb-10 "/>
           <ContactMap />
       </div>
     </div>

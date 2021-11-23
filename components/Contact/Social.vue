@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="bg-white p-10 rounded-3xl shadow-xl">
       <h1 class="text-2xl font-bold mb-6 text-black">Social Media</h1>
         <div class="flex flex-row w-full sm:flex-col sm:space-y-6 ">
             <div v-for="(item, index) in socialItems" :key="index" class="justify-center sm:justify-start flex flex-grow flex-row items-center space-x-4">
