@@ -5,6 +5,7 @@
                 h-full w-full 
                 px-7 pb-7 pt-80 
                 rounded-3xl 
+                cursor-pointer
                 hover:shadow-2xl 
                 bg-cover
                 bg-center

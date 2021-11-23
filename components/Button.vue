@@ -14,6 +14,7 @@
       hover:scale-105 hover:shadow-lg
     "
     @click="$emit('clicked')"
+    
   >
     {{ text }}
   </button>

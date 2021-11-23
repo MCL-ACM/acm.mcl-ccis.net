@@ -1,10 +1,10 @@
 <template>
-  <section class="event-sec px-6 py-16 md:py-36">
+  <section class="event-sec px-6">
       <div class="flex flex-col max-w-6xl mx-auto gap-y-28 items-center">
         <!-- Info -->
         <div>
             <h1 class="font-bold text-dark-blue text-5xl text-center mb-12">Events</h1>
-            <p class="font-extralight text-xl">
+            <p class="font-extralight text-xl text-center">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie morbi porta justo faucibus 
                     laoreet nunc cursus quisque. In sed eget faucibus est. Convallis nisi tortor, faucibus quisque 
                     mauris netus vitae. Consequat commodo sem bibendum dolor ultrices etiam enim nunc velit. Lacus 
