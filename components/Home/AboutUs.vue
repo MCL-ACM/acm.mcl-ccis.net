@@ -23,11 +23,7 @@
         justify-center
       "
     >
-      <!-- Background of text 
-      <div class="text-bg"></div>
-      -->
-
-      <p class="font-bold text-4xl text-dark-blue">About Us</p>
+      <h1 class="font-bold text-5xl text-dark-blue">About Us</h1>
       <p class="text-xl max-w-4xl p-4 mt-4 mb-6">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ultricies
         habitant id porttitor etiam sem commodo, blandit sit. Fringilla est amet
@@ -42,7 +38,7 @@
     <!-- Background Decorations -->
     <div class="bg-details overflow-hidden">
       <img id="dots-diamond" src="@/assets/svg/dots-diamond.svg" />
-      <img id="line-diamond-1" src="@/assets/svg/line-diamond-1.svg" />
+      <img id="line-diamond-1 sm:relative hidden" src="@/assets/svg/line-diamond-1.svg" />
       <img id="line-diamond-2" src="@/assets/svg/line-diamond-2.svg" />
     </div>
   </div>

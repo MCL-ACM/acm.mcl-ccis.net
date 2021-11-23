@@ -1,23 +1,25 @@
 <template>
   <div class="fixed 
             overflow-x-hidden 
-            overflow-y-auto 
-            inset-0 
+            overflow-y-auto
+            inset-1 
             flex 
             justify-center 
             items-center 
             z-50">
-    <div class="relative mx-auto w-auto max-w-6xl px-6">
-        <div class="bg-midnight-blue 
+    <div class="mx-auto w-auto max-w-6xl px-6 pb-8 pt-60 md:p-8">
+        <div class="relative
+                  bg-midnight-blue 
                     w-full 
                     rounded-3xl 
                     shadow-2xl 
-                    flex flex-col 
                     text-white 
                     p-12">
 
             <div class="max-x-2xl flex flex-col justify-center content-center">
-              <button @click="closeModal" class="font-bold self-end">X</button>
+              <button @click="closeModal" class="absolute font-bold top-6 right-6">
+                <img src="@/assets/svg/close.svg" alt="" class="h-4">
+              </button>
               
               <h2 class="text-4xl font-bold mb-6">{{ details.title }}</h2>
               <p class="mb-6">{{ details.description }}</p>
@@ -33,7 +35,7 @@
                     :index="index"
                     :visibleImage="visibleImage" >
                     <a :href="image" target="_blank">
-                      <img :src="image" alt="" class="object-cover max-h-80 w-full">
+                      <img :src="image" alt="" class="object-cover h-40 md:h-60 lg:h-80 w-full">
                     </a>
                     
                   </EventsSlideshowImage>

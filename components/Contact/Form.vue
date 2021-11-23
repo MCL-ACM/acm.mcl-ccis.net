@@ -4,12 +4,12 @@
         <form ref="form" @submit.prevent="sendEmail">
             <div>
                 <label class="font-extralight">Name<span class="text-red-500"> *</span></label><br>
-                <input required v-model="user_name" class="w-full p-2 rounded-lg mt-2 border-solid border-2" type="text" name="user_name" ><br>
+                <input v-model="user_name" required class="w-full p-2 rounded-lg mt-2 border-solid border-2" type="text" name="user_name" ><br>
             </div>
 
             <div class="mt-4">
                 <label class="font-extralight">Email<span class="text-red-500"> *</span></label><br>
-                <input required v-model="user_email" class="w-full p-2 rounded-lg mt-2 border-solid border-2" type="email" name="user_email"><br>
+                <input v-model="user_email" required class="w-full p-2 rounded-lg mt-2 border-solid border-2" type="email" name="user_email"><br>
             </div>
 
             <div class="mt-4">
@@ -19,11 +19,11 @@
 
             <div class="mt-4">
                 <label class="font-extralight">Message<span class="text-red-500"> *</span></label><br>
-                <textarea required v-model="message" name="message" class="w-full h-56 p-2 rounded-xl text-xl mt-2 border-solid border-2" style="resize: none;" placeholder="Please enter your message here"></textarea><br>
+                <textarea v-model="message" required name="message" class="w-full h-56 p-2 rounded-xl mt-2 border-solid border-2" style="resize: none;" placeholder="Please enter your message here"></textarea><br>
             </div>
 
             <div class="mt-4 float-right">
-                <Button :type="submit" text="Send" class="px-10" value="Send"></Button><br>
+                <Button type="submit" text="Send" class="px-10" value="Send"></Button><br>
             </div>
             <ul v-if="checkForm() == false && trySent" class="list-item list-disc">
                 <li  class="pt-4">Name, Email, and Message must be filled!</li>
@@ -75,8 +75,6 @@ export default {
         },
 
         sendEmail() {
-           console.log(this.checkForm())
-           console.log(this.checkEmail())
             if(this.checkForm() && this.checkEmail()) {
                 sendForm(process.env.SERVICE_KEY, process.env.TEMPLATE_KEY, this.$refs.form, process.env.USER_KEY)
                     .then((result) => {
