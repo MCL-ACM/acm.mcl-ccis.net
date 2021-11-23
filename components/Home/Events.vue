@@ -40,7 +40,7 @@ export default {
         },
         {
           title: "Hour of Code",
-          image: "/content/hour-of-code.png",
+          image: "/content/hoc.jpg",
           link:"",
         },
       ],
