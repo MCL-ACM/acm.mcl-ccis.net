@@ -2,7 +2,7 @@
   <div class="flex my-32">
     <!-- Main Content of Members -->
     <div class="my-auto">
-      <p class="font-bold text-4xl text-dark-blue">Our Members</p>
+      <h1 class="font-bold text-5xl text-dark-blue">Our Members</h1>
       <p class="max-w-xl text-xl my-12">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ultricies
         habitant id porttitor etiam sem commodo, blandit sit. Fringilla est amet

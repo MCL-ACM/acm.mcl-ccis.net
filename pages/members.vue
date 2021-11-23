@@ -1,7 +1,7 @@
 <template>
   <div class="relative">
     <main class="container flex flex-col min-h-screen">
-      <h1 class="text-dark-blue text-4xl font-bold mb-6">Members</h1>
+      <h1 class="text-dark-blue text-5xl font-bold mb-6">Members</h1>
       <MembersCollapsibleItem class="collapse-item">
         <template #header>
           <p class="collapse-header">Committees</p>
