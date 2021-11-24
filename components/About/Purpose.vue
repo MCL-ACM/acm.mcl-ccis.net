@@ -25,7 +25,7 @@
               applications of modern computing
             </li>
             <li>b. Greater interest in computing and its applications</li>
-            <li>c. Greater interest in computing and its applications</li>
+            <li>c. A means of communication between persons having an interest in computing</li>
           </ol>
         </li>
 
@@ -38,7 +38,7 @@
     </section>
     <img
       class="rounded-3xl lg:rounded-none max-w-lg object-scale-down flex-auto"
-      src="../../assets/img/placeholder_4x3.png"
+      src="../../assets/img/event.jpg"
     />
   </article>
 </template>
