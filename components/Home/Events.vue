@@ -4,9 +4,8 @@
     <div>
       <h1 class="font-bold text-5xl text-dark-blue mb-4">Events</h1>
       <p class="text-lg">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Posuere proin
-        at a elementum egestas morbi mauris. At pellentesque lacus pulvinar
-        tortor, et libero a elementum enim.
+        MCL-ACM aims to serve as a tool in introducing programming to students and in helping them enhance their skills 
+        while having fun at the same time.
       </p>
     </div>
 

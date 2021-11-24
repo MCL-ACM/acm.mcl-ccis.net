@@ -25,10 +25,8 @@
     >
       <h1 class="font-bold text-5xl text-dark-blue">About Us</h1>
       <p class="text-xl max-w-4xl p-4 mt-4 mb-6">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit ultricies
-        habitant id porttitor etiam sem commodo, blandit sit. Fringilla est amet
-        pellentesque massa purus vel pretium velit. Ipsum varius urna varius
-        iaculis massa quis. Diam molestie nisl ultricies ultrices.
+        Malayan Colleges Laguna ACM Student Chapter is a student organization chartered by the Association for Computing 
+        Machinery that aims to promote a greater interest in modern computing and its applications.
       </p>
       <NuxtLink to="about">
         <Button text="Learn more about MCL-ACM" />

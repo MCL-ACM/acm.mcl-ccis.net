@@ -1,11 +1,11 @@
 <template>
   <article class="flex flex-col items-center justify-center">
     <h1 class="text-3xl mt-10 mb-10 lg:text-5xl font-bold lg:mb-14 text-center text-dark-blue">
-      Association for Computing Machinery
+      The International Organization
     </h1>
     <img
       class="object-scale-down lg:h-96 w-full mb-10 lg:mb-0"
-      src="../../assets/img/placeholder_2.39x1.png"
+      src="../../assets/img/acm.png"
     />
     <p class="text-center lg:pt-16 font-extralight text-lg leading-9 mb-10 lg:mb-10">
       The Association for Computing Machinery is an international learned

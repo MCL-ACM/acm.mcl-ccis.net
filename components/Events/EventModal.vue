@@ -21,7 +21,8 @@
                 <img src="@/assets/svg/close.svg" alt="" class="h-4">
               </button>
               
-              <h2 class="text-4xl font-bold mb-6">{{ details.title }}</h2>
+              <h2 class="text-4xl font-bold mb-2">{{ details.title }}</h2>
+              <p class="font-extralight mb-4">{{ details.date }}</p>
               <p class="mb-6">{{ details.description }}</p>
 
               <!-- Slideshow -->
