@@ -1,6 +1,6 @@
 <template>
   <main class="flex flex-col">
-    <div class="hero-section pb-10 pt-20">
+    <div class="hero-section pt-20">
       <HomeHeroSection class="container"/>
     </div>
     <div class="about-us-bg">

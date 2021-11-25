@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col sm:flex-row bg-opacity-50 p-8 card-bg rounded-lg">
+  <MembersCardItem class="flex flex-col sm:flex-row">
     <MembersIconedMember
       class="sm:w-64 my-auto"
       v-bind="details.committeeChair"
@@ -24,7 +24,7 @@
         {{ member }}
       </p>
     </div>
-  </div>
+  </MembersCardItem>
 </template>
 
 <script>

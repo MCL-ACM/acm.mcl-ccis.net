@@ -1,14 +1,12 @@
 <template>
-  <div class="card-bg p-8 rounded-lg">
-    <div class="flex flex-row flex-wrap justify-center gap-4 bg-opacity-50">
-      <MembersIconedMember
-        v-for="(member, index) in members"
-        :key="index"
-        :class="['max-w-54 mb-3', `${index === 0 ? 'full-width' : ''}`]"
-        v-bind="member"
-      />
-    </div>
-  </div>
+  <MembersCardItem class="flex flex-row flex-wrap justify-center gap-4">
+    <MembersIconedMember
+      v-for="(member, index) in members"
+      :key="index"
+      :class="['max-w-54 mb-3', `${index === 0 ? 'full-width' : ''}`]"
+      v-bind="member"
+    />
+  </MembersCardItem>
 </template>
 
 <script>
