@@ -6,8 +6,9 @@
             flex 
             justify-center 
             items-center 
-            z-50">
-    <div class="mx-auto w-auto max-w-6xl px-6 pb-8 pt-60 md:p-8">
+            z-50"
+        @click="closeModal">
+    <div class="mx-auto w-auto max-w-6xl px-6 pb-8 pt-60 md:p-8" @click.stop="">
         <div class="relative
                   bg-midnight-blue 
                     w-full 
@@ -17,7 +18,7 @@
                     p-12">
 
             <div class="max-x-2xl flex flex-col justify-center content-center">
-              <button @click="closeModal" class="absolute font-bold top-6 right-6">
+              <button class="absolute font-bold top-6 right-6" @click="closeModal">
                 <img src="@/assets/svg/close.svg" alt="" class="h-4">
               </button>
               
@@ -35,9 +36,8 @@
                     :key="index" 
                     :index="index"
                     :visibleImage="visibleImage" >
-                    <a :href="image" target="_blank">
-                      <img :src="image" alt="" class="object-cover h-40 md:h-60 lg:h-80 w-full">
-                    </a>
+                    
+                    <img :src="image" alt="" class="object-cover h-40 md:h-60 lg:h-80 w-full">
                     
                   </EventsSlideshowImage>
                 </EventsSlideshow>
@@ -52,11 +52,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-      visibleImage: 0,
-    }
-  },
   props: {
     details: {
       type: Object,
@@ -71,6 +66,11 @@ export default {
         })
     }
   },
+  data() {
+    return {
+      visibleImage: 0,
+    }
+  },
   computed: {
     imagesLen() {
       return Object.keys(this.details.images).length;
@@ -81,7 +81,6 @@ export default {
       this.$emit('close-modal')
     },
     prevImage() {
-      console.log(typeof(this.details.images));
       if(this.visibleImage === 0) {
         this.visibleImage = this.imagesLen - 1;
       }

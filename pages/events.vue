@@ -7,10 +7,11 @@
           Events
         </h1>
         <p class="font-extralight text-xl text-center">
-          MCL-ACM focus on providing activities that promote interest in modern computing and develop students' knowledge and 
-          skills. This includes programming-related seminars, workshops, contests and competitions. At the same time, the 
-          organization occasionally conduct activities that encourage rest and relaxation among students to build a healthier 
-          community.
+          MCL-ACM focuses on providing activities that promote interest in modern computing and develop students' 
+          knowledge and skills. This includes programming-related seminars, workshops, contests, and competitions. 
+          At the same time, the organization occasionally conducts activities that encourage rest and relaxation 
+          among students to build a healthier community.
+
         </p>
       </div>
 
@@ -89,18 +90,18 @@ export default {
         {
           title: "CodeX 2021 Programming Workshop",
           date: "April 17, 2021",
-          cover: "/content/CodeX2021_1.jpg",
+          cover: "/content/CodeX2021_1.png",
           description:
             "A Java programming workshop was held for all Senior High School students from different schools. Its aim was to promote education in programming and to demonstrate its application in solving problems.",
-          images: ["/content/CodeX2021_1.jpg", "/content/CodeX2021_2.png", "/content/CodeX2021_3.png", "/content/CodeX2021_4.png", "/content/CodeX2021_5.png", "/content/CodeX2021_6.png", ],
+          images: ["/content/CodeX2021_1.png", "/content/CodeX2021_2.png", "/content/CodeX2021_3.png", "/content/CodeX2021_4.png", "/content/CodeX2021_5.png", "/content/CodeX2021_6.jpg", ],
         },
         {
           title: "Craftivities",
           date: "January 26 & 27, 2021",
-          cover: "/content/Craftivities_1.png",
+          cover: "/content/Craftivities_1.jpg",
           description:
             "As part of the MCL 15th Foundation Week, MCL-ACM hosted Minecraft activities on their Minecraft server. It was open to all MCL students and was aimed to take the students' minds off their academic responsibilities and have fun during the week.",
-          images: ["/content/Craftivities_1.png", "/content/Craftivities_2.jpg", "/content/Craftivities_3.jpg", "/content/Craftivities_4.jpg", "/content/Craftivities_5.jpg", "/content/Craftivities_6.jpg", ],
+          images: ["/content/Craftivities_1.jpg", "/content/Craftivities_2.jpg", "/content/Craftivities_3.jpg", "/content/Craftivities_4.jpg", "/content/Craftivities_5.jpg", "/content/Craftivities_6.png", ],
         },
         {
           title: "Hello Programming 2020: An Hour of Code with MCL-ACM in the New Normal",
@@ -108,15 +109,15 @@ export default {
           cover: "/content/HourofCode2020_1.jpg",
           description:
             "MCL-ACM hosted an Hour of Code event in the New Normal using Discord and Google Blocky. Its purpose was to demystify programming and show that everyone can code. The event was participated by Grade 9 to 12 students from the Kids Nucleus School of Laguna, Wise Kids School, and Far Eastern University Alabang.",
-          images: ["/content/HourofCode2020_1.jpg", "/content/HourofCode2020_2.jpg", "/content/HourofCode2020_3.jpg", "/content/HourofCode2020_4.jpg", "/content/HourofCode2020_5.jpg", "/content/HourofCode2020_6.png", ],
+          images: ["/content/HourofCode2020_1.jpg", "/content/HourofCode2020_2.jpg", "/content/HourofCode2020_3.jpg", "/content/HourofCode2020_4.jpg", "/content/HourofCode2020_5.png", "/content/HourofCode2020_6.jpg", ],
         },
         {
           title: "Code Masters",
           date: "October 22, 2020",
-          cover: "/content/CodeMasters_1.png",
+          cover: "/content/CodeMasters_1.jpg",
           description:
             "Code Masters was an online contest that tested the participants’ understanding of their lessons in IT111/L: Concepts in Object Oriented Programming Lecture/Laboratory and CS102-1/L: Data Structures and Algorithms Analysis Lecture/Laboratory courses. It was executed using Kahoot! and it served as a review for their upcoming final exams.",
-          images: ["/content/CodeMasters_1.png", "/content/CodeMasters_2.jpg", "/content/CodeMasters_3.jpg", "/content/CodeMasters_4.jpg", "/content/CodeMasters_5.jpg", "/content/CodeMasters_6.jpg", ],
+          images: ["/content/CodeMasters_1.jpg", "/content/CodeMasters_2.jpg", "/content/CodeMasters_3.jpg", "/content/CodeMasters_4.jpg", "/content/CodeMasters_5.jpg", "/content/CodeMasters_6.png", ],
         },
         {
           title: "Work Immersion Web Development Workshop for ICT-SHS",
@@ -127,12 +128,12 @@ export default {
           images: ["/content/WorkImmersionWorkshop_1.jpg", "/content/WorkImmersionWorkshop_2.jpg", "/content/WorkImmersionWorkshop_3.jpg", ],
         },
         {
-          title: "Hour of Code at Don Jose Integrated H.S.",
+          title: "Hello Programming 2019 at Don Jose Integrated High School",
           date: "December 11, 2019",
-          cover: "/content/HourofCode2019_1.png",
+          cover: "/content/HourofCode2019_1.jpg",
           description:
             "MCL ACM Student Chapter together with the SHS Junior ACM celebrated the Computer Science Education Week 2019 with an Hour of Code event. Thirty-seven Grade 7 students of Don Jose Integrated High School were introduced to concepts of programming using Google Blockly.",
-          images: ["/content/HourofCode2019_1.png", "/content/HourofCode2019_2.jpg", "/content/HourofCode2019_3.jpg", "/content/HourofCode2019_4.jpg", "/content/HourofCode2019_5.jpg", "/content/HourofCode2019_6.jpg", "/content/HourofCode2019_7.jpg", "/content/HourofCode2019_8.jpg", ],
+          images: ["/content/HourofCode2019_1.jpg", "/content/HourofCode2019_2.jpg", "/content/HourofCode2019_3.jpg", "/content/HourofCode2019_4.jpg", "/content/HourofCode2019_5.jpg", "/content/HourofCode2019_6.jpg", "/content/HourofCode2019_7.jpg", "/content/HourofCode2019_8.png", ],
         },
         {
           title: "CodeX 2019 Inter-SHS Programming Competition",
@@ -145,10 +146,10 @@ export default {
         {
           title: "CodeX 2019 Programming Workshop",
           date: "February 16 & 23, 2019",
-          cover: "/content/CodeX2019Workshop_1.png",
+          cover: "/content/CodeX2019Workshop_1.jpg",
           description:
             "This programming workshop was held to prepare students for the upcoming CodeX 2019 Competition. The competition participants from two different schools were taught about the fundamentals of C# and Java Programming.",
-          images: ["/content/CodeX2019Workshop_1.png", "/content/CodeX2019Workshop_2.jpg", "/content/CodeX2019Workshop_3.jpg", "/content/CodeX2019Workshop_4.jpg", "/content/CodeX2019Workshop_5.jpg", "/content/CodeX2019Workshop_6.jpg", "/content/CodeX2019Workshop_7.jpg", "/content/CodeX2019Workshop_8.jpg", ],
+          images: ["/content/CodeX2019Workshop_1.jpg", "/content/CodeX2019Workshop_2.jpg", "/content/CodeX2019Workshop_3.jpg", "/content/CodeX2019Workshop_4.jpg", "/content/CodeX2019Workshop_5.jpg", "/content/CodeX2019Workshop_6.jpg", "/content/CodeX2019Workshop_7.jpg", "/content/CodeX2019Workshop_8.png", ],
         },
         {
           title: "VR PH Seminar: Introduction to Augmented and Virtual Reality",
@@ -159,7 +160,7 @@ export default {
           images: ["/content/VRPHSeminar_1.jpg", "/content/VRPHSeminar_2.jpg", "/content/VRPHSeminar_3.jpg", "/content/VRPHSeminar_4.jpg", "/content/VRPHSeminar_5.jpg", "/content/VRPHSeminar_6.jpg", "/content/VRPHSeminar_7.jpg", ],
         },
         {
-          title: "Hour of Code: Hello Programming!",
+          title: "Hello Programming!",
           date: "December 7, 2018",
           cover: "/content/HourofCode2018_1.jpg",
           description:
