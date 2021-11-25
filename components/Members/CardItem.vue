@@ -1,22 +1,7 @@
 <template>
-  <MembersCardItem
-    class="
-      grid
-      sm:grid-cols-2
-      md:grid-cols-3
-      lg:grid-cols-4
-      justify-evenly
-      content-start
-      flex-grow
-      mx-8
-      text-center
-      mt-4
-    "
-  >
-    <p v-for="(name, index) in names" :key="index" class="mb-8 text-lg">
-      {{ name }}
-    </p>
-  </MembersCardItem>
+  <div class="p-8 card-bg rounded-lg">
+    <slot> </slot>
+  </div>
 </template>
 
 <script>
