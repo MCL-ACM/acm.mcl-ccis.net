@@ -5,11 +5,11 @@ import Navbar from "./common/Navbar";
 export default function Layout({ children }) {
 	return (
 		<div className="flex flex-col h-full">
-			<Navbar/>
+			<Navbar />
 			<main className="h-full flex-auto">
-        {children}
-      </main>
-			<Footer/>
+        		{children}
+      		</main>
+			<Footer />
 		</div>
 	);
 }
