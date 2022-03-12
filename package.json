@@ -17,8 +17,12 @@
   "dependencies": {
     "framer-motion": "^6.2.8",
     "gatsby": "^4.9.2",
+    "gatsby-plugin-image": "^2.9.1",
     "gatsby-plugin-netlify-cms": "^6.9.0",
     "gatsby-plugin-postcss": "^5.9.0",
+    "gatsby-plugin-sharp": "^4.9.1",
+    "gatsby-source-filesystem": "^4.9.1",
+    "gatsby-transformer-sharp": "^4.9.0",
     "netlify-cms-app": "^2.15.68",
     "postcss": "^8.4.8",
     "react": "^17.0.1",
