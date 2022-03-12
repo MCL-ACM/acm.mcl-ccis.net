@@ -26,7 +26,8 @@
     "netlify-cms-app": "^2.15.68",
     "postcss": "^8.4.8",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-icons": "^4.3.1"
   },
   "devDependencies": {
     "tailwindcss": "^3.0.23"

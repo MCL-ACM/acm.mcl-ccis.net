@@ -4,12 +4,12 @@ import Navbar from "./common/Navbar";
 
 export default function Layout({ children }) {
 	return (
-		<div className="flex flex-col h-full">
+		<main className="flex flex-col h-full">
 			<Navbar />
-			<main className="h-full flex-auto">
+			<section className="h-full flex-auto">
         		{children}
-      		</main>
+      		</section>
 			<Footer />
-		</div>
+		</main>
 	);
 }
