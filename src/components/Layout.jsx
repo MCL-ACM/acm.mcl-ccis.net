@@ -6,7 +6,7 @@ export default function Layout({ children }) {
 	return (
 		<main className="min-h-screen relative">
 			<Navbar />
-			<section className="flex-auto px-5 pb-[34.8125em]">
+			<section className="flex-auto pt-5 pb-[34.8125em]">
         		{children}
       		</section>
 			<Footer />
