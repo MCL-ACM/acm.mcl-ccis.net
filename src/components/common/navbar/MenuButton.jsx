@@ -6,14 +6,14 @@ const Path = props => (
 	  fill="transparent"
 	  strokeWidth="3"
 	  stroke="hsl(0, 0%, 18%)"
-	  strokeLinecap="round"
 	  {...props}
 	/>
 );
-export default function MenuButton() {
+export default function MenuButton({toggle}) {
+
   return (
-    <motion.button animate="closed">
-			<svg width="23" height="23" viewBox="0 0 23 23">
+    <motion.button onClick={toggle} className="z-20 relative">
+			<svg width="23" height="23" viewBox="0 0 23 23" fill="#00214E">
 				<Path
 					variants={{
 						closed: { d: "M 2 2.5 L 20 2.5" },

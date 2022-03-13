@@ -4,7 +4,7 @@ import Navbar from "./common/Navbar";
 
 export default function Layout({ children }) {
 	return (
-		<main className="flex flex-col h-full">
+		<main className="">
 			<Navbar />
 			<section className="h-full flex-auto px-5">
         		{children}
