@@ -6,7 +6,7 @@ import Logo from "./navbar/Logo";
 
 export default function Navbar() {
 	return (
-		<div className="h-full flex justify-between px-5 py-7">
+		<div className="h-full flex justify-between px-10 py-7">
 			<Link to="/">
 				<Logo/>
 			</Link>

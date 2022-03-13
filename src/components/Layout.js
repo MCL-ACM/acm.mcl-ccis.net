@@ -6,7 +6,7 @@ export default function Layout({ children }) {
 	return (
 		<main className="flex flex-col h-full">
 			<Navbar />
-			<section className="h-full flex-auto">
+			<section className="h-full flex-auto px-5">
         		{children}
       		</section>
 			<Footer />
