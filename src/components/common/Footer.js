@@ -24,8 +24,8 @@ export default function Footer() { // TODO: Can someone try to set the height of
 	]
 
 	return (
-		<div className="absolute bottom-0 w-full">
-			<div className="relative h-[34.8125rem]"> 
+		<footer className="absolute bottom-0 w-full">
+			<main className="relative h-[34.8125rem]"> 
 				<section className="text-white absolute h-full w-full pt-24 flex flex-col justify-between px-5">
 					<div className="flex flex-col gap-y-[2.375rem]">
 						<article className="flex flex-col gap-y-[1.0625rem]">
@@ -45,8 +45,8 @@ export default function Footer() { // TODO: Can someone try to set the height of
 					<p className="text-lg font-light text-center mb-11">© {year} Malayan Colleges Laguna ACM Student Chapter</p>
 				</section>
 				<img className="absolute z-[-100] w-full sm:hidden" src={FooterBG} alt="footer background" />
-			</div>
-		</div>
+			</main>
+		</footer>
 
 	);
 }
