@@ -25,8 +25,8 @@ export default function Footer() { // TODO: Can someone try to set the height of
 
 	return (
 		<footer className="absolute w-full bottom-0 h-[34.8125em]">
-			<svg className="absolute" viewBox="0 0 375 47"  preserveAspectRatio="none">
-					<path d="M0 0H375V46.804C375 46.804 317 0 296 0C275 0 0 47 0 47V0Z" fill="#FFFFFF"/>
+			<svg className="absolute" viewBox="0 0 375 48" preserveAspectRatio="none">
+				<path d="M0 0H375V47.7998C375 47.7998 317 0.510638 296 0.510638C275 0.510638 0 48 0 48V0Z" fill="#FFFFFF"/>
 			</svg>
 			<main className="h-full bg-gradient-to-tr from-standard-blue to-cerulean-crayola px-5 pt-24 pb-10"> 
 				<section className="h-full w-full flex flex-col justify-between text-white">
