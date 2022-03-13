@@ -1,6 +1,5 @@
 import React from "react";
 import {FaTwitter, FaFacebook, FaInstagram} from "react-icons/fa"
-import FooterBG from '../../images/svg/footer-background.svg'
 
 export default function Footer() { // TODO: Can someone try to set the height of the parent div to wrap its children (.incld background image). Parent height is currently set hard-valued
 	let year = new Date().getFullYear()
