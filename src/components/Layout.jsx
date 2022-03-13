@@ -4,9 +4,9 @@ import Navbar from "./common/Navbar";
 
 export default function Layout({ children }) {
 	return (
-		<main className="">
+		<main className="min-h-screen relative">
 			<Navbar />
-			<section className="h-full flex-auto px-5">
+			<section className="flex-auto px-5 pb-[34.8125em]">
         		{children}
       		</section>
 			<Footer />
