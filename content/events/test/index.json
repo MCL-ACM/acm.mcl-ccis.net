@@ -8,7 +8,7 @@
   ],
   "summary": "This is the summary",
   "description": "This is the description",
-  "slideshow": [
+  "images": [
     {
       "image": "voteyea.png",
       "imageAlt": "VoteYea"

@@ -9,7 +9,7 @@
   ],
   "summary": "This is the second summary",
   "description": "This is the second description",
-  "slideshow": [
+  "images": [
     {
       "image": "nay.png",
       "imageAlt": "VoteNay"

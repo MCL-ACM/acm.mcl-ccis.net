@@ -14,7 +14,7 @@ export default function cmspage({ data }) {
               <p>{node.summary}</p>
               <p>{node.description}</p>
               <div>
-                {node.slideshow?.map(({ image, imageAlt }) => (
+                {node.images?.map(({ image, imageAlt }) => (
                   <div>
                     <GatsbyImage image={getImage(image)} alt={imageAlt} />
                   </div>
@@ -37,7 +37,7 @@ export const query = graphql`
           tags
           summary
           description
-          slideshow {
+          images {
             image {
               childImageSharp {
                 gatsbyImageData
