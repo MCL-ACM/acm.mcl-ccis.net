@@ -24,9 +24,9 @@ export default function Footer() { // TODO: Can someone try to set the height of
 	]
 
 	return (
-		<footer className="absolute bottom-0 w-full">
-			<main className="relative h-[34.8125rem]"> 
-				<section className="text-white absolute h-full w-full pt-24 flex flex-col justify-between px-5">
+		<footer className="absolute w-full bottom-0 h-[34.8125em]">
+			<main className="h-full bg-gradient-to-tr from-standard-blue to-cerulean-crayola px-5 py-10"> 
+				<section className="h-full w-full flex flex-col justify-between text-white">
 					<div className="flex flex-col gap-y-[2.375rem]">
 						<article className="flex flex-col gap-y-[1.0625rem]">
 							<header className="text-sm font-light">Connect with us</header>
@@ -42,9 +42,8 @@ export default function Footer() { // TODO: Can someone try to set the height of
 							</figure>
 						</article>
 					</div>
-					<p className="text-lg font-light text-center mb-11">© {year} Malayan Colleges Laguna ACM Student Chapter</p>
+					<p className="text-lg font-light text-center">© {year} Malayan Colleges Laguna ACM Student Chapter</p>
 				</section>
-				<img className="absolute z-[-100] w-full sm:hidden" src={FooterBG} alt="footer background" />
 			</main>
 		</footer>
 
