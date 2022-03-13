@@ -1,47 +1,35 @@
 <template>
   <div class="relative bg-white rounded-3xl">
     <main class="container flex flex-col min-h-screen">
-      <h1 class="text-dark-blue text-5xl font-bold mb-6 pt-10 ">Members</h1>
-      <MembersCollapsibleItem class="collapse-item">
-        <template #header>
-          <p class="collapse-header">Committees</p>
-        </template>
-        <template #content>
-          <MembersCollapsibleItem class="collapse-item">
-            <template #header>
-              <p class="collapse-header">Executive Committee</p>
-            </template>
-            <template #content>
-              <MembersExecutiveCard
-                :members="details.executiveCommittee"
-                class="collapse-content"
-              />
-            </template>
-          </MembersCollapsibleItem>
-          <div v-for="(committee, index) in details.committees" :key="index">
-            <MembersCollapsibleItem class="collapse-item">
-              <template #header>
-                <p class="collapse-header text-left">
-                  {{ committee.title }}
-                </p>
-              </template>
-              <template #content>
-                <MembersCommitteeCard
-                  :details="committee"
-                  class="collapse-content"
-                />
-              </template>
-            </MembersCollapsibleItem>
-          </div>
-        </template>
+      <h1 class="text-dark-blue text-5xl font-bold mb-6 pt-10">Members</h1>
+      <MembersCollapsibleItem>
+        <template #header> Committees </template>
+        <!-- Executive Committee --->
+        <MembersCollapsibleItem>
+          <template #header> Executive Committee </template>
+          <MembersExecutiveCard :members="details.executiveCommittee" />
+        </MembersCollapsibleItem>
+
+        <!-- Committees --->
+        <MembersCollapsibleItem
+          v-for="(committee, index) in details.committees"
+          :key="index"
+        >
+          <template #header>
+            {{ committee.title }}
+          </template>
+          <MembersCommitteeCard :details="committee" />
+        </MembersCollapsibleItem>
       </MembersCollapsibleItem>
-      <MembersCollapsibleItem class="collapse-item">
-        <template #header> <p class="collapse-header">Alumni</p> </template>
-        <template #content>
-          <MembersAlumniCard :names="details.alumni" class="collapse-content" />
-        </template>
+
+      <!-- Alumni --->
+      <MembersCollapsibleItem>
+        <template #header> Alumni </template>
+        <MembersAlumniCard :names="details.alumni" />
       </MembersCollapsibleItem>
     </main>
+
+    <!-- Bottom Gradient --->
     <div
       class="gradient-bg-reverse absolute bottom-0 h-screen w-full"
       style="z-index: -1"
@@ -158,16 +146,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.collapse-header {
-  @apply text-xl;
-}
-
-.collapse-item {
-  @apply mx-2  sm:ml-8 mb-2;
-}
-
-.collapse-content {
-  @apply mb-12 sm:ml-6;
-}
-</style>
+<style lang="scss" scoped></style>

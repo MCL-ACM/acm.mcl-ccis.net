@@ -13,7 +13,7 @@
                 bg-center
                 block"
         :style="{
-          'background-image': `linear-gradient(rgba(44, 193, 199, 0) 0%, rgba(44, 193, 199, 0.45) 30%, rgba(217, 237, 146, 1) 100%), url('${details.cover}')`,
+          'background-image': `linear-gradient(rgba(44, 193, 199, 0) 0%, rgba(44, 193, 199, 0.75) 30%, rgba(217, 237, 146, 1) 100%), url('${details.cover}')`,
         }"
                 >
       <div>

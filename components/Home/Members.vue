@@ -4,7 +4,7 @@
     <div class="my-auto">
       <h1 class="font-bold text-5xl text-dark-blue">Our Members</h1>
       <p class="max-w-xl text-xl my-12">
-        MCL-ACM take pride in its organization members. Led by the Executive Committee, its members work together and strive to 
+        MCL-ACM takes pride in its organization members. Led by the Executive Committee, its members work together and strive to 
         build an excellent community and execute meaningful initiatives. 
       </p>
       <NuxtLink to="members">
