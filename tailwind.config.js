@@ -8,6 +8,9 @@ module.exports = {
         'cerulean-crayola': '#00A8DB',
         'standard-blue': '#0070EE',
       },
+      backgroundImage: {
+        'footer-texture': "url('/src/images/svg/footer-background.svg')",
+      }
     },
   },
   plugins: [],
