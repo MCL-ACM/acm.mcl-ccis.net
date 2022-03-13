@@ -1,0 +1,44 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+
+local_backend: true
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "events"
+    label: "Events"
+    folder: "content/events"
+    create: true
+    slug: "title"
+    media_folder: ""
+    public_folder: ""
+    path: "{{title}}/index"
+    extension: "json"
+    format: "json"
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Year",
+          name: "year",
+          widget: "datetime",
+          date_format: "YYYY",
+          time_format: "",
+        }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Summary", name: "summary", widget: "string" }
+      - { label: "Description", name: "description", widget: "markdown" }
+      - {
+          label: "Slideshow",
+          name: "slideshow",
+          widget: "list",
+          fields:
+            [
+              { label: "Image", name: "image", widget: "image" },
+              { label: "Image Alt", name: "imageAlt", widget: "string" },
+            ],
+        }
