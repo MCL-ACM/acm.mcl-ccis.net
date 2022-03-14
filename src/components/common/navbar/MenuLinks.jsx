@@ -32,10 +32,10 @@ const links = [
 
 const sliding = {
   open: {
-    transition: { staggerChildren: 0.07, delayChildren: 0.2 },
+    transition: { staggerChildren: 0.04, delayChildren: 0.1 },
   },
   closed: {
-    transition: { staggerChildren: 0.07, staggerDirection: -1 },
+    transition: { staggerChildren: 0.04, staggerDirection: -1 },
   },
 };
 

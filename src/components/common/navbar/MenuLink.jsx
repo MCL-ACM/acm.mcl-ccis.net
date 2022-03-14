@@ -5,9 +5,15 @@ import { motion } from "framer-motion";
 const linkAnimation = {
   open: {
     x: "0",
+    transition: {
+      type:"tween",
+    }
   },
   closed: {
     x: "100%",
+    transition: {
+      type:"tween",
+    }
   },
 };
 

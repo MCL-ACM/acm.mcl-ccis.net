@@ -14,7 +14,7 @@ const sidebar = {
   closed: {
     x: "100%",
     transition: {
-      delay: 0.5,
+      delay: 0.2,
       type: "tween",
     },
   },
