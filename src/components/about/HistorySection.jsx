@@ -11,10 +11,10 @@ export default function HistorySection() {
       <StaticImage 
         src="../../images/about/how_we_started.png"
         alt="MCL-ACM's first General Assembly"
-        className="mt-5"
+        className="mt-5 w-full"
       />
-      <div className="text-lg text-rich-black">
-        <p className="mt-5">
+      <div className="text-lg text-rich-black font-light leading-[180%]">
+        <p className="mt-5  ">
           The Malayan Colleges Laguna ACM Student Chapter is the first 
           Association for Computing Machinery (ACM) student chapter in 
           the CALABARZON region. It was founded on August 13, 2018, with 

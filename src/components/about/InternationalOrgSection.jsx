@@ -13,7 +13,7 @@ export default function InternationalOrgSection() {
         alt="ACM logo"
         className="mt-5"
       />
-      <div className="text-lg text-rich-black">
+      <div className="text-lg text-rich-black font-light leading-[180%]">
         <p className="mt-5">
         The Association for Computing Machinery is an international learned 
         society for computing founded in 1947. It is a non-profit professional 
