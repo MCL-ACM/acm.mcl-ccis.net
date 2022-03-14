@@ -41,7 +41,7 @@ export default function Footer() {
               <header className="text-sm font-light">Keep in touch</header>
               <ul className="flex gap-x-3.5">
                 {socialLinks.map(({ link, icon }) => (
-                  <a href={link} target="_blank">
+                  <a href={link} target="_blank" rel="noreferrer">
                     {icon}
                   </a>
                 ))}
