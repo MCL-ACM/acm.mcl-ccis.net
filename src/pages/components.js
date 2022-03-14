@@ -4,12 +4,12 @@ import arrowIcon from "../images/svg/arrow-forward-white.svg"
 
 export default function components() {
   
-  const Foo = () => null;
+  const Foo = () => console.log("hello");
 
   return (
     <div className="border-2 p-6">
         <Button
-          callBack={() => Foo()}
+          callback={() => Foo()}
           text="Explore our members" 
           textColor="text-white" 
           color="bg-darkish-blue" 

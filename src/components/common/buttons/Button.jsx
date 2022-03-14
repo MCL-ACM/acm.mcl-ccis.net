@@ -6,7 +6,7 @@ export default function Button({glow, textColor ,color, text, icon, callback}) {
 
   return (
     <motion.button 
-      onClick={callBack}
+      onClick={callback}
       whileHover={{
         y:'-6%'
       }}
