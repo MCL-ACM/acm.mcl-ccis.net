@@ -8,7 +8,7 @@ import MembersSection from '../components/home/MembersSection'
 
 export default function index() {
   return (
-    <main className="height-screen">
+    <main className="flex flex-col gap-12">
       <HeroSection />
       <Divider />
       <AboutSection />

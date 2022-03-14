@@ -1,6 +1,7 @@
 import * as React from "react";
 import Button from "../common/buttons/Button";
-import arrowIcon from "../../images/svg/arrow-forward-white.svg";
+import { FiArrowRight } from "react-icons/fi";
+import SectionHeader from "./SectionHeader";
 
 export default function SectionItem({
   header,
@@ -17,9 +18,8 @@ export default function SectionItem({
 
   return (
     <section className={`flex flex-col gap-4 ${alignStyle[align]}`}>
-      <h2 className="text-2xl font-bold text-oxford-blue">{header}</h2>
-      <h3 className="text-lg font-medium text-darkish-blue">{subheader}</h3>
-      <p className="text-lg font-light leading-relaxed text-rich-black">
+      <SectionHeader header={header} subheader={subheader} />
+      <p className="text-xl font-light leading-relaxed text-rich-black">
         {body}
       </p>
       <a href={buttonLink}>
@@ -27,13 +27,7 @@ export default function SectionItem({
           text={buttonText}
           color="bg-darkish-blue"
           textColor="text-white"
-          icon={
-            <object
-              data={arrowIcon}
-              type="image/svg+xml"
-              aria-label="button icon"
-            />
-          }
+          icon={<FiArrowRight size="1.3em" />}
         />
       </a>
     </section>
