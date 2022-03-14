@@ -1,7 +1,21 @@
 import React from 'react'
+import AboutSection from '../components/home/AboutSection'
+import ContactSection from '../components/home/ContactSection'
+import Divider from '../components/home/Divider'
+import EventsSection from '../components/home/EventsSection'
+import HeroSection from '../components/home/HeroSection'
+import MembersSection from '../components/home/MembersSection'
 
 export default function index() {
   return (
-	<div></div>
+    <main className="height-screen">
+      <HeroSection />
+      <Divider />
+      <AboutSection />
+      <Divider />
+      <MembersSection />
+      <EventsSection />
+      <ContactSection />
+    </main>
   )
 }
