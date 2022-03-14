@@ -45,8 +45,9 @@ export default function EventCard({events, tagged, slider}) {
     return (
         
         
-        <article className="items-center flex flex-col w-[20.9375em] h-[34.25em] relative rounded-bl-3xl rounded-br-3xl border-[0.55px] border-gray-200 overflow-hidden">
+        <article className="items-center w-[20.9375em] h-[34.25em] relative rounded-bl-3xl rounded-br-3xl border-[0.55px] border-gray-200 overflow-hidden">
             <span className="absolute block w-full h-[4px] bg-gradient-to-r from-cerulean-crayola to-standard-blue"></span>
+            
             <AnimatePresence initial={false} custom={direction} >
                 <motion.div
                     key={page}
@@ -56,7 +57,8 @@ export default function EventCard({events, tagged, slider}) {
                     animate="center"
                     exit="exit"
                     transition={{
-                        x: { type: "spring", stiffness: 300, damping: 30 },                        
+                        x: { type: "spring", stiffness: 300, damping: 30 },     
+                        opacity: { duration: 0.2 }                   
                     }}
                     drag="x"
                     dragConstraints = {{ left: 0, right: 0}}
@@ -71,8 +73,8 @@ export default function EventCard({events, tagged, slider}) {
                         }
                     }}
                     
-                    className="flex flex-col gap-6 w-full align-middle items-center px-9"
-                        >
+                    className="flex flex-col gap-6 w-full align-middle items-center px-9 absolute"
+                >
                     <ul className={(tagged ? "visible ": "hidden ")  + "flex space-x-3 absolute pt-7 px-9 w-full flex-wrap"}>
                         {
                             events[eventIndex].tags.map((tag) => {
@@ -91,7 +93,7 @@ export default function EventCard({events, tagged, slider}) {
                     <p className="text-sm font-light text-center text-rich-black">{events[eventIndex].description}</p>
                 </motion.div>
             </AnimatePresence>
-            <ul className="flex items-center justify-center text-center">
+            <ul className="flex items-center justify-center text-center absolute bottom-0 w-full mb-7">
                     {events.map((_, __, ___, ____, _____) => {
                         return <li className="text-4xl h-full">.</li>
                     })}
