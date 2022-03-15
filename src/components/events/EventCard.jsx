@@ -76,7 +76,7 @@ export default function EventCard({events=[], tagged, carousel, event}) {
                                 }
                             }}
                             
-                            className="flex flex-col gap-6 w-full align-middle items-center px-9 absolute"
+                            className="flex flex-col gap-6 w-full align-middle items-center px-9 absolute h-full"
                         >
                             <ul className={(tagged ? "visible ": "hidden ")  + "flex space-x-3 absolute pt-7 px-9 w-full flex-wrap"}>
                                 {
