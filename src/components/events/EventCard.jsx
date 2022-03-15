@@ -93,21 +93,18 @@ export default function EventCard({events, tagged, slider}) {
                     <p className="text-sm font-light text-center text-rich-black">{events[eventIndex].description}</p>
                 </motion.div>
             </AnimatePresence>
-            <ul currIndex={eventIndex} className="flex justify-center absolute bottom-0 w-full gap-3 carousel-dots">
+            <ul className="flex justify-center absolute bottom-0 w-full gap-3">
                     {events.map(event => {
-
+                        console.log(eventIndex)
                         let itemIndex = events.indexOf(event)
 
                         return (
-                            <motion.li className="text-6xl text-darkish-blue " layout transition={{
-                                type: "spring",
-                                stiffness: 700,
-                                damping: 30
-                            }}>
+                            <motion.li className="text-6xl text-darkish-blue">
                                 .
                             </motion.li>)
 
                     })}
+                    
             </ul>
             
         </article>
