@@ -29,7 +29,7 @@ const swipePower = (offset, velocity) => {
 };
 
 
-export default function EventCard({events=[], tagged, slider, carousel, event}) {
+export default function EventCard({events=[], tagged, carousel, event}) {
 
 
     const [[page, direction], setPage] = useState([0, 0]);
