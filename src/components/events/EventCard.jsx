@@ -96,14 +96,15 @@ export default function EventCard({events=[], tagged, carousel, event}) {
                             <p className="text-sm font-light text-center text-rich-black">{events[eventIndex].description}</p>
                         </motion.div>
                     </AnimatePresence>
-                    <ul className="flex justify-center absolute bottom-0 w-full gap-3">
+                    <ul className="flex justify-center absolute bottom-0 w-full gap-3 mb-8">
                         {events.map(event => {
                             
                             let itemIndex = events.indexOf(event)
 
                             return (
-                                <motion.li className="text-6xl text-darkish-blue">
-                                    .
+                                <motion.li className="text-6xl text-darkish-blue"><svg width="7" height="7" viewBox="0 0 7 7">
+                                <path d="M3.5 7C1.57771 7 0 5.44038 0 3.49997C0 1.5777 1.55958 0 3.5 0C5.42229 0 7 1.55957 7 3.49997C7 5.44038 5.44042 7 3.5 7Z" fill="#184E77"/>
+                                </svg>
                                 </motion.li>)
 
                         })}
