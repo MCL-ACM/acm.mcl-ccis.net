@@ -1,4 +1,5 @@
 import React from 'react';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 export default function EventCardContent({
   tagged,
@@ -9,6 +10,8 @@ export default function EventCardContent({
   imageAlt,
   description,
 }) {
+  const gImage = getImage(img);
+
   return (
     <div className='absolute flex flex-col items-center w-full gap-6 align-middle px-9'>
       {tagged && (
@@ -28,7 +31,7 @@ export default function EventCardContent({
         <h1 className='text-lg font-bold text-oxford-blue'>{title}</h1>
         <h5 className='text-base font-light text-maximum-blue-green'>{year}</h5>
       </header>
-      <img height='181px' width='263px' src={img} alt={imageAlt} />
+      <GatsbyImage image={gImage} alt={imageAlt} />
       <p className='text-sm font-light text-center text-rich-black'>
         {description}
       </p>
