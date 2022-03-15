@@ -30,9 +30,19 @@ export default function components() {
             imgAlt: "vr group picture",
         },
     ]
+
+    const event = { 
+        tags: ["vr", "seminar", "external"],
+        title: "Introduction to Virtual Reality and Augmented Reality ",
+        year: "2022",
+        description: "MCL-ACM conducted its first seminar in the ‘CCIS Technology Seminar Series’ about VR and AR technology during MCL’s 13th Foundation Day.",
+        img: sampleImg,
+        imgAlt: "vr group picture",
+    }
     return (
         <div>
-            <EventCard events={events} tagged={true}/>
+            <EventCard events={events} tagged={true} carousel={true}/>
+            <EventCard event={event} tagged={true} carousel={false}/>
         </div>
     )
 }

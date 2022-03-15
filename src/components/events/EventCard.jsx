@@ -29,7 +29,8 @@ const swipePower = (offset, velocity) => {
 };
 
 
-export default function EventCard({events, tagged, slider}) {
+export default function EventCard({events=[], tagged, slider, carousel, event}) {
+
 
     const [[page, direction], setPage] = useState([0, 0]);
 
@@ -40,72 +41,101 @@ export default function EventCard({events, tagged, slider}) {
         setPage([page + newDirection, newDirection]);
     };
 
-    
 
     return (
-        
         
         <article className="items-center w-[20.9375em] h-[34.25em] relative rounded-bl-3xl rounded-br-3xl border-[0.55px] border-gray-200 overflow-hidden">
             <span className="absolute block w-full h-[4px] bg-gradient-to-r from-cerulean-crayola to-standard-blue"></span>
             
-            <AnimatePresence initial={false} custom={direction} >
-                <motion.div
-                    key={page}
-                    custom={direction}
-                    variants={variants}
-                    initial="enter"
-                    animate="center"
-                    exit="exit"
-                    transition={{
-                        x: { type: "spring", stiffness: 300, damping: 30 },     
-                        opacity: { duration: 0.2 }                   
-                    }}
-                    drag="x"
-                    dragConstraints = {{ left: 0, right: 0}}
-                    dragElastic={1}
-                    onDragEnd={(e, { offset, velocity }) => {
-                        const swipe = swipePower(offset.x, velocity.x)
+            {
+                carousel ? 
 
-                        if (swipe < -swipeConfidenceThreshold){
-                            paginate(1);
-                        } else if (swipe > swipeConfidenceThreshold) {
-                            paginate(-1);
-                        }
-                    }}
-                    
-                    className="flex flex-col gap-6 w-full align-middle items-center px-9 absolute"
-                >
-                    <ul className={(tagged ? "visible ": "hidden ")  + "flex space-x-3 absolute pt-7 px-9 w-full flex-wrap"}>
-                        {
-                            events[eventIndex].tags.map((tag) => {
-                                return(
-                                    <li key={tag} className="bg-standard-blue text-white font-bold text-xs py-[4px] px-[10px] rounded-lg">{tag.toUpperCase()}</li>
-                                )
-                            })
-                        }
-                     </ul>
-                    <header className="flex flex-col gap-2 text-center pt-[72px]">
-                        <h1 className="text-lg font-bold text-oxford-blue">{events[eventIndex].title}</h1>
-                        <h5 className="text-base font-light text-maximum-blue-green">{events[eventIndex].year}</h5>
-                    </header>
-                    
-                    <img height="181px" width="263px" src={events[eventIndex].img} alt={events.imageAlt}/>
-                    <p className="text-sm font-light text-center text-rich-black">{events[eventIndex].description}</p>
-                </motion.div>
-            </AnimatePresence>
-            <ul className="flex justify-center absolute bottom-0 w-full gap-3">
-                    {events.map(event => {
-                        console.log(eventIndex)
-                        let itemIndex = events.indexOf(event)
+                <>
+                    <AnimatePresence initial={false} custom={direction} >
+                        <motion.div
+                            key={page}
+                            custom={direction}
+                            variants={variants}
+                            initial="enter"
+                            animate="center"
+                            exit="exit"
+                            transition={{
+                                x: { type: "spring", stiffness: 300, damping: 30 },     
+                                opacity: { duration: 0.2 }                   
+                            }}
+                            drag="x"
+                            dragConstraints = {{ left: 0, right: 0}}
+                            dragElastic={1}
+                            onDragEnd={(e, { offset, velocity }) => {
+                                const swipe = swipePower(offset.x, velocity.x)
 
-                        return (
-                            <motion.li className="text-6xl text-darkish-blue">
-                                .
-                            </motion.li>)
+                                if (swipe < -swipeConfidenceThreshold){
+                                    paginate(1);
+                                } else if (swipe > swipeConfidenceThreshold) {
+                                    paginate(-1);
+                                }
+                            }}
+                            
+                            className="flex flex-col gap-6 w-full align-middle items-center px-9 absolute"
+                        >
+                            <ul className={(tagged ? "visible ": "hidden ")  + "flex space-x-3 absolute pt-7 px-9 w-full flex-wrap"}>
+                                {
+                                    events[eventIndex].tags.map((tag) => {
+                                        return(
+                                            <li key={tag} className="bg-standard-blue text-white font-bold text-xs py-[4px] px-[10px] rounded-lg">{tag.toUpperCase()}</li>
+                                        )
+                                    })
+                                }
+                            </ul>
+                            <header className="flex flex-col gap-2 text-center pt-[72px]">
+                                <h1 className="text-lg font-bold text-oxford-blue">{events[eventIndex].title}</h1>
+                                <h5 className="text-base font-light text-maximum-blue-green">{events[eventIndex].year}</h5>
+                            </header>
+                            
+                            <img height="181px" width="263px" src={events[eventIndex].img} alt={events.imageAlt}/>
+                            <p className="text-sm font-light text-center text-rich-black">{events[eventIndex].description}</p>
+                        </motion.div>
+                    </AnimatePresence>
+                    <ul className="flex justify-center absolute bottom-0 w-full gap-3">
+                        {events.map(event => {
+                            
+                            let itemIndex = events.indexOf(event)
 
-                    })}
-                    
-            </ul>
+                            return (
+                                <motion.li className="text-6xl text-darkish-blue">
+                                    .
+                                </motion.li>)
+
+                        })}
+                        
+                    </ul>
+                </> 
+                
+                :
+
+                <>
+                    <div className="flex flex-col gap-6 w-full align-middle items-center px-9 absolute">
+                        <ul className={(tagged ? "visible ": "hidden ")  + "flex space-x-3 absolute pt-7 px-9 w-full flex-wrap"}>
+                            {
+                                event.tags.map((tag) => {
+                                    return(
+                                        <li key={tag} className="bg-standard-blue text-white font-bold text-xs py-[4px] px-[10px] rounded-lg">{tag.toUpperCase()}</li>
+                                    )
+                                })
+                            }
+                        </ul>
+                        <header className="flex flex-col gap-2 text-center pt-[72px]">
+                            <h1 className="text-lg font-bold text-oxford-blue">{event.title}</h1>
+                            <h5 className="text-base font-light text-maximum-blue-green">{event.year}</h5>
+                        </header>
+                        
+                        <img height="181px" width="263px" src={event.img} alt={events.imageAlt}/>
+                        <p className="text-sm font-light text-center text-rich-black">{event.description}</p>
+                    </div>
+                </>
+            }
+            
+            
             
         </article>
         
