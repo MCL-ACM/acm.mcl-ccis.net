@@ -3,7 +3,7 @@ import { FiArrowDown } from 'react-icons/fi';
 import Button from '../common/buttons/Button';
 import HeroContentDecoration from './HeroContentDecoration';
 
-export default function HeroContent() {
+export default function HeroContent({ callback }) {
   return (
     <div className='relative'>
       <HeroContentDecoration
@@ -18,14 +18,13 @@ export default function HeroContent() {
         <p className='mb-8 text-4xl font-bold text-oxford-blue'>
           A Community for Computing Enthusiasts
         </p>
-        <a href='#about'>
-          <Button
-            color='bg-white'
-            textColor='text-oxford-blue'
-            text='Check us out'
-            icon={<FiArrowDown size='1.3em' />}
-          />
-        </a>
+        <Button
+          callback={callback}
+          color='bg-white'
+          textColor='text-oxford-blue'
+          text='Check us out'
+          icon={<FiArrowDown size='1.3em' />}
+        />
       </div>
     </div>
   );

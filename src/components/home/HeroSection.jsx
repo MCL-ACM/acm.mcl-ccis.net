@@ -2,11 +2,11 @@ import * as React from 'react';
 import HeroBanner from './HeroBanner';
 import HeroContent from './HeroContent';
 
-export default function HeroSection() {
+export default function HeroSection({ callback }) {
   return (
     <section>
       <HeroBanner />
-      <HeroContent />
+      <HeroContent callback={callback} />
     </section>
   );
 }
