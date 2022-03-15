@@ -70,7 +70,7 @@ export default function CarouselEventCard({ events, tagged }) {
             tagged={tagged}
             tags={currentEvent.tags}
             title={currentEvent.title}
-            year={currentEvent.title}
+            year={currentEvent.year}
             img={currentEvent.img}
             imageAlt={currentEvent.imageAlt}
             description={currentEvent.description}
