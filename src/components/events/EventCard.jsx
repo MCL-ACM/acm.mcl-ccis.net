@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { motion, AnimatePresence } from "framer-motion"
 import { wrap } from 'popmotion'
 
-// NOT MY CODE
 const variants = {
     enter: (direction) => {
       return {
@@ -33,6 +32,7 @@ const swipePower = (offset, velocity) => {
 export default function EventCard({events, tagged, slider}) {
 
     const [[page, direction], setPage] = useState([0, 0]);
+
 
     const eventIndex = wrap(0, events.length, page)
 
@@ -93,9 +93,20 @@ export default function EventCard({events, tagged, slider}) {
                     <p className="text-sm font-light text-center text-rich-black">{events[eventIndex].description}</p>
                 </motion.div>
             </AnimatePresence>
-            <ul className="flex items-center justify-center text-center absolute bottom-0 w-full mb-7">
-                    {events.map((_, __, ___, ____, _____) => {
-                        return <li className="text-4xl h-full">.</li>
+            <ul currIndex={eventIndex} className="flex justify-center absolute bottom-0 w-full gap-3 carousel-dots">
+                    {events.map(event => {
+
+                        let itemIndex = events.indexOf(event)
+
+                        return (
+                            <motion.li className="text-6xl text-darkish-blue " layout transition={{
+                                type: "spring",
+                                stiffness: 700,
+                                damping: 30
+                            }}>
+                                .
+                            </motion.li>)
+
                     })}
             </ul>
             
