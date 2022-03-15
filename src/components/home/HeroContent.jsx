@@ -20,7 +20,7 @@ export default function HeroContent() {
         </p>
         <a href="#about">
           <Button
-            color="white"
+            color="bg-white"
             textColor="text-oxford-blue"
             text="Check us out"
             icon={<FiArrowDown size="1.3em" />}

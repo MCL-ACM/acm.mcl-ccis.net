@@ -1,6 +1,6 @@
 import * as React from "react";
 import { GoPrimitiveDot } from "react-icons/go";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 
 export default function EventCard({ title, imagePath, year, summary }) {
   const image = getImage(imagePath);
@@ -14,7 +14,11 @@ export default function EventCard({ title, imagePath, year, summary }) {
             <h4 className="text-2xl font-bold text-oxford-blue">{title}</h4>
             <p className="text-xl font-thin text-maximum-blue-green">{year}</p>
           </div>
-          <GatsbyImage image={image} alt={title} />
+          
+          {/* PLACEHOLDER IMAGE */}
+          <StaticImage src="../../images/home/IMG_3227.jpg"/>
+          {/* <GatsbyImage image={image} alt={title} />  */}
+          
           <p className="text-xl font-light text-rich-black">{summary}</p>
         </article>
 
