@@ -6,7 +6,10 @@ import HeroContentDecoration from "./HeroContentDecoration";
 export default function HeroContent() {
   return (
     <div className="relative">
-      <HeroContentDecoration className="absolute w-full -top-10" style={{"max-height": "500px"}} />
+      <HeroContentDecoration
+        className="absolute w-full -top-10"
+        style={{ "max-height": "500px", "z-index": "-1" }}
+      />
 
       <div className="flex flex-col items-center px-5 my-8 mb-4 text-center">
         <p className="mb-4 text-lg font-light text-oxford-blue">
@@ -15,11 +18,14 @@ export default function HeroContent() {
         <p className="mb-8 text-5xl font-bold text-oxford-blue">
           A Community for Computing Enthusiasts
         </p>
-        <Button
-          textColor="text-oxford-blue"
-          text="Check us out"
-          icon={<FiArrowDown size="1.3em" />}
-        />
+        <a href="#about">
+          <Button
+            color="white"
+            textColor="text-oxford-blue"
+            text="Check us out"
+            icon={<FiArrowDown size="1.3em" />}
+          />
+        </a>
       </div>
     </div>
   );

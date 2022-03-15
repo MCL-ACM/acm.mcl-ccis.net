@@ -1,6 +1,7 @@
 import * as React from "react";
 import Button from "../common/buttons/Button";
 import { FiArrowRight } from "react-icons/fi";
+import { Link } from "gatsby";
 
 export default function ContactSection() {
   return (
@@ -10,14 +11,14 @@ export default function ContactSection() {
         We're always looking forward to making connections. So feel free to drop
         us a message.
       </p>
-      <div>
+      <Link to="/contact-us">
         <Button
           text="Send a message"
           textColor="text-white"
           icon={<FiArrowRight size="1.3em" />}
           color="bg-darkish-blue"
         />
-      </div>
+      </Link>
     </section>
   );
 }

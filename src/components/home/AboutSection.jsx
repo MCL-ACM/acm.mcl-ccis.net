@@ -1,12 +1,11 @@
 import * as React from "react";
 import SectionItem from "./SectionItem";
-import Button from "../common/buttons/Button";
-import aboutImage from "../../images/home/Home-About.jpg";
+import { StaticImage } from "gatsby-plugin-image";
 
 export default function AboutSection() {
   return (
-    <section className="px-5">
-      <img src={aboutImage} alt="" className="mb-8"/>
+    <section id="about" className="px-5">
+      <StaticImage src="../../images/home/Home-About.jpg" alt="" className="mb-8"/>
       <SectionItem
         header="Nurturing Excellence"
         subheader="About Us"
