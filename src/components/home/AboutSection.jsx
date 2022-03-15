@@ -5,7 +5,11 @@ import { StaticImage } from "gatsby-plugin-image";
 export default function AboutSection() {
   return (
     <section id="about" className="px-5">
-      <StaticImage src="../../images/home/Home-About.jpg" alt="" className="mb-8"/>
+      <StaticImage
+        src="../../images/home/Home-About.jpg"
+        alt=""
+        className="mb-8"
+      />
       <SectionItem
         header="Nurturing Excellence"
         subheader="About Us"

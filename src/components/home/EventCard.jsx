@@ -14,11 +14,11 @@ export default function EventCard({ title, imagePath, year, summary }) {
             <h4 className="text-2xl font-bold text-oxford-blue">{title}</h4>
             <p className="text-xl font-thin text-maximum-blue-green">{year}</p>
           </div>
-          
+
           {/* PLACEHOLDER IMAGE */}
-          <StaticImage src="../../images/home/IMG_3227.jpg"/>
+          <StaticImage src="../../images/home/Home-Event.jpg" />
           {/* <GatsbyImage image={image} alt={title} />  */}
-          
+
           <p className="text-xl font-light text-rich-black">{summary}</p>
         </article>
 
