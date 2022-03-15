@@ -4,6 +4,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        'button-glow-white': '0px 0px 20px 0px rgba(255,255,255,1)'
+      },
       colors: {
         'cerulean-crayola': '#00A8DB',
         'standard-blue': '#0070EE',
