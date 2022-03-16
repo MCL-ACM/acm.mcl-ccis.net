@@ -11,8 +11,7 @@ export default function events({ data }) {
   data.allJson.edges.map(({ node }) => {
     const eventYear = new Date(node.year).getFullYear();
 
-    // eslint-disable-next-line radix
-    if (parseInt(eventYear) === year) {
+    if (parseInt(eventYear, 10) === year) {
       selectedEvents.push(node);
     } else if (year === 'All') {
       selectedEvents = [...data.allJson.edges];
