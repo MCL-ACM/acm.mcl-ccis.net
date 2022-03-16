@@ -53,10 +53,10 @@ collections:
     label: 'Executive Committee'
     folder: 'content/executive'
     create: true
-    slug: 'name'
+    slug: 'members'
     media_folder: ''
     public_folder: ''
-    path: '{{name}}/index'
+    path: 'members/index'
     extension: 'json'
     format: 'json'
     editor:
@@ -68,9 +68,17 @@ collections:
           widget: 'hidden',
           default: 'executive',
         }
-      - { label: 'Name', name: 'name', widget: 'string' }
-      - { label: 'Position', name: 'position', widget: 'string' }
-      - { label: 'Photo', name: 'photo', widget: 'image' }
+      - {
+          label: 'Member',
+          name: 'member',
+          widget: 'list',
+          fields:
+            [
+              { label: 'Name', name: 'name', widget: 'string' },
+              { label: 'Position', name: 'position', widget: 'string' },
+              { label: 'Photo', name: 'photo', widget: 'image' },
+            ],
+        }
 
   - name: 'committee'
     label: 'Committee'

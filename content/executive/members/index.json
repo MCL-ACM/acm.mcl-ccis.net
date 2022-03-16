@@ -1,0 +1,10 @@
+{
+  "type": "executive",
+  "member": [
+    {
+      "name": "James",
+      "position": "President",
+      "photo": "dog.jpg"
+    }
+  ]
+}
