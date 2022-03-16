@@ -6,7 +6,10 @@ import MembersHeader from '../components/members/MembersHeader';
 
 export default function members({ data }) {
   const executiveCommittee = data.executive.member;
-  const committees = data.committees.edges.map(({ node }) => node);
+  const committees = data.committees.edges.map(({ node }) => ({
+    ...node,
+    members: node.members.sort(),
+  }));
 
   return (
     <div className='flex flex-col gap-20 px-5 mb-24'>
@@ -24,7 +27,7 @@ export default function members({ data }) {
 }
 
 export const query = graphql`
-  query MyQuery {
+  query GetMembers {
     executive: executive {
       member {
         name
@@ -36,7 +39,7 @@ export const query = graphql`
         }
       }
     }
-    committees: allCommittee {
+    committees: allCommittee(sort: { fields: name, order: ASC }) {
       edges {
         node {
           name

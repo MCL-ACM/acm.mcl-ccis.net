@@ -1,0 +1,13 @@
+{
+  "type": "committee",
+  "name": "Finance Committee",
+  "chair": {
+    "name": "Patrick Mediodia",
+    "position": "Treasurer",
+    "photo": "dog.jpg"
+  },
+  "members": [
+    "Carlos Lorenzo Melchor",
+    "Sherald Ryoj Gurion"
+  ]
+}
