@@ -1,28 +1,37 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { wrap } from 'popmotion';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const variants = {
-  enter: (direction) => ({
-    x: direction > 0 ? 1000 : -1000,
-    opacity: 0,
-  }),
+  // eslint-disable-next-line arrow-body-style
+  enter: (direction) => {
+    return {
+      x: direction > 0 ? 1000 : -1000,
+      opacity: 0,
+    };
+  },
   center: {
     zIndex: 1,
     x: 0,
     opacity: 1,
   },
-  exit: (direction) => ({
-    zIndex: 0,
-    x: direction < 0 ? 1000 : -1000,
-    opacity: 0,
-  }),
+  // eslint-disable-next-line arrow-body-style
+  exit: (direction) => {
+    return { zIndex: 0, x: direction < 0 ? 1000 : -1000, opacity: 0 };
+  },
 };
 
 const swipeConfidenceThreshold = 10000;
 const swipePower = (offset, velocity) => Math.abs(offset) * velocity;
 
-export default function EventCard({ events = [], tagged, carousel, event }) {
+export default function EventCard({
+  events = [],
+  tagged,
+  carousel,
+  event,
+  shadow,
+}) {
   const [[page, direction], setPage] = useState([0, 0]);
 
   const eventIndex = wrap(0, events.length, page);
@@ -32,14 +41,18 @@ export default function EventCard({ events = [], tagged, carousel, event }) {
   };
 
   return (
-    <article className='items-center w-[20.9375em] h-[34.25em] relative rounded-bl-3xl rounded-br-3xl border-[0.55px] border-gray-200 overflow-hidden'>
+    <article
+      className={`${
+        shadow ? 'shadow-xl ' : ''
+      }items-center w-[20.9375em] h-[34.25em] relative rounded-bl-3xl rounded-br-3xl border-[0.55px] border-gray-200 overflow-hidden`}
+    >
       <span className='absolute block w-full h-[4px] bg-gradient-to-r from-cerulean-crayola to-standard-blue' />
 
       {carousel ? (
         <>
           <AnimatePresence initial={false} custom={direction}>
             <motion.div
-              key={page}
+              key={eventIndex}
               custom={direction}
               variants={variants}
               initial='enter'
@@ -72,7 +85,7 @@ export default function EventCard({ events = [], tagged, carousel, event }) {
                   tagged ? 'visible ' : 'hidden '
                 }flex space-x-3 absolute pt-7 px-9 w-full flex-wrap`}
               >
-                {events[eventIndex].tags.map((tag) => (
+                {events[eventIndex].node.tags.map((tag) => (
                   <li
                     key={tag}
                     className='bg-standard-blue text-white font-bold text-xs py-[4px] px-[10px] rounded-lg'
@@ -83,21 +96,21 @@ export default function EventCard({ events = [], tagged, carousel, event }) {
               </ul>
               <header className='flex flex-col gap-2 text-center pt-[72px]'>
                 <h1 className='text-lg font-bold text-oxford-blue'>
-                  {events[eventIndex].title}
+                  {events[eventIndex].node.title}
                 </h1>
                 <h5 className='text-base font-light text-maximum-blue-green'>
-                  {events[eventIndex].year}
+                  {new Date(events[eventIndex].node.year).getFullYear()}
                 </h5>
               </header>
 
-              <img
+              <GatsbyImage
                 height='181px'
                 width='263px'
-                src={events[eventIndex].img}
-                alt={events.imageAlt}
+                image={getImage(events[eventIndex].node.images[0].image)}
+                alt={events[eventIndex].node.images[0].imageAlt}
               />
               <p className='text-sm font-light text-center text-rich-black'>
-                {events[eventIndex].description}
+                {events[eventIndex].node.description}
               </p>
             </motion.div>
           </AnimatePresence>
