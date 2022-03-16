@@ -12,7 +12,9 @@ module.exports = {
         'maximum-blue-green': '#32C2C2',
         'rich-black': '#001F29',
         'darkish-blue': '#184E77',
-        ming: '#0D6E7A',
+        'ming': '#0D6E7A',
+        'rich-black': '#001F29',
+        'maximum-blue-green':'#32C2C2',
       },
       backgroundImage: {
         'footer-texture': "url('/src/images/svg/footer-background.svg')",
