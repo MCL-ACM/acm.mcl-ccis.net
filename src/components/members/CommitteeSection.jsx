@@ -3,7 +3,7 @@ import MemberSection from './MemberSection';
 import MemberInfo from './MemberInfo';
 import tempPhoto from '../../images/members/dog.jpg';
 
-export default function CommitteeSection({ name, chair, memberNames }) {
+export default function CommitteeSection({ name, chair, members }) {
   return (
     <MemberSection header={name}>
       <div className='grid grid-cols-2 gap-y-8'>
@@ -14,7 +14,7 @@ export default function CommitteeSection({ name, chair, memberNames }) {
           className='col-span-2'
         />
 
-        {memberNames.map((memberName) => (
+        {members.map((memberName) => (
           <MemberInfo name={memberName} position='Member' />
         ))}
       </div>

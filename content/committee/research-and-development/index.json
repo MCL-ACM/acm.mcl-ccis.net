@@ -1,0 +1,10 @@
+{
+  "type": "committee",
+  "name": "Research and Development",
+  "chair": {
+    "name": "Job Lipat",
+    "position": "RND Chair",
+    "photo": "dog.jpg"
+  },
+  "members": ["Joachim Cobar", "EJ Garcia"]
+}

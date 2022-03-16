@@ -8,37 +8,104 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "events"
-    label: "Events"
-    folder: "content/events"
+  - name: 'event'
+    label: 'Event'
+    folder: 'content/event'
     create: true
-    slug: "title"
-    media_folder: ""
-    public_folder: ""
-    path: "{{title}}/index"
-    extension: "json"
-    format: "json"
+    slug: 'title'
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/index'
+    extension: 'json'
+    format: 'json'
     editor:
       preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string" }
       - {
-          label: "Year",
-          name: "year",
-          widget: "datetime",
-          date_format: "YYYY",
-          time_format: "",
+          label: 'Collection Type',
+          name: 'type',
+          widget: 'hidden',
+          default: 'event',
         }
-      - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Summary", name: "summary", widget: "string" }
-      - { label: "Description", name: "description", widget: "markdown" }
+      - { label: 'Title', name: 'title', widget: 'string' }
       - {
-          label: "Images",
-          name: "images",
-          widget: "list",
+          label: 'Year',
+          name: 'year',
+          widget: 'datetime',
+          date_format: 'YYYY',
+          time_format: '',
+        }
+      - { label: 'Tags', name: 'tags', widget: 'list' }
+      - { label: 'Summary', name: 'summary', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'markdown' }
+      - {
+          label: 'Images',
+          name: 'images',
+          widget: 'list',
           fields:
             [
-              { label: "Image", name: "image", widget: "image" },
-              { label: "Image Alt", name: "imageAlt", widget: "string" },
+              { label: 'Image', name: 'image', widget: 'image' },
+              { label: 'Image Alt', name: 'imageAlt', widget: 'string' },
             ],
+        }
+
+  - name: 'executive'
+    label: 'Executive Committee'
+    folder: 'content/executive'
+    create: true
+    slug: 'name'
+    media_folder: ''
+    public_folder: ''
+    path: '{{name}}/index'
+    extension: 'json'
+    format: 'json'
+    editor:
+      preview: false
+    fields:
+      - {
+          label: 'Collection Type',
+          name: 'type',
+          widget: 'hidden',
+          default: 'executive',
+        }
+      - { label: 'Name', name: 'name', widget: 'string' }
+      - { label: 'Position', name: 'position', widget: 'string' }
+      - { label: 'Photo', name: 'photo', widget: 'image' }
+
+  - name: 'committee'
+    label: 'Committee'
+    folder: 'content/committee'
+    create: true
+    slug: 'name'
+    media_folder: ''
+    public_folder: ''
+    path: '{{name}}/index'
+    extension: 'json'
+    format: 'json'
+    editor:
+      preview: false
+    fields:
+      - {
+          label: 'Collection Type',
+          name: 'type',
+          widget: 'hidden',
+          default: 'committee',
+        }
+      - { label: 'Committee Name', name: 'name', widget: 'string' }
+      - {
+          label: 'Chair',
+          name: 'chair',
+          widget: 'object',
+          fields:
+            [
+              { label: 'Name', name: 'name', widget: 'string' },
+              { label: 'Position', name: 'position', widget: 'string' },
+              { label: 'Photo', name: 'photo', widget: 'image' },
+            ],
+        }
+      - {
+          label: 'Members',
+          name: 'members',
+          widget: 'list',
+          field: { label: 'Member name', name: 'memberName', widget: 'string' },
         }
