@@ -17,6 +17,7 @@
   "dependencies": {
     "framer-motion": "^6.2.8",
     "gatsby": "^4.9.2",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "^2.9.1",
     "gatsby-plugin-netlify-cms": "^6.9.0",
     "gatsby-plugin-postcss": "^5.9.0",

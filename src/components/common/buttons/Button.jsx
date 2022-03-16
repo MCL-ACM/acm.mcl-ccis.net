@@ -23,7 +23,7 @@ export default function Button({
       className={`${isGlowing} ${textColor} ${color} py-2.5 px-4 flex flex-row justify-center align-middle items-center rounded-full gap-2`}
     >
       {icon}
-      <p className='text-lg'>{text}</p>
+      <p className='font-mono text-lg'>{text}</p>
     </motion.button>
   );
 }
