@@ -2,8 +2,13 @@
   "type": "executive",
   "member": [
     {
-      "name": "James",
+      "name": "James Paz",
       "position": "President",
+      "photo": "dog.jpg"
+    },
+    {
+      "name": "Karlo Palisoc",
+      "position": "Vice President",
       "photo": "dog.jpg"
     }
   ]

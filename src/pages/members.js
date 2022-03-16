@@ -5,7 +5,7 @@ import ExecutiveSection from '../components/members/ExecutiveSection';
 import MembersHeader from '../components/members/MembersHeader';
 
 export default function members({ data }) {
-  const executiveCommittee = data.executive.edges.map(({ node }) => node);
+  const executiveCommittee = data.executive.member;
   const committees = data.committees.edges.map(({ node }) => node);
 
   /*
@@ -65,15 +65,13 @@ export default function members({ data }) {
 
 export const query = graphql`
   query MyQuery {
-    executive: allExecutive {
-      edges {
-        node {
-          name
-          position
-          photo {
-            childImageSharp {
-              gatsbyImageData
-            }
+    executive: executive {
+      member {
+        name
+        position
+        photo {
+          childImageSharp {
+            gatsbyImageData
           }
         }
       }
