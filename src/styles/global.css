@@ -11,4 +11,6 @@ body {
 
 .fixed-width {
   max-width: 1112px;
+  margin-left: auto;
+  margin-right: auto;
 }
