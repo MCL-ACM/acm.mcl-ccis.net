@@ -1,0 +1,13 @@
+{
+  "type": "committee",
+  "name": "Publication Committee",
+  "chair": {
+    "name": "Vivien Erica Hermoso",
+    "position": "Publication Committee Chair",
+    "photo": "dog.jpg"
+  },
+  "members": [
+    "Roigene Marc Bautista",
+    "Charmaine Eunice Rabano"
+  ]
+}

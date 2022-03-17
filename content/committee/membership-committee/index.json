@@ -1,0 +1,15 @@
+{
+  "type": "committee",
+  "name": "Membership Committee",
+  "chair": {
+    "name": "John Arthur Panti",
+    "position": "Membership Committee Chair",
+    "photo": "dog.jpg"
+  },
+  "members": [
+    "John Rieven Adante",
+    "Moses Querubin Manrique",
+    "Domingo Ortega III",
+    "John Peter Pomperada"
+  ]
+}

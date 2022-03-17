@@ -1,0 +1,30 @@
+{
+  "type": "executive",
+  "member": [
+    {
+      "name": "Khristian Kikuchi",
+      "position": "Adviser",
+      "photo": "dog.jpg"
+    },
+    {
+      "name": "James Paz",
+      "position": "President",
+      "photo": "dog.jpg"
+    },
+    {
+      "name": "Karlo Palisoc",
+      "position": "Vice President",
+      "photo": "dog.jpg"
+    },
+    {
+      "name": "Jayvee Mapote",
+      "position": "Secretary",
+      "photo": "dog.jpg"
+    },
+    {
+      "name": "Patrick Mediodia",
+      "position": "Treasurer",
+      "photo": "dog.jpg"
+    }
+  ]
+}

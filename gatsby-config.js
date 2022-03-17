@@ -19,14 +19,28 @@ module.exports = {
     {
       resolve: `gatsby-transformer-json`,
       options: {
-        typeName: `Json`, // a fixed string
+        typeName: ({ object }) => object.type,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: 'events',
-        path: `${__dirname}/content/events`,
+        name: 'event',
+        path: `${__dirname}/content/event`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'executive',
+        path: `${__dirname}/content/executive`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'committee',
+        path: `${__dirname}/content/committee`,
       },
     },
   ],
