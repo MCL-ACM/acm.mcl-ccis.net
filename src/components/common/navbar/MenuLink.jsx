@@ -34,7 +34,7 @@ export default function MenuLink({ page, slug, toggle }) {
           to={slug}
           className={`${
             page === 'Contact Us'
-              ? 'lg:bg-darkish-blue lg:text-white lg:py-4 lg:px-8 rounded-full '
+              ? 'lg:bg-darkish-blue lg:text-white lg:py-4 lg:px-8 rounded-full text-lg '
               : ''
           }text-lg text-oxford-blue `}
           activeClassName='font-bold'

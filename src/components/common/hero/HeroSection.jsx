@@ -2,13 +2,7 @@ import React from 'react';
 import HeroBanner from './HeroBanner';
 import HeroText from './HeroText';
 
-export default function HeroSection(
-  imagePath,
-  imageAlt,
-  header,
-  subheader,
-  variants,
-) {
+export default function HeroSection({ header, subheader, variants, image }) {
   const variantClasses = {
     left: 'items-left',
     right: 'items-right',
@@ -17,7 +11,7 @@ export default function HeroSection(
 
   return (
     <div>
-      <HeroBanner imagePath={imagePath} imageAlt={imageAlt} />
+      <HeroBanner image={image} />
       <HeroText
         header={header}
         subheader={subheader}

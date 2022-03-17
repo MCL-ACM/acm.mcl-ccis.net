@@ -14,7 +14,6 @@ export default function HeroSection({ callback }) {
           />
         }
       />
-
       <HeroContent callback={callback} />
     </section>
   );

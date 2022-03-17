@@ -1,0 +1,19 @@
+{
+  "type": "event",
+  "year": "2022-03-15T18:49:14.103Z",
+  "title": "CodeX 2022",
+  "tags": [
+    "123",
+    "123",
+    "123",
+    ""
+  ],
+  "summary": "This is the summary",
+  "description": "123123123",
+  "images": [
+    {
+      "image": "nay.png",
+      "imageAlt": "Yea"
+    }
+  ]
+}

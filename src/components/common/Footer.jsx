@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
 import { Link } from 'gatsby';
-import MenuLinks from './navbar/MenuLinks';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -83,7 +82,7 @@ export default function Footer() {
             <div className='lg:flex lg:justify-end'>
               <div className='flex flex-col gap-y-[1.0625rem]'>
                 <header className='text-sm font-light'>Keep in touch</header>
-                <ul className='flex gap-x-3.5'>
+                <ul className='flex gap-x-4'>
                   {socialLinks.map(({ link, icon }) => (
                     <a href={link} key={link} target='_blank' rel='noreferrer'>
                       {icon}

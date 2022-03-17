@@ -8,7 +8,10 @@ export default function events({ data }) {
   const [selectedEvents, setSelectedEvents] = useState([]);
 
   useEffect(() => {
-    const eventNodes = data.allJson.edges.map(({ node }) => node);
+    const eventNodes = data.allEvent.edges.map(({ node }) => ({
+      image: node.image && node.image[0] && node.images[0].image,
+      ...node,
+    }));
     setSelectedEvents(() =>
       year === 'All'
         ? eventNodes
@@ -38,8 +41,8 @@ export default function events({ data }) {
 }
 
 export const query = graphql`
-  query {
-    allJson {
+  query GetEvents {
+    allEvent {
       edges {
         node {
           id
@@ -47,12 +50,12 @@ export const query = graphql`
           year(formatString: "YYYY")
           tags
           summary
-          description
           images {
             image {
               childImageSharp {
                 gatsbyImageData
               }
+              name
             }
             imageAlt
           }
