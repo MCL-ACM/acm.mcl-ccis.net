@@ -12,19 +12,19 @@ export default function events({ data }) {
 
     data.allJson.edges.map(({ node }) => {
       const eventYear = new Date(node.year).getFullYear();
-
+      console.log(eventYear);
       // eslint-disable-next-line radix
       if (eventYear === year) {
         newEvents.push(node);
-        return false;
+      } else if (year === 'All') {
+        newEvents.push(node);
       }
-      newEvents.push(node);
+
       return true;
     });
     setSelectedEvents((prevState) => [...newEvents]);
-
-    // console.log(newEvents);
   }, [year]);
+
   return (
     <div className='w-full'>
       <div className='flex flex-col items-center w-full text-center'>

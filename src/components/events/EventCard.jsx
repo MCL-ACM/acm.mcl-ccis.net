@@ -39,7 +39,7 @@ export default function EventCard({
   const paginate = (newDirection) => {
     setPage([page + newDirection, newDirection]);
   };
-  console.log(events);
+
   return (
     <div>
       {events.length > 0 ? (
