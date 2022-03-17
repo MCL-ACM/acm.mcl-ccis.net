@@ -8,13 +8,14 @@ export default function events({ data }) {
   const [selectedEvents, setSelectedEvents] = useState([]);
 
   useEffect(() => {
+    const eventNodes = data.allJson.edges.map(({ node }) => node);
     setSelectedEvents(() =>
-      data.allJson.edges
-        .map(({ node }) => node)
-        .filter((event) => {
-          const eventYear = new Date(event.year).getFullYear();
-          return year === 'All' || eventYear === year;
-        }),
+      year === 'All'
+        ? eventNodes
+        : eventNodes.filter((event) => {
+            const eventYear = new Date(event.year).getFullYear();
+            return eventYear === year;
+          }),
     );
   }, [year]);
 
