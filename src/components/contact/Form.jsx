@@ -8,7 +8,7 @@ import MessageSentAlert from './MessageSentAlert';
 
 export default function Form() {
     const recaptchaRef = React.createRef()
-    const recaptchaSitekey = "6LfJCeYeAAAAADBoJ1boATwFV1G4fa8VEY1yLfv4"
+    const recaptchaSitekey = "6LdXlDkdAAAAAL7N1ImCSAEaCpISFOeEX10rGjVU"
 
     const [showRecaptchaAlert, setShowRecaptchaAlert] = useState(false);
     const [showMessageSent, setShowMessageSent] = useState(false);
@@ -22,7 +22,7 @@ export default function Form() {
                 "contact_form",
                 "contact_form_template",
                 event.target,
-                "ZUX5zi3qOZXgli_o3"
+                "user_HjRyAOakAT9wan4erehrS"
             )
             
             setShowRecaptchaAlert(false)
