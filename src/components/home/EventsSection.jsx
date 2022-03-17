@@ -8,8 +8,8 @@ import CarouselEventCard from '../events/CarouselEventCard';
 
 export default function EventsSection() {
   const query = graphql`
-    query GetEvents {
-      allJson(limit: 3, sort: { fields: year, order: DESC }) {
+    query GetHomeEvents {
+      allEvent(limit: 3, sort: { fields: year, order: DESC }) {
         edges {
           node {
             title
@@ -45,7 +45,7 @@ export default function EventsSection() {
         </div>
         <div className='flex flex-col items-center gap-8'>
           <CarouselEventCard
-            events={data.allJson.edges.map(({ node: event }) => ({
+            events={data.allEvent.edges.map(({ node: event }) => ({
               img: event.images[0].image,
               description: event.summary,
               ...event,
