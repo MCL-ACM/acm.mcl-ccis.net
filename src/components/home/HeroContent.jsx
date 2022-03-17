@@ -15,7 +15,7 @@ export default function HeroContent({ callback }) {
         <p className='mb-4 text-sm font-light text-oxford-blue sm:text-lg'>
           Malayan Colleges Laguna ACM Student Chapter
         </p>
-        <p className='mb-4 text-4xl font-bold text-oxford-blue sm:text-7xl'>
+        <p className='mb-4 text-4xl font-bold text-oxford-blue sm:text-6xl'>
           A Community for Computing Enthusiasts
         </p>
         <p className='hidden mb-8 font-light sm:block text-oxford-blue sm:text-lg'>

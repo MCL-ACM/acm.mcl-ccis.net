@@ -34,7 +34,7 @@ export default function EventsSection() {
   const data = useStaticQuery(query);
 
   return (
-    <div className='relative mt-12 mb-8'>
+    <div className='relative mt-12 mb-8 fixed-width'>
       <EventsDecoration
         className='absolute sm:hidden -bottom-20 max-h-fit'
         style={{ 'z-index': '-10' }}

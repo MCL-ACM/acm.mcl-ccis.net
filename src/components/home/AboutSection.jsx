@@ -7,7 +7,7 @@ export default function AboutSection() {
   return (
     <section
       id='about'
-      className='flex flex-col-reverse gap-4 px-5 sm:my-24 sm:gap-24 sm:grid sm:grid-cols-2'
+      className='flex flex-col-reverse gap-4 px-5 sm:my-24 sm:gap-24 sm:grid sm:grid-cols-2 fixed-width'
     >
       <div className='relative '>
         <div className='hidden sm:block sm:absolute sm:w-[95%] sm:h-[95%] sm:top-0 sm:left-0 sm:bg-gradient-to-tr from-standard-blue to-cerulean-crayola z-[-1]' />
