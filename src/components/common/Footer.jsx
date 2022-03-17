@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
 import { Link } from 'gatsby';
-import MenuLinks from './navbar/MenuLinks';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -62,7 +61,7 @@ export default function Footer() {
       <main className='h-full px-5 pt-24 pb-10 bg-gradient-to-tr from-standard-blue to-cerulean-crayola'>
         <section className='flex flex-col justify-between w-full h-full text-white'>
           <div className='flex flex-col gap-y-[2.375rem]'>
-            <div className='flex w-full justify-between'>
+            <div className='flex justify-between w-full'>
               <article className='flex flex-col gap-y-[1.0625rem]'>
                 <header className='text-sm font-light'>Connect with us</header>
                 <p className='text-lg'>
@@ -71,7 +70,7 @@ export default function Footer() {
                 <p className='text-lg'>acm.mclstudchapter@gmail.com</p>
               </article>
 
-              <ul className='hidden lg:flex text-2xl font-medium gap-x-16'>
+              <ul className='hidden text-2xl font-medium lg:flex gap-x-16'>
                 {links.map((link) => (
                   <li>
                     <Link to={link.slug}>{link.page}</Link>
@@ -83,7 +82,7 @@ export default function Footer() {
             <div className='lg:flex lg:justify-end'>
               <div className='flex flex-col gap-y-[1.0625rem]'>
                 <header className='text-sm font-light'>Keep in touch</header>
-                <ul className='flex gap-x-3.5'>
+                <ul className='flex gap-x-4'>
                   {socialLinks.map(({ link, icon }) => (
                     <a href={link} key={link} target='_blank' rel='noreferrer'>
                       {icon}
