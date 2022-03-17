@@ -28,7 +28,7 @@ export default function cmspage({ data }) {
 
 export const query = graphql`
   query {
-    allJson {
+    allEvent {
       edges {
         node {
           id

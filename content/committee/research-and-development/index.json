@@ -1,0 +1,18 @@
+{
+  "type": "committee",
+  "name": "Research and Development",
+  "chair": {
+    "name": "Job Lipat",
+    "position": "RND Chair",
+    "photo": "dog.jpg"
+  },
+  "members": [
+    "Joachim Cobar",
+    "EJ Garcia",
+    "Simon Asino",
+    "Cedrick Alon",
+    "Borge Paguirigan",
+    "John Matthew Tolentino",
+    "John Arsenio Lumtao"
+  ]
+}
