@@ -34,16 +34,18 @@ const links = [
 
 export default function Navbar() {
   return (
-    <nav className='fixed z-10 flex items-center justify-between w-full px-10 bg-white py-7'>
-      <Link to='/'>
-        <Logo />
-      </Link>
-      <div className='lg:hidden'>
-        <Menu links={links} />
-      </div>
-      <div className='hidden lg:block relative'>
-        <MenuNav links={links} />
-      </div>
+    <nav className='fixed z-10 flex items-center justify-center w-full bg-white'>
+      <main className='px-5 lg:px-2 py-7 w-full flex justify-between items-center lg:max-w-[69.5em]'>
+        <Link to='/'>
+          <Logo />
+        </Link>
+        <div className='lg:hidden'>
+          <Menu links={links} />
+        </div>
+        <div className='hidden lg:block relative'>
+          <MenuNav links={links} />
+        </div>
+      </main>
     </nav>
   );
 }
