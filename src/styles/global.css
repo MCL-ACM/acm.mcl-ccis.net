@@ -8,3 +8,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.fixed-width {
+  max-width: 1112px;
+}
