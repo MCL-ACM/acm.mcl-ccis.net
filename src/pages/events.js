@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { graphql } from 'gatsby';
 import EventDropdown from '../components/events/EventDropdown';
-import EventCard from '../components/events/EventCard';
+import CarouselEventCard from '../components/events/CarouselEventCard';
 
 export default function events({ data }) {
   const [year, setYear] = useState('All');
@@ -22,6 +22,7 @@ export default function events({ data }) {
 
       return true;
     });
+
     setSelectedEvents((prevState) => [...newEvents]);
   }, [year]);
 
@@ -37,8 +38,7 @@ export default function events({ data }) {
         <div className='pb-4'>
           <EventDropdown year={year} changeYear={setYear} />
         </div>
-
-        <EventCard shadow tagged carousel events={selectedEvents} />
+        <CarouselEventCard shadow tagged events={selectedEvents} />
       </div>
     </div>
   );
@@ -51,7 +51,7 @@ export const query = graphql`
         node {
           id
           title
-          year
+          year(formatString: "YYYY")
           tags
           summary
           description
