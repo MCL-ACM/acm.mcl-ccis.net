@@ -1,10 +1,10 @@
 import React from 'react';
-import EventCard from './EventCard';
+import EventCardBackground from './EventCardBackground';
 import EventCardContent from './EventCardContent';
 
-export default function SingleEventCard({ event, tagged }) {
+export default function SingleEventCard({ event, tagged, shadow }) {
   return (
-    <EventCard>
+    <EventCardBackground shadow={shadow}>
       <EventCardContent
         tagged={tagged}
         tags={event.tags}
@@ -14,6 +14,6 @@ export default function SingleEventCard({ event, tagged }) {
         imageAlt={event.imageAlt}
         description={event.description}
       />
-    </EventCard>
+    </EventCardBackground>
   );
 }
