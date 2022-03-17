@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { graphql } from 'gatsby';
 import EventDropdown from '../components/events/EventDropdown';
 import CarouselEventCard from '../components/events/CarouselEventCard';
+import FeaturedEventCard from '../components/events/FeaturedEventCard';
+import HeroDecoration from '../components/common/decorations/HeroDecoration';
+import SingleEventCard from '../components/events/SingleEventCard.jsx';
 
 export default function events({ data }) {
   const [year, setYear] = useState('All');
@@ -23,8 +26,33 @@ export default function events({ data }) {
   }, [year]);
 
   return (
-    <div className='w-full'>
-      <div className='flex flex-col items-center w-full text-center'>
+    <div className='w-full lg:mt-[4.8125em] relative pb-[9.25em]'>
+      <section>
+        <HeroDecoration className='absolute hidden lg:block' />
+        <div className='hidden lg:flex fixed-width relative pb-[5.8125em]'>
+          <div className='pt-11'>
+            <header>
+              <h1 className='text-[4rem] font-bold text-oxford-blue'>
+                Our Initiatives
+              </h1>
+              <h5 className='text-4xl font-bold text-darkish-blue'>Events</h5>
+            </header>
+          </div>
+          <FeaturedEventCard />
+        </div>
+        <div className='w-[87.1%] bottom-0 h-[1px] bg-gradient-to-r from-standard-blue to-cerulean-crayola hidden lg:block' />
+
+        <header className='fixed-width hidden lg:block text-center pt-[5.8125em]'>
+          <EventDropdown year={year} changeYear={setYear} />
+          <main className='flex flex-wrap pt-[6.8125em] gap-x-[3.3125em] gap-y-36'>
+            {selectedEvents.map((currentEvent) => (
+              <SingleEventCard tagged event={currentEvent} />
+            ))}
+          </main>
+        </header>
+      </section>
+
+      <div className='flex flex-col items-center w-full text-center fixed-width lg:hidden'>
         <header className='w-full pb-8 text-center'>
           <h1 className='text-4xl font-bold text-oxford-blue'>
             Our Initiatives

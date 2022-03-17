@@ -15,7 +15,7 @@ export default function EventDropdown({ year, changeYear }) {
   return (
     <div className='relative min-w-[12.5em]'>
       <button type='button' onClick={toggleOpen}>
-        <h1 className='flex items-center pb-2 text-2xl text-ming gap-x-3'>
+        <h1 className='flex items-center pb-2 text-2xl text-ming lg:text-7xl lg:text-oxford-blue lg:font-bold lg:tracking-wider gap-x-3'>
           {Number.isInteger(year) ? `A.Y. ${year}-${year + 1}` : 'All'}
           <svg width='13' height='11' viewBox='0 0 13 11'>
             <path
