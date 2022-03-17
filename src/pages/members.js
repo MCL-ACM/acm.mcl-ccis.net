@@ -12,16 +12,18 @@ export default function members({ data }) {
   }));
 
   return (
-    <div className='flex flex-col gap-20 px-5 mb-24'>
+    <div>
       <MembersHeader />
-      <ExecutiveSection officers={executiveCommittee} />
-      {committees.map((committee) => (
-        <CommitteeSection
-          name={committee.name}
-          chair={committee.chair}
-          members={committee.members}
-        />
-      ))}
+      <div className='flex flex-col gap-20 px-5 mb-24'>
+        <ExecutiveSection officers={executiveCommittee} />
+        {committees.map((committee) => (
+          <CommitteeSection
+            name={committee.name}
+            chair={committee.chair}
+            members={committee.members}
+          />
+        ))}
+      </div>
     </div>
   );
 }
