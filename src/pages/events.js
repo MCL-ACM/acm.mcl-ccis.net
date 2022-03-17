@@ -8,22 +8,14 @@ export default function events({ data }) {
   const [selectedEvents, setSelectedEvents] = useState([]);
 
   useEffect(() => {
-    const newEvents = [];
-
-    data.allJson.edges.map(({ node }) => {
-      const eventYear = new Date(node.year).getFullYear();
-      console.log(eventYear);
-      // eslint-disable-next-line radix
-      if (eventYear === year) {
-        newEvents.push(node);
-      } else if (year === 'All') {
-        newEvents.push(node);
-      }
-
-      return true;
-    });
-
-    setSelectedEvents((prevState) => [...newEvents]);
+    setSelectedEvents(() =>
+      data.allJson.edges
+        .map(({ node }) => node)
+        .filter((event) => {
+          const eventYear = new Date(event.year).getFullYear();
+          return year === 'All' || eventYear === year;
+        }),
+    );
   }, [year]);
 
   return (
