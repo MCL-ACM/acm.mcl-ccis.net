@@ -2,8 +2,8 @@ import * as React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import HeroBanner from '../common/hero/HeroBanner';
 import HeroContent from './HeroContent';
-import DesktopHeroDecoration from './DesktopHeroDecoration';
-import DotsDecoration from './DotsDecoration';
+import DotsDecoration from './decorations/DotsDecoration';
+import HeroDecoration from '../common/decorations/HeroDecoration';
 
 export default function HeroSection({ callback }) {
   return (
@@ -22,7 +22,7 @@ export default function HeroSection({ callback }) {
           <DotsDecoration className='hidden sm:block sm:absolute -bottom-10 -left-10 max-w-[80%] max-h-[80%] z-[-1]' />
         </div>
         <HeroContent callback={callback} />
-        <DesktopHeroDecoration className='hidden sm:block sm:absolute z-[-1]' />
+        <HeroDecoration className='hidden sm:block sm:absolute z-[-1]' />
       </section>
     </div>
   );

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { FiArrowDown } from 'react-icons/fi';
 import Button from '../common/buttons/Button';
-import HeroContentDecoration from './HeroContentDecoration';
+import HeroContentDecoration from './decorations/HeroContentDecoration';
 
 export default function HeroContent({ callback }) {
   return (

@@ -3,7 +3,7 @@ import { FiArrowRight } from 'react-icons/fi';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import Button from '../common/buttons/Button';
 import SectionHeader from './SectionHeader';
-import EventsDecoration from './EventsDecoration';
+import EventsDecoration from './decorations/EventsDecoration';
 import CarouselEventCard from '../events/CarouselEventCard';
 
 export default function EventsSection() {
