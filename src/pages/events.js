@@ -5,26 +5,26 @@ import EventCard from '../components/events/EventCard';
 
 export default function events({ data }) {
   const [year, setYear] = useState('All');
-  const [selectedEvents, setSelectedEvents] = useState();
+  const [selectedEvents, setSelectedEvents] = useState([]);
 
   useEffect(() => {
-    let newEvents = [];
+    const newEvents = [];
 
     data.allJson.edges.map(({ node }) => {
       const eventYear = new Date(node.year).getFullYear();
 
       // eslint-disable-next-line radix
-      if (parseInt(eventYear) === year) {
+      if (eventYear === year) {
         newEvents.push(node);
-      } else if (year === 'All') {
-        newEvents = [...data.allJson.edges];
+        return false;
       }
-      return undefined;
+      newEvents.push(node);
+      return true;
     });
-    setSelectedEvents(newEvents);
-    console.log('This useEffect hook has fired once');
-  }, [year]);
+    setSelectedEvents((prevState) => [...newEvents]);
 
+    // console.log(newEvents);
+  }, [year]);
   return (
     <div className='w-full'>
       <div className='flex flex-col text-center items-center w-full'>

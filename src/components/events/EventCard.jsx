@@ -39,10 +39,9 @@ export default function EventCard({
   const paginate = (newDirection) => {
     setPage([page + newDirection, newDirection]);
   };
-
+  console.log(events);
   return (
     <div>
-      {console.log(events)}
       {events.length > 0 ? (
         <article
           className={`${
@@ -88,7 +87,7 @@ export default function EventCard({
                       tagged ? 'visible ' : 'hidden '
                     }flex space-x-3 absolute pt-7 px-9 w-full flex-wrap`}
                   >
-                    {events[eventIndex].node.tags.map((tag) => (
+                    {events[eventIndex].tags.map((tag) => (
                       <li
                         key={tag}
                         className='bg-standard-blue text-white font-bold text-xs py-[4px] px-[10px] rounded-lg'
@@ -100,22 +99,22 @@ export default function EventCard({
 
                   <header className='flex flex-col gap-2 text-center pt-[72px]'>
                     <h1 className='text-lg font-bold text-oxford-blue'>
-                      {events[eventIndex].node.title}
+                      {events[eventIndex].title}
                     </h1>
                     <h5 className='text-base font-light text-maximum-blue-green'>
-                      {new Date(events[eventIndex].node.year).getFullYear()}
+                      {new Date(events[eventIndex].year).getFullYear()}
                     </h5>
                   </header>
 
                   <GatsbyImage
                     height='181px'
                     width='263px'
-                    image={getImage(events[eventIndex].node.images[0].image)}
-                    alt={events[eventIndex].node.images[0].imageAlt}
+                    image={getImage(events[eventIndex].images[0].image)}
+                    alt={events[eventIndex].images[0].imageAlt}
                   />
 
                   <p className='text-sm font-light text-center text-rich-black'>
-                    {events[eventIndex].node.description}
+                    {events[eventIndex].description}
                   </p>
                 </motion.div>
               </AnimatePresence>
