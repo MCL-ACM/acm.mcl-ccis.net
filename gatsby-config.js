@@ -10,6 +10,13 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: ['Exo 2', 'Roboto:100,300,400,400,700'],
+        display: 'swap',
+      },
+    },
+    {
       resolve: `gatsby-transformer-json`,
       options: {
         typeName: ({ object }) => object.type,
