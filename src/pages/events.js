@@ -45,9 +45,15 @@ export default function events({ data }) {
         <header className='fixed-width hidden lg:block text-center pt-[5.8125em]'>
           <EventDropdown year={year} changeYear={setYear} />
           <main className='flex flex-wrap pt-[6.8125em] gap-x-[3.3125em] gap-y-36'>
-            {selectedEvents.map((currentEvent) => (
-              <SingleEventCard tagged event={currentEvent} />
-            ))}
+            {selectedEvents.length > 0 ? (
+              selectedEvents.map((currentEvent) => (
+                <SingleEventCard tagged event={currentEvent} />
+              ))
+            ) : (
+              <div className='py-12 text-7xl font-bold text-slate-500 opacity-70 w-full text-center'>
+                No Events Found . . .
+              </div>
+            )}
           </main>
         </header>
       </section>
