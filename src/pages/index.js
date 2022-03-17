@@ -14,12 +14,13 @@ export default function index() {
   return (
     <main className='flex flex-col gap-12'>
       <HeroSection callback={() => executeScroll()} />
-      <Divider glow className='mx-5 sm:mr-5 sm:ml-0' />
+      <Divider className='mx-5 sm:mr-5 sm:ml-0' />
       <div ref={aboutRef}>
         <AboutSection />
       </div>
-      <Divider glow className='mx-5 sm:mr-5 sm:ml-0' />
+      <Divider className='mx-5 sm:mr-5 sm:ml-0' />
       <MembersSection />
+      <Divider className='hidden mx-5 sm:block sm:mr-5 sm:ml-0' />
       <EventsSection />
       <ContactSection />
     </main>

@@ -11,7 +11,7 @@ export default function AboutSection() {
     >
       <div className='relative '>
         <div className='hidden sm:block sm:absolute sm:w-[95%] sm:h-[95%] sm:top-0 sm:left-0 sm:bg-gradient-to-tr from-standard-blue to-cerulean-crayola z-[-1]' />
-        <div className='sm:absolute sm:w-[95%] sm:h-[95%] sm:bottom-0 sm:right-0 sm:z-[1] sm:bg-white sm:p-24 sm:shadow-lg'>
+        <div className='sm:absolute sm:w-[95%] sm:h-[95%] sm:bottom-0 sm:right-0 sm:z-[1] sm:bg-white sm:p-[10%] sm:shadow-lg'>
           <hgroup className='flex flex-col gap-3 '>
             <h2 className='text-3xl font-bold text-oxford-blue'>
               Nurturing Excellence

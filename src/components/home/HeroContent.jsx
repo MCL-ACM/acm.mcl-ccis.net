@@ -11,7 +11,7 @@ export default function HeroContent({ callback }) {
         style={{ 'max-height': '500px', 'z-index': '-1' }}
       />
 
-      <div className='flex flex-col items-center px-5 my-8 mb-4 text-center sm:text-right sm:items-end'>
+      <div className='flex flex-col items-center my-8 mb-4 text-center sm:text-right sm:items-end'>
         <p className='mb-4 text-sm font-light text-oxford-blue sm:text-lg'>
           Malayan Colleges Laguna ACM Student Chapter
         </p>
