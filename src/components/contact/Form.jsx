@@ -10,6 +10,7 @@ export default function Form() {
     const recaptchaRef = React.createRef()
     const recaptchaSitekey = "6LfJCeYeAAAAADBoJ1boATwFV1G4fa8VEY1yLfv4"
 
+    const [showRecaptchaAlert, setShowRecaptchaAlert] = useState(false);
     const [showMessageSent, setShowMessageSent] = useState(false);
 
     function sendEmail(event) {
@@ -23,9 +24,13 @@ export default function Form() {
                 event.target,
                 "ZUX5zi3qOZXgli_o3"
             )
-
+            
+            setShowRecaptchaAlert(false)
             event.target.reset()
             setShowMessageSent(true)
+        }
+        else {
+            setShowRecaptchaAlert(true)
         }
 
     }
@@ -48,10 +53,13 @@ export default function Form() {
                     Your message<br />
                     <textarea id="message" name="message" rows="5" placeholder="Enter your message here" required className="w-full mt-1 py-2 border-b-2 border-cerulean-crayola text-lg focus:outline-none focus:border-standard-blue" />
                 </label>
-                <ReCAPTCHA
-                    ref = {recaptchaRef}
-                    sitekey = {recaptchaSitekey}
-                />
+                <div>
+                    <ReCAPTCHA
+                        ref = {recaptchaRef}
+                        sitekey = {recaptchaSitekey}
+                    />
+                    <p className="text-red-500" style={{ display: showRecaptchaAlert ? "block" : "none" }}>Please answer reCAPTCHA</p>                    
+                </div>
                 <Button
                     text="Send my message"
                     color="bg-darkish-blue"
