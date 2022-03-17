@@ -4,11 +4,18 @@ module.exports = {
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
-    "gatsby-plugin-netlify-cms",
-    "gatsby-plugin-postcss",
-    "gatsby-plugin-image",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+    'gatsby-plugin-netlify-cms',
+    'gatsby-plugin-postcss',
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: ['Exo 2', 'Roboto:100,300,400,400,700'],
+        display: 'swap',
+      },
+    },
     {
       resolve: `gatsby-transformer-json`,
       options: {
@@ -18,7 +25,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: "events",
+        name: 'events',
         path: `${__dirname}/content/events`,
       },
     },
