@@ -8,7 +8,10 @@ export default function events({ data }) {
   const [selectedEvents, setSelectedEvents] = useState([]);
 
   useEffect(() => {
-    const eventNodes = data.allEvent.edges.map(({ node }) => node);
+    const eventNodes = data.allEvent.edges.map(({ node }) => ({
+      image: node.image && node.image[0] && node.images[0].image,
+      ...node,
+    }));
     setSelectedEvents(() =>
       year === 'All'
         ? eventNodes
