@@ -7,16 +7,19 @@ export default function HeroContent({ callback }) {
   return (
     <div className='relative'>
       <HeroContentDecoration
-        className='absolute w-full -top-20'
+        className='absolute w-full -top-20 sm:hidden'
         style={{ 'max-height': '500px', 'z-index': '-1' }}
       />
 
-      <div className='flex flex-col items-center px-5 my-8 mb-4 text-center'>
-        <p className='mb-4 text-sm font-light text-oxford-blue'>
+      <div className='flex flex-col items-center px-5 my-8 mb-4 text-center sm:text-right sm:items-end'>
+        <p className='mb-4 text-sm font-light text-oxford-blue sm:text-lg'>
           Malayan Colleges Laguna ACM Student Chapter
         </p>
-        <p className='mb-8 text-4xl font-bold text-oxford-blue'>
+        <p className='mb-4 text-4xl font-bold text-oxford-blue sm:text-7xl'>
           A Community for Computing Enthusiasts
+        </p>
+        <p className='hidden mb-8 font-light sm:block text-oxford-blue sm:text-lg'>
+          Promoting excellence in modern computing
         </p>
         <Button
           callback={callback}

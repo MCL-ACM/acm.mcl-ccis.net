@@ -5,11 +5,6 @@ import SectionItem from './SectionItem';
 export default function MembersSection() {
   return (
     <section className='px-5'>
-      <StaticImage
-        src='../../images/home/Home-Members.jpg'
-        alt=''
-        className='mb-8'
-      />
       <SectionItem
         header='Passionate and Dedicated'
         subheader='Our Members'
@@ -17,6 +12,13 @@ export default function MembersSection() {
         buttonText='Explore our members'
         buttonLink='/members'
         align='right'
+        image={
+          <StaticImage
+            src='../../images/home/Home-Members.jpg'
+            alt=''
+            className='mb-8'
+          />
+        }
       />
     </section>
   );

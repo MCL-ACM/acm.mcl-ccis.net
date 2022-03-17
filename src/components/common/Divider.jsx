@@ -6,7 +6,7 @@ export default function Divider({ glow, className }) {
   };
   return (
     <hr
-      className={`h-1 shadow-lg bg-gradient-to-tr from-standard-blue to-cerulean-crayola ${className}`}
+      className={`sm:h-0.5 h-1 shadow-lg bg-gradient-to-tr from-standard-blue to-cerulean-crayola ${className}`}
       style={styles}
     />
   );

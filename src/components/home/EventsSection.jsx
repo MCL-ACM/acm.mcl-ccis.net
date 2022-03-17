@@ -36,7 +36,7 @@ export default function EventsSection() {
   return (
     <div className='relative mt-12 mb-8'>
       <EventsDecoration
-        className='absolute -bottom-20 max-h-fit'
+        className='absolute sm:hidden -bottom-20 max-h-fit'
         style={{ 'z-index': '-10' }}
       />
       <section className='z-10 px-5'>
