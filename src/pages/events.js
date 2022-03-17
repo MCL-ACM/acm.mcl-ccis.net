@@ -1,27 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { graphql } from 'gatsby';
 import EventDropdown from '../components/events/EventDropdown';
 import EventCard from '../components/events/EventCard';
-import sampleImage from '../images/about/how_we_started.png';
 
 export default function events({ data }) {
   const [year, setYear] = useState('All');
+  const [selectedEvents, setSelectedEvents] = useState();
 
-  let selectedEvents = [];
+  useEffect(() => {
+    let newEvents = [];
 
-  data.allJson.edges.map(({ node }) => {
-    const eventYear = new Date(node.year).getFullYear();
+    data.allJson.edges.map(({ node }) => {
+      const eventYear = new Date(node.year).getFullYear();
 
-    // eslint-disable-next-line radix
-    if (parseInt(eventYear) === year) {
-      selectedEvents.push(node);
-    } else if (year === 'All') {
-      selectedEvents = [...data.allJson.edges];
-    }
-    return undefined;
-  });
-
-  console.log(selectedEvents[0]);
+      // eslint-disable-next-line radix
+      if (parseInt(eventYear) === year) {
+        newEvents.push(node);
+      } else if (year === 'All') {
+        newEvents = [...data.allJson.edges];
+      }
+      return undefined;
+    });
+    setSelectedEvents(newEvents);
+    console.log('This useEffect hook has fired once');
+  }, [year]);
 
   return (
     <div className='w-full'>
@@ -32,7 +34,10 @@ export default function events({ data }) {
           </h1>
           <h3 className='text-darkish-blue text-2xl font-medium'>Events</h3>
         </header>
-        <EventDropdown year={year} changeYear={setYear} />
+        <div className='pb-4'>
+          <EventDropdown year={year} changeYear={setYear} />
+        </div>
+
         <EventCard shadow tagged carousel events={selectedEvents} />
       </div>
     </div>
