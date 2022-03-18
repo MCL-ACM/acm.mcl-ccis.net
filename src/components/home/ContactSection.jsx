@@ -6,7 +6,7 @@ import Divider from '../common/Divider';
 
 export default function ContactSection() {
   return (
-    <div className='px-12 mt-12 fixed-width'>
+    <div className='px-12 my-8 fixed-width sm:mb-24'>
       <Divider className='hidden sm:block' />
       <section className='flex flex-col items-center grid-cols-2 gap-12 px-5 my-16 text-center sm:text-left sm:items-start sm:grid'>
         <h1 className='font-bold text-7xl text-oxford-blue sm:text-8xl'>

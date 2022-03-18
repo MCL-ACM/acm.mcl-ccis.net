@@ -50,17 +50,17 @@ export default function EventsSection() {
   return (
     <div className='relative mt-12 mb-8'>
       <EventsDecoration className='absolute sm:hidden -bottom-20 max-h-fit z-[-1]' />
-      <DesktopEventsDecoration className='hidden sm:block sm:absolute top-20 z-[-1] w-full h-[100%]' />
+      <DesktopEventsDecoration className='hidden sm:block sm:absolute top-32 z-[-1] w-full h-[90%]' />
 
       <section className='z-[1]'>
-        <div className='self-start px-5 mb-4 text-left fixed-width'>
-          <hgroup className='flex flex-col gap-3'>
-            <h2 className='text-3xl font-bold text-oxford-blue'>
-              Fulfilling our Vision
-            </h2>
-            <h3 className='text-xl font-medium text-darkish-blue'>Events</h3>
-          </hgroup>
-        </div>
+        <hgroup className='flex flex-col self-start gap-3 px-5 mb-4 text-left sm:mb-20 fixed-width'>
+          <h2 className='text-3xl font-bold text-oxford-blue sm:text-6xl'>
+            Fulfilling our Vision
+          </h2>
+          <h3 className='text-xl font-medium text-darkish-blue sm:text-4xl'>
+            Events
+          </h3>
+        </hgroup>
         <div className=''>
           <div className='flex flex-col items-center sm:hidden'>
             <CarouselEventCard events={events} />

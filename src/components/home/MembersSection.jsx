@@ -10,18 +10,14 @@ export default function MembersSection() {
   return (
     <section className='px-5 fixed-width'>
       <section className='flex flex-col gap-4'>
-        <div className='relative sm:my-20'>
-          <div className='sm:absolute sm:w-[98%] sm:h-[98%] sm:bottom-0 sm:right-0 sm:z-[-1] sm:bg-gradient-to-tr from-standard-blue to-cerulean-crayola' />
-          <StaticImage
-            src='../../images/home/Home-Members.jpg'
-            alt=''
-            className='mb-8 sm:w-[98%] sm:h-[98%]'
-          />
-          <DotsRowSmallDecoration className='hidden sm:block sm:absolute -top-8 left-20 max-w-[30%] max-h-[30%]' />
-          <DotsDecoration className='text-oxford-blue hidden sm:block sm:absolute bottom-28 -right-10 max-w-[50%] max-h-[50%] z-[-1]' />
-          <DotsDecoration className='text-oxford-blue hidden sm:block sm:absolute -bottom-5 left-10 max-w-[50%] max-h-[50%] z-[-1]' />
+        <div className='relative sm:my-28'>
+          <div className='sm:absolute w-full h-full sm:top-8 sm:left-8 sm:z-[-1] sm:bg-gradient-to-tr from-standard-blue to-cerulean-crayola' />
+          <StaticImage src='../../images/home/Home-Members.jpg' alt='' />
+          <DotsRowSmallDecoration className='hidden sm:block sm:absolute -top-8 -left-10 max-w-[20%] max-h-[20%]' />
+          <DotsDecoration className='text-oxford-blue hidden sm:block sm:absolute bottom-28 -right-16 max-w-[50%] max-h-[50%] z-[-1]' />
+          <DotsDecoration className='text-oxford-blue hidden sm:block sm:absolute -bottom-20 left-10 max-w-[50%] max-h-[50%] z-[-1]' />
         </div>
-        <div className='flex flex-col items-end gap-3 text-right sm:items-center sm:text-center'>
+        <div className='flex flex-col items-end gap-3 text-right sm:items-center sm:text-center '>
           <h2 className='text-3xl font-bold text-oxford-blue sm:text-4xl'>
             Passionate and Dedicated
           </h2>
@@ -37,7 +33,7 @@ export default function MembersSection() {
             <Button
               text='Explore our members'
               color='bg-darkish-blue'
-              textColor='text-white '
+              textColor='text-white sm:text-xl sm:p-4 sm:px-8 gap-4'
               icon={<FiArrowRight size='1.3em' />}
             />
           </Link>

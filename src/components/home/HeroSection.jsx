@@ -18,8 +18,8 @@ export default function HeroSection({ callback }) {
               />
             }
           />
-          <DotsDecoration className='hidden sm:block sm:absolute -top-10 -right-10 max-w-[80%] max-h-[80%] z-[-1]' />
-          <DotsDecoration className='hidden sm:block sm:absolute -bottom-10 -left-10 max-w-[80%] max-h-[80%] z-[-1]' />
+          <DotsDecoration className='hidden text-cerulean-crayola sm:block sm:absolute -top-10 -right-10 max-w-[80%] max-h-[80%] z-[-1]' />
+          <DotsDecoration className='hidden text-cerulean-crayola sm:block sm:absolute -bottom-10 -left-10 max-w-[80%] max-h-[80%] z-[-1]' />
         </div>
         <HeroContent callback={callback} />
       </section>

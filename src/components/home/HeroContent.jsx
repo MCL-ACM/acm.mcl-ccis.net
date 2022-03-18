@@ -5,12 +5,7 @@ import HeroContentDecoration from './decorations/HeroContentDecoration';
 
 export default function HeroContent({ callback }) {
   return (
-    <div className='relative'>
-      <HeroContentDecoration
-        className='absolute w-full -top-20 sm:hidden'
-        style={{ 'max-height': '500px', 'z-index': '-1' }}
-      />
-
+    <div className='block'>
       <div className='flex flex-col items-center my-8 mb-4 text-center sm:text-right sm:items-end'>
         <p className='mb-4 text-sm font-light text-oxford-blue sm:text-lg'>
           Malayan Colleges Laguna ACM Student Chapter
@@ -24,10 +19,12 @@ export default function HeroContent({ callback }) {
         <Button
           callback={callback}
           color='bg-white'
-          textColor='text-oxford-blue'
+          textColor='text-oxford-blue sm:border sm:border-standard-blue/40 sm:shadow-button-glow-white sm:px-8 sm:py-4 sm:gap-3 sm:text-xl'
           text='Check us out'
-          icon={<FiArrowDown size='1.3em' />}
+          icon={<FiArrowDown size='1.2em' />}
+          iconRight
         />
+        <HeroContentDecoration className='absolute w-[80%] right-[-10%] bottom-0 z-[-1]' />
       </div>
     </div>
   );
