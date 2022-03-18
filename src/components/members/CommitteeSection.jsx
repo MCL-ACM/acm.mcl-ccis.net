@@ -6,7 +6,7 @@ import tempPhoto from '../../images/members/dog.jpg';
 export default function CommitteeSection({ name, chair, members }) {
   return (
     <MemberSection header={name}>
-      <div className='grid grid-cols-2 sm:grid-cols-3 gap-y-8'>
+      <div className='grid grid-cols-2 sm:grid-cols-3 gap-y-8  sm:gap-y-14'>
         <MemberInfo
           name={chair.name}
           position={chair.position}
