@@ -14,7 +14,7 @@ export default function AboutSection({ ref }) {
       ref={ref}
     >
       <div className='relative'>
-        <div className='absolute w-full h-full -left-8 -top-8  sm:bg-gradient-to-tr from-standard-blue to-cerulean-crayola z-[-1]' />
+        <div className='absolute w-full h-full -left-8 -top-8  sm:bg-gradient-to-t from-standard-blue to-cerulean-crayola z-[-1]' />
         <div className='flex flex-col sm:bg-white sm:p-12 sm:shadow-lg gap-y-12'>
           <Divider className='sm:h-2' />
           <div className='flex flex-col gap-y-9'>
@@ -50,7 +50,7 @@ export default function AboutSection({ ref }) {
           className='mb-8 sm:mb-0 sm: aspect-square'
         />
         <DotsRowSmallDecoration className='hidden sm:block sm:absolute -top-8 left-20 max-w-[40%] max-h-[40%]' />
-        <DotsDecoration className='text-oxford-blue hidden sm:block sm:absolute bottom-0 -right-5 max-w-[50%] max-h-[50%] z-[-1]' />
+        <DotsDecoration className='text-oxford-blue hidden sm:block sm:absolute -bottom-7 -right-7 max-w-[50%] max-h-[50%] z-[-1]' />
       </div>
     </section>
   );

@@ -24,8 +24,8 @@ export default function HeroContent({ callback }) {
           icon={<FiArrowDown size='1.2em' />}
           iconRight
         />
-        <HeroContentDecoration className='absolute w-[80%] right-[-10%] bottom-0 z-[-1]' />
       </div>
+      <HeroContentDecoration className='absolute -bottom-20 h-[55%] left-[-70%] sm:left-auto sm:h-full sm:w-[80%] sm:right-[-10%] sm:bottom-0 z-[-1]' />
     </div>
   );
 }

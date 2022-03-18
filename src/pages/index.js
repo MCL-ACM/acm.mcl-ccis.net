@@ -12,15 +12,19 @@ export default function index() {
     aboutRef.current.scrollIntoView({ behavior: 'smooth' });
 
   return (
-    <main className='flex flex-col gap-12 sm:gap-20'>
-      <HeroSection callback={() => executeScroll()} />
-      <Divider className='mx-5 sm:mr-5 sm:ml-0' glow />
-      <AboutSection ref={aboutRef} />
-      <Divider className='mx-5 sm:mr-5 sm:ml-0' glow />
-      <MembersSection />
-      <Divider className='hidden mx-5 sm:block sm:mr-5 sm:ml-0' glow />
-      <EventsSection />
-      <ContactSection />
-    </main>
+    <div>
+      <Divider className='hidden sm:block' />
+
+      <main className='flex flex-col gap-12 sm:gap-20'>
+        <HeroSection callback={() => executeScroll()} />
+        <Divider className='mx-5 sm:mr-5 sm:ml-0' glow />
+        <AboutSection ref={aboutRef} />
+        <Divider className='mx-5 sm:mr-5 sm:ml-0' glow />
+        <MembersSection />
+        <Divider className='hidden sm:block sm:mr-5 sm:ml-0' glow />
+        <EventsSection />
+        <ContactSection />
+      </main>
+    </div>
   );
 }

@@ -23,7 +23,7 @@ export default function HeroSection({ callback }) {
         </div>
         <HeroContent callback={callback} />
       </section>
-      <HeroDecoration className='hidden sm:block sm:absolute z-[-1] h-full top-0 right-0' />
+      <HeroDecoration className='hidden sm:block sm:absolute z-[-1] h-[98%] bottom-0 right-0' />
     </div>
   );
 }
