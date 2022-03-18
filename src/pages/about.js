@@ -1,7 +1,7 @@
-import React from 'react'
-import HeroSection from '../components/about/HeroSection'
-import HistorySection from '../components/about/HistorySection'
-import InternationalOrgSection from '../components/about/InternationalOrgSection'
+import React from 'react';
+import HeroSection from '../components/about/HeroSection';
+import HistorySection from '../components/about/HistorySection';
+import InternationalOrgSection from '../components/about/InternationalOrgSection';
 
 export default function about() {
   return (
@@ -10,5 +10,5 @@ export default function about() {
       <HistorySection />
       <InternationalOrgSection />
     </div>
-  )
+  );
 }
