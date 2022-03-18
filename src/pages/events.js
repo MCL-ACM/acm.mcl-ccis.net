@@ -43,11 +43,13 @@ export default function events({ data }) {
         <div className='w-[87.1%] bottom-0 h-[1px] bg-gradient-to-r from-standard-blue to-cerulean-crayola hidden lg:block' />
 
         <section className='fixed-width hidden lg:block text-center pt-[5.8125em] min-h-[830px]'>
-          <EventDropdown year={year} changeYear={setYear} />
+          <div className='max-w-[600px] ml-auto mr-auto'>
+            <EventDropdown year={year} changeYear={setYear} />
+          </div>
           <main className='flex flex-wrap pt-[6.8125em] gap-x-[3.3125em] gap-y-36'>
             {selectedEvents.length > 0 ? (
               selectedEvents.map((currentEvent) => (
-                <SingleEventCard tagged event={currentEvent} />
+                <SingleEventCard shadow tagged event={currentEvent} />
               ))
             ) : (
               <div className='py-12 text-7xl font-bold text-slate-500 opacity-70 w-full text-center'>

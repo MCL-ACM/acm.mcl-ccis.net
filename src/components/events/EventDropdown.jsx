@@ -27,7 +27,7 @@ export default function EventDropdown({ year, changeYear }) {
       </button>
 
       {isOpen ? (
-        <ul className='absolute z-10 flex flex-col items-center w-full pb-2 bg-white border-2 border-t-0 gap-y-2 rounded-br-xl rounded-bl-xl'>
+        <ul className='absolute z-10 flex flex-col items-center w-full pb-2 bg-white border-2 border-t-0 gap-y-2 lg:gap-y-8 lg:py-8 rounded-b-xl'>
           <li key={year}>
             <button
               type='button'
@@ -35,7 +35,7 @@ export default function EventDropdown({ year, changeYear }) {
                 changeYear('All');
                 toggleOpen();
               }}
-              className='text-xl text-ming'
+              className='text-xl text-ming lg:text-2xl'
             >
               All
             </button>
@@ -48,7 +48,7 @@ export default function EventDropdown({ year, changeYear }) {
                   changeYear(_year);
                   toggleOpen();
                 }}
-                className='text-xl text-ming'
+                className='lg:text-2xl text-xl text-ming'
               >{`${_year}-${_year + 1}`}</button>
             </li>
           ))}
