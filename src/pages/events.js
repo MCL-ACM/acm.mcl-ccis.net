@@ -40,7 +40,7 @@ export default function events({ data }) {
           </div>
           <FeaturedEventCard />
         </div>
-        <div className='w-[87.1%] bottom-0 h-[1px] bg-gradient-to-r from-standard-blue to-cerulean-crayola hidden lg:block' />
+        <div className='w-[88.1%] bottom-0 h-[1px] bg-gradient-to-r from-standard-blue to-cerulean-crayola hidden lg:block' />
 
         <section className='fixed-width hidden lg:block text-center pt-[5.8125em] min-h-[830px]'>
           <div className='max-w-[600px] ml-auto mr-auto'>
