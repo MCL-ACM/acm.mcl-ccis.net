@@ -14,7 +14,7 @@ export default function members({ data }) {
   return (
     <div>
       <MembersHeader />
-      <div className='flex flex-col gap-20 px-5 mb-24'>
+      <div className='flex flex-col gap-20 sm:gap-28 px-5 mb-24 fixed-width'>
         <ExecutiveSection officers={executiveCommittee} />
         {committees.map((committee) => (
           <CommitteeSection
