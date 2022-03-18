@@ -42,7 +42,7 @@ export default function events({ data }) {
         </div>
         <div className='w-[87.1%] bottom-0 h-[1px] bg-gradient-to-r from-standard-blue to-cerulean-crayola hidden lg:block' />
 
-        <header className='fixed-width hidden lg:block text-center pt-[5.8125em]'>
+        <section className='fixed-width hidden lg:block text-center pt-[5.8125em] min-h-[830px]'>
           <EventDropdown year={year} changeYear={setYear} />
           <main className='flex flex-wrap pt-[6.8125em] gap-x-[3.3125em] gap-y-36'>
             {selectedEvents.length > 0 ? (
@@ -55,7 +55,7 @@ export default function events({ data }) {
               </div>
             )}
           </main>
-        </header>
+        </section>
       </section>
 
       <div className='flex flex-col items-center w-full text-center fixed-width lg:hidden'>
