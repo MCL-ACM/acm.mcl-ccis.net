@@ -2,7 +2,9 @@ import React from 'react';
 
 export default function HeroBodyText({ className }) {
   return (
-    <div className={`text-2xl text-center text-rich-black leading-[180%] tracking-wide ${className}`}>
+    <div
+      className={`text-2xl text-center text-rich-black leading-[180%] tracking-wide ${className}`}
+    >
       <p>
         MCL-ACM fosters computing excellence within its members and the MCL
         community by hosting programming-related events and peer mentoring for
