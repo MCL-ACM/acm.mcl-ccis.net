@@ -18,7 +18,7 @@ export default function CommitteeSection({ name, chair, members }) {
           <MemberInfo
             name={memberName}
             position='Member'
-            className='w-[50%] sm:w-[33%]'
+            className='w-[50%] sm:w-[33%] '
           />
         ))}
       </div>
