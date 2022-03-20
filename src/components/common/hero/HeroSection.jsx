@@ -1,22 +1,30 @@
 import React from 'react';
 import HeroBanner from './HeroBanner';
-import HeroText from './HeroText';
+import HeroHeadingText from './HeroHeadingText';
+import HeroBodyText from './HeroBodyText';
 
-export default function HeroSection({ header, subheader, variants, image }) {
+export default function HeroSection({
+  headerText,
+  subheaderText,
+  children,
+  variant,
+  image,
+}) {
   const variantClasses = {
-    left: 'items-left',
-    right: 'items-right',
-    center: 'items-center',
+    left: 'text-left lg:text-center',
+    right: 'text-right lg:text-center',
+    center: 'text-center lg:text-center',
   };
 
   return (
-    <div>
+    <div className='flex flex-col lg:gap-16 fixed-width lg:mt-16'>
       <HeroBanner image={image} />
-      <HeroText
-        header={header}
-        subheader={subheader}
-        className={variantClasses[variants]}
+      <HeroHeadingText
+        header={headerText}
+        subheader={subheaderText}
+        className={variantClasses[variant]}
       />
+      <HeroBodyText className='hidden lg:block'>{children}</HeroBodyText>
     </div>
   );
 }
