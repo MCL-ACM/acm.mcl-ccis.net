@@ -48,9 +48,9 @@ export default function EventsSection() {
     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
   }, []);
   return (
-    <div className='relative mt-12 mb-8'>
-      <EventsDecoration className='absolute sm:hidden -bottom-20 max-h-fit z-[-1]' />
-      <DesktopEventsDecoration className='hidden sm:block sm:absolute top-32 z-[-1] w-full h-[90%]' />
+    <div className='relative mt-12 mb-16'>
+      <EventsDecoration className='absolute sm:hidden -bottom-20 max-h-full w-full z-[-1]' />
+      <DesktopEventsDecoration className='hidden sm:block sm:absolute top-32 z-[-1] w-full h-[92%]' />
 
       <section>
         <div className='flex flex-row items-stretch items-start mb-4 gap-x-16 fixed-width sm:mb-20'>

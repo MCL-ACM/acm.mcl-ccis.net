@@ -8,6 +8,7 @@ export default function EventsDecoration({ className, style }) {
       viewBox='0 0 375 607'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
+      preserveAspectRatio='none'
     >
       <path
         d='M0 0L375 170.851V565.535C375 565.535 86 607 73.5 607C61 607 0 565.535 0 565.535V0Z'

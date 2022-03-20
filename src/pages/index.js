@@ -13,16 +13,16 @@ export default function index() {
 
   return (
     <div>
-      <Divider className='hidden sm:block' />
-      <main className='flex flex-col gap-12 sm:gap-20'>
+      <Divider className='hidden lg:block' />
+      <main className='flex flex-col gap-12 lg:gap-20'>
         <HeroSection callback={() => executeScroll()} />
-        <Divider className='mx-5 sm:mr-5 sm:ml-0 shadow-border-glow' />
+        <Divider className='mx-5 lg:mr-5 lg:ml-0 shadow-border-glow' />
         <div ref={aboutRef}>
           <AboutSection />
         </div>
-        <Divider className='mx-5 sm:mr-5 sm:ml-0 shadow-border-glow' />
+        <Divider className='mx-5 lg:mr-5 lg:ml-0 shadow-border-glow' />
         <MembersSection />
-        <Divider className='hidden sm:block sm:mr-5 sm:ml-0 sm:shadow-none' />
+        <Divider className='hidden lg:block lg:mr-5 lg:ml-0 lg:shadow-none' />
         <EventsSection />
         <ContactSection />
       </main>
