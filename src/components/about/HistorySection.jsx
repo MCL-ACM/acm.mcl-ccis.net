@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function HistorySection() {
   return (
-    <div className='flex flex-col text-center gap-5 lg:gap-12'>
+    <div className='flex flex-col text-center gap-5 lg:gap-16'>
       <h2 className='px-5 text-3xl lg:text-6xl font-bold leading-snug text-oxford-blue fixed-width'>
         How We Started
       </h2>
