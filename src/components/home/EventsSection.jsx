@@ -36,7 +36,7 @@ export default function EventsSection() {
   const data = useStaticQuery(query);
 
   const events = data.allEvent.edges.map(({ node: event }) => ({
-    img: event.images[0].image,
+    image: event.images[0].image,
     description: event.summary,
     ...event,
   }));

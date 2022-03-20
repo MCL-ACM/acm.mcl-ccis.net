@@ -10,7 +10,7 @@ export default function SingleEventCard({ event, tagged, shadow }) {
         tags={event.tags}
         title={event.title}
         year={event.year}
-        img={event.img}
+        img={event.image}
         imageAlt={event.imageAlt}
         description={event.description}
       />
