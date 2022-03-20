@@ -1,11 +1,14 @@
 import React from 'react';
 import { FiArrowRight } from 'react-icons/fi';
+import { useCycle } from 'framer-motion';
 import CarouselEventCard from '../components/events/CarouselEventCard';
 import SingleEventCard from '../components/events/SingleEventCard';
 import sampleImg from '../images/image-sample.png';
 import Button from '../components/common/buttons/Button';
+import EventModal from '../components/events/EventModal';
 
 export default function components() {
+  const [isOpen, toggleOpen] = useCycle(false, true);
   const events = [
     {
       tags: ['vr', 'seminar', 'external'],
@@ -45,19 +48,14 @@ export default function components() {
   };
   return (
     <div>
-      <div className='my-5'>
-        <Button
-          text='Send a message'
-          textColor='text-white'
-          icon={<FiArrowRight size='1.3em' />}
-          color='bg-darkish-blue'
-        />
-      </div>
-
-      <CarouselEventCard events={events} tagged />
-      <SingleEventCard event={event} tagged />
-      <CarouselEventCard events={events} />
-      <SingleEventCard event={event} />
+      <button type='button' onClick={() => toggleOpen()}>
+        test
+      </button>
+      {isOpen ? (
+        <EventModal event={event} toggle={() => toggleOpen()} />
+      ) : (
+        <div />
+      )}
     </div>
   );
 }
