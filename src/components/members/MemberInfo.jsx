@@ -7,11 +7,11 @@ export default function MemberInfo({ name, position, photo, alt, className }) {
         <img
           src={photo}
           alt={alt}
-          className='w-24 h-24 sm:w-36 sm:h-36 mb-3 rounded-full'
+          className='w-24 h-24 mb-3 rounded-full lg:w-36 lg:h-36'
         />
       )}
-      <p className='text-lg text-oxford-blue sm:text-xl'>{name}</p>
-      <p className='font-light text-oxford-blue sm:text-lg'>{position}</p>
+      <p className='text-lg text-oxford-blue lg:text-xl'>{name}</p>
+      <p className='font-light text-oxford-blue lg:text-lg'>{position}</p>
     </div>
   );
 }
