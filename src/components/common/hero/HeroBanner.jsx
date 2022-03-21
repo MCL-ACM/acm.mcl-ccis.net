@@ -1,4 +1,6 @@
-import * as React from 'react';
+import React from 'react';
+import DotsRowSmallDecoration from '../decorations/DotsRowSmallDecoration';
+import SquareDotsDecoration from '../decorations/SquareDotsDecoration';
 import HeroBannerDecoration from './HeroBannerDecoration';
 
 export default function HeroBanner({ image, className }) {

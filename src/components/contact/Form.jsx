@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import { Helmet } from 'react-helmet';
-import { FiArrowRight } from 'react-icons/fi';
 import ReCAPTCHA from 'react-google-recaptcha';
 import Button from '../common/buttons/Button';
 import MessageSentAlert from './MessageSentAlert';
 
 export default function Form() {
   const recaptchaRef = React.createRef();
-  const recaptchaSitekey = '6LdXlDkdAAAAAL7N1ImCSAEaCpISFOeEX10rGjVU';
+  const recaptchaSitekey = `${process.env.GATSBY_CAPTCHA_SITE_KEY}`;
 
   const [showRecaptchaAlert, setShowRecaptchaAlert] = useState(false);
   const [showMessageSent, setShowMessageSent] = useState(false);
@@ -22,7 +21,7 @@ export default function Form() {
         'contact_form',
         'contact_form_template',
         event.target,
-        'user_HjRyAOakAT9wan4erehrS',
+        `${process.env.GATSBY_EMAILJS_USER_ID}`,
       );
 
       setShowRecaptchaAlert(false);
@@ -34,7 +33,7 @@ export default function Form() {
   }
 
   return (
-    <div className='my-10 px-5'>
+    <div className='md:w-[670px] md:mx-auto my-10 lg:my-0 px-5 md:py-14 md:px-12 md:bg-white md:rounded-2xl md:border-2 md:drop-shadow-2xl'>
       <Helmet>
         <script src='https://www.google.com/recaptcha/api.js' async defer />
       </Helmet>

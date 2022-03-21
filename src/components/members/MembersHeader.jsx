@@ -6,8 +6,8 @@ export default function MembersHeader() {
   return (
     <div>
       <HeroSection
-        header='The Foundation for Excellence'
-        subheader='Members'
+        headerText='The Foundation for Excellence'
+        subheaderText='Members'
         image={
           <StaticImage
             src='../../images/home/Home-Banner.jpg'
