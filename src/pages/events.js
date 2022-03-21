@@ -4,7 +4,7 @@ import EventDropdown from '../components/events/EventDropdown';
 import CarouselEventCard from '../components/events/CarouselEventCard';
 import FeaturedEventCard from '../components/events/FeaturedEventCard';
 import HeroDecoration from '../components/common/decorations/HeroDecoration';
-import SingleEventCard from '../components/events/SingleEventCard.jsx';
+import SingleEventCard from '../components/events/SingleEventCard';
 
 export default function events({ data }) {
   const [year, setYear] = useState('All');

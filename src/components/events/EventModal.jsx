@@ -1,11 +1,10 @@
 import React from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 import EventImageSlideshow from './EventImageSlideshow';
-import sampleIMG from '../../images/home/Home-About.jpg';
 import EventTags from './EventTags';
 
 export default function EventModal({ toggle, event }) {
-  const { title, tags, year, description, image } = event;
+  const { title, tags, year, description, images } = event;
 
   return (
     <div className='fixed top-0 z-10 flex flex-col w-screen h-screen text-white bg-black'>
