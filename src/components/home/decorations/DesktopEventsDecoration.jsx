@@ -5,21 +5,22 @@ export default function EventsDecoration({ className, style }) {
     <svg
       className={className}
       style={style}
-      viewBox='0 0 375 607'
+      viewBox='0 0 1438 782'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
+      preserveAspectRatio='none'
     >
       <path
-        d='M0 0L375 170.851V565.535C375 565.535 86 607 73.5 607C61 607 0 565.535 0 565.535V0Z'
-        fill='url(#paint0_linear_683_691)'
+        d='M0 0L1438 220.108V728.581C1438 728.581 329.781 782 281.848 782C233.915 782 0 728.581 0 728.581V0Z'
+        fill='url(#paint0_linear_1151_2171)'
       />
       <defs>
         <linearGradient
-          id='paint0_linear_683_691'
-          x1='93.5'
-          y1='544.158'
-          x2='154.085'
-          y2='-5.55811'
+          id='paint0_linear_1151_2171'
+          x1='358.541'
+          y1='701.04'
+          x2='385.046'
+          y2='-14.7814'
           gradientUnits='userSpaceOnUse'
         >
           <stop stopColor='#00A8DB' />

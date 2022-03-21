@@ -11,6 +11,7 @@ export default function SectionItem({
   buttonText,
   buttonLink,
   align,
+  image,
 }) {
   const alignStyle = {
     left: 'text-left justify-items-start',
@@ -19,6 +20,7 @@ export default function SectionItem({
 
   return (
     <section className={`flex flex-col gap-4 ${alignStyle[align]}`}>
+      <div>{image}</div>
       <SectionHeader header={header} subheader={subheader} />
       <p className='text-xl font-light leading-relaxed text-rich-black'>
         {body}

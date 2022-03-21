@@ -8,6 +8,7 @@ export default function Button({
   text,
   icon,
   callback,
+  iconRight,
 }) {
   const isGlowing = glow ? 'shadow-button-glow-white' : 'shadow';
 
@@ -20,10 +21,11 @@ export default function Button({
       whileTap={{
         y: '0%',
       }}
-      className={`${isGlowing} ${textColor} ${color} py-2.5 px-4 flex flex-row justify-center align-middle items-center rounded-full gap-2`}
+      className={`${isGlowing} ${textColor} ${color} py-2.5 px-4 flex flex-row justify-center align-middle items-center rounded-full gap-2 font-mono text-lg`}
     >
-      {icon}
-      <p className='font-mono text-lg'>{text}</p>
+      {!iconRight && icon}
+      {text}
+      {iconRight && icon}
     </motion.button>
   );
 }

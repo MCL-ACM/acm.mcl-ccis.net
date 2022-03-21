@@ -3,14 +3,11 @@ import DotsRowSmallDecoration from '../decorations/DotsRowSmallDecoration';
 import SquareDotsDecoration from '../decorations/SquareDotsDecoration';
 import HeroBannerDecoration from './HeroBannerDecoration';
 
-export default function HeroBanner({ image }) {
+export default function HeroBanner({ image, className }) {
   return (
-    <div className='relative lg:m-10 lg:mt-14'>
+    <div className={`relative w-full h-auto ${className}`}>
       {image}
-      <DotsRowSmallDecoration className='hidden lg:block lg:absolute -top-14 -left-10 max-w-2 max-h-2' />
-      <SquareDotsDecoration className='text-cerulean-crayola hidden lg:block lg:absolute -top-10 -right-10 max-w-[60%] max-h-[60%] z-[-1]' />
-      <SquareDotsDecoration className='text-cerulean-crayola hidden lg:block lg:absolute -bottom-10 -left-10 max-w-[60%] max-h-[60%] z-[-1]' />
-      <HeroBannerDecoration className='absolute lg:hidden w-[100%] -bottom-[2px]' />
+      <HeroBannerDecoration className='lg:hidden absolute w-[101%] -bottom-[2px]' />
     </div>
   );
 }
