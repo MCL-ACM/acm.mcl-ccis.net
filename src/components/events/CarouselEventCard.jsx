@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useCycle } from 'framer-motion';
 import { wrap } from 'popmotion';
 import CarouselIndicator from './CarouselIndicator';
 import EventCardContent from './EventCardContent';
 import EventCardBackground from './EventCardBackground';
+import EventModal from './EventModal';
 
 const variants = {
   enter: (direction) => ({
@@ -26,6 +27,7 @@ const swipeConfidenceThreshold = 10000;
 const swipePower = (offset, velocity) => Math.abs(offset) * velocity;
 
 export default function CarouselEventCard({ events, tagged, shadow }) {
+  const [isOpen, toggleOpen] = useCycle(false, true);
   const [[page, direction], setPage] = useState([0, 0]);
   const eventIndex = wrap(0, events.length, page);
   const currentEvent = events[eventIndex];
@@ -67,6 +69,11 @@ export default function CarouselEventCard({ events, tagged, shadow }) {
               }}
               className='absolute flex flex-col items-center w-full h-full gap-6 align-middle px-9'
             >
+              <button
+                type='button'
+                className='h-full w-full'
+                onClick={() => toggleOpen()}
+              />
               <EventCardContent
                 tagged={tagged}
                 tags={currentEvent.tags}
@@ -76,6 +83,11 @@ export default function CarouselEventCard({ events, tagged, shadow }) {
                 imageAlt={currentEvent.imageAlt}
                 description={currentEvent.description}
               />
+              {isOpen ? (
+                <EventModal event={currentEvent} toggle={() => toggleOpen()} />
+              ) : (
+                <div />
+              )}
             </motion.div>
           </AnimatePresence>
           <CarouselIndicator
