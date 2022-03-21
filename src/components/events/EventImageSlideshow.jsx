@@ -33,30 +33,24 @@ export default function EventImageSlideshow({ images }) {
 
   return (
     <div className='mt-14 sm:mt-1'>
+      <ul className='flex items-center w-full min-w-0 gap-4 p-2 overflow-x-scroll sm:mb-1 no-scrollbar'>
+        {Array(images.length)
+          .fill()
+          .map((_, index) => (
+            <motion.li key={images[index]} className='w-full h-full'>
+              <button
+                type='button'
+                onClick={() => setPage([index, eventIndex > index ? -1 : 1])}
+                className={`w-14 h-14 overflow-hidden rounded-lg shrink-0 ${
+                  index === eventIndex ? 'ring-white ring-2' : ''
+                }`}
+              >
+                <img src={images[index]} alt='test' className='w-full h-full' />
+              </button>
+            </motion.li>
+          ))}
+      </ul>
       <AnimatePresence initial={false} custom={direction}>
-        <div className='w-full relative'>
-          <div className='w-full h-full absolute bg-gradient-to-r from-black via-transparent to-black pointer-events-none' />
-          <ul className='flex mb-5 sm:mb-1 overflow-x-scroll no-scrollbar min-w-0 items-center'>
-            {Array(images.length)
-              .fill()
-              .map((_, index) => (
-                <button
-                  type='button'
-                  onClick={() => setPage([index, eventIndex > index ? -1 : 1])}
-                  className='w-12 h-14'
-                >
-                  <motion.li key={images[index]} className='w-full h-full'>
-                    <img
-                      src={images[index]}
-                      alt='test'
-                      className='w-full h-full'
-                    />
-                  </motion.li>
-                </button>
-              ))}
-          </ul>
-        </div>
-
         <motion.img
           key={page}
           custom={direction}
@@ -74,7 +68,6 @@ export default function EventImageSlideshow({ images }) {
           dragElastic={1}
           onDragEnd={(e, { offset, velocity }) => {
             const swipe = swipePower(offset.x, velocity.x);
-
             if (swipe < -swipeConfidenceThreshold) {
               paginate(1);
             } else if (swipe > swipeConfidenceThreshold) {
@@ -82,11 +75,6 @@ export default function EventImageSlideshow({ images }) {
             }
           }}
           className='absolute max-h-[235px] w-full object-cover'
-        />
-        <img
-          src={currImage}
-          className='w-full h-full invisible max-h-[235px] object-cover'
-          alt='dummy'
         />
       </AnimatePresence>
     </div>

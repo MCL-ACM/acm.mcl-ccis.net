@@ -2,6 +2,7 @@ import React from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 import EventImageSlideshow from './EventImageSlideshow';
 import sampleIMG from '../../images/home/Home-About.jpg';
+import EventTags from './EventTags';
 
 export default function EventModal({ toggle, event }) {
   const { title, tags, year, description } = event;
@@ -28,21 +29,22 @@ export default function EventModal({ toggle, event }) {
     sampleIMG,
   ];
   return (
-    <div className='w-screen top-0 h-screen fixed bg-black z-10 text-white flex flex-col'>
+    <div className='fixed top-0 z-10 flex flex-col w-screen h-screen text-white bg-black'>
       <div className='absolute top-0 right-0 z-40 pt-4 pr-4'>
         <button type='button' className='left-0' onClick={toggle}>
           <AiOutlineClose color='red' fontSize='1.5em' />
         </button>
       </div>
 
-      <div className='h-full flex flex-col justify-between'>
-        <EventImageSlideshow images={images} />
-
-        <div className='px-6 flex flex-col justify-between mb-8 sm:flex-row sm:pr-9'>
+      <div className='flex flex-col h-full'>
+        <div className='h-[55%] mb-10 overflow-hidden'>
+          <EventImageSlideshow images={images} />
+        </div>
+        <div className='flex flex-col px-6 mb-8 sm:flex-row sm:pr-9'>
           <div>
             <h1 className='text-lg font-bold'>{title}</h1>
             <h5 className='text-maximum-blue-green'>{year}</h5>
-            <ul className=''>{tags}</ul>{' '}
+            <EventTags tags={tags} className='my-4' />
           </div>
 
           <div className='sm:max-w-[50%] sm:text-right'>

@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function EventTags({ tags }) {
+export default function EventTags({ tags, className }) {
   return (
-    <ul className='absolute flex flex-wrap w-full space-x-3 pt-7 px-9'>
+    <ul className={`flex flex-wrap w-full space-x-3 ${className}`}>
       {tags.map((tag) => (
         <li
           key={tag}
