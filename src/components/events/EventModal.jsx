@@ -40,14 +40,14 @@ export default function EventModal({ toggle, event }) {
         <div className='h-[55%] mb-10 overflow-hidden'>
           <EventImageSlideshow images={images} />
         </div>
-        <div className='flex flex-col px-6 mb-8 sm:flex-row sm:pr-9'>
+        <div className='flex flex-col px-6 mb-8 sm:flex-row fixed-width sm:gap-8'>
           <div>
             <h1 className='text-lg font-bold'>{title}</h1>
             <h5 className='text-maximum-blue-green'>{year}</h5>
             <EventTags tags={tags} className='my-4' />
           </div>
 
-          <div className='sm:max-w-[50%] sm:text-right'>
+          <div className='sm:max-w-[50%] sm:text-right sm:ml-auto'>
             <p className='font-light'>{description}</p>
           </div>
         </div>
