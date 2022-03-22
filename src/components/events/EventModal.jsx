@@ -5,7 +5,6 @@ import EventTags from './EventTags';
 
 export default function EventModal({ toggle, event }) {
   const { title, tags, year, description, images } = event;
-  console.log(event);
 
   return (
     <div className='fixed top-0 z-20 flex flex-col w-screen h-screen text-white bg-black'>

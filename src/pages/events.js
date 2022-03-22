@@ -13,6 +13,7 @@ export default function events({ data }) {
   const [selectedEvents, setSelectedEvents] = useState([]);
   const [isOpen, toggleOpen] = useCycle(false, true);
   const [isFeaturedOpen, toggleFeaturedOpen] = useCycle(false, true);
+  const [selectedEvent, setSelectedEvent] = useState();
 
   useEffect(() => {
     const eventNodes = data.allEvent.edges.map(({ node }) => ({
@@ -61,26 +62,32 @@ export default function events({ data }) {
           </div>
           <main className='flex flex-wrap pt-[6.8125em] gap-x-[3.3125em] gap-y-36'>
             {selectedEvents.length > 0 ? (
-              selectedEvents.map((currentEvent) => (
+              selectedEvents.map((currentEvent, index) => (
                 <div>
-                  <button onClick={() => toggleOpen()} type='button'>
+                  <button
+                    onClick={() => {
+                      setSelectedEvent(index);
+                      toggleOpen();
+                    }}
+                    type='button'
+                  >
                     <SingleEventCard shadow tagged event={currentEvent} />
                   </button>
-                  {isOpen ? (
-                    <DEventModal
-                      tagged
-                      event={currentEvent}
-                      toggle={() => toggleOpen()}
-                    />
-                  ) : (
-                    <div />
-                  )}
                 </div>
               ))
             ) : (
               <div className='py-12 text-7xl font-bold text-slate-500 opacity-70 w-full text-center'>
                 No Events Found . . .
               </div>
+            )}
+            {isOpen ? (
+              <DEventModal
+                tagged
+                event={selectedEvents[selectedEvent]}
+                toggle={() => toggleOpen()}
+              />
+            ) : (
+              <div />
             )}
           </main>
           <div />
