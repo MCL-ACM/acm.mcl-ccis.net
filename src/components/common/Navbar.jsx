@@ -42,7 +42,7 @@ export default function Navbar() {
         <div className='lg:hidden'>
           <Menu links={links} />
         </div>
-        <div className='hidden lg:block relative'>
+        <div className='relative hidden lg:block'>
           <MenuNav links={links} />
         </div>
       </main>

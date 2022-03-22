@@ -17,7 +17,8 @@ export default function events({ data }) {
 
   useEffect(() => {
     const eventNodes = data.allEvent.edges.map(({ node }) => ({
-      image: node.image && node.image[0] && node.images[0].image,
+      image: node.images && node.images[0] && node.images[0].image,
+      description: node.summary,
       ...node,
     }));
     setSelectedEvents(() =>
