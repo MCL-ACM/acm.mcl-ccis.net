@@ -35,11 +35,11 @@ export default function EventImageSlideshow({ images }) {
   return (
     <div className='flex flex-col justify-between pt-12 sm:pt-2 h-full'>
       <div>
-        <ul className='flex items-center w-full min-w-0 overflow-x-scroll no-scrollbar'>
+        <ul className='flex items-center justify-center w-full min-w-0 overflow-x-scroll no-scrollbar'>
           {Array(images.length)
             .fill()
             .map((_, index) => (
-              <motion.li key={images[index]} className='w-full h-full '>
+              <motion.li key={images[index]} className=''>
                 <button
                   type='button'
                   onClick={() => setPage([index, eventIndex > index ? -1 : 1])}
