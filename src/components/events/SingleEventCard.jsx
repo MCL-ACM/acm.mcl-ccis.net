@@ -13,6 +13,7 @@ export default function SingleEventCard({ event, tagged, shadow }) {
         img={event.images[0].image}
         imageAlt={event.images[0].imageAlt}
         description={event.description}
+        linky
       />
     </EventCardBackground>
   );

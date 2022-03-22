@@ -2,10 +2,10 @@ import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import FeaturedEventDetails from './FeaturedEventDetails';
 
-export default function FeaturedEventCard() {
+export default function FeaturedEventCard({ toggle }) {
   return (
     <article className='max-w-[735px] min-w-[735px] min-h-[565px] h-[565px] relative'>
-      <FeaturedEventDetails />
+      <FeaturedEventDetails toggle={toggle} />
       <StaticImage
         src='../../images/home/Home-Event.jpg'
         alt=''

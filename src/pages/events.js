@@ -12,6 +12,7 @@ export default function events({ data }) {
   const [year, setYear] = useState('All');
   const [selectedEvents, setSelectedEvents] = useState([]);
   const [isOpen, toggleOpen] = useCycle(false, true);
+  const [isFeaturedOpen, toggleFeaturedOpen] = useCycle(false, true);
 
   useEffect(() => {
     const eventNodes = data.allEvent.edges.map(({ node }) => ({
@@ -41,7 +42,16 @@ export default function events({ data }) {
               <h5 className='text-4xl font-bold text-darkish-blue'>Events</h5>
             </header>
           </div>
-          <FeaturedEventCard />
+          <FeaturedEventCard toggle={() => toggleFeaturedOpen()} />
+          {selectedEvents.length > 0 && isFeaturedOpen ? (
+            <DEventModal
+              tagged
+              event={selectedEvents[0]}
+              toggle={() => toggleFeaturedOpen()}
+            />
+          ) : (
+            <div />
+          )}
         </div>
         <div className='w-[88.1%] bottom-0 h-[1px] bg-gradient-to-r from-standard-blue to-cerulean-crayola hidden lg:block' />
 

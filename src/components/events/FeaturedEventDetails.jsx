@@ -2,7 +2,7 @@ import React from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 import Button from '../common/buttons/Button.jsx';
 
-export default function FeaturedEventDetails({ event }) {
+export default function FeaturedEventDetails({ event, toggle }) {
   return (
     <div className='absolute shadow-xl border-2 border-opacity-20 pt-6 bg-white min-w-[358px] max-w-[358px] min-h-[461px] flex flex-col pr-[3.25em] pl-6 gap-y-[1.125em]'>
       <div className='flex flex-col gap-y-2'>
@@ -19,7 +19,7 @@ export default function FeaturedEventDetails({ event }) {
       </p>
       <div>
         <Button
-          callback={() => console.log('hello')}
+          callback={toggle}
           color='bg-darkish-blue'
           textColor='text-white'
           text='Read More'

@@ -25,8 +25,8 @@ export default function EventModal({ toggle, event }) {
             <EventTags tags={tags} className='my-4 sm:my-0' />
           </div>
 
-          <div className='sm:max-w-[50%] sm:text-right sm:ml-auto py-6 text-left'>
-            <p className='font-light sm:text-sm'>{description}</p>
+          <div className='sm:max-w-[50%] sm:text-right sm:ml-auto text-left py-6 overflow-y-scroll sm:max-h-[120px]'>
+            <p className='font-light sm:text-sm  break-words'>{description}</p>
           </div>
         </div>
       </div>
