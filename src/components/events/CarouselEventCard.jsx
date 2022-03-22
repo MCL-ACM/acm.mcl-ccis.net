@@ -38,64 +38,68 @@ export default function CarouselEventCard({ events, tagged, shadow }) {
   };
 
   return (
-    <div>
+    <div className='w-full h-full'>
+      {isOpen ? (
+        <div className='absolute'>
+          <EventModal event={currentEvent} toggle={() => toggleOpen()} />
+        </div>
+      ) : (
+        <div />
+      )}
       {events && events.length > 0 ? (
-        <EventCardBackground shadow={shadow}>
-          <AnimatePresence initial={false} custom={direction}>
-            <motion.div
-              key={eventIndex}
-              custom={direction}
-              variants={variants}
-              initial='enter'
-              animate='center'
-              exit='exit'
-              transition={{
-                x: {
-                  type: 'spring',
-                  stiffness: 300,
-                  damping: 30,
-                },
-                opacity: { duration: 0.2 },
-              }}
-              drag='x'
-              dragConstraints={{ left: 0, right: 0 }}
-              dragElastic={1}
-              onDragEnd={(e, { offset, velocity }) => {
-                const swipe = swipePower(offset.x, velocity.x);
-                if (swipe < -swipeConfidenceThreshold) {
-                  paginate(1);
-                } else if (swipe > swipeConfidenceThreshold) {
-                  paginate(-1);
-                }
-              }}
-              className='absolute flex flex-col items-center w-full h-full gap-6 align-middle px-9'
-            >
-              <button
-                type='button'
-                className='h-full w-full'
-                onClick={() => toggleOpen()}
-              />
-              <EventCardContent
-                tagged={tagged}
-                tags={currentEvent.tags}
-                title={currentEvent.title}
-                year={currentEvent.year}
-                img={currentEvent.image}
-                imageAlt={currentEvent.imageAlt}
-                description={currentEvent.description}
-              />
-              {isOpen ? (
-                <EventModal event={currentEvent} toggle={() => toggleOpen()} />
-              ) : (
-                <div />
-              )}
-            </motion.div>
-          </AnimatePresence>
-          <CarouselIndicator
-            eventCount={events.length}
-            eventIndex={eventIndex}
+        <div className='flex justify-center'>
+          <button
+            type='button'
+            className='h-full w-full absolute z'
+            onClick={() => toggleOpen()}
           />
-        </EventCardBackground>
+          <EventCardBackground shadow={shadow}>
+            <AnimatePresence initial={false} custom={direction}>
+              <motion.div
+                key={eventIndex}
+                custom={direction}
+                variants={variants}
+                initial='enter'
+                animate='center'
+                exit='exit'
+                transition={{
+                  x: {
+                    type: 'spring',
+                    stiffness: 300,
+                    damping: 30,
+                  },
+                  opacity: { duration: 0.2 },
+                }}
+                drag='x'
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={1}
+                onDragEnd={(e, { offset, velocity }) => {
+                  const swipe = swipePower(offset.x, velocity.x);
+                  if (swipe < -swipeConfidenceThreshold) {
+                    paginate(1);
+                  } else if (swipe > swipeConfidenceThreshold) {
+                    paginate(-1);
+                  }
+                }}
+                className='absolute flex flex-col items-center w-full h-full gap-6 align-middle px-9'
+              >
+                <EventCardContent
+                  tagged={tagged}
+                  tags={currentEvent.tags}
+                  title={currentEvent.title}
+                  year={currentEvent.year}
+                  img={currentEvent.images[0].image}
+                  imageAlt={currentEvent.images[0].imageAlt}
+                  description={currentEvent.summary}
+                />
+              </motion.div>
+            </AnimatePresence>
+            <CarouselIndicator
+              eventCount={events.length}
+              eventIndex={eventIndex}
+            />
+          </EventCardBackground>
+        </div>
       ) : (
         <div className='py-12 text-3xl font-bold text-slate-500 opacity-70'>
           No Events Found . . .

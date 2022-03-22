@@ -86,6 +86,7 @@ export const query = graphql`
           year(formatString: "YYYY")
           tags
           summary
+          description
           images {
             image {
               childImageSharp {

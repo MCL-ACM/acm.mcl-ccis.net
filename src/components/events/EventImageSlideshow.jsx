@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { wrap } from 'popmotion';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const variants = {
   enter: (direction) => ({
@@ -33,42 +34,35 @@ export default function EventImageSlideshow({ images }) {
 
   return (
     <div className='flex flex-col justify-between pt-12 sm:pt-2 h-full'>
-      {images.length > 1 ? (
-        <div>
-          <ul className='flex items-center w-full min-w-0 overflow-x-scroll no-scrollbar'>
-            {Array(images.length)
-              .fill()
-              .map((_, index) => (
-                <motion.li key={images[index]} className='w-full h-full '>
-                  <button
-                    type='button'
-                    onClick={() =>
-                      setPage([index, eventIndex > index ? -1 : 1])
-                    }
-                    className={`w-16 h-9 overflow-hidden shrink-0 ${
-                      index === eventIndex ? 'ring-white ring-2' : ''
-                    }`}
-                  >
-                    <img
-                      src={images[index]}
-                      alt='test'
-                      className='w-full h-full object-cover'
-                    />
-                  </button>
-                </motion.li>
-              ))}
-          </ul>
-        </div>
-      ) : (
-        <div />
-      )}
+      <div>
+        <ul className='flex items-center w-full min-w-0 overflow-x-scroll no-scrollbar'>
+          {Array(images.length)
+            .fill()
+            .map((_, index) => (
+              <motion.li key={images[index]} className='w-full h-full '>
+                <button
+                  type='button'
+                  onClick={() => setPage([index, eventIndex > index ? -1 : 1])}
+                  className={`w-16 h-9 overflow-hidden shrink-0 ${
+                    index === eventIndex ? 'ring-white ring-2' : ''
+                  }`}
+                >
+                  <GatsbyImage
+                    image={getImage(images[index].image)}
+                    alt={images[index].imageAlt}
+                    className='w-full h-full object-cover'
+                  />
+                </button>
+              </motion.li>
+            ))}
+        </ul>
+      </div>
 
       <div className='relative h-full w-full'>
         <AnimatePresence initial={false} custom={direction}>
-          <motion.img
+          <motion.div
             key={page}
             custom={direction}
-            src={currImage}
             variants={variants}
             initial='enter'
             animate='center'
@@ -89,7 +83,13 @@ export default function EventImageSlideshow({ images }) {
               }
             }}
             className='absolute h-full w-full object-contain'
-          />
+          >
+            <GatsbyImage
+              image={getImage(currImage.image)}
+              alt={currImage.imageAlt}
+              className='w-full h-full'
+            />
+          </motion.div>
         </AnimatePresence>
       </div>
     </div>
