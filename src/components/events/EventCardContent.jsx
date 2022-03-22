@@ -16,7 +16,7 @@ export default function EventCardContent({
       {tagged && (
         <EventTags tags={tags} className="className='absolute pt-7 px-9'" />
       )}
-      <header className='flex flex-col gap-2 text-center pt-[72px]'>
+      <header className='flex flex-col gap-2 text-center'>
         <h1 className='text-lg font-bold text-oxford-blue'>{title}</h1>
         <h5 className='text-base font-light text-maximum-blue-green'>{year}</h5>
       </header>

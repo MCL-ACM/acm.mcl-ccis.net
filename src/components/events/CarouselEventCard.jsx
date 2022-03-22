@@ -48,11 +48,6 @@ export default function CarouselEventCard({ events, tagged, shadow }) {
       )}
       {events && events.length > 0 ? (
         <div className='flex justify-center'>
-          <button
-            type='button'
-            className='h-full w-full absolute z'
-            onClick={() => toggleOpen()}
-          />
           <EventCardBackground shadow={shadow}>
             <AnimatePresence initial={false} custom={direction}>
               <motion.div
@@ -91,6 +86,11 @@ export default function CarouselEventCard({ events, tagged, shadow }) {
                   img={currentEvent.images[0].image}
                   imageAlt={currentEvent.images[0].imageAlt}
                   description={currentEvent.summary}
+                />
+                <button
+                  type='button'
+                  className='h-full w-full absolute z'
+                  onClick={() => toggleOpen()}
                 />
               </motion.div>
             </AnimatePresence>
