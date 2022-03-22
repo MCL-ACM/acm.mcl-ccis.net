@@ -1,0 +1,16 @@
+{
+  "type": "event",
+  "year": "2022-03-22T14:39:31.940Z",
+  "title": "Hour of Code 2021",
+  "tags": [
+    "hoc"
+  ],
+  "summary": "The hour of code by MCL-ACM",
+  "description": "This is the description for Hour of Code",
+  "images": [
+    {
+      "image": "hoc-ppt-front.png",
+      "imageAlt": "poster"
+    }
+  ]
+}
