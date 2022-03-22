@@ -35,7 +35,7 @@ export default function EventImageSlideshow({ images }) {
   return (
     <div className='flex flex-col justify-between pt-12 sm:pt-2 h-full'>
       <div>
-        <ul className='flex items-center justify-center w-full min-w-0 overflow-x-scroll no-scrollbar'>
+        <ul className='flex items-center justify-center w-full min-w-0 overflow-x-scroll no-scrollbar pb-4'>
           {Array(images.length)
             .fill()
             .map((_, index) => (
