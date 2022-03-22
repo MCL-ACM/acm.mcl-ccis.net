@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { graphql } from 'gatsby';
+import { useCycle } from 'framer-motion';
 import EventDropdown from '../components/events/EventDropdown';
 import CarouselEventCard from '../components/events/CarouselEventCard';
 import FeaturedEventCard from '../components/events/FeaturedEventCard';
 import HeroDecoration from '../components/common/decorations/HeroDecoration';
 import SingleEventCard from '../components/events/SingleEventCard';
+import DEventModal from '../components/events/desktop_modal/DEventModal';
 
 export default function events({ data }) {
   const [year, setYear] = useState('All');
   const [selectedEvents, setSelectedEvents] = useState([]);
+  const [isOpen, toggleOpen] = useCycle(false, true);
 
   useEffect(() => {
     const eventNodes = data.allEvent.edges.map(({ node }) => ({
@@ -49,7 +52,20 @@ export default function events({ data }) {
           <main className='flex flex-wrap pt-[6.8125em] gap-x-[3.3125em] gap-y-36'>
             {selectedEvents.length > 0 ? (
               selectedEvents.map((currentEvent) => (
-                <SingleEventCard shadow tagged event={currentEvent} />
+                <div>
+                  <button onClick={() => toggleOpen()} type='button'>
+                    <SingleEventCard shadow tagged event={currentEvent} />
+                  </button>
+                  {isOpen ? (
+                    <DEventModal
+                      tagged
+                      event={currentEvent}
+                      toggle={() => toggleOpen()}
+                    />
+                  ) : (
+                    <div />
+                  )}
+                </div>
               ))
             ) : (
               <div className='py-12 text-7xl font-bold text-slate-500 opacity-70 w-full text-center'>
@@ -57,6 +73,7 @@ export default function events({ data }) {
               </div>
             )}
           </main>
+          <div />
         </section>
       </section>
 
