@@ -32,12 +32,12 @@ export default function DEventImageSlideshow({ images }) {
     setPage([page + newDirection, newDirection]);
   };
   return (
-    <div className='flex flex-col h-full'>
+    <div className='flex flex-col h-full gap-y-2'>
       <div className='flex w-full h-full relative justify-center item-center px-8'>
         <div className='mt-auto mb-auto z-20'>
           <AiOutlineLeft size={36} onClick={() => paginate(-1)} />
         </div>
-        <div className='relative w-full h-full overflow-hidden'>
+        <div className='relative w-full h-full overflow-hidden object-contain'>
           <AnimatePresence initial={false} custom={direction}>
             <motion.div
               key={page}
@@ -61,12 +61,12 @@ export default function DEventImageSlideshow({ images }) {
                   paginate(-1);
                 }
               }}
-              className='absolute flex flex-col items-center w-full'
+              className='absolute flex flex-col items-center w-full z-50 object-contain'
             >
               <GatsbyImage
                 image={getImage(currImage.image)}
                 alt={currImage.imageAlt}
-                className='w-[820px] h-[420px]'
+                className='w-[820px] h-[420px] pointer-events-none object-contain'
               />
             </motion.div>
           </AnimatePresence>
@@ -84,11 +84,11 @@ export default function DEventImageSlideshow({ images }) {
           {Array(images.length)
             .fill()
             .map((_, index) => (
-              <motion.li key={images[index]} className='w-full h-full p-2'>
+              <motion.li key={images[index]} className=''>
                 <button
                   type='button'
                   onClick={() => setPage([index, eventIndex > index ? -1 : 1])}
-                  className={`w-55 h-16 object-contain overflow-hidden shrink-0 ${
+                  className={`w-24 h-14 object-contain overflow-hidden shrink-0 ${
                     index === eventIndex ? 'ring-standard-blue ring-1' : ''
                   }`}
                 >

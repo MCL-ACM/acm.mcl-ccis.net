@@ -18,7 +18,7 @@ export default function EventModal({ event, tagged, toggle }) {
           <div className='flex flex-col gap-y-4 px-24'>
             <button
               type='button'
-              className='max-w-full flex justify-center ml-auto pb-5'
+              className='max-w-full flex justify-center ml-auto'
               onClick={toggle}
             >
               <div className='w-full h-full'>
@@ -30,7 +30,9 @@ export default function EventModal({ event, tagged, toggle }) {
             </h1>
             <p className='text-lg font-light text-maximum-blue-green'>{year}</p>
             {tagged && <EventTags tags={tags} />}
-            <p className='text-base '>{description}</p>
+            <p className='text-base break-words overflow-y-scroll max-h-24 no-scrollbar'>
+              {description}
+            </p>
           </div>
           <div className='flex flex-col w-full h-full relative'>
             <DEventImageSlideshow images={images} />
