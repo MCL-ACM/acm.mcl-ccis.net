@@ -1,0 +1,45 @@
+{
+  "type": "event",
+  "year": "2019-03-23T12:21:49.511Z",
+  "title": "CodeX 2019 Programming Workshop",
+  "description": "February 16 & 23, 2019 - This programming workshop was held to prepare students for the upcoming CodeX 2019 Competition. The competition participants from two different schools were taught about the fundamentals of C# and Java Programming.",
+  "summary": "This programming workshop was held to prepare students for the upcoming CodeX 2019 Competition.",
+  "tags": [
+    "CODEX",
+    "WORKSHOP"
+  ],
+  "images": [
+    {
+      "image": "codex2019workshop_1.jpg",
+      "imageAlt": "CodeX 2019 Programming Workshop"
+    },
+    {
+      "image": "codex2019workshop_2.jpg",
+      "imageAlt": "CodeX 2019 Programming Workshop"
+    },
+    {
+      "image": "codex2019workshop_3.jpg",
+      "imageAlt": "CodeX 2019 Programming Workshop"
+    },
+    {
+      "image": "codex2019workshop_4.jpg",
+      "imageAlt": "CodeX 2019 Programming Workshop"
+    },
+    {
+      "image": "codex2019workshop_5.jpg",
+      "imageAlt": "CodeX 2019 Programming Workshop"
+    },
+    {
+      "image": "codex2019workshop_6.jpg",
+      "imageAlt": "CodeX 2019 Programming Workshop"
+    },
+    {
+      "image": "codex2019workshop_7.jpg",
+      "imageAlt": "CodeX 2019 Programming Workshop"
+    },
+    {
+      "image": "codex2019workshop_8.png",
+      "imageAlt": "CodeX 2019 Programming Workshop"
+    }
+  ]
+}

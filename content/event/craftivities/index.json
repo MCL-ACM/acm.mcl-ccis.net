@@ -1,0 +1,36 @@
+{
+  "type": "event",
+  "year": "2021-03-23T12:41:27.825Z",
+  "title": "Craftivities",
+  "description": "January 26 & 27, 2021 - As part of the MCL 15th Foundation Week, MCL-ACM hosted Minecraft activities on their Minecraft server. It was open to all MCL students and was aimed to take the students' minds off their academic responsibilities and have fun during the week.",
+  "summary": "As part of the MCL 15th Foundation Week, MCL-ACM hosted Minecraft activities on their Minecraft server.",
+  "tags": [
+    "CRAFTIVITIES"
+  ],
+  "images": [
+    {
+      "image": "craftivities_1.jpg",
+      "imageAlt": "Craftivities"
+    },
+    {
+      "image": "craftivities_2.jpg",
+      "imageAlt": "Craftivities"
+    },
+    {
+      "image": "craftivities_3.jpg",
+      "imageAlt": "Craftivities"
+    },
+    {
+      "image": "craftivities_4.jpg",
+      "imageAlt": "Craftivities"
+    },
+    {
+      "image": "craftivities_5.jpg",
+      "imageAlt": "Craftivities"
+    },
+    {
+      "image": "craftivities_6.png",
+      "imageAlt": "Craftivities"
+    }
+  ]
+}
