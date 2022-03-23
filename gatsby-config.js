@@ -1,15 +1,26 @@
 module.exports = {
   siteMetadata: {
-    title: `new`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `MCL-ACM`,
+    siteUrl: `https://acm.mcl-ccis.net`,
   },
   plugins: [
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-postcss',
     'gatsby-plugin-image',
-    'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Malayan Colleges Laguna ACM Student Chapter`,
+        short_name: `MCL-ACM`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        display: `minimal-ui`,
+        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
