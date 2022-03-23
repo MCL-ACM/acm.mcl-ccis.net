@@ -7,6 +7,7 @@ import FeaturedEventCard from '../components/events/FeaturedEventCard';
 import HeroDecoration from '../components/common/decorations/HeroDecoration';
 import SingleEventCard from '../components/events/SingleEventCard';
 import DEventModal from '../components/events/desktop_modal/DEventModal';
+import Head from '../components/common/Head';
 
 export default function events({ data }) {
   const [year, setYear] = useState('All');
@@ -33,6 +34,7 @@ export default function events({ data }) {
 
   return (
     <div className='w-full lg:mt-[4.8125em] relative pb-[9.25em]'>
+      <Head title='Events' />
       <section>
         <HeroDecoration className='absolute hidden lg:block' />
         <div className='hidden lg:flex fixed-width relative pb-[5.8125em]'>

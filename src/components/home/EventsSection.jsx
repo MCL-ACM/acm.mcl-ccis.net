@@ -23,7 +23,6 @@ export default function EventsSection() {
                 childImageSharp {
                   gatsbyImageData
                 }
-                name
               }
               imageAlt
             }
