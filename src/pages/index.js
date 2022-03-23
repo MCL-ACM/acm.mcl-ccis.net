@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import Divider from '../components/common/Divider';
+import Head from '../components/common/Head';
 import AboutSection from '../components/home/AboutSection';
 import ContactSection from '../components/home/ContactSection';
 import EventsSection from '../components/home/EventsSection';
@@ -13,6 +14,7 @@ export default function index() {
 
   return (
     <div>
+      <Head />
       <main className='flex flex-col gap-12 lg:gap-20'>
         <HeroSection callback={() => executeScroll()} />
         <Divider className='lg:my-24 mx-5 lg:mx-0 lg:w-11/12 lg:h-[2px] shadow-border-glow' />
