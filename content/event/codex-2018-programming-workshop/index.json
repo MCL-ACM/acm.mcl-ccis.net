@@ -1,0 +1,45 @@
+{
+  "type": "event",
+  "year": "2018-03-23T10:52:40.685Z",
+  "title": "CodeX 2018 Programming Workshop",
+  "description": "**October 17 & 18, 2018** - In this programming workshop, ICT and STEM students from Malayan Colleges Laguna were taught about the fundamentals of C# and Java Programming. This aimed to introduce the students to the basics of both programming languages.",
+  "summary": "In this programming workshop, ICT and STEM students from Malayan Colleges Laguna were taught about the fundamentals of C# and Java Programming.",
+  "tags": [
+    "CODEX",
+    "WORKSHOP"
+  ],
+  "images": [
+    {
+      "image": "codex2018workshop_1.jpg",
+      "imageAlt": "CodeX 2018 Programming Workshop"
+    },
+    {
+      "image": "codex2018workshop_2.jpg",
+      "imageAlt": "CodeX 2018 Programming Workshop"
+    },
+    {
+      "image": "codex2018workshop_3.jpg",
+      "imageAlt": "CodeX 2018 Programming Workshop"
+    },
+    {
+      "image": "codex2018workshop_4.jpg",
+      "imageAlt": "CodeX 2018 Programming Workshop"
+    },
+    {
+      "image": "codex2018workshop_5.jpg",
+      "imageAlt": "CodeX 2018 Programming Workshop"
+    },
+    {
+      "image": "codex2018workshop_6.jpg",
+      "imageAlt": "CodeX 2018 Programming Workshop"
+    },
+    {
+      "image": "codex2018workshop_7.jpg",
+      "imageAlt": "CodeX 2018 Programming Workshop"
+    },
+    {
+      "image": "codex2018workshop_8.jpg",
+      "imageAlt": "CodeX 2018 Programming Workshop"
+    }
+  ]
+}
