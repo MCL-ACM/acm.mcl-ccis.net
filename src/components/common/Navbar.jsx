@@ -35,7 +35,7 @@ const links = [
 export default function Navbar() {
   return (
     <nav className='fixed z-10 flex items-center justify-center w-full bg-white'>
-      <main className='px-5 lg:px-2 py-7 w-full flex justify-between items-center lg:max-w-[69.5em]'>
+      <main className='px-5 lg:px-2 py-3 w-full flex justify-between items-center lg:max-w-[69.5em]'>
         <Link to='/'>
           <Logo />
         </Link>
