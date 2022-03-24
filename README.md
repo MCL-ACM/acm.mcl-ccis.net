@@ -1,3 +1,7 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6e21d47d-a3cb-4e2f-a49d-386384c5af9d/deploy-status)](https://app.netlify.com/sites/hopeful-dubinsky-93bfd5/deploys)
+
+
+
 <p align="center">
   <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
     <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
