@@ -3,3 +3,5 @@ node_modules/
 public
 src/pages/components.js
 .env.*
+# Local Netlify folder
+.netlify
