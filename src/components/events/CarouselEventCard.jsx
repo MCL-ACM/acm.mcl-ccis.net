@@ -85,7 +85,7 @@ export default function CarouselEventCard({ events, tagged, shadow }) {
                   year={currentEvent.year}
                   img={currentEvent.images[0].image}
                   imageAlt={currentEvent.images[0].imageAlt}
-                  description={currentEvent.summary}
+                  summary={currentEvent.summary}
                 />
                 <button
                   type='button'

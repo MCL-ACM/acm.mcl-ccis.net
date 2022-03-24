@@ -12,7 +12,7 @@ export default function SingleEventCard({ event, tagged, shadow }) {
         year={event.year}
         img={event.images[0].image}
         imageAlt={event.images[0].imageAlt}
-        description={event.description}
+        summary={event.summary}
         linky
       />
     </EventCardBackground>
