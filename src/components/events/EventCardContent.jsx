@@ -34,7 +34,7 @@ export default function EventCardContent({
           {description.length > 200 ? (
             <p>
               {description.slice(0, 200)}
-              <span className='text-xl font-medium'> . . . </span>{' '}
+              <span className='font-black'> . . . </span>{' '}
             </p>
           ) : (
             description
