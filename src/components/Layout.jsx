@@ -1,14 +1,12 @@
-import React from "react";
-import WhiteButton from "./common/buttons/WhiteButton";
-import Footer from "./common/Footer";
-import Navbar from "./common/Navbar";
+import React from 'react';
+import Footer from './common/Footer';
+import Navbar from './common/Navbar';
 
 export default function Layout({ children }) {
   return (
-    <main className="relative min-h-screen">
+    <main className='relative min-h-screen '>
       <Navbar />
-      <section className="flex-auto pt-24 pb-[34.8125em]">
-        <WhiteButton />
+      <section className='pt-24 sm:pt-[8.3125em] pb-[38.5em]'>
         {children}
       </section>
       <Footer />

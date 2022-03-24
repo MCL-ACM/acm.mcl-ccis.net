@@ -1,13 +1,12 @@
-import { StaticImage } from "gatsby-plugin-image";
-import React from "react";
+import { StaticImage } from 'gatsby-plugin-image';
+import React from 'react';
 
 export default function Logo() {
   return (
     <StaticImage
-      src="../../../images/navbar/acm_logo.png"
-      alt="MCL-ACM logo"
-      width={78}
-      height={40}
+      src='../../../images/navbar/acm_logo.png'
+      alt='MCL-ACM logo'
+      className='w-[78px] h-[40px] sm:w-[151px] sm:h-[77px]'
     />
   );
 }

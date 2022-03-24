@@ -1,0 +1,37 @@
+{
+  "type": "event",
+  "year": "2021-03-23T12:44:10.561Z",
+  "title": "CodeX 2021 Programming Workshop",
+  "description": "April 17, 2021 - A Java programming workshop was held for all Senior High School students from different schools. Its aim was to promote education in programming and to demonstrate its application in solving problems.",
+  "summary": "A Java programming workshop was held for all Senior High School students from different schools.",
+  "tags": [
+    "CODEX",
+    "WORKSHOP"
+  ],
+  "images": [
+    {
+      "image": "codex2021_1.png",
+      "imageAlt": "CodeX 2021 Programming Workshop"
+    },
+    {
+      "image": "codex2021_2.png",
+      "imageAlt": "CodeX 2021 Programming Workshop"
+    },
+    {
+      "image": "codex2021_3.png",
+      "imageAlt": "CodeX 2021 Programming Workshop"
+    },
+    {
+      "image": "codex2021_4.png",
+      "imageAlt": "CodeX 2021 Programming Workshop"
+    },
+    {
+      "image": "codex2021_5.png",
+      "imageAlt": "CodeX 2021 Programming Workshop"
+    },
+    {
+      "image": "codex2021_6.jpg",
+      "imageAlt": "CodeX 2021 Programming Workshop"
+    }
+  ]
+}

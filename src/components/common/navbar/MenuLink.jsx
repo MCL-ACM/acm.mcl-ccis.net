@@ -1,27 +1,47 @@
-import React from "react";
-import { Link } from "gatsby";
-import { motion } from "framer-motion";
+import React from 'react';
+import { Link } from 'gatsby';
+import { motion } from 'framer-motion';
 
 const linkAnimation = {
   open: {
-    x: "0",
+    x: '0',
+    transition: {
+      type: 'tween',
+    },
   },
   closed: {
-    x: "100%",
+    x: '100%',
+    transition: {
+      type: 'tween',
+    },
   },
 };
 
-export default function MenuLink({ page, slug }) {
+export default function MenuLink({ page, slug, toggle }) {
   return (
     <motion.li
       variants={linkAnimation}
-      className="font-light mb-7"
-      whileHover={{ scale: 1.1, fontWeight: "normal" }}
-      whileTap={{ scale: 0.95, fontWeight: "normal" }}
+      className='mb-7 lg:mb-0'
+      whileHover={{ scale: 1.05, fontWeight: 'normal' }}
+      whileTap={{
+        scale: 1,
+        fontWeight: 'normal',
+        transition: { duration: 0.05 },
+      }}
     >
-      <Link to={slug} className="text-xl text-oxford-blue">
-        {page}
-      </Link>
+      <button type='button' onClick={toggle}>
+        <Link
+          to={slug}
+          className={`${
+            page === 'Contact Us'
+              ? 'lg:bg-darkish-blue lg:text-white lg:py-4 lg:px-8 rounded-full text-lg '
+              : ''
+          }text-lg text-oxford-blue `}
+          activeClassName='font-bold'
+        >
+          {page}
+        </Link>
+      </button>
     </motion.li>
   );
 }
