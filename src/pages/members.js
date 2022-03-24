@@ -4,6 +4,7 @@ import CommitteeSection from '../components/members/CommitteeSection';
 import ExecutiveSection from '../components/members/ExecutiveSection';
 import MembersHero from '../components/members/MembersHero';
 import Divider from '../components/common/Divider';
+import Head from '../components/common/Head';
 
 export default function members({ data }) {
   const executiveCommittee = data.executive.member;
@@ -14,6 +15,7 @@ export default function members({ data }) {
 
   return (
     <div>
+      <Head title='Members' />
       <MembersHero />
       <Divider className='lg:my-24 mx-5 lg:mx-0 lg:w-11/12 lg:h-[2px] hidden lg:block' />
       <div className='flex flex-col gap-20 px-5 mb-24 lg:gap-28 fixed-width'>

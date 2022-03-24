@@ -1,0 +1,45 @@
+{
+  "type": "event",
+  "year": "2018-03-23T11:55:54.461Z",
+  "title": "CodeX 2018 Programming Challenge",
+  "description": "October 19, 2018 - Students from the previous CodeX Workshop were tested on their programming knowledge. Team Blank, which included ICT members Mikhaela Tapia and Cyrel Ace Lejeta, was awarded the CodeX 2018 champions at the end of the competition.",
+  "summary": "Students from the previous CodeX Workshop were tested on their programming knowledge.",
+  "tags": [
+    "CODEX",
+    "COMPETITION"
+  ],
+  "images": [
+    {
+      "image": "codex2018challenge_1.jpg",
+      "imageAlt": "CodeX 2018 Programming Challenge"
+    },
+    {
+      "image": "codex2018challenge_2.jpg",
+      "imageAlt": "CodeX 2018 Programming Challenge"
+    },
+    {
+      "image": "codex2018challenge_3.jpg",
+      "imageAlt": "CodeX 2018 Programming Challenge"
+    },
+    {
+      "image": "codex2018challenge_4.jpg",
+      "imageAlt": "CodeX 2018 Programming Challenge"
+    },
+    {
+      "image": "codex2018challenge_5.jpg",
+      "imageAlt": "CodeX 2018 Programming Challenge"
+    },
+    {
+      "image": "codex2018challenge_6.jpg",
+      "imageAlt": "CodeX 2018 Programming Challenge"
+    },
+    {
+      "image": "codex2018challenge_7.jpg",
+      "imageAlt": "CodeX 2018 Programming Challenge"
+    },
+    {
+      "image": "codex2018challenge_8.jpg",
+      "imageAlt": "CodeX 2018 Programming Challenge"
+    }
+  ]
+}
