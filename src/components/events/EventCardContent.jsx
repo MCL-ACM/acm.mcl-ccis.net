@@ -15,8 +15,10 @@ export default function EventCardContent({
   return (
     <div className='absolute flex flex-col items-center w-full align-middle px-9 justify-between h-full'>
       <div className='flex flex-col items-center w-full gap-3 align-middle h-full break-words'>
-        {tagged && (
+        {tagged ? (
           <EventTags tags={tags} className="className='absolute pt-7 '" />
+        ) : (
+          <div className='pt-7' />
         )}
         <header className='flex flex-col gap-2 text-center'>
           <h1 className='text-lg font-bold text-oxford-blue'>{title}</h1>

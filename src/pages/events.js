@@ -74,7 +74,7 @@ export default function events({ data }) {
                     }}
                     type='button'
                   >
-                    <SingleEventCard shadow tagged event={currentEvent} />
+                    <SingleEventCard shadow tagged event={currentEvent} linky />
                   </button>
                 </div>
               ))

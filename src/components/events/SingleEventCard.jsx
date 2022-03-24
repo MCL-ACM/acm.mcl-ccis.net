@@ -2,7 +2,7 @@ import React from 'react';
 import EventCardBackground from './EventCardBackground';
 import EventCardContent from './EventCardContent';
 
-export default function SingleEventCard({ event, tagged, shadow }) {
+export default function SingleEventCard({ event, tagged, shadow, linky }) {
   return (
     <EventCardBackground shadow={shadow}>
       <EventCardContent
@@ -13,7 +13,7 @@ export default function SingleEventCard({ event, tagged, shadow }) {
         img={event.images[0].image}
         imageAlt={event.images[0].imageAlt}
         summary={event.summary}
-        linky
+        linky={linky}
       />
     </EventCardBackground>
   );
