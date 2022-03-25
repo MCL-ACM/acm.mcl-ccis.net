@@ -8,6 +8,7 @@ import HeroDecoration from '../components/common/decorations/HeroDecoration';
 import SingleEventCard from '../components/events/SingleEventCard';
 import DEventModal from '../components/events/desktop_modal/DEventModal';
 import Head from '../components/common/Head';
+import Divider from '../components/common/Divider';
 
 export default function events({ data }) {
   const [year, setYear] = useState('All');
@@ -57,7 +58,7 @@ export default function events({ data }) {
             <div />
           )}
         </div>
-        <div className='w-[88.1%] bottom-0 h-[1px] bg-gradient-to-r from-standard-blue to-cerulean-crayola hidden lg:block' />
+        <Divider className='lg:my-24 mx-5 lg:mx-0 lg:w-11/12 lg:h-[2px] lg:shadow-none hidden lg:block' />
 
         <section className='fixed-width hidden lg:block text-center pt-[5.8125em] min-h-[830px]'>
           <div className='max-w-[600px] ml-auto mr-auto'>
