@@ -3,16 +3,16 @@ import React from 'react';
 
 export default function HistorySection() {
   return (
-    <div className='flex flex-col text-center gap-5 lg:gap-16'>
-      <h2 className='px-5 text-3xl lg:text-6xl font-bold leading-snug text-oxford-blue fixed-width'>
+    <div className='flex flex-col gap-5 text-center lg:gap-10'>
+      <h2 className='px-5 text-3xl font-bold leading-snug lg:text-5xl text-oxford-blue fixed-width'>
         How We Started
       </h2>
       <StaticImage
         src='../../images/about/how_we_started.png'
         alt="MCL-ACM's first General Assembly"
-        className='mx-5 lg:mx-0 max-h-[550px]'
+        className='mx-5 lg:mx-0 max-h-[450px]'
       />
-      <div className='px-5 text-lg lg:text-2xl text-rich-black font-light lg:font-normal leading-[180%] lg:leading-[43px] lg:tracking-wide fixed-width'>
+      <div className='px-5 text-lg lg:text-xl text-rich-black font-light lg:font-normal leading-[180%] lg:leading-[43px] lg:tracking-wide fixed-width'>
         <p>
           The Malayan Colleges Laguna ACM Student Chapter is the{' '}
           <b>

@@ -17,7 +17,7 @@ export default function HeroSection({
   };
 
   return (
-    <div className='flex flex-col lg:gap-16 fixed-width lg:mt-16'>
+    <div className='flex flex-col lg:gap-6 fixed-width lg:mt-16 lg:items-center'>
       <HeroBanner image={image} />
       <HeroHeadingText
         header={headerText}

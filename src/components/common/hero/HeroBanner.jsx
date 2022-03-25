@@ -5,8 +5,8 @@ import HeroBannerDecoration from './HeroBannerDecoration';
 
 export default function HeroBanner({ image, homePage }) {
   return (
-    <div className='relative lg:m-10 lg:mt-14'>
-      {image}
+    <div className='relative max-w-4xl lg:m-10 lg:mt-14'>
+      <div className='overflow-hidden'>{image}</div>
       {!homePage && (
         <DotsRowSmallDecoration className='hidden lg:block lg:absolute -top-14 -left-10 max-w-2 max-h-2' />
       )}
