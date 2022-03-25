@@ -86,7 +86,7 @@ export default function CarouselEventCard({ events, tagged, shadow }) {
                   img={currentEvent.images[0].image}
                   imageAlt={currentEvent.images[0].imageAlt}
                   summary={currentEvent.summary}
-                  linky
+                  linky={false}
                 />
                 <button
                   type='button'
