@@ -80,7 +80,7 @@ export default function events({ data }) {
                 </div>
               ))
             ) : (
-              <div className='py-12 text-7xl font-bold text-slate-500 opacity-70 w-full text-center'>
+              <div className='w-full py-12 font-bold text-center text-7xl text-slate-500 opacity-70'>
                 No Events Found . . .
               </div>
             )}
