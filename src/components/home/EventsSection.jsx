@@ -46,18 +46,18 @@ export default function EventsSection() {
     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
   }, []);
   return (
-    <div className='relative mt-12 mb-16'>
+    <div className='relative mt-12 mb-16 sm:mt-0'>
       <EventsDecoration className='absolute sm:hidden -bottom-20 max-h-full w-full z-[-1]' />
       <DesktopEventsDecoration className='hidden sm:block sm:absolute top-32 z-[-1] w-full h-[92%]' />
 
       <section>
-        <div className='flex flex-row items-stretch items-start mb-4 gap-x-16 fixed-width sm:mb-20'>
+        <div className='flex flex-row items-stretch mb-4 gap-x-16 fixed-width sm:mb-12'>
           <div className='hidden sm:block w-1.5 bg-standard-blue' />
           <hgroup className='flex flex-col self-start gap-3 px-5 text-left '>
-            <h2 className='text-3xl font-bold text-oxford-blue sm:text-6xl'>
+            <h2 className='text-3xl font-bold text-oxford-blue sm:text-5xl'>
               Fulfilling our Vision
             </h2>
-            <h3 className='text-xl font-medium text-darkish-blue sm:text-4xl'>
+            <h3 className='text-xl font-medium text-darkish-blue sm:text-3xl'>
               Events
             </h3>
           </hgroup>

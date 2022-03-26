@@ -80,16 +80,16 @@ export default function DEventImageSlideshow({ images }) {
       </div>
 
       <div>
-        <ul className='px-24 flex items-center w-full min-w-0 overflow-x-scroll no-scrollbar justify-center pb-7'>
+        <ul className='px-24 flex items-center w-full min-w-0 overflow-x-scroll no-scrollbar gap-x-2 justify-center pb-7'>
           {Array(images.length)
             .fill()
             .map((_, index) => (
-              <motion.li key={images[index]} className=''>
+              <motion.li key={images[index]} className='p-1'>
                 <button
                   type='button'
                   onClick={() => setPage([index, eventIndex > index ? -1 : 1])}
-                  className={`w-24 h-14 object-contain overflow-hidden shrink-0 ${
-                    index === eventIndex ? 'ring-standard-blue ring-1' : ''
+                  className={`w-16 h-9 object-contain overflow-hidden shrink-0 ${
+                    index === eventIndex ? 'ring-standard-blue ring-4' : ''
                   }`}
                 >
                   <GatsbyImage

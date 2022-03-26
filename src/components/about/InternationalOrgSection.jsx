@@ -4,7 +4,7 @@ import React from 'react';
 export default function InternationalOrgSection() {
   return (
     <div className='flex flex-col px-5 text-center lg:text-left fixed-width'>
-      <h2 className='text-3xl lg:text-6xl font-bold leading-snug text-oxford-blue lg:max-w-screen-md lg:leading-snug lg:pl-16 lg:border-l-8 lg:border-standard-blue'>
+      <h2 className='text-3xl font-bold leading-snug lg:text-5xl text-oxford-blue lg:max-w-screen-sm lg:leading-snug lg:pl-16 lg:border-l-8 lg:border-standard-blue'>
         The International Organization
       </h2>
 
@@ -17,7 +17,7 @@ export default function InternationalOrgSection() {
           />
         </div>
 
-        <div className='text-lg lg:text-2xl text-rich-black font-light lg:font-normal leading-[180%] lg:leading-[43px] lg:tracking-wide fixed-width lg:basis-1/2'>
+        <div className='text-lg lg:text-xl text-rich-black font-light lg:font-normal leading-[180%] lg:leading-[43px] lg:tracking-wide fixed-width lg:basis-1/2'>
           <p className='mt-5 lg:mt-14'>
             The Association for Computing Machinery is an international learned
             society for computing founded in 1947. It is a non-profit

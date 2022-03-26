@@ -9,14 +9,16 @@ export default function EventCardContent({
   year,
   img,
   imageAlt,
-  description,
+  summary,
   linky,
 }) {
   return (
     <div className='absolute flex flex-col items-center w-full align-middle px-9 justify-between h-full'>
-      <div className='flex flex-col items-center w-full gap-6 align-middle h-full break-words'>
-        {tagged && (
+      <div className='flex flex-col items-center w-full gap-3 align-middle h-full break-words'>
+        {tagged ? (
           <EventTags tags={tags} className="className='absolute pt-7 '" />
+        ) : (
+          <div className='pt-7' />
         )}
         <header className='flex flex-col gap-2 text-center'>
           <h1 className='text-lg font-bold text-oxford-blue'>{title}</h1>
@@ -31,13 +33,13 @@ export default function EventCardContent({
           alt={imageAlt}
         />
         <p className='text-sm font-light text-center text-rich-black w-full'>
-          {description.length > 200 ? (
+          {summary.length > 200 ? (
             <p>
-              {description.slice(0, 200)}
-              <span className='text-xl font-medium'> . . . </span>{' '}
+              {summary.slice(0, 200)}
+              <span className='font-black'> . . . </span>{' '}
             </p>
           ) : (
-            description
+            summary
           )}
         </p>
       </div>

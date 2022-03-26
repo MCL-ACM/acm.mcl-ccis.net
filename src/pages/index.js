@@ -15,7 +15,7 @@ export default function index() {
   return (
     <div>
       <Head />
-      <main className='flex flex-col gap-12 lg:gap-20'>
+      <main className='flex flex-col gap-12 lg:gap-12'>
         <HeroSection callback={() => executeScroll()} />
         <Divider className='lg:my-24 mx-5 lg:mx-0 lg:w-11/12 lg:h-[2px] shadow-border-glow' />
         <div ref={aboutRef}>
