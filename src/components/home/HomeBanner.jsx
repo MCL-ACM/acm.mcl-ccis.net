@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import HeroBanner from '../common/hero/HeroBanner';
 
 export default function HomeBanner() {
-  const data = useStaticQuery(graphql`
+  const query = graphql`
     query GetHeroSlideshowImages {
       allFile(filter: { sourceInstanceName: { eq: "heroSlideshow" } }) {
         edges {
@@ -17,13 +17,11 @@ export default function HomeBanner() {
         }
       }
     }
-  `);
-  const images = data.allFile.edges.map(({ node }) => (
-    <GatsbyImage
-      image={getImage(node.childImageSharp)}
-      className='w-auto h-full'
-    />
-  ));
+  `;
+
+  const images = useStaticQuery(query).allFile.edges.map(
+    ({ node }) => node.childImageSharp,
+  );
   const [index, setIndex] = useState(0);
   const updateIndex = () => {
     setIndex((previousIndex) => (previousIndex + 1) % images.length);
@@ -46,7 +44,11 @@ export default function HomeBanner() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
-              {images[index]}
+              <GatsbyImage
+                image={getImage(images[index])}
+                className='w-auto h-full'
+                alt='Home hero'
+              />
             </motion.div>
           </AnimatePresence>
         </div>
