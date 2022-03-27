@@ -7,9 +7,9 @@ export default function AboutHero() {
     <HeroSection
       image={
         <StaticImage
-          src='../../images/about/about_us.png'
+          src='../../images/HourOfCodeTeach.jpg'
           alt=''
-          className='w-full'
+          className='w-full aspect-[2/1]'
         />
       }
       headerText='A Student Chapter of ACM'

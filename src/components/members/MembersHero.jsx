@@ -7,9 +7,9 @@ export default function MembersHero() {
     <HeroSection
       image={
         <StaticImage
-          src='../../images/about/about_us.png'
+          src='../../images/Members.jpg'
           alt=''
-          className='w-full'
+          className='w-full aspect-[2/1]'
         />
       }
       headerText='The Foundation for Excellence'
