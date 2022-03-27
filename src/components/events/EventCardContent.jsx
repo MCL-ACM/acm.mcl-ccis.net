@@ -13,8 +13,8 @@ export default function EventCardContent({
   linky,
 }) {
   return (
-    <div className='absolute flex flex-col items-center w-full align-middle px-9 justify-between h-full'>
-      <div className='flex flex-col items-center w-full gap-3 align-middle h-full break-words'>
+    <div className='absolute flex flex-col items-center justify-between w-full h-full align-middle px-9'>
+      <div className='flex flex-col items-center w-full h-full gap-3 break-words align-middle'>
         {tagged ? (
           <EventTags tags={tags} className="className='absolute pt-7 '" />
         ) : (
@@ -31,21 +31,15 @@ export default function EventCardContent({
           width='263px'
           image={getImage(img)}
           alt={imageAlt}
+          className='aspect-[16/9] w-full'
         />
-        <p className='text-sm font-light text-center text-rich-black w-full'>
-          {summary.length > 200 ? (
-            <p>
-              {summary.slice(0, 200)}
-              <span className='font-black'> . . . </span>{' '}
-            </p>
-          ) : (
-            summary
-          )}
+        <p className='w-full text-sm font-light text-center text-rich-black'>
+          {summary.length > 180 ? `${summary.slice(0, 180)}. . . ` : summary}
         </p>
       </div>
 
       {linky ? (
-        <div className='text-lg text-darkish-blue underline pb-5'>
+        <div className='pb-5 text-lg underline text-darkish-blue'>
           View Details
         </div>
       ) : (
