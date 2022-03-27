@@ -18,18 +18,19 @@ export default function HomeBanner() {
       }
     }
   `;
-
   const images = useStaticQuery(query).allFile.edges.map(
     ({ node }) => node.childImageSharp,
   );
+
   const [index, setIndex] = useState(0);
   const updateIndex = () => {
     setIndex((previousIndex) => (previousIndex + 1) % images.length);
   };
-
   useEffect(() => {
-    const nextImageDelay = 10000;
-    setInterval(() => updateIndex(), nextImageDelay);
+    const nextImageDelay = 15000;
+    const interval = setInterval(() => updateIndex(), nextImageDelay);
+
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -38,7 +39,7 @@ export default function HomeBanner() {
         <div className='relative w-full bg-black h-96'>
           <AnimatePresence>
             <motion.div
-              className='absolute object-contain w-full h-full'
+              className='absolute w-full h-full aspect-[3/2]'
               key={index}
               exit={{ opacity: 0 }}
               initial={{ opacity: 0 }}
