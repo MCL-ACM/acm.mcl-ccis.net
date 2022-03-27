@@ -9,7 +9,7 @@ export default function MembersHero() {
         <StaticImage
           src='../../images/Members.jpg'
           alt=''
-          className='w-full aspect-[2/1]'
+          className='h-[375px] w-auto lg:w-full lg:aspect-[2/1]'
         />
       }
       headerText='The Foundation for Excellence'
