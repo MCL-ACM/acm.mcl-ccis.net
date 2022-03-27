@@ -25,7 +25,7 @@ export default function HeroContent({ callback }) {
           iconRight
         />
       </div>
-      <HeroContentDecoration className='absolute -bottom-20 h-[55%] left-[-70%] lg:left-auto lg:h-full lg:w-[80%] lg:right-[-10%] lg:bottom-0 z-[-1]' />
+      <HeroContentDecoration className='absolute -bottom-20 h-[55%] left-[-70%] lg:left-auto lg:h-full lg:w-[80%] lg:right-[-10%] lg:-bottom-48 z-[-1]' />
     </div>
   );
 }
