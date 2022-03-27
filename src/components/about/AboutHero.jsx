@@ -8,7 +8,7 @@ export default function AboutHero() {
       image={
         <StaticImage
           src='../../images/HourOfCodeTeach.jpg'
-          alt=''
+          alt='About Hero'
           className='h-[375px] w-auto lg:w-full lg:aspect-[2/1]'
         />
       }

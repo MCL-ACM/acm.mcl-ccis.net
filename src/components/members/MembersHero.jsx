@@ -8,7 +8,7 @@ export default function MembersHero() {
       image={
         <StaticImage
           src='../../images/Members.jpg'
-          alt=''
+          alt='Members'
           className='h-[375px] w-auto lg:w-full lg:aspect-[2/1]'
         />
       }
