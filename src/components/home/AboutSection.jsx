@@ -11,7 +11,7 @@ import Divider from '../common/Divider';
 export default function AboutSection({ ref }) {
   return (
     <section
-      className='flex flex-col-reverse items-center gap-8 px-5 m-10 lg:gap-24 lg:grid lg:grid-cols-2 fixed-width'
+      className='flex flex-col-reverse items-center gap-8 px-5 lg:gap-24 lg:grid lg:grid-cols-2 fixed-width'
       ref={ref}
     >
       <div className='relative'>
