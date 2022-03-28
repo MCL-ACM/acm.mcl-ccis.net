@@ -20,12 +20,8 @@ export default function members({ data }) {
       <Divider className='lg:my-24 mx-5 lg:mx-0 lg:w-11/12 lg:h-[2px] hidden lg:block' />
       <div className='flex flex-col gap-20 px-5 mb-24 lg:gap-28 fixed-width'>
         <ExecutiveSection officers={executiveCommittee} />
-        {committees.map((committee) => (
-          <CommitteeSection
-            name={committee.name}
-            chair={committee.chair}
-            members={committee.members}
-          />
+        {committees.map(({ name, chair, members: _members }) => (
+          <CommitteeSection name={name} chair={chair} members={_members} />
         ))}
       </div>
     </div>

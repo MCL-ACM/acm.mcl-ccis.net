@@ -1,7 +1,6 @@
 import React from 'react';
 import MemberSection from './MemberSection';
 import MemberInfo from './MemberInfo';
-import tempPhoto from '../../images/members/dog.jpg';
 
 export default function CommitteeSection({ name, chair, members }) {
   return (
@@ -10,7 +9,7 @@ export default function CommitteeSection({ name, chair, members }) {
         <MemberInfo
           name={chair.name}
           position={chair.position}
-          photo={tempPhoto}
+          photo={chair.photo}
           className='w-full'
         />
 

@@ -55,5 +55,12 @@ module.exports = {
         path: `${__dirname}/content/committee`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'heroSlideshow',
+        path: `${__dirname}/src/images/home/heroSlideshow`,
+      },
+    },
   ],
 };
