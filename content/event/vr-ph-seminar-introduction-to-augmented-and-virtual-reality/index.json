@@ -4,10 +4,8 @@
   "title": "VR PH Seminar: Introduction to Augmented and Virtual Reality",
   "description": "January 21, 2019 - MCL-ACM conducted its first seminar in the ‘CCIS Technology Seminar Series’ about VR and AR technology during MCL’s 13th Foundation Day. Its goal was to introduce students to technological advancements, specifically in the fields of Virtual Reality and Augmented Reality.",
   "summary": "MCL-ACM conducted its first seminar in the ‘CCIS Technology Seminar Series’ about VR and AR technology during MCL’s 13th Foundation Day.",
-  "tags": [
-    "SEMINAR",
-    "VR"
-  ],
+  "featured": false,
+  "tags": ["SEMINAR", "VR"],
   "images": [
     {
       "image": "vrphseminar_1.jpg",

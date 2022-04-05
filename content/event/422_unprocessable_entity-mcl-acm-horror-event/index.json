@@ -4,10 +4,8 @@
   "title": "422_unprocessable_entity: MCL-ACM Horror Event",
   "description": "October 14, 2021 - In the spirit of Halloween and as part of MCL’s E-Blaze 2021, MCL-ACM conducted a Horror event for the students to enjoy. It is in the form of an online escape room where teams were given sets of questions that challenged their critical thinking and problem-solving skills.",
   "summary": "In the spirit of Halloween and as part of MCL’s E-Blaze 2021, MCL-ACM conducted a Horror event for the students to enjoy.",
-  "tags": [
-    "COMPETITION",
-    "HALLOWEEN"
-  ],
+  "featured": false,
+  "tags": ["COMPETITION", "HALLOWEEN"],
   "images": [
     {
       "image": "422horror_01.jpg",
