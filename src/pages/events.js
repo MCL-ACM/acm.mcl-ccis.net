@@ -128,7 +128,7 @@ export const query = graphql`
           images {
             image {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(placeholder: BLURRED)
               }
               name
             }
