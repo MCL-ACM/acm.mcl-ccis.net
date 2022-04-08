@@ -32,7 +32,7 @@ export default function DEventImageSlideshow({ images }) {
     setPage([page + newDirection, newDirection]);
   };
   return (
-    <div className='flex flex-col h-full gap-y-2'>
+    <div className='flex flex-col h-full gap-y-2 overflow-x-auto'>
       <div className='flex w-full h-full relative justify-center item-center'>
         <div className='mt-auto mb-auto z-20'>
           <AiOutlineLeft size={36} onClick={() => paginate(-1)} />

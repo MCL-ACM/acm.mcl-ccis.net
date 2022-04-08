@@ -13,7 +13,7 @@ export default function EventModal({ event, tagged, toggle }) {
         onClick={toggle}
       />
 
-      <div className='fixed max-w-[1020px] h-[844px] m-auto inset-0 z-50 flex flex-col justify-center items-center'>
+      <div className='fixed max-w-[1020px] max-h-[844px] m-auto inset-0 z-50 flex flex-col justify-center items-center'>
         <div className='bg-white max-w-[1020px] w-full h-[844px] text-left rounded-3xl flex flex-col pt-7 gap-y-5 border-2 shadow-2xl z-50 shadow-sky-200'>
           <div className='flex flex-col gap-y-4 px-24'>
             <button
