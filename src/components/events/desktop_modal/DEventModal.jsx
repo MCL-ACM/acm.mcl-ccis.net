@@ -25,16 +25,15 @@ export default function EventModal({ event, tagged, toggle }) {
                 <AiOutlineClose color='red' fontSize='1.5em' className='' />
               </div>
             </button>
-            <div className='flex w-full justify-between'>
-              <h1 className='text-3xl font-bold text-oxford-blue leading-snug max-w-[70%]'>
+            <div className='flex w-full justify-between flex-col space-y-3'>
+              <h1 className='text-3xl font-bold text-oxford-blue leading-snug'>
                 {title}
               </h1>
-              <div className='flex gap-y-3 flex-col pr-9'>
-                <p className='text-lg font-light text-maximum-blue-green'>
-                  {year}
-                </p>
-                <div>{tagged && <EventTags tags={tags} />}</div>
-              </div>
+
+              <p className='text-lg font-light text-maximum-blue-green'>
+                {year}
+              </p>
+              <div>{tagged && <EventTags tags={tags} />}</div>
             </div>
 
             <p className='text-sm text-justify break-words overflow-y-scroll max-h-24 no-scrollbar'>
