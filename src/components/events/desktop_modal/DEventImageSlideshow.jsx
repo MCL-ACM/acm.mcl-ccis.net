@@ -61,12 +61,13 @@ export default function DEventImageSlideshow({ images }) {
                   paginate(-1);
                 }
               }}
-              className='absolute flex flex-col items-center w-full z-50 object-contain'
+              className='absolute flex flex-col items-center w-full z-50'
             >
               <GatsbyImage
                 image={getImage(currImage.image)}
                 alt={currImage.imageAlt}
-                className='pointer-events-none object-contain'
+                className='pointer-events-none'
+                objectFit='fit'
               />
             </motion.div>
           </AnimatePresence>

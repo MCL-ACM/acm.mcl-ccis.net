@@ -9,6 +9,7 @@ import SingleEventCard from '../components/events/SingleEventCard';
 import DEventModal from '../components/events/desktop_modal/DEventModal';
 import Head from '../components/common/Head';
 import Divider from '../components/common/Divider';
+import EventModal from '../components/events/EventModal';
 
 export default function events({ data }) {
   const [year, setYear] = useState('All');
@@ -36,7 +37,7 @@ export default function events({ data }) {
   return (
     <div className='w-full lg:mt-[4.8125em] relative pb-[9.25em]'>
       <Head title='Events' />
-      <section>
+      <section className=''>
         <HeroDecoration className='absolute hidden lg:block' />
         <div className='hidden lg:flex fixed-width relative pb-[5.8125em]'>
           <div className='pt-11'>
@@ -49,7 +50,7 @@ export default function events({ data }) {
           </div>
           <FeaturedEventCard toggle={() => toggleFeaturedOpen()} />
           {selectedEvents.length > 0 && isFeaturedOpen ? (
-            <DEventModal
+            <EventModal
               tagged
               event={selectedEvents[13]}
               toggle={() => toggleFeaturedOpen()}
@@ -85,7 +86,7 @@ export default function events({ data }) {
               </div>
             )}
             {isOpen ? (
-              <DEventModal
+              <EventModal
                 tagged
                 event={selectedEvents[selectedEvent]}
                 toggle={() => toggleOpen()}
