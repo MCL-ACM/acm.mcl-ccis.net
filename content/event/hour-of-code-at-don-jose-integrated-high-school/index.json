@@ -4,9 +4,8 @@
   "title": "Hour of Code at Don Jose Integrated High School",
   "description": "December 11, 2019 - MCL ACM Student Chapter together with the SHS Junior ACM celebrated the Computer Science Education Week 2019 with an Hour of Code event. Thirty-seven Grade 7 students of Don Jose Integrated High School were introduced to concepts of programming using Google Blockly.",
   "summary": "MCL ACM Student Chapter together with the SHS Junior ACM celebrated the Computer Science Education Week 2019 with an Hour of Code event.",
-  "tags": [
-    "HOUR OF CODE"
-  ],
+  "featured": false,
+  "tags": ["HOUR OF CODE"],
   "images": [
     {
       "image": "hourofcode2019_1.jpg",

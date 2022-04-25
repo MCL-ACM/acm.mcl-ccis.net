@@ -11,6 +11,7 @@ export default function HistorySection() {
         src='../../images/about/how_we_started.png'
         alt="MCL-ACM's first General Assembly"
         className='mx-5 lg:mx-0 max-h-[450px]'
+        objectFit='cover'
       />
       <div className='px-5 text-lg lg:text-xl text-rich-black font-light lg:font-normal leading-[180%] lg:leading-[43px] lg:tracking-wide fixed-width'>
         <p>

@@ -4,10 +4,8 @@
   "title": "Work Immersion Web Development Workshop for ICT-SHS",
   "description": "February 1, 2020 - MCL-ACM, in collaboration with the institution’s SHS-ICT Department, equipped students with basic knowledge and ability in web development in preparation for their work immersion. The workshop introduced web technologies, such as HTML, CSS, Bootstrap, and PHP.",
   "summary": "MCL-ACM, in collaboration with the institution’s SHS-ICT Department, equipped students with basic knowledge and ability in web development in preparation for their work immersion.",
-  "tags": [
-    "WORKSHOP",
-    "WEB DEVELOPMENT"
-  ],
+  "featured": false,
+  "tags": ["WORKSHOP", "WEB DEVELOPMENT"],
   "images": [
     {
       "image": "workimmersionworkshop_1.jpg",

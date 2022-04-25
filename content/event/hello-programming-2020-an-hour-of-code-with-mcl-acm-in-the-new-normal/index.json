@@ -4,9 +4,8 @@
   "title": "Hello Programming 2020: An Hour of Code with MCL-ACM in the New Normal",
   "description": "December 10, 2020 - MCL-ACM hosted an Hour of Code event in the New Normal using Discord and Google Blocky. Its purpose was to demystify programming and show that everyone can code. The event was participated by Grade 9 to 12 students from the Kids Nucleus School of Laguna, Wise Kids School, and Far Eastern University Alabang.",
   "summary": "MCL-ACM hosted an Hour of Code event in the New Normal using Discord and Google Blocky.",
-  "tags": [
-    "HOUR OF CODE"
-  ],
+  "featured": false,
+  "tags": ["HOUR OF CODE"],
   "images": [
     {
       "image": "hourofcode2020_1.jpg",

@@ -26,7 +26,7 @@ export default function MembersSection() {
           </h3>
         </div>
         <p className='text-lg font-light leading-relaxed lg:font-normal text-rich-black lg:text-lg lg:my-4'>
-          MCL-ACM take pride in its organization members. Led by the Executive
+          MCL-ACM takes pride in its organization members. Led by the Executive
           Committee, its members work together and strive to build an excellent
           community and execute meaningful initiatives.
         </p>

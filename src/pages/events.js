@@ -51,7 +51,7 @@ export default function events({ data }) {
           {selectedEvents.length > 0 && isFeaturedOpen ? (
             <DEventModal
               tagged
-              event={selectedEvents[0]}
+              event={selectedEvents[13]}
               toggle={() => toggleFeaturedOpen()}
             />
           ) : (
@@ -64,7 +64,7 @@ export default function events({ data }) {
           <div className='max-w-[600px] ml-auto mr-auto'>
             <EventDropdown year={year} changeYear={setYear} />
           </div>
-          <main className='flex flex-wrap pt-[6.8125em] gap-x-[3.3125em] gap-y-36'>
+          <main className='flex flex-wrap pt-[6.8125em] gap-x-[3.3125em] gap-y-36 justify-center'>
             {selectedEvents.length > 0 ? (
               selectedEvents.map((currentEvent, index) => (
                 <div>
@@ -108,7 +108,7 @@ export default function events({ data }) {
         <div className='pb-4'>
           <EventDropdown year={year} changeYear={setYear} />
         </div>
-        <CarouselEventCard shadow tagged events={selectedEvents} />
+        <CarouselEventCard shadow={false} tagged events={selectedEvents} />
       </div>
     </div>
   );
@@ -128,7 +128,7 @@ export const query = graphql`
           images {
             image {
               childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(placeholder: BLURRED)
               }
               name
             }
