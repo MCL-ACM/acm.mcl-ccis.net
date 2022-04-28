@@ -65,7 +65,7 @@ export default function EventImageSlideshow({ images }) {
       </div>
 
       <div className='relative h-full w-full'>
-        <div className='z-20 left-0 absolute top-1/2 pl-4'>
+        <div className='z-20 left-0 absolute top-1/2 pl-4 hidden sm:block'>
           <AiOutlineLeft size={36} onClick={() => paginate(-1)} />
         </div>
         <AnimatePresence initial={false} custom={direction}>
@@ -91,7 +91,7 @@ export default function EventImageSlideshow({ images }) {
                 paginate(-1);
               }
             }}
-            className='absolute h-full w-full object-contain'
+            className='absolute h-full w-full object-contain px-0 sm:px-16'
           >
             <GatsbyImage
               image={getImage(currImage.image)}
@@ -101,7 +101,7 @@ export default function EventImageSlideshow({ images }) {
             />
           </motion.div>
         </AnimatePresence>
-        <div className='z-20 right-0 absolute top-1/2 pr-4'>
+        <div className='z-20 right-0 absolute top-1/2 pr-4 hidden sm:block'>
           <button type='button' onClick={() => paginate(1)}>
             <AiOutlineRight size={36} />
           </button>
