@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
+import { FaTwitter, FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
 import { Link } from 'gatsby';
 
 export default function Footer() {
@@ -17,6 +17,10 @@ export default function Footer() {
     {
       link: 'https://www.instagram.com/acm_mcl/',
       icon: <FaInstagram size={35} />,
+    },
+    {
+      link: 'https://www.youtube.com/channel/UCuEfYX_hMeS3sSj5M0wHaYQ',
+      icon: <FaYoutube size={35} />,
     },
   ];
   const links = [
@@ -58,10 +62,10 @@ export default function Footer() {
           fill='#FFFFFF'
         />
       </svg>
-      <main className='h-full px-5 pt-24 pb-10 bg-gradient-to-tr from-standard-blue to-cerulean-crayola flex justify-center w-full'>
+      <main className='flex justify-center w-full h-full px-5 pt-24 pb-10 bg-gradient-to-tr from-standard-blue to-cerulean-crayola'>
         <section className='flex flex-col justify-between w-full h-full text-white lg:max-w-[69.5em]'>
           <div className='flex flex-col gap-y-[2.375rem]'>
-            <div className='flex w-full justify-between'>
+            <div className='flex justify-between w-full'>
               <article className='flex flex-col gap-y-[1.0625rem] max-w-[23.0625em]'>
                 <header className='text-sm font-light'>Connect with us</header>
                 <p className='text-lg'>

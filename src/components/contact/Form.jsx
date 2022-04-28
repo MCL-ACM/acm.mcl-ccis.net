@@ -39,7 +39,7 @@ export default function Form() {
       </Helmet>
       <form
         onSubmit={sendEmail}
-        className='flex flex-col gap-7 font-light text-rich-black'
+        className='flex flex-col font-light gap-7 text-rich-black'
       >
         <label htmlFor='name'>
           Your name
@@ -50,7 +50,7 @@ export default function Form() {
             type='text'
             placeholder='Enter your name here'
             required
-            className='w-full mt-1 py-2 border-b-2 border-cerulean-crayola text-lg focus:outline-none focus:border-standard-blue'
+            className='w-full py-2 mt-1 text-lg border-b-2 border-cerulean-crayola focus:outline-none focus:border-standard-blue'
           />
         </label>
         <label htmlFor='email'>
@@ -62,7 +62,7 @@ export default function Form() {
             type='email'
             placeholder='Enter your email here'
             required
-            className='w-full mt-1 py-2 border-b-2 border-cerulean-crayola text-lg focus:outline-none focus:border-standard-blue'
+            className='w-full py-2 mt-1 text-lg border-b-2 border-cerulean-crayola focus:outline-none focus:border-standard-blue'
           />
         </label>
         <label htmlFor='message'>
@@ -74,10 +74,11 @@ export default function Form() {
             rows='5'
             placeholder='Enter your message here'
             required
-            className='w-full mt-1 py-2 border-b-2 border-cerulean-crayola text-lg focus:outline-none focus:border-standard-blue'
+            className='w-full py-2 mt-1 text-lg border-b-2 border-cerulean-crayola focus:outline-none focus:border-standard-blue'
           />
         </label>
-        <div className='gap-y-10 flex flex-col items-center'>
+
+        <div className='flex flex-col items-center gap-y-10'>
           <div>
             <ReCAPTCHA ref={recaptchaRef} sitekey={recaptchaSitekey} />
             <p
@@ -87,6 +88,7 @@ export default function Form() {
               Please answer reCAPTCHA
             </p>
           </div>
+
           <div>
             <Button
               text='Send my message'
@@ -97,6 +99,10 @@ export default function Form() {
           </div>
         </div>
       </form>
+      <p className='mt-4 text-xs font-light text-center text-gray-700'>
+        The information that you submit in this form will be sent to our email
+        and will not be stored in a database
+      </p>
       <div
         className='mt-5'
         style={{ display: showMessageSent ? 'block' : 'none' }}
