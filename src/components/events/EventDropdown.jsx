@@ -15,7 +15,7 @@ export default function EventDropdown({ year, changeYear }) {
   return (
     <div>
       <h1 className='mb-2 text-xl font-medium text-left'>Academic Year</h1>
-      <div className='relative min-w-[12.5em] border-2 border-gray-400 rounded '>
+      <div className='relative sm:min-w-[12.5em] border-2 border-gray-400 rounded '>
         <button type='button' onClick={toggleOpen} className='w-full text-left'>
           <h1 className='flex items-center p-3 text-xl text-ming lg:text-xl lg:text-oxford-blue lg:font-bold lg:tracking-wider'>
             {Number.isInteger(year) ? `${year}-${year + 1}` : 'All'}

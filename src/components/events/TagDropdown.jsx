@@ -11,17 +11,14 @@ for (let i = 2018; i <= currYear; i += 1) {
 
 export default function TagDropdown({ tags, selectedTag, onNewTagSelected }) {
   const [isOpen, toggleOpen] = useCycle(false, true);
-  const titleCase = (s) =>
-    s
-      .replace(/^[-_]*(.)/, (_, c) => c.toUpperCase())
-      .replace(/[-_]+(.)/g, (_, c) => ` ${c.toUpperCase()}`);
+
   return (
     <div>
       <h1 className='mb-2 text-xl font-medium text-left'>Tag</h1>
       <div className='relative min-w-[12.5em] border-2 border-gray-400 rounded '>
         <button type='button' onClick={toggleOpen} className='w-full text-left'>
           <h1 className='flex items-center p-3 text-xl text-ming lg:text-xl lg:text-oxford-blue lg:font-bold lg:tracking-wider'>
-            {titleCase(selectedTag)}
+            {selectedTag}
             <svg width='13' height='11' viewBox='0 0 13 11' className='ml-auto'>
               <path
                 d='M6.5 11L0.870833 0.500001L12.1292 0.5L6.5 11Z'
@@ -55,7 +52,7 @@ export default function TagDropdown({ tags, selectedTag, onNewTagSelected }) {
                   }}
                   className='text-xl text-ming lg:text-lg'
                 >
-                  {titleCase(_tag)}
+                  {_tag}
                 </button>
               </li>
             ))}

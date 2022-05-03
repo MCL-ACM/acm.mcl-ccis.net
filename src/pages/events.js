@@ -24,10 +24,16 @@ export default function events({ data }) {
     description: node.summary,
     ...node,
   }));
-
+  const titleCase = (s) =>
+    s.replace(
+      /\w\S*/g,
+      (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(),
+    );
   const tags = Array.from(
     new Set(eventNodes.reduce((prev, curr) => [...prev, ...curr.tags], [])),
-  ).sort();
+  )
+    .sort()
+    .map(titleCase);
 
   useEffect(() => {
     setSelectedEvents(() => {
@@ -75,7 +81,20 @@ export default function events({ data }) {
         <Divider className='lg:my-24 mx-5 lg:mx-0 lg:w-11/12 lg:h-[2px] lg:shadow-none hidden lg:block' />
 
         <section className='fixed-width hidden lg:block text-center pt-[5.8125em] min-h-[830px]'>
-          <div className='max-w-[600px] flex flex-row gap-8'>
+          <div>
+            <p className='mb-16 text-5xl font-bold text-oxford-blue'>
+              {(() => {
+                if (year === 'All' && tag === 'All') return 'All Events';
+                if (tag === 'All')
+                  return `Events for A.Y. ${`${year}-${year + 1}`}`;
+                if (year === 'All') return `Events with ${tag} Tag`;
+                return `Events for A.Y. ${`${year}-${
+                  year + 1
+                }`} with ${tag} Tag`;
+              })()}
+            </p>
+          </div>
+          <div className='flex flex-row gap-8'>
             <EventDropdown year={year} changeYear={setYear} />
             <TagDropdown
               selectedTag={tag}
@@ -124,8 +143,13 @@ export default function events({ data }) {
           </h1>
           <h3 className='text-2xl font-medium text-darkish-blue'>Events</h3>
         </header>
-        <div className='pb-4'>
+        <div className='flex flex-col w-[24.9375em] gap-4 px-8 pb-8'>
           <EventDropdown year={year} changeYear={setYear} />
+          <TagDropdown
+            selectedTag={tag}
+            onNewTagSelected={setTag}
+            tags={tags}
+          />
         </div>
         <CarouselEventCard shadow={false} tagged events={selectedEvents} />
       </div>
