@@ -17,8 +17,8 @@ export default function Footer() {
       icon: <FaFacebook size={35} />,
     },
     {
-      slug: 'acm_mcl',
-      link: 'https://www.instagram.com/acm_mcl',
+      slug: 'mcl_acm',
+      link: 'https://www.instagram.com/mcl_acm',
       icon: <FaInstagram size={35} />,
     },
     {

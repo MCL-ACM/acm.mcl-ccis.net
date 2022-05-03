@@ -59,7 +59,7 @@ export default function events({ data }) {
         {selectedEvents.length > 0 && isFeaturedOpen ? (
           <EventModal
             tagged
-            event={selectedEvents[13]}
+            event={selectedEvents[14]}
             toggle={() => toggleFeaturedOpen()}
           />
         ) : (
@@ -69,10 +69,12 @@ export default function events({ data }) {
         <div className='hidden lg:flex fixed-width relative pb-[5.8125em]'>
           <div className='pt-11'>
             <header>
-              <h1 className='text-[4rem] font-bold text-oxford-blue'>
+              <h1 className='text-4xl font-bold leading-10 lg:text-7xl text-oxford-blue'>
                 Our Initiatives
               </h1>
-              <h5 className='text-4xl font-bold text-darkish-blue'>Events</h5>
+              <h5 className='text-4xl font-bold lg:mt-9 text-darkish-blue'>
+                Events
+              </h5>
             </header>
           </div>
           <FeaturedEventCard toggle={() => toggleFeaturedOpen()} />
@@ -84,12 +86,9 @@ export default function events({ data }) {
             <p className='mb-16 text-5xl font-bold text-oxford-blue'>
               {(() => {
                 if (year === 'All' && tag === 'All') return 'All Events';
-                if (tag === 'All')
-                  return `Events for A.Y. ${`${year}-${year + 1}`}`;
+                if (tag === 'All') return `Events for Year ${year}`;
                 if (year === 'All') return `Events with ${tag} Tag`;
-                return `Events for A.Y. ${`${year}-${
-                  year + 1
-                }`} with ${tag} Tag`;
+                return `Events for Year ${year} with ${tag} Tag`;
               })()}
             </p>
           </div>
