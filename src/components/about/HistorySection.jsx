@@ -1,6 +1,6 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
-import ImageWithInformation from '../common/ImageWithInformation';
+import ImageWithCaption from '../common/ImageWithCaption';
 
 export default function HistorySection() {
   return (
@@ -9,7 +9,7 @@ export default function HistorySection() {
         How We Started
       </h2>
       <div className='px-5 lg:mx-0'>
-        <ImageWithInformation
+        <ImageWithCaption
           image={
             <StaticImage
               src='../../images/about/how_we_started.png'

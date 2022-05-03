@@ -1,7 +1,7 @@
 import React from 'react';
 import { GrCircleInformation } from 'react-icons/gr';
 
-export default function ImageWithInformation({ image, message, hiddenMobile }) {
+export default function ImageWithCaption({ image, message, hiddenMobile }) {
   const hidden = hiddenMobile ? 'hidden sm:block' : 'block';
   return (
     <div className='relative'>

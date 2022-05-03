@@ -7,7 +7,7 @@ import DotsRowSmallDecoration from './decorations/DotsRowSmallDecoration';
 import Button from '../common/buttons/Button';
 
 import Divider from '../common/Divider';
-import ImageWithInformation from '../common/ImageWithInformation';
+import ImageWithCaption from '../common/ImageWithCaption';
 
 export default function AboutSection({ ref }) {
   return (
@@ -47,7 +47,7 @@ export default function AboutSection({ ref }) {
         </div>
       </div>
       <div className='relative lg:mt-8 lg:mb-7 lg:mr-7'>
-        <ImageWithInformation
+        <ImageWithCaption
           image={
             <StaticImage
               src='../../images/home/Home-About.jpg'
