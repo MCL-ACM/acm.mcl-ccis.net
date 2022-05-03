@@ -1,9 +1,14 @@
 import React from 'react';
 
-export default function ImageWithCaption({ image, message, hiddenMobile }) {
+export default function ImageWithCaption({
+  image,
+  message,
+  hiddenMobile,
+  className,
+}) {
   const hidden = hiddenMobile ? 'hidden sm:block' : 'block';
   return (
-    <div className='relative'>
+    <div className={`relative ${className}`}>
       {image}
       <div
         className={`absolute text-xs bg-white rounded-full bottom-3 right-3 bg-opacity-80 ${hidden}`}

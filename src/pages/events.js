@@ -157,7 +157,7 @@ export default function events({ data }) {
 
 export const query = graphql`
   query GetEvents {
-    allEvent {
+    allEvent(sort: { fields: year, order: DESC }) {
       edges {
         node {
           id

@@ -1,0 +1,37 @@
+{
+  "type": "homeSlideshow",
+  "content": [
+    {
+      "image": "1.jpg",
+      "caption": "MCL-ACM's First Ever General Assembly"
+    },
+    {
+      "image": "2.jpg",
+      "caption": "MCL-ACM and Junior MCL-ACM batch 2018-2019"
+    },
+    {
+      "image": "3.jpg",
+      "caption": "CodeX 2019 Programming Challenge"
+    },
+    {
+      "image": "4.jpg",
+      "caption": "MCL-ACM's Third General Assembly"
+    },
+    {
+      "image": "6.jpg",
+      "caption": "Participants and Organizers of the VR PH Seminar"
+    },
+    {
+      "image": "7.jpg",
+      "caption": "Participants and Organizers of Hour of Code 2018"
+    },
+    {
+      "image": "8.jpg",
+      "caption": "Logo of CodeX 2019 displayed the the ETY lobby"
+    },
+    {
+      "image": "9.jpg",
+      "caption": "Participants and Organizers of CodeX 2019 Workshop"
+    }
+  ]
+}
