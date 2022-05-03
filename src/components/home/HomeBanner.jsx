@@ -3,28 +3,38 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { motion, AnimatePresence } from 'framer-motion';
 import HeroBanner from '../common/hero/HeroBanner';
+import ImageWithCaption from '../common/ImageWithCaption';
 
 export default function HomeBanner() {
   const query = graphql`
-    query GetHeroSlideshowImages {
-      allFile(filter: { sourceInstanceName: { eq: "heroSlideshow" } }) {
+    query MyQuery {
+      allHomeSlideshow {
         edges {
           node {
-            childImageSharp {
-              gatsbyImageData
+            id
+            content {
+              caption
+              image {
+                childImageSharp {
+                  gatsbyImageData
+                }
+              }
             }
           }
         }
       }
     }
   `;
-  const images = useStaticQuery(query).allFile.edges.map(
-    ({ node }) => node.childImageSharp,
-  );
+  const content = useStaticQuery(
+    query,
+  ).allHomeSlideshow.edges[0].node.content.map((e) => ({
+    ...e,
+    image: e.image.childImageSharp,
+  }));
 
   const [index, setIndex] = useState(0);
   const updateIndex = () => {
-    setIndex((previousIndex) => (previousIndex + 1) % images.length);
+    setIndex((previousIndex) => (previousIndex + 1) % content.length);
   };
   useEffect(() => {
     const nextImageDelay = 15000;
@@ -45,10 +55,17 @@ export default function HomeBanner() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
-              <GatsbyImage
-                image={getImage(images[index])}
+              <ImageWithCaption
+                image={
+                  <GatsbyImage
+                    image={getImage(content[index].image)}
+                    className='w-auto h-full'
+                    alt='Home hero'
+                  />
+                }
+                message={content[index].caption}
                 className='w-auto h-full'
-                alt='Home hero'
+                hiddenMobile
               />
             </motion.div>
           </AnimatePresence>
