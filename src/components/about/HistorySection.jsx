@@ -1,5 +1,6 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
+import ImageWithInformation from '../common/ImageWithInformation';
 
 export default function HistorySection() {
   return (
@@ -8,14 +9,17 @@ export default function HistorySection() {
         How We Started
       </h2>
       <div>
-        <p className='text-gray-500 font-light italic pt-2 text-lg pb-2'>
-          The first general assembly of MCL-ACM
-        </p>
-        <StaticImage
-          src='../../images/about/how_we_started.png'
-          alt="MCL-ACM's first General Assembly"
-          className='mx-5 lg:mx-0 max-h-[450px] w-full'
-          objectFit='cover'
+        <ImageWithInformation
+          image={
+            <StaticImage
+              src='../../images/about/how_we_started.png'
+              alt="MCL-ACM's first General Assembly"
+              className='mx-5 lg:mx-0 max-h-[450px] w-full'
+              objectFit='cover'
+            />
+          }
+          message='The first ever general assembly of MCL-ACM'
+          hiddenMobile
         />
       </div>
 
