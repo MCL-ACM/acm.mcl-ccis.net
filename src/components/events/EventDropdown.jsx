@@ -14,11 +14,11 @@ export default function EventDropdown({ year, changeYear }) {
 
   return (
     <div>
-      <h1 className='mb-2 text-xl font-medium text-left'>Academic Year</h1>
+      <h1 className='mb-2 text-xl font-medium text-left'>Year</h1>
       <div className='relative sm:min-w-[12.5em] border-2 border-gray-400 rounded '>
         <button type='button' onClick={toggleOpen} className='w-full text-left'>
           <h1 className='flex items-center p-3 text-xl text-ming lg:text-xl lg:text-oxford-blue lg:font-bold lg:tracking-wider'>
-            {Number.isInteger(year) ? `${year}-${year + 1}` : 'All'}
+            {Number.isInteger(year) ? `${year}` : 'All'}
             <svg width='13' height='11' viewBox='0 0 13 11' className='ml-auto'>
               <path
                 d='M6.5 11L0.870833 0.500001L12.1292 0.5L6.5 11Z'
@@ -43,7 +43,7 @@ export default function EventDropdown({ year, changeYear }) {
               </button>
             </li>
             {years.map((_year) => (
-              <li key={`${_year}-${_year + 1}`}>
+              <li key={_year}>
                 <button
                   type='button'
                   onClick={() => {
@@ -51,7 +51,9 @@ export default function EventDropdown({ year, changeYear }) {
                     toggleOpen();
                   }}
                   className='text-xl text-ming lg:text-lg'
-                >{`${_year}-${_year + 1}`}</button>
+                >
+                  {_year}
+                </button>
               </li>
             ))}
           </ul>

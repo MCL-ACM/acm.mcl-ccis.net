@@ -80,7 +80,7 @@ export default function FormerOfficersSection() {
                   <MemberInfo
                     name={member.name}
                     position={`${member.position}`}
-                    className='lg:w-[20%]'
+                    className='lg:w-[20%] mt-3'
                   />
                 ))}
               </div>
