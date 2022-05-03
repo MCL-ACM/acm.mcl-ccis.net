@@ -9,29 +9,43 @@ import SingleEventCard from '../components/events/SingleEventCard';
 import DEventModal from '../components/events/desktop_modal/DEventModal';
 import Head from '../components/common/Head';
 import Divider from '../components/common/Divider';
+import TagDropdown from '../components/events/TagDropdown';
 
 export default function events({ data }) {
   const [year, setYear] = useState('All');
+  const [tag, setTag] = useState('All');
   const [selectedEvents, setSelectedEvents] = useState([]);
   const [isOpen, toggleOpen] = useCycle(false, true);
   const [isFeaturedOpen, toggleFeaturedOpen] = useCycle(false, true);
   const [selectedEvent, setSelectedEvent] = useState();
 
+  const eventNodes = data.allEvent.edges.map(({ node }) => ({
+    image: node.images && node.images[0] && node.images[0].image,
+    description: node.summary,
+    ...node,
+  }));
+
+  const tags = Array.from(
+    new Set(eventNodes.reduce((prev, curr) => [...prev, ...curr.tags], [])),
+  ).sort();
+
   useEffect(() => {
-    const eventNodes = data.allEvent.edges.map(({ node }) => ({
-      image: node.images && node.images[0] && node.images[0].image,
-      description: node.summary,
-      ...node,
-    }));
-    setSelectedEvents(() =>
-      year === 'All'
-        ? eventNodes
-        : eventNodes.filter((event) => {
-            const eventYear = new Date(event.year).getFullYear();
-            return eventYear === year;
-          }),
-    );
-  }, [year]);
+    setSelectedEvents(() => {
+      const eventsFilteredByYear =
+        year === 'All'
+          ? eventNodes
+          : eventNodes.filter((event) => {
+              const eventYear = new Date(event.year).getFullYear();
+              return eventYear === year;
+            });
+      const eventsFilteredByTags =
+        tag === 'All'
+          ? eventsFilteredByYear
+          : eventsFilteredByYear.filter((event) => event.tags.includes(tag));
+
+      return eventsFilteredByTags;
+    });
+  }, [year, tag]);
 
   return (
     <div className='w-full lg:mt-[4.8125em] relative pb-[9.25em]'>
@@ -61,10 +75,15 @@ export default function events({ data }) {
         <Divider className='lg:my-24 mx-5 lg:mx-0 lg:w-11/12 lg:h-[2px] lg:shadow-none hidden lg:block' />
 
         <section className='fixed-width hidden lg:block text-center pt-[5.8125em] min-h-[830px]'>
-          <div className='max-w-[600px] ml-auto mr-auto'>
+          <div className='max-w-[600px] flex flex-row gap-8'>
             <EventDropdown year={year} changeYear={setYear} />
+            <TagDropdown
+              selectedTag={tag}
+              onNewTagSelected={setTag}
+              tags={tags}
+            />
           </div>
-          <main className='flex flex-wrap pt-[6.8125em] gap-x-[3.3125em] gap-y-36 justify-center'>
+          <main className='flex flex-wrap pt-[3.8125em] gap-x-[3.3125em] gap-y-36 justify-center'>
             {selectedEvents.length > 0 ? (
               selectedEvents.map((currentEvent, index) => (
                 <div>

@@ -12,7 +12,7 @@ export default function MemberInfo({ name, position, photo, alt, className }) {
           className='w-20 h-20 mb-3 rounded-full lg:w-32 lg:h-32'
         />
       )}
-      <p className='text-lg font-medium text-oxford-blue lg:text-lg'>{name}</p>
+      <p className='text-lg text-oxford-blue lg:text-lg'>{name}</p>
       <p className='font-light text-oxford-blue'>{position}</p>
     </div>
   );
