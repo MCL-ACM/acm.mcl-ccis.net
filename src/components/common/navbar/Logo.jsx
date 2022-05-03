@@ -6,7 +6,7 @@ export default function Logo() {
     <StaticImage
       src='../../../images/navbar/acm_logo.png'
       alt='MCL-ACM logo'
-      className='w-[78px] h-[40px] sm:w-[151px] sm:h-[77px]'
+      className='w-[78px] h-[40px] sm:w-[150px] sm:h-[76px]'
     />
   );
 }

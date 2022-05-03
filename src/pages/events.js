@@ -18,22 +18,21 @@ export default function events({ data }) {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const [isFeaturedOpen, toggleFeaturedOpen] = useCycle(false, true);
   const [selectedEvent, setSelectedEvent] = useState();
-
-  const eventNodes = data.allEvent.edges.map(({ node }) => ({
-    image: node.images && node.images[0] && node.images[0].image,
-    description: node.summary,
-    ...node,
-  }));
   const titleCase = (s) =>
     s.replace(
       /\w\S*/g,
       (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(),
     );
+  const eventNodes = data.allEvent.edges.map(({ node }) => ({
+    image: node.images && node.images[0] && node.images[0].image,
+    description: node.summary,
+    ...node,
+    tags: node.tags.map(titleCase),
+  }));
+
   const tags = Array.from(
     new Set(eventNodes.reduce((prev, curr) => [...prev, ...curr.tags], [])),
-  )
-    .sort()
-    .map(titleCase);
+  ).sort();
 
   useEffect(() => {
     setSelectedEvents(() => {
