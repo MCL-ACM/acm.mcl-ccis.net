@@ -6,9 +6,9 @@ import CarouselEventCard from '../components/events/CarouselEventCard';
 import FeaturedEventCard from '../components/events/FeaturedEventCard';
 import HeroDecoration from '../components/common/decorations/HeroDecoration';
 import SingleEventCard from '../components/events/SingleEventCard';
-import DEventModal from '../components/events/desktop_modal/DEventModal';
 import Head from '../components/common/Head';
 import Divider from '../components/common/Divider';
+import EventModal from '../components/events/EventModal';
 import TagDropdown from '../components/events/TagDropdown';
 
 export default function events({ data }) {
@@ -56,7 +56,16 @@ export default function events({ data }) {
   return (
     <div className='w-full lg:mt-[4.8125em] relative pb-[9.25em]'>
       <Head title='Events' />
-      <section>
+      <section className=''>
+        {selectedEvents.length > 0 && isFeaturedOpen ? (
+          <EventModal
+            tagged
+            event={selectedEvents[13]}
+            toggle={() => toggleFeaturedOpen()}
+          />
+        ) : (
+          <div />
+        )}
         <HeroDecoration className='absolute hidden lg:block' />
         <div className='hidden lg:flex fixed-width relative pb-[5.8125em]'>
           <div className='pt-11'>
@@ -68,15 +77,6 @@ export default function events({ data }) {
             </header>
           </div>
           <FeaturedEventCard toggle={() => toggleFeaturedOpen()} />
-          {selectedEvents.length > 0 && isFeaturedOpen ? (
-            <DEventModal
-              tagged
-              event={selectedEvents[13]}
-              toggle={() => toggleFeaturedOpen()}
-            />
-          ) : (
-            <div />
-          )}
         </div>
         <Divider className='lg:my-24 mx-5 lg:mx-0 lg:w-11/12 lg:h-[2px] lg:shadow-none hidden lg:block' />
 
@@ -123,7 +123,7 @@ export default function events({ data }) {
               </div>
             )}
             {isOpen ? (
-              <DEventModal
+              <EventModal
                 tagged
                 event={selectedEvents[selectedEvent]}
                 toggle={() => toggleOpen()}

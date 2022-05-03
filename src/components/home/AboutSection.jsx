@@ -7,6 +7,7 @@ import DotsRowSmallDecoration from './decorations/DotsRowSmallDecoration';
 import Button from '../common/buttons/Button';
 
 import Divider from '../common/Divider';
+import ImageWithInformation from '../common/ImageWithInformation';
 
 export default function AboutSection({ ref }) {
   return (
@@ -46,11 +47,17 @@ export default function AboutSection({ ref }) {
         </div>
       </div>
       <div className='relative lg:mt-8 lg:mb-7 lg:mr-7'>
-        <StaticImage
-          src='../../images/home/Home-About.jpg'
-          alt=''
-          className='aspect-square'
+        <ImageWithInformation
+          image={
+            <StaticImage
+              src='../../images/home/Home-About.jpg'
+              alt=''
+              className='aspect-square'
+            />
+          }
+          message='Jereh Tejano teaching in Hour of Code 2019'
         />
+
         <DotsRowSmallDecoration className='hidden lg:block lg:absolute -top-8 left-20 max-w-[40%] max-h-[40%]' />
         <DotsDecoration className='text-oxford-blue hidden lg:block lg:absolute -bottom-7 -right-7 max-w-[50%] max-h-[50%] z-[-1]' />
       </div>
