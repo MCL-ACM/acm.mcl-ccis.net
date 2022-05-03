@@ -8,18 +8,16 @@ export default function HistorySection() {
       <h2 className='px-5 text-3xl font-bold leading-snug lg:text-5xl text-oxford-blue fixed-width'>
         How We Started
       </h2>
-      <div>
+      <div className='px-5 lg:mx-0'>
         <ImageWithInformation
           image={
             <StaticImage
               src='../../images/about/how_we_started.png'
               alt="MCL-ACM's first General Assembly"
-              className='mx-5 lg:mx-0 max-h-[450px] w-full'
-              objectFit='cover'
+              className='  max-h-[450px] w-full'
             />
           }
           message='The first ever general assembly of MCL-ACM'
-          hiddenMobile
         />
       </div>
 
