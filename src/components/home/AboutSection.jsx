@@ -51,6 +51,9 @@ export default function AboutSection({ ref }) {
           alt=''
           className='aspect-square'
         />
+        <p className='lg:max-w-[15rem] text-gray-500 font-light italic pt-2 text-sm'>
+          Jereh Tejano teaching in Hour of Code 2019
+        </p>
         <DotsRowSmallDecoration className='hidden lg:block lg:absolute -top-8 left-20 max-w-[40%] max-h-[40%]' />
         <DotsDecoration className='text-oxford-blue hidden lg:block lg:absolute -bottom-7 -right-7 max-w-[50%] max-h-[50%] z-[-1]' />
       </div>
