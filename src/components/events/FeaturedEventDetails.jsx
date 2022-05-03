@@ -6,8 +6,8 @@ export default function FeaturedEventDetails({ event, toggle }) {
   return (
     <div className='absolute shadow-xl border-2 border-opacity-20 pt-6 bg-white min-w-[358px] max-w-[358px] min-h-[461px] flex flex-col pr-[3.25em] pl-6 gap-y-[1.125em]'>
       <div className='flex flex-col gap-y-2'>
-        <h5 className='font-light text-maximum-blue-green'>March 10, 2022</h5>
-        <h1 className='font-bold text-oxford-blue tracking-wide text-2xl'>
+        <h5 className='font-light text-maximum-blue-green'>January 21, 2019</h5>
+        <h1 className='text-2xl font-bold tracking-wide text-oxford-blue'>
           Introduction to Virtual Reality and Augmented Reality
         </h1>
       </div>

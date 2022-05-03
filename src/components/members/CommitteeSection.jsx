@@ -5,7 +5,7 @@ import MemberInfo from './MemberInfo';
 export default function CommitteeSection({ name, chair, members }) {
   return (
     <MemberSection header={name}>
-      <div className='flex flex-row flex-wrap justify-center gap-y-8 lg:gap-y-14'>
+      <div className='flex flex-row flex-wrap justify-center gap-y-8 lg:gap-y-10'>
         <MemberInfo
           name={chair.name}
           position={chair.position}

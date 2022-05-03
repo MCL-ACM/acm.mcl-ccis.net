@@ -14,6 +14,7 @@ export default function Button({
 
   return (
     <motion.button
+      type='button'
       onClick={callback}
       whileHover={{
         y: '-6%',

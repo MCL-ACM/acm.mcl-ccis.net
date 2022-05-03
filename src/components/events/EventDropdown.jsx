@@ -13,49 +13,52 @@ export default function EventDropdown({ year, changeYear }) {
   const [isOpen, toggleOpen] = useCycle(false, true);
 
   return (
-    <div className='relative min-w-[12.5em]'>
-      <button type='button' onClick={toggleOpen}>
-        <h1 className='flex items-center pb-2 text-2xl text-ming lg:text-5xl lg:text-oxford-blue lg:font-bold lg:tracking-wider gap-x-3'>
-          {Number.isInteger(year) ? `A.Y. ${year}-${year + 1}` : 'All'}
-          <svg width='13' height='11' viewBox='0 0 13 11'>
-            <path
-              d='M6.5 11L0.870833 0.500001L12.1292 0.5L6.5 11Z'
-              fill='#0D6E7A'
-            />
-          </svg>
-        </h1>
-      </button>
+    <div>
+      <h1 className='mb-2 text-xl font-medium text-left'>Academic Year</h1>
+      <div className='relative sm:min-w-[12.5em] border-2 border-gray-400 rounded '>
+        <button type='button' onClick={toggleOpen} className='w-full text-left'>
+          <h1 className='flex items-center p-3 text-xl text-ming lg:text-xl lg:text-oxford-blue lg:font-bold lg:tracking-wider'>
+            {Number.isInteger(year) ? `${year}-${year + 1}` : 'All'}
+            <svg width='13' height='11' viewBox='0 0 13 11' className='ml-auto'>
+              <path
+                d='M6.5 11L0.870833 0.500001L12.1292 0.5L6.5 11Z'
+                fill='#000000'
+              />
+            </svg>
+          </h1>
+        </button>
 
-      {isOpen ? (
-        <ul className='absolute z-10 flex flex-col items-center w-full pb-2 bg-white border-2 border-t-0 gap-y-2 lg:gap-y-6 lg:py-4 rounded-b-xl'>
-          <li key={year}>
-            <button
-              type='button'
-              onClick={() => {
-                changeYear('All');
-                toggleOpen();
-              }}
-              className='text-xl text-ming lg:text-2xl'
-            >
-              All
-            </button>
-          </li>
-          {years.map((_year) => (
-            <li key={`${_year}-${_year + 1}`}>
+        {isOpen ? (
+          <ul className='absolute z-10 flex flex-col items-center w-full pb-2 bg-white border-2 border-t-0 gap-y-2 lg:gap-y-6 lg:py-4 rounded-b-xl'>
+            <li key={year}>
               <button
                 type='button'
                 onClick={() => {
-                  changeYear(_year);
+                  changeYear('All');
                   toggleOpen();
                 }}
-                className='text-xl lg:text-2xl text-ming'
-              >{`${_year}-${_year + 1}`}</button>
+                className='text-xl text-ming lg:text-lg'
+              >
+                All
+              </button>
             </li>
-          ))}
-        </ul>
-      ) : (
-        <div />
-      )}
+            {years.map((_year) => (
+              <li key={`${_year}-${_year + 1}`}>
+                <button
+                  type='button'
+                  onClick={() => {
+                    changeYear(_year);
+                    toggleOpen();
+                  }}
+                  className='text-xl text-ming lg:text-lg'
+                >{`${_year}-${_year + 1}`}</button>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <div />
+        )}
+      </div>
     </div>
   );
 }

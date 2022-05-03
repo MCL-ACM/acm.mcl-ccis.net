@@ -1,5 +1,6 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
+import ImageWithCaption from '../common/ImageWithCaption';
 
 export default function HistorySection() {
   return (
@@ -7,12 +8,19 @@ export default function HistorySection() {
       <h2 className='px-5 text-3xl font-bold leading-snug lg:text-5xl text-oxford-blue fixed-width'>
         How We Started
       </h2>
-      <StaticImage
-        src='../../images/about/how_we_started.png'
-        alt="MCL-ACM's first General Assembly"
-        className='mx-5 lg:mx-0 max-h-[450px]'
-        objectFit='cover'
-      />
+      <div className='px-5 lg:mx-0'>
+        <ImageWithCaption
+          image={
+            <StaticImage
+              src='../../images/about/how_we_started.png'
+              alt="MCL-ACM's first General Assembly"
+              className='  max-h-[450px] w-full'
+            />
+          }
+          message='The first ever general assembly of MCL-ACM'
+        />
+      </div>
+
       <div className='px-5 text-lg lg:text-xl text-rich-black font-light lg:font-normal leading-[180%] lg:leading-[43px] lg:tracking-wide fixed-width'>
         <p>
           The Malayan Colleges Laguna ACM Student Chapter is the{' '}

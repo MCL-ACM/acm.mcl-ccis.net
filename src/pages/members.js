@@ -5,6 +5,7 @@ import ExecutiveSection from '../components/members/ExecutiveSection';
 import MembersHero from '../components/members/MembersHero';
 import Divider from '../components/common/Divider';
 import Head from '../components/common/Head';
+import FormerOfficersSection from '../components/members/FormerOfficersSection';
 
 export default function members({ data }) {
   const executiveCommittee = data.executive.member;
@@ -23,6 +24,7 @@ export default function members({ data }) {
         {committees.map(({ name, chair, members: _members }) => (
           <CommitteeSection name={name} chair={chair} members={_members} />
         ))}
+        <FormerOfficersSection />
       </div>
     </div>
   );
