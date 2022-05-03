@@ -5,7 +5,7 @@ import MemberSection from './MemberSection';
 export default function ExecutiveSection({ officers }) {
   return (
     <MemberSection header='Executive Committee'>
-      <div className='grid grid-cols-2 lg:grid-cols-4 gap-y-8 lg:gap-y-14'>
+      <div className='grid grid-cols-2 lg:grid-cols-4 gap-y-8 lg:gap-y-10'>
         {officers.map(({ name, position, photo }, index) => (
           <div
             className={`flex flex-col items-center ${

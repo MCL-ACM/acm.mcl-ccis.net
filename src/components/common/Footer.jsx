@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
+import { FaTwitter, FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
 import { Link } from 'gatsby';
 
 export default function Footer() {
@@ -7,16 +7,24 @@ export default function Footer() {
 
   const socialLinks = [
     {
+      slug: 'MCL_ACM',
       link: 'https://twitter.com/MCL_ACM',
       icon: <FaTwitter size={35} />,
     },
     {
+      slug: 'acmMCL',
       link: 'https://fb.me/acmMCL',
       icon: <FaFacebook size={35} />,
     },
     {
-      link: 'https://www.instagram.com/acm_mcl/',
+      slug: 'acm_mcl',
+      link: 'https://www.instagram.com/acm_mcl',
       icon: <FaInstagram size={35} />,
+    },
+    {
+      slug: 'MCL ACM',
+      link: 'https://www.youtube.com/channel/UCuEfYX_hMeS3sSj5M0wHaYQ',
+      icon: <FaYoutube size={35} />,
     },
   ];
   const links = [
@@ -58,34 +66,49 @@ export default function Footer() {
           fill='#FFFFFF'
         />
       </svg>
-      <main className='h-full px-5 pt-24 pb-10 bg-gradient-to-tr from-standard-blue to-cerulean-crayola flex justify-center w-full'>
+      <main className='flex justify-center w-full h-full px-5 pt-24 pb-10 bg-gradient-to-tr from-standard-blue to-cerulean-crayola'>
         <section className='flex flex-col justify-between w-full h-full text-white lg:max-w-[69.5em]'>
-          <div className='flex flex-col gap-y-[2.375rem]'>
-            <div className='flex w-full justify-between'>
-              <article className='flex flex-col gap-y-[1.0625rem] max-w-[23.0625em]'>
-                <header className='text-sm font-light'>Connect with us</header>
-                <p className='text-lg'>
-                  Pulo Diezmo Rd, Pulo, Cabuyao, Laguna 4026, Philippines
-                </p>
-                <p className='text-lg'>acm.mclstudchapter@gmail.com</p>
-              </article>
-
-              <ul className='hidden lg:flex text-[1.375rem] font-medium gap-x-16'>
+          <div className='grid grid-cols-1 mb-4 lg:grid-cols-3 gap-y-8'>
+            <div className='hidden lg:block'>
+              <p className='mb-4 text-2xl font-bold'>Links</p>
+              <ul className='flex-col lg:flex gap-y-3'>
                 {links.map((link) => (
                   <li>
-                    <Link to={link.slug}>{link.page}</Link>
+                    <Link
+                      to={link.slug}
+                      className='text-lg font-medium hover:underline'
+                    >
+                      {link.page}
+                    </Link>
                   </li>
                 ))}
               </ul>
             </div>
 
+            <div className='flex flex-col'>
+              <header className='mb-4 text-2xl font-bold'>
+                Connect with us
+              </header>
+              <p className='text-lg'>
+                Pulo Diezmo Rd, Pulo, Cabuyao, Laguna 4026, Philippines
+              </p>
+              <p className='text-lg'>acm.mclstudchapter@gmail.com</p>
+            </div>
+
             <div className='lg:flex lg:justify-end'>
-              <div className='flex flex-col gap-y-[1.0625rem]'>
-                <header className='text-sm font-light'>Keep in touch</header>
-                <ul className='flex gap-x-4'>
-                  {socialLinks.map(({ link, icon }) => (
+              <div className='flex flex-col'>
+                <header className='mb-4 text-2xl font-bold'>
+                  Keep in touch
+                </header>
+                <ul className='flex flex-row lg:flex-col gap-y-3 gap-x-4'>
+                  {socialLinks.map(({ link, icon, slug }) => (
                     <a href={link} key={link} target='_blank' rel='noreferrer'>
-                      {icon}
+                      <div className='flex flex-row items-center gap-3 hover:underline'>
+                        <div>{icon}</div>
+                        <p className='hidden text-lg font-medium sm:block'>
+                          {slug}
+                        </p>
+                      </div>
                     </a>
                   ))}
                 </ul>
