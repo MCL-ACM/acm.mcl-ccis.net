@@ -74,10 +74,7 @@ export default function Footer() {
               <ul className='flex-col lg:flex gap-y-3'>
                 {links.map((link) => (
                   <li>
-                    <Link
-                      to={link.slug}
-                      className='text-lg font-medium hover:underline'
-                    >
+                    <Link to={link.slug} className='text-lg hover:underline'>
                       {link.page}
                     </Link>
                   </li>
@@ -105,9 +102,7 @@ export default function Footer() {
                     <a href={link} key={link} target='_blank' rel='noreferrer'>
                       <div className='flex flex-row items-center gap-3 hover:underline'>
                         <div>{icon}</div>
-                        <p className='hidden text-lg font-medium sm:block'>
-                          {slug}
-                        </p>
+                        <p className='hidden text-lg sm:block'>{slug}</p>
                       </div>
                     </a>
                   ))}
