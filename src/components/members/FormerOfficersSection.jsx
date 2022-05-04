@@ -67,7 +67,7 @@ export default function FormerOfficersSection() {
 
   return (
     <div>
-      <MemberSection header='Former officers'>
+      <MemberSection header='Former Officers'>
         <div className='gap-y-8 lg:gap-y-10 text-oxford-blue'>
           {officersPerYear.map(({ year, officers }) => (
             <div className='mb-12'>
