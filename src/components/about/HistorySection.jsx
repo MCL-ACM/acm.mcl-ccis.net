@@ -17,7 +17,7 @@ export default function HistorySection() {
               className='  max-h-[450px] w-full'
             />
           }
-          message='The first ever general assembly of MCL-ACM'
+          message="MCL-ACM's First Ever General Assembly"
         />
       </div>
 
