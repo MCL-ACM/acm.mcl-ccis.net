@@ -55,7 +55,7 @@ export default function AboutSection({ ref }) {
               className='aspect-square'
             />
           }
-          message='Jereh Tejano teaching in Hour of Code 2019'
+          message='Jereh Tejano teaching in Hour of Code 2018'
         />
 
         <DotsRowSmallDecoration className='hidden lg:block lg:absolute -top-8 left-20 max-w-[40%] max-h-[40%]' />
