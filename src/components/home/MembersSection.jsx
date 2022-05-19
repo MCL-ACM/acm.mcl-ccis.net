@@ -16,7 +16,7 @@ export default function MembersSection() {
           image={
             <StaticImage src='../../images/home/Home-Members.jpg' alt='' />
           }
-          message='MCL-ACM members of academic year 2017 to 2018'
+          message='MCL-ACM members from Academic Year 2018-2019'
         />
 
         <DotsRowSmallDecoration className='hidden lg:block lg:absolute -top-8 -left-10 max-w-[20%] max-h-[20%]' />

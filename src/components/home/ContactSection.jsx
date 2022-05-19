@@ -13,7 +13,7 @@ export default function ContactSection() {
           Reach out to us.
         </h1>
         <p className='text-2xl font-light text-oxford-blue lg:order-3'>
-          We're always looking forward to making connections. So feel free to
+          We're always looking forward to making connections, so feel free to
           drop us a message.
         </p>
         <Link to='/contact-us' className='m-auto grow lg:row-span-2 lg:order-2'>

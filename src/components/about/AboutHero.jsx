@@ -15,7 +15,7 @@ export default function AboutHero() {
               className='h-[375px] w-auto lg:w-full lg:aspect-[2/1]'
             />
           }
-          message='Jereh Tejano teaching in Hour of Code 2019'
+          message='Jereh Tejano teaching in Hour of Code 2018'
           hiddenMobile
         />
       }

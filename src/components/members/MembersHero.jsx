@@ -15,7 +15,7 @@ export default function MembersHero() {
               className='h-[375px] w-auto lg:w-full lg:aspect-[2/1]'
             />
           }
-          message='MCL-ACM members of academic year 2017 to 2018'
+          message='MCL-ACM members from Academic Year 2018-2019'
           hiddenMobile
         />
       }
