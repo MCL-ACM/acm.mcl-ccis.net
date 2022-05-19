@@ -39,6 +39,12 @@ collections:
       - { label: 'Summary', name: 'summary', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'markdown' }
       - {
+          label: 'Featured',
+          name: 'featured',
+          widget: 'boolean',
+          default: false,
+        }
+      - {
           label: 'Images',
           name: 'images',
           widget: 'list',

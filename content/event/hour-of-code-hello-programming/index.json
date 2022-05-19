@@ -4,9 +4,8 @@
   "title": "Hour of Code: Hello Programming!",
   "description": "December 7, 2018 - In celebration of Computer Science Education Week 2018, MCL-ACM held the ‘Hello Programming! Coding Made Easy, Starts with an #HourofCode’. This event was held to help non-ICT Senior Highschool students understand basic programming using Google Blockly.",
   "summary": "In celebration of Computer Science Education Week 2018, MCL-ACM held the ‘Hello Programming! Coding Made Easy, Starts with an #HourofCode’.",
-  "tags": [
-    "HOUR OF CODE"
-  ],
+  "featured": false,
+  "tags": ["HOUR OF CODE"],
   "images": [
     {
       "image": "hourofcode2018_1.jpg",

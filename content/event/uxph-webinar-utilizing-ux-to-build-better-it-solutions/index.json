@@ -2,12 +2,10 @@
   "type": "event",
   "year": "2021-03-23T12:48:24.487Z",
   "title": "UXPH Webinar: Utilizing UX to Build Better IT Solutions",
-  "description": "August 27, 2021 - In celebration of MCL-ACM’s 3rd Founding Anniversary and as part of the ‘CCIS Technology Seminar Series’, MCL-ACM held a webinar in partnership with UXPH. Mr. Jordan Aiko P. Deja, the resource speaker, talked about what User Experience is and how to create a better experience for the users. It was attended by students from MCL and other schools.",
-  "summary": "In celebration of MCL-ACM’s 3rd Founding Anniversary and as part of the ‘CCIS Technology Seminar Series’, MCL-ACM held a webinar in partnership with UXPH.",
-  "tags": [
-    "WEBINAR",
-    "UX"
-  ],
+  "description": "August 27, 2021 - In celebration of MCL-ACM’s 3rd Founding Anniversary and as part of the ‘CCIS Technology Seminar Series’, MCL-ACM held a webinar in partnership with UXPH (UX Philippines). Mr. Jordan Aiko P. Deja, the resource speaker, talked about what User Experience is and how to create a better experience for the users. It was attended by students from MCL and other schools.",
+  "summary": "In celebration of MCL-ACM’s 3rd Founding Anniversary and as part of the ‘CCIS Technology Seminar Series’, MCL-ACM held a webinar in partnership with UXPH (UX Philippines).",
+  "featured": false,
+  "tags": ["WEBINAR", "UX"],
   "images": [
     {
       "image": "uxphwebinar_1.jpg",

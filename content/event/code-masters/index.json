@@ -2,12 +2,10 @@
   "type": "event",
   "year": "2020-03-23T12:35:42.242Z",
   "title": "Code Masters",
-  "description": "October 22, 2020 - Code Masters was an online contest that tested the participants’ understanding of their lessons in IT111/L: Concepts in Object Oriented Programming Lecture/Laboratory and CS102-1/L: Data Structures and Algorithms Analysis Lecture/Laboratory courses. It was executed using Kahoot! and it served as a review for their upcoming final exams.",
-  "summary": "Code Masters was an online contest that tested the participants’ understanding of their lessons in IT111/L and CS102-1/L courses.",
-  "tags": [
-    "COMPETITION",
-    "KAHOOT"
-  ],
+  "description": "October 22, 2020 - Code Masters was an online contest that tested the participants’ understanding of their lessons in IT111/IT111L (Concepts in Object Oriented Programming) and CS102-1/CS102-1L (Data Structures and Algorithms Analysis). It was executed using Kahoot! and it served as a review for their upcoming final exams.",
+  "summary": "Code Masters was an online contest that tested the participants’ understanding of their lessons in IT111/IT111L and CS102-1/CS102-1L courses.",
+  "featured": false,
+  "tags": ["COMPETITION", "KAHOOT"],
   "images": [
     {
       "image": "codemasters_1.jpg",

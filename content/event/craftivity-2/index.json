@@ -2,12 +2,10 @@
   "type": "event",
   "year": "2021-03-23T12:46:21.906Z",
   "title": "Craftivity 2",
-  "description": "April 26 & 27, 2021 - For the CCIS College Week 2021, MCL-ACM did a part two of Craftivities after the success of the event during the MCL 15th Foundation Week. It was an event composed of Minecraft activities and was aimed for all the participants to have fun and enjoy the College Week.",
-  "summary": "For the CCIS College Week 2021, MCL-ACM did a part two of Craftivities after the success of the event during the MCL 15th Foundation Week.",
-  "tags": [
-    "CRAFTIVITIES",
-    "MINECRAFT"
-  ],
+  "description": "April 26 & 27, 2021 - For the 2021 CCIS College Week, MCL-ACM did a part two of Craftivities after the success of the event during MCL's 15th Foundation Week. It was an event composed of Minecraft activities and was aimed for all the participants to have fun and enjoy during the college week.",
+  "summary": "For the 2021 CCIS College Week, MCL-ACM did a part two of Craftivities after the success of the event during MCL's 15th Foundation Week.",
+  "featured": false,
+  "tags": ["CRAFTIVITIES", "MINECRAFT"],
   "images": [
     {
       "image": "craftivity2_1.jpg",

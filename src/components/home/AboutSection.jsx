@@ -7,6 +7,7 @@ import DotsRowSmallDecoration from './decorations/DotsRowSmallDecoration';
 import Button from '../common/buttons/Button';
 
 import Divider from '../common/Divider';
+import ImageWithCaption from '../common/ImageWithCaption';
 
 export default function AboutSection({ ref }) {
   return (
@@ -31,12 +32,12 @@ export default function AboutSection({ ref }) {
             <p className='text-lg font-light leading-relaxed lg:font-normal text-rich-black'>
               Malayan Colleges Laguna ACM Student Chapter is a student
               organization chartered by the Association for Computing Machinery
-              that aims to promote a greater interest in modern computing and
-              its applications.
+              (ACM) that aims to promote a greater interest in modern computing
+              and its applications.
             </p>
             <Link to='/about'>
               <Button
-                text='Read about Us'
+                text='Read about us'
                 textColor='text-white lg:text-2xl lg:p-4 lg:px-8 gap-4'
                 icon={<FiArrowRight size='1.3em' />}
                 color='bg-darkish-blue'
@@ -46,11 +47,17 @@ export default function AboutSection({ ref }) {
         </div>
       </div>
       <div className='relative lg:mt-8 lg:mb-7 lg:mr-7'>
-        <StaticImage
-          src='../../images/home/Home-About.jpg'
-          alt=''
-          className='aspect-square'
+        <ImageWithCaption
+          image={
+            <StaticImage
+              src='../../images/home/Home-About.jpg'
+              alt=''
+              className='aspect-square'
+            />
+          }
+          message='Jereh Tejano teaching in Hour of Code 2018'
         />
+
         <DotsRowSmallDecoration className='hidden lg:block lg:absolute -top-8 left-20 max-w-[40%] max-h-[40%]' />
         <DotsDecoration className='text-oxford-blue hidden lg:block lg:absolute -bottom-7 -right-7 max-w-[50%] max-h-[50%] z-[-1]' />
       </div>

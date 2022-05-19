@@ -4,10 +4,8 @@
   "title": "CodeX 2019 Programming Workshop",
   "description": "February 16 & 23, 2019 - This programming workshop was held to prepare students for the upcoming CodeX 2019 Competition. The competition participants from two different schools were taught about the fundamentals of C# and Java Programming.",
   "summary": "This programming workshop was held to prepare students for the upcoming CodeX 2019 Competition.",
-  "tags": [
-    "CODEX",
-    "WORKSHOP"
-  ],
+  "featured": false,
+  "tags": ["CODEX", "WORKSHOP"],
   "images": [
     {
       "image": "codex2019workshop_1.jpg",
