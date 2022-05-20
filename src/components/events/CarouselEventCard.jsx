@@ -38,7 +38,7 @@ export default function CarouselEventCard({ events, tagged, shadow }) {
   };
 
   return (
-    <div className='w-full h-full'>
+    <div className='w-full overflow-hidden'>
       {isOpen ? (
         <div className='absolute'>
           <EventModal event={currentEvent} toggle={() => toggleOpen()} />
@@ -47,7 +47,7 @@ export default function CarouselEventCard({ events, tagged, shadow }) {
         <div />
       )}
       {events && events.length > 0 ? (
-        <div className='flex justify-center'>
+        <div className='flex justify-center h-full'>
           <EventCardBackground shadow={shadow}>
             <AnimatePresence initial={false} custom={direction}>
               <motion.div
@@ -90,7 +90,7 @@ export default function CarouselEventCard({ events, tagged, shadow }) {
                 />
                 <button
                   type='button'
-                  className='h-full w-full absolute z'
+                  className='absolute w-full h-full z'
                   onClick={() => toggleOpen()}
                 />
               </motion.div>
