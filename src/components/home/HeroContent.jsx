@@ -11,7 +11,7 @@ export default function HeroContent({ callback }) {
           Malayan Colleges Laguna ACM Student Chapter
         </p>
         <p className='mb-4 text-4xl font-bold text-oxford-blue lg:text-6xl'>
-          A Community for Computing Enthusiasts
+          A Community of Computing Enthusiasts
         </p>
         <p className='hidden mb-8 font-light lg:block text-oxford-blue lg:text-lg'>
           Promoting excellence in modern computing

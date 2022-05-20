@@ -32,12 +32,12 @@ export default function AboutSection({ ref }) {
             <p className='text-lg font-light leading-relaxed lg:font-normal text-rich-black'>
               Malayan Colleges Laguna ACM Student Chapter is a student
               organization chartered by the Association for Computing Machinery
-              that aims to promote a greater interest in modern computing and
-              its applications.
+              (ACM) that aims to promote a greater interest in modern computing
+              and its applications.
             </p>
             <Link to='/about'>
               <Button
-                text='Read about Us'
+                text='Read about us'
                 textColor='text-white lg:text-2xl lg:p-4 lg:px-8 gap-4'
                 icon={<FiArrowRight size='1.3em' />}
                 color='bg-darkish-blue'
