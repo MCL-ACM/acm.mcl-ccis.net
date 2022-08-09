@@ -5,12 +5,14 @@ import JoiningMclAcm from './JoiningMclAcm';
 import MostMemorableMoment from './MostMemorableMoment';
 import MessageToAspiringMembers from './MessageToAspiringMembers';
 import TitleCanvas from './Splash';
+import TestBed from './TestBed';
 
 export default function MessageWall() {
   const canvasHeight = window.innerHeight;
   const canvasWidth = window.innerWidth;
   const [currentPageIndex, setCurrentPageIndex] = useState(0);
   const pages = [
+    <TestBed />,
     <TitleCanvas />,
     <MostMemorableMoment />,
     <JoiningMclAcm />,
