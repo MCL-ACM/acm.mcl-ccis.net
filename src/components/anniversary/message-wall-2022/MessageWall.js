@@ -52,7 +52,7 @@ export default function MessageWall() {
           <Group>{pages[currentPageIndex]}</Group>
           <Group>
             {isFirstPage && (
-              <BackHomeButton onClick={() => goBackHome()} x={80} y={80} />
+              <BackHomeButton onClick={() => goBackHome()} x={20} y={20} />
             )}
             {hasPreviousPage && (
               <PreviousPageButton
