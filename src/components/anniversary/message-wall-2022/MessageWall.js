@@ -14,6 +14,7 @@ import Confetti from 'react-confetti';
 export default function MessageWall() {
   const canvasWidth = 360;
   const canvasHeight = 640;
+
   const [currentPageIndex, setCurrentPageIndex] = useState(0);
   const pages = [
     <TitleCanvas width={canvasWidth} height={canvasHeight} />,
@@ -62,14 +63,15 @@ export default function MessageWall() {
     <div>
       {destroyConfetti ? (
         <Confetti
-          width={canvasWidth}
-          height={canvasHeight}
+          width={window.innerWidth}
+          height={window.innerHeight}
           numberOfPieces={showConfetti ? 100 : 0}
         />
       ) : (
         <></>
       )}
-      <Stage width={canvasWidth} height={canvasHeight}>
+
+      <Stage width={window.innerWidth} height={window.innerHeight}>
         <Layer>
           <Group>{pages[currentPageIndex]}</Group>
           <Group>
