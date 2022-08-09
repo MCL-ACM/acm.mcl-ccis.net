@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Stage, Layer, Group } from 'react-konva';
 import EndGallery from './pages/EndGallery';
 import JoiningMclAcm from './pages/JoiningMclAcm';
@@ -9,13 +9,13 @@ import TestBed from './pages/TestBed';
 import PreviousPageButton from './common/PreviousPageButton';
 import NextPageButton from './common/NextPageButton';
 import BackHomeButton from './common/BackHomeButton';
+import Confetti from 'react-confetti';
 
 export default function MessageWall() {
   const canvasWidth = 360;
   const canvasHeight = 640;
   const [currentPageIndex, setCurrentPageIndex] = useState(0);
   const pages = [
-    <TestBed />,
     <TitleCanvas width={canvasWidth} height={canvasHeight} />,
     <MostMemorableMoment width={canvasWidth} height={canvasHeight} />,
     <JoiningMclAcm width={canvasWidth} height={canvasHeight} />,
@@ -45,8 +45,30 @@ export default function MessageWall() {
     setCurrentPageIndex(currentPageIndex - 1);
   }
 
+  const [showConfetti, setshowConfetti] = useState(true);
+  useEffect(() => {
+    setTimeout(function () {
+      setshowConfetti(false);
+    }, 3000);
+  }, []);
+  const [destroyConfetti, setDestroyConfetti] = useState(true);
+  useEffect(() => {
+    setTimeout(function () {
+      setDestroyConfetti(false);
+    }, 10000);
+  }, []);
+
   return (
     <div>
+      {destroyConfetti ? (
+        <Confetti
+          width={canvasWidth}
+          height={canvasHeight}
+          numberOfPieces={showConfetti ? 100 : 0}
+        />
+      ) : (
+        <></>
+      )}
       <Stage width={canvasWidth} height={canvasHeight}>
         <Layer>
           <Group>{pages[currentPageIndex]}</Group>
