@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Stage, Layer, Circle, Group } from 'react-konva';
+import { Stage, Layer, Group } from 'react-konva';
 import EndGallery from './pages/EndGallery';
 import JoiningMclAcm from './pages/JoiningMclAcm';
 import MostMemorableMoment from './pages/MostMemorableMoment';
@@ -8,6 +8,7 @@ import TitleCanvas from './pages/Splash';
 import TestBed from './pages/TestBed';
 import PreviousPageButton from './common/PreviousPageButton';
 import NextPageButton from './common/NextPageButton';
+import BackHomeButton from './common/BackHomeButton';
 
 export default function MessageWall() {
   const canvasHeight = window.innerHeight;
@@ -22,6 +23,7 @@ export default function MessageWall() {
     <EndGallery />,
   ];
 
+  const isFirstPage = currentPageIndex === 0;
   const hasPreviousPage = currentPageIndex - 1 >= 0;
   const hasNextPage = currentPageIndex + 1 < pages.length;
 
@@ -45,6 +47,10 @@ export default function MessageWall() {
         <Layer>
           {pages[currentPageIndex]}
           <Group>
+            {isFirstPage && (
+              <BackHomeButton onClick={() => false} x={80} y={80} />
+            )}
+
             {hasPreviousPage && (
               <PreviousPageButton
                 onClick={() => previousPage()}
