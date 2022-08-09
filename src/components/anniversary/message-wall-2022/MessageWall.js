@@ -16,11 +16,11 @@ export default function MessageWall() {
   const [currentPageIndex, setCurrentPageIndex] = useState(0);
   const pages = [
     <TestBed />,
-    <TitleCanvas />,
-    <MostMemorableMoment />,
-    <JoiningMclAcm />,
-    <MessageToAspiringMembers />,
-    <EndGallery />,
+    <TitleCanvas width={canvasWidth} height={canvasHeight} />,
+    <MostMemorableMoment width={canvasWidth} height={canvasHeight} />,
+    <JoiningMclAcm width={canvasWidth} height={canvasHeight} />,
+    <MessageToAspiringMembers width={canvasWidth} height={canvasHeight} />,
+    <EndGallery width={canvasWidth} height={canvasHeight} />,
   ];
 
   const isFirstPage = currentPageIndex === 0;
