@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Stage, Layer, Circle, Group } from 'react-konva';
-import EndGallery from './EndGallery';
-import JoiningMclAcm from './JoiningMclAcm';
-import MostMemorableMoment from './MostMemorableMoment';
-import MessageToAspiringMembers from './MessageToAspiringMembers';
-import TitleCanvas from './Splash';
-import TestBed from './TestBed';
+import EndGallery from './pages/EndGallery';
+import JoiningMclAcm from './pages/JoiningMclAcm';
+import MostMemorableMoment from './pages/MostMemorableMoment';
+import MessageToAspiringMembers from './pages/MessageToAspiringMembers';
+import TitleCanvas from './pages/Splash';
+import TestBed from './pages/TestBed';
+import PreviousPageButton from './common/PreviousPageButton';
+import NextPageButton from './common/NextPageButton';
 
 export default function MessageWall() {
   const canvasHeight = window.innerHeight;
@@ -23,14 +25,14 @@ export default function MessageWall() {
   const hasPreviousPage = currentPageIndex - 1 >= 0;
   const hasNextPage = currentPageIndex + 1 < pages.length;
 
-  function nextCanvas() {
+  function nextPage() {
     if (!hasNextPage) {
       return;
     }
     setCurrentPageIndex(currentPageIndex + 1);
   }
 
-  function previousCanvas() {
+  function previousPage() {
     if (!hasPreviousPage) {
       return;
     }
@@ -44,23 +46,17 @@ export default function MessageWall() {
           {pages[currentPageIndex]}
           <Group>
             {hasPreviousPage && (
-              <Circle
-                onClick={() => previousCanvas()}
-                width={80}
-                height={80}
-                x={100}
-                y={canvasHeight - 100 - 80}
-                fill='white'
+              <PreviousPageButton
+                onClick={() => previousPage()}
+                x={100 + 40}
+                y={canvasHeight - 100 - 40}
               />
             )}
             {hasNextPage && (
-              <Circle
-                onClick={() => nextCanvas()}
-                width={80}
-                height={80}
+              <NextPageButton
+                onClick={() => nextPage()}
                 x={canvasWidth - 100 - 40}
-                y={canvasHeight - 100 - 80}
-                fill='white'
+                y={canvasHeight - 100 - 40}
               />
             )}
           </Group>
