@@ -47,11 +47,11 @@ export default function Page({ children, color }) {
       }}
     >
       <Rect
-        width={canvasWidth * 3}
-        height={canvasHeight * 3}
+        width={window.innerWidth * 3}
+        height={window.innerHeight * 3}
         fill={color}
-        x={-canvasWidth}
-        y={-canvasHeight}
+        x={-window.innerWidth}
+        y={-window.innerHeight}
       />
 
       {children}
