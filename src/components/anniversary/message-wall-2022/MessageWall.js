@@ -13,6 +13,7 @@ import BackHomeButton from './common/BackHomeButton';
 export default function MessageWall() {
   const canvasWidth = 360;
   const canvasHeight = 640;
+
   const [currentPageIndex, setCurrentPageIndex] = useState(0);
   const pages = [
     <TestBed />,
@@ -47,7 +48,7 @@ export default function MessageWall() {
 
   return (
     <div>
-      <Stage width={canvasWidth} height={canvasHeight}>
+      <Stage width={window.innerWidth} height={window.innerHeight}>
         <Layer>
           <Group>{pages[currentPageIndex]}</Group>
           <Group>
