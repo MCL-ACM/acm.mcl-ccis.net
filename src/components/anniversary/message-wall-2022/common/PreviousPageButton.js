@@ -1,8 +1,15 @@
 import React from 'react';
-import { Circle } from 'react-konva';
+import Image from './Image';
 
 export default function PreviousPageButton({ onClick, x, y }) {
   return (
-    <Circle onClick={onClick} width={80} height={80} x={x} y={y} fill='white' />
+    <Image
+      onClick={onClick}
+      imagePath='/anniversary/2022/previousPage.svg'
+      width={100}
+      height={94.75}
+      x={x}
+      y={y}
+    />
   );
 }

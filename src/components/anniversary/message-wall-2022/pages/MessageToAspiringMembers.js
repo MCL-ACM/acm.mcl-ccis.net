@@ -1,19 +1,14 @@
 import React from 'react';
-import { Text } from 'react-konva';
+import QuestionHeader from '../common/QuestionHeader';
 import Page from './Page';
 
-export default function MessageToAspiringMembers({ width, height }) {
+export default function MessageToAspiringMembers() {
   return (
     <Page color='#005C7A'>
-      <Text
+      <QuestionHeader
         text='Do you have a message for aspiring members of MCL-ACM?'
-        fontSize={50}
-        fill='white'
-        width={width}
-        height={height}
-        align='center'
-        fontFamily='Kavivanar'
-        verticalAlign='middle'
+        x={10}
+        y={10}
       />
     </Page>
   );

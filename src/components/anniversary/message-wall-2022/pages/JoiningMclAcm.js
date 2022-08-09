@@ -1,20 +1,11 @@
 import React from 'react';
-import { Text } from 'react-konva';
+import QuestionHeader from '../common/QuestionHeader';
 import Page from './Page';
 
-export default function JoiningMclAcm({ width, height }) {
+export default function JoiningMclAcm() {
   return (
     <Page color='#004D66'>
-      <Text
-        text='How did joining MCL-ACM help you?'
-        fontSize={50}
-        fill='white'
-        width={width}
-        height={height}
-        align='center'
-        fontFamily='Kavivanar'
-        verticalAlign='middle'
-      />
+      <QuestionHeader text='How did joining MCL-ACM help you?' x={10} y={10} />
     </Page>
   );
 }

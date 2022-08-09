@@ -11,8 +11,8 @@ import NextPageButton from './common/NextPageButton';
 import BackHomeButton from './common/BackHomeButton';
 
 export default function MessageWall() {
-  const canvasHeight = window.innerHeight;
-  const canvasWidth = window.innerWidth;
+  const canvasWidth = 360;
+  const canvasHeight = 640;
   const [currentPageIndex, setCurrentPageIndex] = useState(0);
   const pages = [
     <TestBed />,
@@ -26,6 +26,10 @@ export default function MessageWall() {
   const isFirstPage = currentPageIndex === 0;
   const hasPreviousPage = currentPageIndex - 1 >= 0;
   const hasNextPage = currentPageIndex + 1 < pages.length;
+
+  function goBackHome() {
+    setCurrentPageIndex(0);
+  }
 
   function nextPage() {
     if (!hasNextPage) {
@@ -45,24 +49,23 @@ export default function MessageWall() {
     <div>
       <Stage width={canvasWidth} height={canvasHeight}>
         <Layer>
-          {pages[currentPageIndex]}
+          <Group>{pages[currentPageIndex]}</Group>
           <Group>
             {isFirstPage && (
-              <BackHomeButton onClick={() => false} x={80} y={80} />
+              <BackHomeButton onClick={() => goBackHome()} x={80} y={80} />
             )}
-
             {hasPreviousPage && (
               <PreviousPageButton
                 onClick={() => previousPage()}
-                x={100 + 40}
-                y={canvasHeight - 100 - 40}
+                x={10}
+                y={canvasHeight - 100 - 10}
               />
             )}
             {hasNextPage && (
               <NextPageButton
                 onClick={() => nextPage()}
-                x={canvasWidth - 100 - 40}
-                y={canvasHeight - 100 - 40}
+                x={canvasWidth - 100 - 10}
+                y={canvasHeight - 100 - 10}
               />
             )}
           </Group>

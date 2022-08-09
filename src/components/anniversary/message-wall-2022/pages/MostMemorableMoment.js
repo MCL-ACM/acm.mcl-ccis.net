@@ -1,20 +1,11 @@
 import React from 'react';
-import { Text } from 'react-konva';
+import QuestionHeader from '../common/QuestionHeader';
 import Page from './Page';
 
-export default function MostMemorableMoment({ width, height }) {
+export default function MostMemorableMoment() {
   return (
     <Page color='#003D52'>
-      <Text
-        text="What's your most memorable moment in MCL-ACM?"
-        fontSize={50}
-        fill='white'
-        width={width}
-        height={height}
-        align='center'
-        fontFamily='Kavivanar'
-        verticalAlign='middle'
-      />
+      <QuestionHeader text='How did joining MCL-ACM help you?' x={10} y={10} />
     </Page>
   );
 }
