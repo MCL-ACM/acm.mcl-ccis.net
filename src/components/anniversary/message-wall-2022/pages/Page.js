@@ -37,13 +37,16 @@ export default function Page({ children, color }) {
         const newScale =
           e.evt.deltaY > 0 ? oldScale / scaleBy : oldScale * scaleBy;
 
-        setScale(newScale);
+        if (newScale >= 1) {
+          setScale(newScale);
 
-        const newPos = {
-          x: center.x - relatedTo.x * newScale,
-          y: center.y - relatedTo.y * newScale,
-        };
-        setStagePosition(newPos);
+          const newPos = {
+            x: center.x - relatedTo.x * newScale,
+            y: center.y - relatedTo.y * newScale,
+          };
+
+          setStagePosition(newPos);
+        }
       }}
     >
       <Rect
@@ -53,7 +56,6 @@ export default function Page({ children, color }) {
         x={-window.innerWidth}
         y={-window.innerHeight}
       />
-
       {children}
     </Group>
   );

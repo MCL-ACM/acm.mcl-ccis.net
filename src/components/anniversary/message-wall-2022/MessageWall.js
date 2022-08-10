@@ -46,6 +46,7 @@ export default function MessageWall() {
     setCurrentPageIndex(currentPageIndex - 1);
   }
 
+  // Confetti Stuff
   const [showConfetti, setshowConfetti] = useState(true);
   useEffect(() => {
     setTimeout(function () {
