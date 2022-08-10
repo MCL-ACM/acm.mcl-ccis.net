@@ -3,7 +3,11 @@ import { Text, Group, Rect } from 'react-konva';
 
 import QuestionHeader from '../common/QuestionHeader';
 import Page from './Page';
-import { mostMemorableMomentContent } from '../lib/MessageWallContent';
+import {
+  mostMemorableMomentContent,
+  contentTypes,
+} from '../lib/MessageWallContent';
+import Image from '../common/Image';
 
 export default function MostMemorableMoment({ width, height }) {
   return (
@@ -15,28 +19,36 @@ export default function MostMemorableMoment({ width, height }) {
         rotation={-1.91}
       />
 
-      {mostMemorableMomentContent.map(
-        ({
-          text,
-          fontFamily,
-          fontSize,
-          x,
-          y,
-          width: contentWidth,
-          height: contentHeight,
-        }) => (
-          <Text
-            x={x}
-            y={y}
-            fontFamily={fontFamily}
-            fontSize={fontSize}
-            text={text}
-            width={contentWidth}
-            height={contentHeight}
-            fill='white'
-          />
-        ),
-      )}
+      {mostMemorableMomentContent.map((content) => {
+        switch (content.contentType) {
+          case contentTypes.TextContentType:
+            return (
+              <Text
+                x={content.x}
+                y={content.y}
+                fontFamily={content.fontFamily}
+                fontSize={content.fontSize}
+                text={content.text}
+                width={content.width}
+                height={content.height + 20}
+                fill='white'
+                lineHeight={content.lineHeight}
+              />
+            );
+          case contentTypes.ImageContentType:
+            return (
+              <Image
+                x={content.x}
+                y={content.y}
+                width={content.contentWidth}
+                height={content.contentHeight}
+                imagePath={content.image}
+              />
+            );
+          default:
+            return null;
+        }
+      })}
     </Page>
   );
 }

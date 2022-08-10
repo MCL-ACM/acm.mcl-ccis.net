@@ -1,4 +1,10 @@
 const TextContentType = 'TEXT';
+const ImageContentType = 'IMAGE';
+
+const contentTypes = {
+  TextContentType,
+  ImageContentType,
+};
 
 const mostMemorableMomentContent = [
   {
@@ -10,6 +16,7 @@ const mostMemorableMomentContent = [
     y: 10,
     width: 100,
     height: 39,
+    lineHeight: 1,
   },
   {
     contentType: TextContentType,
@@ -20,6 +27,7 @@ const mostMemorableMomentContent = [
     y: 19,
     width: 48,
     height: 40,
+    lineHeight: 1,
   },
   {
     contentType: TextContentType,
@@ -30,6 +38,7 @@ const mostMemorableMomentContent = [
     y: 11,
     width: 100,
     height: 40,
+    lineHeight: 1.6,
   },
   {
     contentType: TextContentType,
@@ -40,6 +49,7 @@ const mostMemorableMomentContent = [
     y: 73,
     width: 157,
     height: 30,
+    lineHeight: 1,
   },
   {
     contentType: TextContentType,
@@ -50,6 +60,7 @@ const mostMemorableMomentContent = [
     y: 59,
     width: 61,
     height: 61,
+    lineHeight: 1,
   },
   {
     contentType: TextContentType,
@@ -60,6 +71,7 @@ const mostMemorableMomentContent = [
     y: 127,
     width: 40,
     height: 63,
+    lineHeight: 1.3,
   },
   {
     contentType: TextContentType,
@@ -70,6 +82,7 @@ const mostMemorableMomentContent = [
     y: 150,
     width: 52,
     height: 24,
+    lineHeight: 1,
   },
   {
     contentType: TextContentType,
@@ -80,6 +93,7 @@ const mostMemorableMomentContent = [
     y: 136,
     width: 105,
     height: 27,
+    lineHeight: 1,
   },
   {
     contentType: TextContentType,
@@ -90,6 +104,7 @@ const mostMemorableMomentContent = [
     y: 200,
     width: 100,
     height: 28,
+    lineHeight: 1,
   },
   {
     contentType: TextContentType,
@@ -100,6 +115,7 @@ const mostMemorableMomentContent = [
     y: 235,
     width: 110,
     height: 44,
+    lineHeight: 1,
   },
   {
     contentType: TextContentType,
@@ -110,6 +126,7 @@ const mostMemorableMomentContent = [
     y: 233,
     width: 88,
     height: 24,
+    lineHeight: 1.5,
   },
   {
     contentType: TextContentType,
@@ -120,6 +137,7 @@ const mostMemorableMomentContent = [
     y: 231,
     width: 100,
     height: 36,
+    lineHeight: 1,
   },
   {
     contentType: TextContentType,
@@ -130,6 +148,7 @@ const mostMemorableMomentContent = [
     y: 362,
     width: 100,
     height: 30,
+    lineHeight: 1,
   },
   {
     contentType: TextContentType,
@@ -140,6 +159,7 @@ const mostMemorableMomentContent = [
     y: 371,
     width: 48,
     height: 77,
+    lineHeight: 1,
   },
   {
     contentType: TextContentType,
@@ -150,6 +170,7 @@ const mostMemorableMomentContent = [
     y: 367,
     width: 100,
     height: 21,
+    lineHeight: 1,
   },
   {
     contentType: TextContentType,
@@ -160,6 +181,7 @@ const mostMemorableMomentContent = [
     y: 401,
     width: 100,
     height: 40,
+    lineHeight: 1,
   },
   {
     contentType: TextContentType,
@@ -170,6 +192,7 @@ const mostMemorableMomentContent = [
     y: 429,
     width: 40,
     height: 35,
+    lineHeight: 1,
   },
   {
     contentType: TextContentType,
@@ -180,6 +203,7 @@ const mostMemorableMomentContent = [
     y: 460,
     width: 96,
     height: 28,
+    lineHeight: 1,
   },
   {
     contentType: TextContentType,
@@ -190,6 +214,7 @@ const mostMemorableMomentContent = [
     y: 464,
     width: 64,
     height: 36,
+    lineHeight: 1,
   },
   {
     contentType: TextContentType,
@@ -200,6 +225,7 @@ const mostMemorableMomentContent = [
     y: 507,
     width: 93,
     height: 28,
+    lineHeight: 1,
   },
   {
     contentType: TextContentType,
@@ -210,17 +236,103 @@ const mostMemorableMomentContent = [
     y: 521,
     width: 128,
     height: 36,
+    lineHeight: 1,
   },
   {
     contentType: TextContentType,
-    text: '',
-    fontFamily: '',
-    fontSize: 0,
-    x: 0,
-    y: 0,
-    width: 0,
-    height: 0,
+    text: 'The Year-end party was pretty great, I was able to personally meet other members, really pog event.',
+    fontFamily: 'Gloria Hallelujah',
+    fontSize: 6,
+    x: 111,
+    y: 591,
+    width: 137,
+    height: 36,
+    lineHeight: 1,
+  },
+
+  // Decorations
+  {
+    contentType: ImageContentType,
+    image: '/anniversary/2022/moments/momentsDecoration1.svg',
+    rotation: 0,
+    x: 286,
+    y: 50,
+    width: 29,
+    height: 16,
+  },
+  {
+    contentType: ImageContentType,
+    image: '/anniversary/2022/moments/momentsDecoration2.svg',
+    rotation: 0,
+    x: 17,
+    y: 115,
+    width: 54.55,
+    height: 82.67,
+  },
+  {
+    contentType: ImageContentType,
+    image: '/anniversary/2022/moments/momentsDecoration3.svg',
+    rotation: 0,
+    x: 153.19,
+    y: 131.81,
+    width: 26,
+    height: 17,
+  },
+
+  {
+    contentType: ImageContentType,
+    image: '/anniversary/2022/moments/momentsDecoration4.svg',
+    rotation: 0,
+    x: 294.53,
+    y: 210.26,
+    width: 24,
+    height: 13,
+  },
+  {
+    contentType: ImageContentType,
+    image: '/anniversary/2022/moments/momentsDecoration5.svg',
+    rotation: 0,
+    x: 151,
+    y: 264,
+    width: 74,
+    height: 11,
+  },
+  {
+    contentType: ImageContentType,
+    image: '/anniversary/2022/moments/momentsDecoration6.svg',
+    rotation: 0,
+    x: 10,
+    y: 372.76,
+    width: 25,
+    height: 24,
+  },
+  {
+    contentType: ImageContentType,
+    image: '/anniversary/2022/moments/momentsDecoration7.svg',
+    rotation: 0,
+    x: 286.95,
+    y: 453.47,
+    width: 15.6,
+    height: 13.57,
+  },
+  {
+    contentType: ImageContentType,
+    image: '/anniversary/2022/moments/momentsDecoration8.svg',
+    rotation: 0,
+    x: 108.32,
+    y: 485,
+    width: 21.08,
+    height: 19.69,
+  },
+  {
+    contentType: ImageContentType,
+    image: '/anniversary/2022/moments/momentsDecoration9.svg',
+    rotation: 0,
+    x: 158,
+    y: 576,
+    width: 42,
+    height: 9,
   },
 ];
 
-export { mostMemorableMomentContent };
+export { mostMemorableMomentContent, contentTypes };
