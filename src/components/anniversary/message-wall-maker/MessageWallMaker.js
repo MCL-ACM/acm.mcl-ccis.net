@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Stage, Text, Layer, Rect } from 'react-konva';
+import { Stage, Text, Layer, Group, Rect } from 'react-konva';
 import Image from '../message-wall-2022/common/Image';
 import {
   contentTypes,
@@ -80,6 +80,50 @@ export default function MessageWallMaker() {
 
   const onExportClicked = () => setExportModelVisible(true);
 
+  const onAddTextClicked = () => {
+    setItems([
+      ...items,
+      {
+        contentType: contentTypes.TextContentType,
+        text: 'Sample Text',
+        fontFamily: 'Arial',
+        fontSize: 10,
+        x: 100,
+        y: 100,
+        width: 100,
+        height: 100,
+        lineHeight: 1,
+      },
+    ]);
+    setSelectedItemIndex(items.length - 1);
+  };
+
+  const onAddImageClicked = () => {
+    setItems([
+      ...items,
+      {
+        contentType: contentTypes.ImageContentType,
+        image: '/anniversary/2022/moments/momentsDecoration8.svg',
+        rotation: 0,
+        x: 100,
+        y: 100,
+        width: 21.08,
+        height: 19.69,
+      },
+    ]);
+    setSelectedItemIndex(items.length - 1);
+  };
+  const onDelesectClicked = () => {
+    setSelectedItemIndex(null);
+  };
+
+  const onDeleteClicked = () => {
+    const newItems = [...items];
+    newItems.splice(selectedItemIndex, 1);
+    setItems(newItems);
+    setSelectedItemIndex(null);
+  };
+
   return (
     <>
       {exportModelVisible && (
@@ -113,8 +157,34 @@ export default function MessageWallMaker() {
           >
             Export
           </button>
+          {!selectedItem && (
+            <div className='flex flex-row gap-4'>
+              <button
+                type='button'
+                onClick={onAddTextClicked}
+                className='border-2 rounded bg-white grow'
+              >
+                Add Text
+              </button>
+
+              <button
+                type='button'
+                onClick={onAddImageClicked}
+                className='border-2 rounded bg-white grow'
+              >
+                Add Image
+              </button>
+            </div>
+          )}
           {selectedItem && (
             <>
+              <button
+                type='button'
+                onClick={onDelesectClicked}
+                className='border-2 rounded bg-white w-[250px]'
+              >
+                Deselect
+              </button>
               <div className='flex flex-col shadow p-4 bg-white rounded'>
                 <h5 className='font-bold text-lg text-center'>Item</h5>
                 <hr className='mb-3' />
@@ -250,6 +320,14 @@ export default function MessageWallMaker() {
                   </button>
                 </div>
               )}
+
+              <button
+                type='button'
+                onClick={onDeleteClicked}
+                className='border-2 border-red-400 rounded bg-red-400 w-[250px]'
+              >
+                Delete
+              </button>
             </>
           )}
         </div>
@@ -262,33 +340,52 @@ export default function MessageWallMaker() {
                 switch (content.contentType) {
                   case contentTypes.TextContentType:
                     return (
-                      <Text
+                      <Group
                         x={content.x}
                         y={content.y}
-                        fontFamily={content.fontFamily}
-                        fontSize={content.fontSize}
-                        text={content.text}
-                        width={content.width - 2}
-                        height={content.height + 20}
-                        fill='white'
-                        lineHeight={content.lineHeight}
                         onClick={() => setSelectedItemIndex(index)}
                         draggable={index === selectedItemIndex}
                         onDragEnd={(e) => onItemDragEnd(e)}
-                      />
+                      >
+                        <Text
+                          fontFamily={content.fontFamily}
+                          fontSize={content.fontSize}
+                          text={content.text}
+                          width={content.width}
+                          height={content.height}
+                          fill='white'
+                          lineHeight={content.lineHeight}
+                        />
+                        <Rect
+                          width={content.width}
+                          height={content.height}
+                          stroke='red'
+                          strokeWidth={index === selectedItemIndex ? 1 : 0}
+                        />
+                      </Group>
                     );
                   case contentTypes.ImageContentType:
                     return (
-                      <Image
+                      <Group
                         x={content.x}
                         y={content.y}
-                        width={content.width}
-                        height={content.height}
-                        imagePath={content.image}
                         onClick={() => setSelectedItemIndex(index)}
                         draggable={index === selectedItemIndex}
                         onDragEnd={(e) => onItemDragEnd(e)}
-                      />
+                      >
+                        <Image
+                          width={content.width}
+                          height={content.height}
+                          imagePath={content.image}
+                          onClick={() => setSelectedItemIndex(index)}
+                        />
+                        <Rect
+                          width={content.width}
+                          height={content.height}
+                          stroke='red'
+                          strokeWidth={index === selectedItemIndex ? 1 : 0}
+                        />
+                      </Group>
                     );
                   default:
                     return null;
