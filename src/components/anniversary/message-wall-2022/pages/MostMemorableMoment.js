@@ -1,24 +1,42 @@
-import React from 'react';
-import Image from '../common/Image';
+import React, { useEffect } from 'react';
+import { Text, Group, Rect } from 'react-konva';
+
 import QuestionHeader from '../common/QuestionHeader';
 import Page from './Page';
+import { mostMemorableMomentContent } from '../lib/MessageWallContent';
 
 export default function MostMemorableMoment({ width, height }) {
   return (
     <Page color='#003D52'>
       <QuestionHeader
         text="What's your most memorable moment in MCL-ACM?"
-        x={width / 2 - 350 / 2}
-        y={height / 2 - 65 / 2}
-        rotation={1.86}
+        x={19}
+        y={292.47}
+        rotation={-1.91}
       />
-      <Image
-        imagePath='/anniversary/2022/craftivities1.png'
-        width={200}
-        height={200}
-        x={10}
-        y={10}
-      />
+
+      {mostMemorableMomentContent.map(
+        ({
+          text,
+          fontFamily,
+          fontSize,
+          x,
+          y,
+          width: contentWidth,
+          height: contentHeight,
+        }) => (
+          <Text
+            x={x}
+            y={y}
+            fontFamily={fontFamily}
+            fontSize={fontSize}
+            text={text}
+            width={contentWidth}
+            height={contentHeight}
+            fill='white'
+          />
+        ),
+      )}
     </Page>
   );
 }
