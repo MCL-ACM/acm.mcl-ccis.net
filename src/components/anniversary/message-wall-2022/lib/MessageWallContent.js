@@ -110,7 +110,7 @@ const mostMemorableMomentContent = [
   {
     contentType: TextContentType,
     text: 'The Year-end party was pretty great, I was able to personally meet other members, really pog event.',
-    fontFamily: 'Nanum Pen',
+    fontFamily: 'Nanum Pen Script',
     fontSize: 9,
     x: 25,
     y: 235,
@@ -610,7 +610,7 @@ const messageToAspiringmembersContent = [
     y: 377,
     width: 60,
     height: 90,
-    fontFamily: 'Nanum Pen',
+    fontFamily: 'Nanum Pen Script',
     fontSize: 8,
     lineHeight: 1,
   },
