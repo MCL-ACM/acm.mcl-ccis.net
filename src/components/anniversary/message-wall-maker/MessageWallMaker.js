@@ -6,10 +6,12 @@ import {
   joiningMclAcmContent,
   messageToAspiringmembersContent,
 } from '../message-wall-2022/lib/MessageWallContent';
+
+import { EndGalleryContent } from '../message-wall-2022/content/EndGalleryContent';
 import Page from '../message-wall-2022/pages/Page';
 
 export default function MessageWallMaker() {
-  const [items, setItems] = useState(joiningMclAcmContent);
+  const [items, setItems] = useState(EndGalleryContent);
   const [formValues, setFormValues] = useState({
     text: '',
     fontFamily: '',

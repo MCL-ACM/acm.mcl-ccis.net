@@ -15,6 +15,11 @@ export default function TitleCanvas({ width, height }) {
 
   return (
     <Page color='#001F29'>
+      <Group y={112}>
+      <Image
+          imagePath='/anniversary/2022/confetti.svg'
+
+        />
         <Image
           imagePath='/anniversary/2022/top-right-stars.svg'
           x={240}
@@ -57,6 +62,7 @@ export default function TitleCanvas({ width, height }) {
           x={8}
           y={74}
         />
+       
       </Group>
       <Group x={8}>
         <CirclyText text='instructions!' fontSize={32} y={340} />
@@ -77,7 +83,13 @@ export default function TitleCanvas({ width, height }) {
             y={445}
           />
         </Group>
+
       </Group>
+      <Image
+        imagePath='/anniversary/2022/right-squiggly.svg'
+        x={230}
+        y={286}
+      />
       <Image
         imagePath='/anniversary/2022/bottom-left-squiggly.svg'
         x={-52}

@@ -25,7 +25,7 @@ export default function Image({
       height={height}
       onClick={onClick}
       onTap={onTap}
-      draggable={draggable !== null}
+      draggable={draggable}
       onDragEnd={onDragEnd}
     />
   );
