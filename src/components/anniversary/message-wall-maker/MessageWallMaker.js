@@ -103,7 +103,7 @@ export default function MessageWallMaker() {
       ...items,
       {
         contentType: contentTypes.ImageContentType,
-        image: '/anniversary/2022/moments/momentsDecoration8.svg',
+        image: '/anniversary/2022/moments/momentsImage1.png',
         rotation: 0,
         x: 100,
         y: 100,
@@ -157,7 +157,7 @@ export default function MessageWallMaker() {
           >
             Export
           </button>
-          {!selectedItem && (
+          {selectedItem === null && (
             <div className='flex flex-row gap-4'>
               <button
                 type='button'
@@ -176,7 +176,7 @@ export default function MessageWallMaker() {
               </button>
             </div>
           )}
-          {selectedItem && (
+          {selectedItem !== null && (
             <>
               <button
                 type='button'

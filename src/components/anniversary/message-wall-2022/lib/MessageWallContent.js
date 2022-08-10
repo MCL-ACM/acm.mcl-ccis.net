@@ -7,6 +7,7 @@ const contentTypes = {
 };
 
 const mostMemorableMomentContent = [
+  {},
   {
     contentType: TextContentType,
     text: 'The Year-end party was pretty great, I was able to personally meet other members, really pog event.',
