@@ -274,6 +274,10 @@ export default function MessageWallMaker() {
                       type='number'
                       name='width'
                       className='border-2 rounded w-full'
+                      value={formValues.lineHeight}
+                      onChange={(e) =>
+                        updateFormValue('lineHeight', e.target.lineHeight)
+                      }
                     />
                   </div>
                   <button
