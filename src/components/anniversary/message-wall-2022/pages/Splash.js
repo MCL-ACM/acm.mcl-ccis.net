@@ -15,8 +15,6 @@ export default function TitleCanvas({ width, height }) {
 
   return (
     <Page color='#001F29'>
-      <Image imagePath='/anniversary/2022/right-squiggly.svg' x={230} y={286} />
-      <Group y={112}>
         <Image
           imagePath='/anniversary/2022/top-right-stars.svg'
           x={240}
@@ -80,7 +78,11 @@ export default function TitleCanvas({ width, height }) {
           />
         </Group>
       </Group>
-      <Image imagePath='/anniversary/2022/bottom-left-squiggly.svg' y={510} />
+      <Image
+        imagePath='/anniversary/2022/bottom-left-squiggly.svg'
+        x={-52}
+        y={510}
+      />
     </Page>
   );
 }
