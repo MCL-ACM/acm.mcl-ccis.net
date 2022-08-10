@@ -3,12 +3,13 @@ import { Stage, Text, Layer, Group, Rect } from 'react-konva';
 import Image from '../message-wall-2022/common/Image';
 import {
   contentTypes,
+  joiningMclAcmContent,
   messageToAspiringmembersContent,
 } from '../message-wall-2022/lib/MessageWallContent';
 import Page from '../message-wall-2022/pages/Page';
 
 export default function MessageWallMaker() {
-  const [items, setItems] = useState(messageToAspiringmembersContent);
+  const [items, setItems] = useState(joiningMclAcmContent);
   const [formValues, setFormValues] = useState({
     text: '',
     fontFamily: '',
