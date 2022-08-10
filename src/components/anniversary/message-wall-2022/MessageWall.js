@@ -10,6 +10,7 @@ import PreviousPageButton from './common/PreviousPageButton';
 import NextPageButton from './common/NextPageButton';
 import BackHomeButton from './common/BackHomeButton';
 import Confetti from 'react-confetti';
+import dimensions from './dimensions';
 
 export default function MessageWall() {
   const canvasWidth = 360;
@@ -83,14 +84,14 @@ export default function MessageWall() {
               <PreviousPageButton
                 onClick={() => previousPage()}
                 x={10}
-                y={canvasHeight - 100 - 10}
+                y={dimensions.pageHeight - 100 - 10}
               />
             )}
             {hasNextPage && (
               <NextPageButton
                 onClick={() => nextPage()}
-                x={canvasWidth - 100 - 10}
-                y={canvasHeight - 100 - 10}
+                x={dimensions.pageWidth - 100 - 10}
+                y={dimensions.pageHeight - 100 - 10}
               />
             )}
           </Group>
