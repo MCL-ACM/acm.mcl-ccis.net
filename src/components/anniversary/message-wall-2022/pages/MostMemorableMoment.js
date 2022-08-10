@@ -29,7 +29,7 @@ export default function MostMemorableMoment({ width, height }) {
                 fontFamily={content.fontFamily}
                 fontSize={content.fontSize}
                 text={content.text}
-                width={content.width}
+                width={content.width - 2}
                 height={content.height + 20}
                 fill='white'
                 lineHeight={content.lineHeight}
@@ -40,8 +40,8 @@ export default function MostMemorableMoment({ width, height }) {
               <Image
                 x={content.x}
                 y={content.y}
-                width={content.contentWidth}
-                height={content.contentHeight}
+                width={content.width}
+                height={content.height}
                 imagePath={content.image}
               />
             );

@@ -333,6 +333,62 @@ const mostMemorableMomentContent = [
     width: 42,
     height: 9,
   },
+
+  // Images
+  {
+    contentType: ImageContentType,
+    image: '/anniversary/2022/moments/momentsImage1.png',
+    rotation: 0,
+    x: 256,
+    y: 74,
+    width: 99.77,
+    height: 54.84,
+  },
+  {
+    contentType: ImageContentType,
+    image: '/anniversary/2022/moments/momentsImage2.png',
+    rotation: 0,
+    x: 87,
+    y: 114,
+    width: 67.7,
+    height: 41.21,
+  },
+  {
+    contentType: ImageContentType,
+    image: '/anniversary/2022/moments/momentsImage3.png',
+    rotation: 0,
+    x: 227,
+    y: 176,
+    width: 67.7,
+    height: 47,
+  },
+  {
+    contentType: ImageContentType,
+    image: '/anniversary/2022/moments/momentsImage4.png',
+    rotation: 0,
+    x: 16,
+    y: 406,
+    width: 78,
+    height: 35.21,
+  },
+  {
+    contentType: ImageContentType,
+    image: '/anniversary/2022/moments/momentsImage5.png',
+    rotation: 0,
+    x: 226,
+    y: 464,
+    width: 81.61,
+    height: 51.87,
+  },
+  {
+    contentType: ImageContentType,
+    image: '/anniversary/2022/moments/momentsImage6.png',
+    rotation: 0,
+    x: 121,
+    y: 506,
+    width: 67.7,
+    height: 39.21,
+  },
 ];
 
 export { mostMemorableMomentContent, contentTypes };
