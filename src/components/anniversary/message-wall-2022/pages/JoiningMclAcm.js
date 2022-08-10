@@ -1,5 +1,7 @@
 import React from 'react';
+import ContentDisplay from '../common/ContentDisplay';
 import QuestionHeader from '../common/QuestionHeader';
+import { joiningMclAcmContent } from '../lib/MessageWallContent';
 import Page from './Page';
 
 export default function JoiningMclAcm({ width, height }) {
@@ -11,6 +13,8 @@ export default function JoiningMclAcm({ width, height }) {
         y={height / 2 - 65 / 2}
         rotation={-2.73}
       />
+
+      <ContentDisplay contents={joiningMclAcmContent} />
     </Page>
   );
 }
