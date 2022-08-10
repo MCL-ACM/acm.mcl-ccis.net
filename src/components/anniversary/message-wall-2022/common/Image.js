@@ -10,6 +10,7 @@ export default function Image({
   height,
   onClick,
   rotation,
+  onTap,
 }) {
   const [img] = useImage(imagePath);
   return (
@@ -21,6 +22,7 @@ export default function Image({
       width={width}
       height={height}
       onClick={onClick}
+      onTap={onTap}
     />
   );
 }

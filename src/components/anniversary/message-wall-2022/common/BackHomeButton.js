@@ -4,7 +4,7 @@ import Image from './Image';
 
 export default function BackHomeButton({ onClick, x, y }) {
   return (
-    <Group onClick={onClick} x={x} y={y}>
+    <Group onClick={onClick} onTap={onClick} x={x} y={y}>
       <Image
         imagePath='/anniversary/2022/backHome.svg'
         width={20}

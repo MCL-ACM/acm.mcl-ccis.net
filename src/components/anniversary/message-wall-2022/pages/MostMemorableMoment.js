@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { Text, Group, Rect } from 'react-konva';
+import React from 'react';
+import { Text } from 'react-konva';
 
 import QuestionHeader from '../common/QuestionHeader';
 import Page from './Page';
@@ -9,7 +9,7 @@ import {
 } from '../lib/MessageWallContent';
 import Image from '../common/Image';
 
-export default function MostMemorableMoment({ width, height }) {
+export default function MostMemorableMoment() {
   return (
     <Page color='#003D52'>
       <QuestionHeader
