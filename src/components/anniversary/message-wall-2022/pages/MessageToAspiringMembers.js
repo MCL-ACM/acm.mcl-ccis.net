@@ -1,7 +1,7 @@
 import React from 'react';
 import ContentDisplay from '../common/ContentDisplay';
 import QuestionHeader from '../common/QuestionHeader';
-import { messageToAspiringmembersContent } from '../lib/MessageWallContent';
+import MessageToAspiringMembersContent from '../content/MessageToAspiringMembersContent';
 import Page from './Page';
 
 export default function MessageToAspiringMembers({ width, height }) {
@@ -14,7 +14,7 @@ export default function MessageToAspiringMembers({ width, height }) {
         rotation={1.44}
       />
 
-      <ContentDisplay contents={messageToAspiringmembersContent} />
+      <ContentDisplay contents={MessageToAspiringMembersContent} />
     </Page>
   );
 }

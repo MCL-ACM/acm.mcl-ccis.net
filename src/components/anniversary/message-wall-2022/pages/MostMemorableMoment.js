@@ -2,8 +2,8 @@ import React from 'react';
 
 import QuestionHeader from '../common/QuestionHeader';
 import Page from './Page';
-import { mostMemorableMomentContent } from '../lib/MessageWallContent';
 import ContentDisplay from '../common/ContentDisplay';
+import MostMemorableMomentContent from '../content/MostMemorableMomentContent';
 
 export default function MostMemorableMoment() {
   return (
@@ -14,7 +14,7 @@ export default function MostMemorableMoment() {
         y={292.47}
         rotation={-1.91}
       />
-      <ContentDisplay contents={mostMemorableMomentContent} />
+      <ContentDisplay contents={MostMemorableMomentContent} />
     </Page>
   );
 }

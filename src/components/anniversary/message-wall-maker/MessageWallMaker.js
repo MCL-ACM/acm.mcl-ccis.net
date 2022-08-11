@@ -1,17 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Stage, Text, Layer, Group, Rect } from 'react-konva';
 import Image from '../message-wall-2022/common/Image';
-import {
-  contentTypes,
-  joiningMclAcmContent,
-  messageToAspiringmembersContent,
-} from '../message-wall-2022/lib/MessageWallContent';
-
-import { EndGalleryContent } from '../message-wall-2022/content/EndGalleryContent';
+import contentTypes from '../message-wall-2022/lib/ContentTypes';
 import Page from '../message-wall-2022/pages/Page';
+import JoiningMclAcmContent from '../message-wall-2022/content/JoiningMclAcmContent';
+import MessageToAspiringMembersContent from '../message-wall-2022/content/MessageToAspiringMembersContent';
+import MostMemorableMomentContent from '../message-wall-2022/content/MostMemorableMomentContent';
 
 export default function MessageWallMaker() {
-  const [items, setItems] = useState(EndGalleryContent);
+  const [items, setItems] = useState([]);
   const [formValues, setFormValues] = useState({
     text: '',
     fontFamily: '',
@@ -127,6 +124,17 @@ export default function MessageWallMaker() {
     setSelectedItemIndex(null);
   };
 
+  const presetContent = {
+    Empty: [],
+    'Most Memorable Moment': MostMemorableMomentContent,
+    'Joining MCL-ACM': JoiningMclAcmContent,
+    'Message to Aspiring Members': MessageToAspiringMembersContent,
+  };
+
+  const onPresetSelected = (preset) => {
+    setItems(preset);
+  };
+
   return (
     <>
       {exportModelVisible && (
@@ -135,9 +143,11 @@ export default function MessageWallMaker() {
             <p className='font-bold mb-3'>
               Copy and Paste this JSON Object to your code
             </p>
-            <pre className='border-2 rounded p-2 w-full h-full whitespace-pre-wrap overflow-scroll'>
-              {JSON.stringify(items, null, 2)}
-            </pre>
+            <textarea
+              className='border-2 rounded p-2 w-full h-full whitespace-pre-wrap overflow-scroll font-mono'
+              value={JSON.stringify(items, null, 2)}
+            />
+
             <div className='flex flex-row items-center mt-4 w-full'>
               <button
                 type='button'
@@ -153,6 +163,16 @@ export default function MessageWallMaker() {
 
       <div className='absolute right-10 top-10 max-w-[250px] z-20'>
         <div className='flex flex-col gap-4 w-[250px]'>
+          <select
+            className='border-2 rounded px-8 py-2'
+            onChange={(e) => onPresetSelected(presetContent[e.target.value])}
+          >
+            {Object.keys(presetContent).map((preset) => (
+              <option key={preset} value={preset}>
+                {preset}
+              </option>
+            ))}
+          </select>
           <button
             type='button'
             onClick={onExportClicked}
@@ -279,7 +299,7 @@ export default function MessageWallMaker() {
                       className='border-2 rounded w-full'
                       value={formValues.lineHeight}
                       onChange={(e) =>
-                        updateFormValue('lineHeight', e.target.lineHeight)
+                        updateFormValue('lineHeight', e.target.value)
                       }
                     />
                   </div>
@@ -359,7 +379,7 @@ export default function MessageWallMaker() {
                           fontSize={content.fontSize}
                           text={content.text}
                           width={content.width}
-                          height={content.height}
+                          height={content.height + 20}
                           fill='white'
                           lineHeight={content.lineHeight}
                         />

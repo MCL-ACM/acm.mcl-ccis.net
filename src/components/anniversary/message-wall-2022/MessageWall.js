@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Stage, Layer, Group } from 'react-konva';
+import Confetti from 'react-confetti';
 import EndGallery from './pages/EndGallery';
 import JoiningMclAcm from './pages/JoiningMclAcm';
 import MostMemorableMoment from './pages/MostMemorableMoment';
@@ -9,7 +10,6 @@ import TestBed from './pages/TestBed';
 import PreviousPageButton from './common/PreviousPageButton';
 import NextPageButton from './common/NextPageButton';
 import BackHomeButton from './common/BackHomeButton';
-import Confetti from 'react-confetti';
 import dimensions from './dimensions';
 
 export default function MessageWall() {
@@ -26,6 +26,7 @@ export default function MessageWall() {
   ];
 
   const isFirstPage = currentPageIndex === 0;
+  const isLastPage = currentPageIndex === pages.length - 1;
   const hasPreviousPage = currentPageIndex - 1 >= 0;
   const hasNextPage = currentPageIndex + 1 < pages.length;
 
@@ -49,13 +50,13 @@ export default function MessageWall() {
 
   const [showConfetti, setshowConfetti] = useState(true);
   useEffect(() => {
-    setTimeout(function () {
+    setTimeout(() => {
       setshowConfetti(false);
     }, 3000);
   }, []);
   const [destroyConfetti, setDestroyConfetti] = useState(true);
   useEffect(() => {
-    setTimeout(function () {
+    setTimeout(() => {
       setDestroyConfetti(false);
     }, 10000);
   }, []);
@@ -76,7 +77,7 @@ export default function MessageWall() {
         <Layer>
           <Group>{pages[currentPageIndex]}</Group>
           <Group>
-            {isFirstPage && (
+            {(isFirstPage || isLastPage) && (
               <BackHomeButton onClick={() => goBackHome()} x={20} y={20} />
             )}
             {hasPreviousPage && (

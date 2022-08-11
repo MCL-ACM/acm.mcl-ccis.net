@@ -1,6 +1,6 @@
 import { Text } from 'react-konva';
 import React from 'react';
-import { contentTypes } from '../lib/MessageWallContent';
+import contentTypes from '../lib/ContentTypes';
 import Image from './Image';
 
 export default function ContentDisplay({ contents }) {
@@ -14,7 +14,7 @@ export default function ContentDisplay({ contents }) {
             fontFamily={content.fontFamily}
             fontSize={content.fontSize}
             text={content.text}
-            width={content.width - 2}
+            width={content.width}
             height={content.height + 20}
             fill='white'
             lineHeight={content.lineHeight}
