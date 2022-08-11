@@ -1,20 +1,19 @@
 import React from 'react';
 import ContentDisplay from '../common/ContentDisplay';
-import QuestionHeader from '../common/QuestionHeader';
+import DesktopMessageToAspiringMembersContent from '../content/DesktopMessageToAspiringMembersContent';
 import MessageToAspiringMembersContent from '../content/MessageToAspiringMembersContent';
 import Page from './Page';
 
-export default function MessageToAspiringMembers({ width, height }) {
+export default function MessageToAspiringMembers({ isPortrait }) {
   return (
     <Page color='#005C7A'>
-      <QuestionHeader
-        text='Do you have a message for aspiring members of MCL-ACM?'
-        x={width / 2 - 350 / 2}
-        y={height / 2 - 65 / 2}
-        rotation={1.44}
+      <ContentDisplay
+        contents={
+          isPortrait
+            ? MessageToAspiringMembersContent
+            : DesktopMessageToAspiringMembersContent
+        }
       />
-
-      <ContentDisplay contents={MessageToAspiringMembersContent} />
     </Page>
   );
 }

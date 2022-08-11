@@ -6,23 +6,39 @@ import JoiningMclAcm from './pages/JoiningMclAcm';
 import MostMemorableMoment from './pages/MostMemorableMoment';
 import MessageToAspiringMembers from './pages/MessageToAspiringMembers';
 import TitleCanvas from './pages/Splash';
-import TestBed from './pages/TestBed';
 import PreviousPageButton from './common/PreviousPageButton';
 import NextPageButton from './common/NextPageButton';
 import BackHomeButton from './common/BackHomeButton';
 import dimensions from './dimensions';
 
 export default function MessageWall() {
-  const canvasWidth = 360;
-  const canvasHeight = 640;
+  const canvasWidth = dimensions.canvasWidth();
+  const canvasHeight = dimensions.canvasHeight();
+  const isPortrait = dimensions.isPortrait();
 
   const [currentPageIndex, setCurrentPageIndex] = useState(0);
   const pages = [
     <TitleCanvas width={canvasWidth} height={canvasHeight} />,
-    <MostMemorableMoment width={canvasWidth} height={canvasHeight} />,
-    <JoiningMclAcm width={canvasWidth} height={canvasHeight} />,
-    <MessageToAspiringMembers width={canvasWidth} height={canvasHeight} />,
-    <EndGallery width={canvasWidth} height={canvasHeight} />,
+    <MostMemorableMoment
+      width={canvasWidth}
+      height={canvasHeight}
+      isPortrait={isPortrait}
+    />,
+    <JoiningMclAcm
+      width={canvasWidth}
+      height={canvasHeight}
+      isPortrait={isPortrait}
+    />,
+    <MessageToAspiringMembers
+      width={canvasWidth}
+      height={canvasHeight}
+      isPortrait={isPortrait}
+    />,
+    <EndGallery
+      width={canvasWidth}
+      height={canvasHeight}
+      isPortrait={isPortrait}
+    />,
   ];
 
   const isFirstPage = currentPageIndex === 0;
@@ -84,14 +100,14 @@ export default function MessageWall() {
               <PreviousPageButton
                 onClick={() => previousPage()}
                 x={10}
-                y={dimensions.pageHeight - 100 - 10}
+                y={dimensions.pageHeight() - 100 - 10}
               />
             )}
             {hasNextPage && (
               <NextPageButton
                 onClick={() => nextPage()}
-                x={dimensions.pageWidth - 100 - 10}
-                y={dimensions.pageHeight - 100 - 10}
+                x={dimensions.pageWidth() - 100 - 10}
+                y={dimensions.pageHeight() - 100 - 10}
               />
             )}
           </Group>

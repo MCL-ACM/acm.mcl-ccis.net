@@ -1,9 +1,16 @@
 import React, { useState, useRef } from 'react';
+
 import { Rect, Group } from 'react-konva';
+import dimensions from '../dimensions';
 
 export default function Page({ children, color }) {
-  const [scale, setScale] = useState(1);
-  const [stagePosition, setStagePosition] = useState({ x: 0, y: 0 });
+  const initialScale = dimensions.pageWidth() / dimensions.canvasWidth();
+  const [scale, setScale] = useState(initialScale);
+
+  const [stagePosition, setStagePosition] = useState({
+    x: 0,
+    y: 0,
+  });
   const canvasHeight = window.innerHeight;
   const canvasWidth = window.innerWidth;
   const groupRef = useRef(null);
@@ -18,6 +25,7 @@ export default function Page({ children, color }) {
       scaleX={scale}
       scaleY={scale}
       ref={groupRef}
+      centeredScaling
       onWheel={(e) => {
         e.evt.preventDefault();
         const scaleBy = 1.05;

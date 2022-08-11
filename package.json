@@ -29,7 +29,7 @@
     "gatsby-source-filesystem": "^4.9.1",
     "gatsby-transformer-json": "^4.9.0",
     "gatsby-transformer-sharp": "^4.9.0",
-    "konva": "^8.3.11",
+    "konva": "^8.3.10",
     "netlify-cms-app": "^2.15.68",
     "popmotion": "^11.0.3",
     "postcss": "^8.4.8",
@@ -39,7 +39,7 @@
     "react-google-recaptcha": "^2.1.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.3.1",
-    "react-konva": "^17.0.2-6",
+    "react-konva": "^17.0.2-5",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.1.2",
     "use-image": "^1.0.12"
