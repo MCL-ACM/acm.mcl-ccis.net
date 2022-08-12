@@ -2,9 +2,9 @@ export default [
   {
     id: 1,
     contentType: 'GROUP',
-    x: 39,
-    y: 0,
-    scale: 0.6,
+    x: 61,
+    y: -25,
+    scale: 0.58,
     children: [
       {
         contentType: 'IMAGE',
@@ -117,9 +117,9 @@ export default [
   {
     id: 2,
     contentType: 'GROUP',
-    x: 271,
-    y: -591,
-    scale: 1,
+    x: 297,
+    y: -384,
+    scale: 0.7,
     children: [
       {
         contentType: 'TEXT',
