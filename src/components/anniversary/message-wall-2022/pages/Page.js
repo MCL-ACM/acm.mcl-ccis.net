@@ -92,30 +92,27 @@ export default function Page({ children, color }) {
         const scale = group.scaleX();
 
         const topLeft = {
-          x,
-          y,
+          x: x / scale,
+          y: y / scale,
         };
 
-        const relativePageWidth = pageWidth / initialScale;
-        const relativePageHeight = pageHeight / initialScale;
-
-        const viewWidth = relativePageWidth / scale;
-        const viewHeight = relativePageHeight / scale;
+        const viewWidth = pageWidth / scale;
+        const viewHeight = pageHeight / scale;
 
         const bottomRight = {
           x: topLeft.x - viewWidth,
           y: topLeft.y - viewHeight,
         };
 
-        const newPosition = { ...topLeft };
+        const newPosition = { x, y };
         if (
-          topLeft.x > 1000 ||
-          topLeft.y > 1000 ||
+          topLeft.x > 500 ||
+          topLeft.y > 500 ||
           bottomRight.x < -1000 ||
           bottomRight.y < -1000
         ) {
-          newPosition.x = 0;
-          newPosition.y = 0;
+          newPosition.x = (-canvasWidth / 2 + viewWidth / 2) * scale;
+          newPosition.y = (-canvasHeight / 2 + viewHeight / 2) * scale;
         }
 
         e.target.position(newPosition);
