@@ -1,7 +1,12 @@
+/* eslint-disable import/prefer-default-export */
 import './src/styles/global.css';
 import React from 'react';
 import Layout from './src/components/Layout';
 
+export const wrapPageElement = ({ element, props }) => {
+  if (props.location.pathname.includes('anniversary')) {
+    return element;
+  }
 
-
-export const wrapPageElement = ({ element }) => <Layout>{element}</Layout>;
+  return <Layout>{element}</Layout>;
+};
