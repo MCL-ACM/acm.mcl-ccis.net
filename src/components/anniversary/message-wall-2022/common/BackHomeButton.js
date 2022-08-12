@@ -13,8 +13,8 @@ export default function BackHomeButton({ onClick, x, y }) {
       <Text
         text='Back Home'
         x={26}
-        y={3}
-        fontSize={14}
+        y={2}
+        fontSize={18}
         fill='white'
         fontFamily='Roboto'
       />

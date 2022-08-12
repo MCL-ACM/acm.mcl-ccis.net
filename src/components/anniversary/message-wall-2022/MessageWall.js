@@ -78,18 +78,18 @@ export default function MessageWall() {
   }, []);
 
   return (
-    <div>
-      {destroyConfetti ? (
-        <Confetti
-          width={window.innerWidth}
-          height={window.innerHeight}
-          numberOfPieces={showConfetti ? 100 : 0}
-        />
-      ) : (
-        <></>
-      )}
+    <div className='w-full h-full'>
+      <div className='absolute'>
+        {destroyConfetti && (
+          <Confetti
+            width={window.innerWidth - 1}
+            height={window.innerHeight - 1}
+            numberOfPieces={showConfetti ? 100 : 0}
+          />
+        )}
+      </div>
 
-      <Stage width={window.innerWidth} height={window.innerHeight}>
+      <Stage width={window.innerWidth} height={window.innerHeight - 1}>
         <Layer>
           <Group>{pages[currentPageIndex]}</Group>
           <Group>
@@ -99,15 +99,15 @@ export default function MessageWall() {
             {hasPreviousPage && (
               <PreviousPageButton
                 onClick={() => previousPage()}
-                x={10}
-                y={dimensions.pageHeight() - 100 - 10}
+                x={dimensions.pageWidth() * 0.05}
+                y={dimensions.pageHeight() * 0.8}
               />
             )}
             {hasNextPage && (
               <NextPageButton
                 onClick={() => nextPage()}
-                x={dimensions.pageWidth() - 100 - 10}
-                y={dimensions.pageHeight() - 100 - 10}
+                x={dimensions.pageWidth() * 0.95 - 100}
+                y={dimensions.pageHeight() * 0.8}
               />
             )}
           </Group>

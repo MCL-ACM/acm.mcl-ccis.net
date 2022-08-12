@@ -18,6 +18,8 @@ export default function ContentDisplay({ contents }) {
           height={content.height + 20}
           fill='white'
           lineHeight={content.lineHeight}
+          align={content.align}
+          fontStyle={content.fontStyle}
         />
       )}
       {content.contentType === contentTypes.ImageContentType && (

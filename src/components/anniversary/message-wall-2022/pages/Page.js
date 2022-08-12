@@ -1,31 +1,50 @@
-import React, { useState, useRef } from 'react';
-
+import React, { useState, useRef, useEffect } from 'react';
+import Konva from 'konva';
 import { Rect, Group } from 'react-konva';
 import dimensions from '../dimensions';
 
 export default function Page({ children, color }) {
   const initialScale = dimensions.pageWidth() / dimensions.canvasWidth();
-  const [scale, setScale] = useState(initialScale);
+  const maxZoomLevel = 4;
+  const [zoomLevel, setZoomLevel] = useState(1);
 
-  const [stagePosition, setStagePosition] = useState({
-    x: 0,
-    y: 0,
-  });
   const canvasHeight = window.innerHeight;
   const canvasWidth = window.innerWidth;
   const groupRef = useRef(null);
 
+  useEffect(() => {
+    groupRef.current.scale(initialScale);
+  }, []);
   return (
     <Group
       width={canvasWidth}
       height={canvasHeight}
       draggable
-      x={stagePosition.x}
-      y={stagePosition.y}
-      scaleX={scale}
-      scaleY={scale}
       ref={groupRef}
-      centeredScaling
+      onTap={(e) => {
+        const group = groupRef.current;
+
+        const newZoomLevel = zoomLevel + 1 > maxZoomLevel ? 1 : zoomLevel + 1;
+        const newScale = initialScale * newZoomLevel;
+        const { x: selectedX, y: selectedY } =
+          groupRef.current.getRelativePointerPosition();
+        const offsetX = canvasWidth / 2;
+        const offsetY = canvasHeight / 2;
+
+        const newPosition = {
+          x: -(selectedX * newScale) + offsetX,
+          y: -(selectedY * newScale) + offsetY,
+        };
+
+        group.to({
+          x: newPosition.x,
+          y: newPosition.y,
+          scaleX: newScale,
+          scaleY: newScale,
+          duration: 0.1,
+        });
+        setZoomLevel(newZoomLevel);
+      }}
       onWheel={(e) => {
         e.evt.preventDefault();
         const scaleBy = 1.05;
@@ -46,14 +65,15 @@ export default function Page({ children, color }) {
           e.evt.deltaY > 0 ? oldScale / scaleBy : oldScale * scaleBy;
 
         if (newScale >= 1) {
-          setScale(newScale);
+          e.target.scaleX(newScale);
+          e.target.scaleY(newScale);
 
           const newPos = {
             x: center.x - relatedTo.x * newScale,
             y: center.y - relatedTo.y * newScale,
           };
 
-          setStagePosition(newPos);
+          e.target.position(newPos);
         }
       }}
     >
