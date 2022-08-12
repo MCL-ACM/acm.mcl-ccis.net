@@ -18,7 +18,11 @@ export default function MessageWall() {
 
   const [currentPageIndex, setCurrentPageIndex] = useState(0);
   const pages = [
-    <TitleCanvas width={canvasWidth} height={canvasHeight} />,
+    <TitleCanvas
+      width={canvasWidth}
+      height={canvasHeight}
+      isPortrait={isPortrait}
+    />,
     <MostMemorableMoment
       width={canvasWidth}
       height={canvasHeight}
