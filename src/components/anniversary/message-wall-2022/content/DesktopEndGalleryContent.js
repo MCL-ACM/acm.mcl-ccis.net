@@ -1,10 +1,10 @@
-const content = [
+export default [
   {
-    id: '1',
+    id: 1,
     contentType: 'GROUP',
-    x: 0,
+    x: 39,
     y: 0,
-    scale: 1,
+    scale: 0.6,
     children: [
       {
         contentType: 'IMAGE',
@@ -20,7 +20,6 @@ const content = [
         y: 14,
         rotation: 0,
       },
-
       {
         contentType: 'IMAGE',
         image: '/anniversary/2022/gallery/pic-1.png',
@@ -112,13 +111,14 @@ const content = [
         rotation: 0,
       },
     ],
+    width: 93,
+    height: 30,
   },
-
   {
-    id: '2',
+    id: 2,
     contentType: 'GROUP',
-    x: 0,
-    y: 0,
+    x: 271,
+    y: -591,
     scale: 1,
     children: [
       {
@@ -160,20 +160,7 @@ const content = [
         y: 839,
       },
     ],
-  },
-  {
-    contentType: 'IMAGE',
-    image: '/anniversary/2022/bottom-arrow.svg',
-    text: 'Group 39994',
-    x: 200,
-    y: 523,
-    rotation: 0,
+    width: 93,
+    height: 30,
   },
 ];
-
-const indexedContent = content.map((e, index) => ({
-  ...e,
-  id: index + 1,
-}));
-
-export default indexedContent;

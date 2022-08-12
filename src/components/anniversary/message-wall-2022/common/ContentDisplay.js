@@ -1,12 +1,24 @@
-import { Text } from 'react-konva';
+import { Group, Text } from 'react-konva';
 import React from 'react';
 import contentTypes from '../lib/ContentTypes';
 import Image from './Image';
 import QuestionHeader from './QuestionHeader';
 
 export default function ContentDisplay({ contents }) {
-  return contents.map((content) => (
+  const renderContent = (content) => (
     <>
+      {content.contentType === contentTypes.GroupContentType && (
+        <Group
+          x={content.x}
+          y={content.y}
+          width={content.width}
+          height={content.height}
+          scaleX={content.scale}
+          scaleY={content.scale}
+        >
+          {content.children.map((child) => renderContent(child))}
+        </Group>
+      )}
       {content.contentType === contentTypes.TextContentType && (
         <Text
           x={content.x}
@@ -40,5 +52,6 @@ export default function ContentDisplay({ contents }) {
         />
       )}
     </>
-  ));
+  );
+  return contents.map((content) => renderContent(content));
 }

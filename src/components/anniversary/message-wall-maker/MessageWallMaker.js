@@ -13,10 +13,13 @@ import DesktopJoiningMclAcmContent from '../message-wall-2022/content/DesktopJoi
 import DesktopMostMemorableMomentContent from '../message-wall-2022/content/DesktopMostMemorableMomentContent';
 import SplashPageContent from '../message-wall-2022/content/SplashPageContent';
 import DesktopSplashPageContent from '../message-wall-2022/content/DesktopSplashPageContent';
+import EndGalleryContent from '../message-wall-2022/content/EndGalleryContent';
+import DesktopEndGalleryContent from '../message-wall-2022/content/DesktopEndGalleryContent';
 
 export default function MessageWallMaker() {
   const [items, setItems] = useState([]);
-  const [formValues, setFormValues] = useState({
+  const initialFormState = {
+    scale: 1,
     text: '',
     fontFamily: '',
     fontSize: 0,
@@ -27,7 +30,8 @@ export default function MessageWallMaker() {
     lineHeight: 0,
     image: '',
     rotation: '',
-  });
+  };
+  const [formValues, setFormValues] = useState(initialFormState);
 
   const [selectedItemId, setSelectedItemId] = useState(null);
   const selectedItem =
@@ -49,10 +53,12 @@ export default function MessageWallMaker() {
       y: formValues.y,
       width: formValues.width,
       height: formValues.height,
+      scale: formValues.scale,
     };
     updateItem(selectedItemId, itemInformation);
     console.log(itemInformation);
   };
+
   const submitTextInformation = () => {
     const textInformation = {
       ...selectedItem,
@@ -157,15 +163,115 @@ export default function MessageWallMaker() {
     '[M] Most Memorable Moment': MostMemorableMomentContent,
     '[M] Joining MCL-ACM': JoiningMclAcmContent,
     '[M] Message to Aspiring Members': MessageToAspiringMembersContent,
+    '[M] End Gallery': EndGalleryContent,
     '[D] Splash Page': DesktopSplashPageContent,
-    '(D) Most Memorable Moment': DesktopMostMemorableMomentContent,
-    '(D) Joining MCL-ACM': DesktopJoiningMclAcmContent,
-    '(D) Message to Aspiring Members': DesktopMessageToAspiringMembersContent,
+    '[D] Most Memorable Moment': DesktopMostMemorableMomentContent,
+    '[D] Joining MCL-ACM': DesktopJoiningMclAcmContent,
+    '[D] Message to Aspiring Members': DesktopMessageToAspiringMembersContent,
+    '[D] End Gallery': DesktopEndGalleryContent,
   };
 
   const onPresetSelected = (preset) => {
     setItems(preset);
   };
+
+  const renderNonGroup = (content) =>
+    content.contentType === contentTypes.QuestionHeaderContentType ? (
+      <QuestionHeader
+        text={content.text}
+        x={content.x}
+        y={content.y}
+        rotation={content.rotation}
+      />
+    ) : (
+      <Group
+        key={content.id}
+        width={content.width}
+        height={content.height}
+        x={content.x}
+        y={content.y}
+        onClick={() => setSelectedItemId(content.id)}
+        draggable={content.id === selectedItemId}
+        onDragEnd={(e) => onItemDragEnd(e)}
+        scaleX={content.scale}
+        scaleY={content.scale}
+      >
+        <Rect
+          width={content.width}
+          height={content.height}
+          stroke='red'
+          strokeWidth={content.id === selectedItemId ? 1 : 0}
+        />
+        {content.contentType === contentTypes.TextContentType && (
+          <Text
+            fontFamily={content.fontFamily}
+            fontSize={content.fontSize}
+            text={content.text}
+            width={content.width}
+            height={content.height + 20}
+            fill='white'
+            lineHeight={content.lineHeight}
+            align={content.align}
+            fontStyle={content.fontStyle}
+          />
+        )}
+        {content.contentType === contentTypes.ImageContentType && (
+          <Image
+            width={content.width}
+            height={content.height}
+            imagePath={content.image}
+            rotation={content.rotation}
+            _useStrictMode
+          />
+        )}
+      </Group>
+    );
+
+  const renderGroupContent = (content) =>
+    content.contentType === contentTypes.QuestionHeaderContentType ? (
+      <QuestionHeader
+        text={content.text}
+        x={content.x}
+        y={content.y}
+        rotation={content.rotation}
+      />
+    ) : (
+      <Group
+        key={content.id}
+        width={content.width}
+        height={content.height}
+        x={content.x}
+        y={content.y}
+      >
+        <Rect
+          width={content.width}
+          height={content.height}
+          stroke='red'
+          strokeWidth={content.id === selectedItemId ? 1 : 0}
+        />
+        {content.contentType === contentTypes.TextContentType && (
+          <Text
+            fontFamily={content.fontFamily}
+            fontSize={content.fontSize}
+            text={content.text}
+            width={content.width}
+            height={content.height + 20}
+            fill='white'
+            lineHeight={content.lineHeight}
+            align={content.align}
+            fontStyle={content.fontStyle}
+          />
+        )}
+        {content.contentType === contentTypes.ImageContentType && (
+          <Image
+            width={content.width}
+            height={content.height}
+            imagePath={content.image}
+            _useStrictMode
+          />
+        )}
+      </Group>
+    );
 
   return (
     <>
@@ -289,6 +395,20 @@ export default function MessageWallMaker() {
                     onChange={(e) =>
                       updateFormValue(
                         'height',
+                        Number.parseFloat(e.target.value),
+                      )
+                    }
+                  />
+                </div>
+                <div>
+                  <p>scale</p>
+                  <input
+                    type='number'
+                    className='border-2 rounded w-full'
+                    value={formValues.scale}
+                    onChange={(e) =>
+                      updateFormValue(
+                        'scale',
                         Number.parseFloat(e.target.value),
                       )
                     }
@@ -421,15 +541,7 @@ export default function MessageWallMaker() {
             <Page color='#003D52'>
               <Rect width={640} height={360} stroke='red' strokeWidth={2} />
               {items.map((content) =>
-                content.contentType ===
-                contentTypes.QuestionHeaderContentType ? (
-                  <QuestionHeader
-                    text={content.text}
-                    x={content.x}
-                    y={content.y}
-                    rotation={content.rotation}
-                  />
-                ) : (
+                content.contentType === contentTypes.GroupContentType ? (
                   <Group
                     key={content.id}
                     width={content.width}
@@ -439,35 +551,15 @@ export default function MessageWallMaker() {
                     onClick={() => setSelectedItemId(content.id)}
                     draggable={content.id === selectedItemId}
                     onDragEnd={(e) => onItemDragEnd(e)}
+                    scaleX={content.scale}
+                    scaleY={content.scale}
                   >
-                    <Rect
-                      width={content.width}
-                      height={content.height}
-                      stroke='red'
-                      strokeWidth={content.id === selectedItemId ? 1 : 0}
-                    />
-                    {content.contentType === contentTypes.TextContentType && (
-                      <Text
-                        fontFamily={content.fontFamily}
-                        fontSize={content.fontSize}
-                        text={content.text}
-                        width={content.width}
-                        height={content.height + 20}
-                        fill='white'
-                        lineHeight={content.lineHeight}
-                        align={content.align}
-                        fontStyle={content.fontStyle}
-                      />
-                    )}
-                    {content.contentType === contentTypes.ImageContentType && (
-                      <Image
-                        width={content.width}
-                        height={content.height}
-                        imagePath={content.image}
-                        _useStrictMode
-                      />
+                    {content.children.map((subContent) =>
+                      renderGroupContent(subContent),
                     )}
                   </Group>
+                ) : (
+                  renderNonGroup(content)
                 ),
               )}
             </Page>
