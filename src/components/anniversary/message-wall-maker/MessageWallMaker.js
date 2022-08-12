@@ -4,12 +4,15 @@ import Image from '../message-wall-2022/common/Image';
 import contentTypes from '../message-wall-2022/lib/ContentTypes';
 import Page from '../message-wall-2022/pages/Page';
 import JoiningMclAcmContent from '../message-wall-2022/content/JoiningMclAcmContent';
+
 import MessageToAspiringMembersContent from '../message-wall-2022/content/MessageToAspiringMembersContent';
 import MostMemorableMomentContent from '../message-wall-2022/content/MostMemorableMomentContent';
 import QuestionHeader from '../message-wall-2022/common/QuestionHeader';
 import DesktopMessageToAspiringMembersContent from '../message-wall-2022/content/DesktopMessageToAspiringMembersContent';
 import DesktopJoiningMclAcmContent from '../message-wall-2022/content/DesktopJoiningMclAcmContent';
 import DesktopMostMemorableMomentContent from '../message-wall-2022/content/DesktopMostMemorableMomentContent';
+import SplashPageContent from '../message-wall-2022/content/SplashPageContent';
+import DesktopSplashPageContent from '../message-wall-2022/content/DesktopSplashPageContent';
 
 export default function MessageWallMaker() {
   const [items, setItems] = useState([]);
@@ -150,13 +153,14 @@ export default function MessageWallMaker() {
 
   const presetContent = {
     Empty: [],
-    'Most Memorable Moment': MostMemorableMomentContent,
-    'Joining MCL-ACM': JoiningMclAcmContent,
-    'Message to Aspiring Members': MessageToAspiringMembersContent,
-    '(Desktop) Most Memorable Moment': DesktopMostMemorableMomentContent,
-    '(Desktop) Joining MCL-ACM': DesktopJoiningMclAcmContent,
-    '(Desktop) Message to Aspiring Members':
-      DesktopMessageToAspiringMembersContent,
+    '[M] Splash Page': SplashPageContent,
+    '[M] Most Memorable Moment': MostMemorableMomentContent,
+    '[M] Joining MCL-ACM': JoiningMclAcmContent,
+    '[M] Message to Aspiring Members': MessageToAspiringMembersContent,
+    '[D] Splash Page': DesktopSplashPageContent,
+    '(D) Most Memorable Moment': DesktopMostMemorableMomentContent,
+    '(D) Joining MCL-ACM': DesktopJoiningMclAcmContent,
+    '(D) Message to Aspiring Members': DesktopMessageToAspiringMembersContent,
   };
 
   const onPresetSelected = (preset) => {
@@ -451,7 +455,8 @@ export default function MessageWallMaker() {
                         height={content.height + 20}
                         fill='white'
                         lineHeight={content.lineHeight}
-                        _useStrictMode
+                        align={content.align}
+                        fontStyle={content.fontStyle}
                       />
                     )}
                     {content.contentType === contentTypes.ImageContentType && (
