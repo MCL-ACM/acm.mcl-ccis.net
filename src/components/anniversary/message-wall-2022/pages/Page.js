@@ -7,8 +7,11 @@ export default function Page({ children, color }) {
   const maxZoomLevel = 4;
   const [zoomLevel, setZoomLevel] = useState(1);
 
-  const canvasHeight = window.innerHeight;
-  const canvasWidth = window.innerWidth;
+  const pageWidth = window.innerWidth;
+  const pageHeight = window.innerHeight;
+  const canvasWidth = dimensions.canvasWidth();
+  const canvasHeight = dimensions.canvasHeight();
+
   const groupRef = useRef(null);
 
   useEffect(() => {
@@ -21,8 +24,8 @@ export default function Page({ children, color }) {
     const newZoomLevel = zoomLevel + 1 > maxZoomLevel ? 1 : zoomLevel + 1;
     const newScale = initialScale * newZoomLevel;
 
-    const offsetX = canvasWidth / 2;
-    const offsetY = canvasHeight / 2;
+    const offsetX = pageWidth / 2;
+    const offsetY = pageHeight / 2;
 
     const newPosition = {
       x: -(selectedX * newScale) + offsetX,
@@ -45,8 +48,8 @@ export default function Page({ children, color }) {
     const oldScale = group.scaleX();
 
     const center = {
-      x: canvasWidth / 2,
-      y: canvasHeight / 2,
+      x: pageWidth / 2,
+      y: pageHeight / 2,
     };
 
     const relatedTo = {
@@ -71,8 +74,8 @@ export default function Page({ children, color }) {
 
   return (
     <Group
-      width={canvasWidth}
-      height={canvasHeight}
+      width={pageWidth}
+      height={pageHeight}
       draggable
       ref={groupRef}
       onDblTap={() => {
@@ -83,14 +86,42 @@ export default function Page({ children, color }) {
         e.evt.preventDefault();
         scrollZoom(e.evt.deltaY);
       }}
+      onDragMove={(e) => {
+        const group = groupRef.current;
+        const { x, y } = group.position();
+        const scale = group.scaleX();
+
+        const topLeft = {
+          x,
+          y,
+        };
+
+        const relativePageWidth = pageWidth / initialScale;
+        const relativePageHeight = pageHeight / initialScale;
+
+        const viewWidth = relativePageWidth / scale;
+        const viewHeight = relativePageHeight / scale;
+
+        const bottomRight = {
+          x: topLeft.x - viewWidth,
+          y: topLeft.y - viewHeight,
+        };
+
+        const newPosition = { ...topLeft };
+        if (
+          topLeft.x > 1000 ||
+          topLeft.y > 1000 ||
+          bottomRight.x < -1000 ||
+          bottomRight.y < -1000
+        ) {
+          newPosition.x = 0;
+          newPosition.y = 0;
+        }
+
+        e.target.position(newPosition);
+      }}
     >
-      <Rect
-        width={window.innerWidth * 3}
-        height={window.innerHeight * 3}
-        fill={color}
-        x={-window.innerWidth}
-        y={-window.innerHeight}
-      />
+      <Rect width={4000} height={4000} fill={color} x={-2000} y={-2000} />
       {children}
     </Group>
   );
