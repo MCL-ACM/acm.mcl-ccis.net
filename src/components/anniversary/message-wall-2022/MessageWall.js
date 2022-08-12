@@ -47,7 +47,7 @@ export default function MessageWall() {
   const hasNextPage = currentPageIndex + 1 < pages.length;
 
   function goBackHome() {
-    setCurrentPageIndex(0);
+    window.location.href = '/';
   }
 
   function nextPage() {

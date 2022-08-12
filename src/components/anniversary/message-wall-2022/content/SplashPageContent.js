@@ -4,7 +4,7 @@ const content = [
     text: 'instructions!',
     x: 20,
     y: 336,
-    width: 130,
+    width: 140,
     height: 44.0,
     fontFamily: 'Reenie Beanie',
     fontSize: 32.0,
@@ -120,7 +120,7 @@ const content = [
   },
   {
     contentType: 'TEXT',
-    text: '1.) zoom in to view messages/images clearly.\n2.) pan around to explore.\n3.) click the arrows to navigate pages.\n4.) explore!',
+    text: '1.) double tap to zoom in and out.\n2.) pan around to explore.\n3.) tap on the arrows to navigate pages.\n4.) explore!',
     x: 20.0,
     y: 383.0,
     width: 320.0,

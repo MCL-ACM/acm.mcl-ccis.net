@@ -13,6 +13,8 @@ export default function Image({
   onTap,
   draggable,
   onDragEnd,
+  onMouseEnter,
+  onMouseLeave,
 }) {
   const [img] = useImage(imagePath);
   return (
@@ -27,6 +29,8 @@ export default function Image({
       onTap={onTap}
       draggable={draggable}
       onDragEnd={onDragEnd}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     />
   );
 }
