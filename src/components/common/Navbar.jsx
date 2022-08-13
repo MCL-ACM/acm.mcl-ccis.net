@@ -50,6 +50,7 @@ export default function Navbar() {
           </main>
           <div className='w-full h-[1px] bg-gradient-to-r from-standard-blue to-cerulean-crayola absolute bottom-0 hidden lg:block opacity-20' />
       </nav>
+      <NavBanner />
     </div>
   );
 }
