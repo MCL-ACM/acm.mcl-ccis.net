@@ -105,11 +105,15 @@ export default function Page({ children, color }) {
         };
 
         const newPosition = { x, y };
+
+        const thresholdX = 600;
+        const thresholdY = 300;
+
         if (
-          topLeft.x > 500 ||
-          topLeft.y > 500 ||
-          bottomRight.x < -1000 ||
-          bottomRight.y < -1000
+          topLeft.x > thresholdX ||
+          topLeft.y > thresholdY ||
+          bottomRight.x < -canvasWidth - thresholdX ||
+          bottomRight.y < -canvasHeight - thresholdY
         ) {
           newPosition.x = (-canvasWidth / 2 + viewWidth / 2) * scale;
           newPosition.y = (-canvasHeight / 2 + viewHeight / 2) * scale;
