@@ -139,7 +139,7 @@ export default [
         text: 'Group 39994',
         x: 91,
         y: 687,
-        url: 'https://forms.office.com/r/CsxqtPGaCd',
+        url: 'https://forms.office.com/r/brHtm8kj8v',
       },
       {
         contentType: 'TEXT',
