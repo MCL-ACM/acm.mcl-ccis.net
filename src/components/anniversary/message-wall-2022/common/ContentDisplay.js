@@ -41,7 +41,19 @@ export default function ContentDisplay({ contents }) {
           width={content.width}
           height={content.height}
           imagePath={content.image}
-          onClick={(e) => (content.url ? window.open(content.url) : null)}
+          onClick={() => (content.url ? window.open(content.url) : null)}
+          onMouseEnter={(e) => {
+            if (content.url !== undefined) {
+              const container = e.target.getStage().container();
+              container.style.cursor = 'pointer';
+            }
+          }}
+          onMouseLeave={(e) => {
+            if (content.url !== undefined) {
+              const container = e.target.getStage().container();
+              container.style.cursor = 'default';
+            }
+          }}
         />
       )}
       {content.contentType === contentTypes.QuestionHeaderContentType && (
