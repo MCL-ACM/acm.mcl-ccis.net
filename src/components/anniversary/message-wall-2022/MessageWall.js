@@ -18,7 +18,11 @@ export default function MessageWall() {
 
   const [currentPageIndex, setCurrentPageIndex] = useState(0);
   const pages = [
-    <TitleCanvas width={canvasWidth} height={canvasHeight} />,
+    <TitleCanvas
+      width={canvasWidth}
+      height={canvasHeight}
+      isPortrait={isPortrait}
+    />,
     <MostMemorableMoment
       width={canvasWidth}
       height={canvasHeight}
@@ -47,7 +51,7 @@ export default function MessageWall() {
   const hasNextPage = currentPageIndex + 1 < pages.length;
 
   function goBackHome() {
-    setCurrentPageIndex(0);
+    window.location.href = '/';
   }
 
   function nextPage() {
