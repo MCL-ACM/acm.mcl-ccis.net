@@ -159,7 +159,7 @@ const content = [
         image: '/anniversary/2022/event-btn.svg',
         x: 23,
         y: 839,
-        url: 'https://www.google.com',
+        url: '/events',
       },
     ],
   },
