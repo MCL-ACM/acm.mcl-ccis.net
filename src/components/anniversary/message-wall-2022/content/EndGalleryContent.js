@@ -139,6 +139,7 @@ const content = [
         text: 'Group 39994',
         x: 91,
         y: 687,
+        url: 'https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&token=af4ebc3bddb84322aa5698d8cf898f68&id=Sza1P1VSFEq5dRGx3mDOrbhYTDYugz5Il-CDpk-fLQZUOFhUVUdPM1YxNFBWQlJVNjE5QzRaTkw5Ty4u',
       },
       {
         contentType: 'TEXT',
@@ -158,6 +159,7 @@ const content = [
         image: '/anniversary/2022/event-btn.svg',
         x: 23,
         y: 839,
+        url: 'https://www.google.com',
       },
     ],
   },

@@ -41,6 +41,7 @@ export default function ContentDisplay({ contents }) {
           width={content.width}
           height={content.height}
           imagePath={content.image}
+          onClick={(e) => (content.url ? window.open(content.url) : null)}
         />
       )}
       {content.contentType === contentTypes.QuestionHeaderContentType && (

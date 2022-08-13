@@ -66,20 +66,11 @@ const content = [
   },
   {
     contentType: 'IMAGE',
-    image: '/anniversary/2022/splash/Group 40004.svg',
-    x: 274.48,
-    y: 442.14,
-    width: 12.57,
-    height: 12.57,
-    rotation: 0,
-  },
-  {
-    contentType: 'IMAGE',
     image: '/anniversary/2022/splash/Group 40002.svg',
-    x: 5.49,
-    y: 504.6,
+    x: 640 / 2 - 160 / 2,
+    y: 162,
     width: 149.29,
-    height: 88.71,
+    height: 78.71,
     rotation: 0,
   },
   {
