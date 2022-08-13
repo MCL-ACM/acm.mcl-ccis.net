@@ -107,7 +107,7 @@ export default function Page({ children, color }) {
         const newPosition = { x, y };
 
         const thresholdX = 600;
-        const thresholdY = 300;
+        const thresholdY = 600;
 
         if (
           topLeft.x > thresholdX ||
