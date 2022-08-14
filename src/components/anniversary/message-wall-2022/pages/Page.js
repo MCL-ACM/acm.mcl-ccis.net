@@ -1,3 +1,4 @@
+import Konva from 'konva';
 import React, { useState, useRef, useEffect } from 'react';
 import { Rect, Group } from 'react-konva';
 import dimensions from '../dimensions';
@@ -17,6 +18,7 @@ export default function Page({ children, color }) {
   useEffect(() => {
     groupRef.current.scaleX(initialScale);
     groupRef.current.scaleY(initialScale);
+    Konva.hitOnDragEnabled = true;
   }, []);
 
   const updateZoomLevel = (selectedX, selectedY) => {
@@ -72,6 +74,20 @@ export default function Page({ children, color }) {
     }
   };
 
+  function getDistance(p1, p2) {
+    return Math.sqrt((p2.x - p1.x) ** 2 + (p2.y - p1.y) ** 2);
+  }
+
+  function getCenter(p1, p2) {
+    return {
+      x: (p1.x + p2.x) / 2,
+      y: (p1.y + p2.y) / 2,
+    };
+  }
+
+  const [lastCenter, setLastCenter] = useState(null);
+  const [lastDist, setLastDist] = useState(0);
+
   return (
     <Group
       width={pageWidth}
@@ -85,6 +101,71 @@ export default function Page({ children, color }) {
       onWheel={(e) => {
         e.evt.preventDefault();
         scrollZoom(e.evt.deltaY);
+      }}
+      onTouchMove={(e) => {
+        const stage = groupRef.current;
+        e.evt.preventDefault();
+        const touch1 = e.evt.touches[0];
+        const touch2 = e.evt.touches[1];
+
+        if (touch1 && touch2) {
+          // if the stage was under Konva's drag&drop
+          // we need to stop it, and implement our own pan logic with two pointers
+          if (stage.isDragging()) {
+            stage.stopDrag();
+          }
+
+          const p1 = {
+            x: touch1.clientX,
+            y: touch1.clientY,
+          };
+          const p2 = {
+            x: touch2.clientX,
+            y: touch2.clientY,
+          };
+
+          if (!lastCenter) {
+            setLastCenter(getCenter(p1, p2));
+            return;
+          }
+          const newCenter = getCenter(p1, p2);
+
+          const dist = getDistance(p1, p2);
+
+          const newDist = lastDist || dist;
+          if (!lastDist) {
+            setLastDist(dist);
+          }
+
+          // local coordinates of center point
+          const pointTo = {
+            x: (newCenter.x - stage.x()) / stage.scaleX(),
+            y: (newCenter.y - stage.y()) / stage.scaleX(),
+          };
+
+          const scale = stage.scaleX() * (dist / newDist);
+
+          stage.scaleX(scale);
+          stage.scaleY(scale);
+
+          // calculate new position of the stage
+          const dx = newCenter.x - lastCenter.x;
+          const dy = newCenter.y - lastCenter.y;
+
+          const newPos = {
+            x: newCenter.x - pointTo.x * scale + dx,
+            y: newCenter.y - pointTo.y * scale + dy,
+          };
+
+          stage.position(newPos);
+
+          setLastDist(dist);
+          setLastCenter(newCenter);
+        }
+      }}
+      onTouchEnd={() => {
+        setLastDist(0);
+        setLastCenter(null);
       }}
       onDragMove={(e) => {
         const group = groupRef.current;
