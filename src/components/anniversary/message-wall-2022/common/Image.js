@@ -1,5 +1,5 @@
 import React from 'react';
-import { Circle, Image as KonvaImage } from 'react-konva';
+import { Image as KonvaImage } from 'react-konva';
 import useImage from 'use-image';
 import LoadingPlaceholder from './LoadingPlaceholder';
 
