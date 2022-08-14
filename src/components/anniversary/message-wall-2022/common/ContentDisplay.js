@@ -42,6 +42,7 @@ export default function ContentDisplay({ contents }) {
           height={content.height}
           imagePath={content.image}
           onClick={() => (content.url ? window.open(content.url) : null)}
+          onTap={() => (content.url ? window.open(content.url) : null)}
           onMouseEnter={(e) => {
             if (content.url !== undefined) {
               const container = e.target.getStage().container();

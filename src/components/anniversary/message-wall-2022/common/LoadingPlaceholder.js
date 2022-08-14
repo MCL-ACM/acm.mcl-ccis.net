@@ -1,5 +1,5 @@
 import Konva from 'konva';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Arc } from 'react-konva';
 
 export default function LoadingPlaceholder({ x, y, width, height }) {
