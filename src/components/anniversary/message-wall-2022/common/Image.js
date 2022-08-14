@@ -1,6 +1,7 @@
 import React from 'react';
 import { Image as KonvaImage } from 'react-konva';
 import useImage from 'use-image';
+import LoadingPlaceholder from './LoadingPlaceholder';
 
 export default function Image({
   imagePath,
@@ -16,21 +17,28 @@ export default function Image({
   onMouseEnter,
   onMouseLeave,
 }) {
-  const [img] = useImage(imagePath);
+  const [img, status] = useImage(imagePath);
   return (
-    <KonvaImage
-      rotation={rotation === null ? 0 : rotation}
-      image={img}
-      x={x}
-      y={y}
-      width={width}
-      height={height}
-      onClick={onClick}
-      onTap={onTap}
-      draggable={draggable}
-      onDragEnd={onDragEnd}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-    />
+    <>
+      {status === 'loading' && (
+        <LoadingPlaceholder x={x} y={y} width={width} height={height} />
+      )}
+      {status === 'loaded' && (
+        <KonvaImage
+          rotation={rotation === null ? 0 : rotation}
+          image={img}
+          x={x}
+          y={y}
+          width={width}
+          height={height}
+          onClick={onClick}
+          onTap={onTap}
+          draggable={draggable}
+          onDragEnd={onDragEnd}
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+        />
+      )}
+    </>
   );
 }
