@@ -2,14 +2,14 @@
   "type": "committee",
   "name": "Membership Committee",
   "chair": {
-    "name": "John Arthur Panti",
+    "name": "Domingo Ortega III",
     "position": "Membership Committee Chair",
-    "photo": "arthur.jpg"
+    "photo": "ortega-domingo-iii-j..jpg"
   },
   "members": [
     "John Rieven Adante",
     "Alain Moses Manrique",
-    "Domingo Ortega III",
+    "John Arthur Panti",
     "Jon Peter Pomperada"
   ]
 }
