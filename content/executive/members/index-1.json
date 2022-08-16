@@ -1,0 +1,30 @@
+{
+  "type": "executive",
+  "member": [
+    {
+      "name": "Khristian Kikuchi",
+      "position": "Adviser",
+      "photo": "sirian.png"
+    },
+    {
+      "position": "President",
+      "name": "Jayvee Mapote",
+      "photo": "jayvee-n-mapote.jpg"
+    },
+    {
+      "position": "Vice President",
+      "name": "Simon Philip Asiño",
+      "photo": "simon-philip-g.-asiño.jpg"
+    },
+    {
+      "position": "Secretary",
+      "name": "John Bernard Sahagun",
+      "photo": "sahagun-john-bernard-g..jpg"
+    },
+    {
+      "position": "Treasurer",
+      "name": "Christian Cedrick Alon",
+      "photo": "christian-cedrick-alon.jpg"
+    }
+  ]
+}
