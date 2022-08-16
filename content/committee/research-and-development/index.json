@@ -2,13 +2,12 @@
   "type": "committee",
   "name": "Research and Development",
   "chair": {
-    "name": "Job Lipat",
+    "name": "Karlo Miguel Palisoc",
     "position": "RND Chair",
-    "photo": "job.jpg"
+    "photo": "karlo.jpg"
   },
   "members": [
-    "Christian Cedrick Alon",
-    "Simon Philip Asiño",
+    "Job Lipat",
     "Joachim Elijah Cobar",
     "Elijah Raphael Garcia",
     "John Arsenio Lumtao",
