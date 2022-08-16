@@ -2,12 +2,13 @@
   "type": "committee",
   "name": "Finance Committee",
   "chair": {
-    "name": "Patrick Mediodia",
+    "name": "Christian Cedrick Alon",
     "position": "Treasurer",
-    "photo": "pat.jpg"
+    "photo": "christian-cedrick-alon.jpg"
   },
   "members": [
     "Carlos Lorenzo Melchor",
-    "Sherald Ryoj Gurion"
+    "Sherald Ryoj Gurion",
+    "Patrick Mediodia"
   ]
 }
