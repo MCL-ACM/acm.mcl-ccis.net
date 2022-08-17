@@ -58,6 +58,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: 'former',
+        path: `${__dirname}/content/former`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: 'heroSlideshow',
         path: `${__dirname}/src/images/home/heroSlideshow`,
       },

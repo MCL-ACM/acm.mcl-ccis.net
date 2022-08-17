@@ -123,3 +123,34 @@ collections:
           widget: 'list',
           field: { label: 'Member name', name: 'memberName', widget: 'string' },
         }
+
+  - name: 'former'
+    label: 'Former Officers'
+    folder: 'content/former'
+    create: true
+    slug: 'name'
+    media_folder: ''
+    public_folder: ''
+    path: '{{name}}/index'
+    extension: 'json'
+    format: 'json'
+    editor:
+      preview: false
+    fields:
+      - {
+          label: 'Collection Type',
+          name: 'type',
+          widget: 'hidden',
+          default: 'former',
+        }
+      - { label: 'Academic Year', name: 'name', widget: 'string' }
+      - {
+          label: 'Officers',
+          name: 'officers',
+          widget: 'list',
+          fields:
+            [
+              { label: 'Name', name: 'name', widget: 'string' },
+              { label: 'Position', name: 'position', widget: 'string' },
+            ],
+        }

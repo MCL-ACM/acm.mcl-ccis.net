@@ -13,6 +13,7 @@ export default function members({ data }) {
     ...node,
     members: node.members.sort(),
   }));
+  const formerOfficers = data.former.edges;
 
   return (
     <div>
@@ -24,7 +25,7 @@ export default function members({ data }) {
         {committees.map(({ name, chair, members: _members }) => (
           <CommitteeSection name={name} chair={chair} members={_members} />
         ))}
-        <FormerOfficersSection />
+        <FormerOfficersSection formerOfficers={formerOfficers} />
       </div>
     </div>
   );
@@ -57,6 +58,17 @@ export const query = graphql`
             }
           }
           members
+        }
+      }
+    }
+    former: allFormer(sort: {order: DESC, fields: name}) {
+      edges {
+        node {
+          year: name
+          officers {
+            name
+            position
+          }
         }
       }
     }
