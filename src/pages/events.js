@@ -10,6 +10,7 @@ import Head from '../components/common/Head';
 import Divider from '../components/common/Divider';
 import EventModal from '../components/events/EventModal';
 import TagDropdown from '../components/events/TagDropdown';
+import { Helmet } from 'react-helmet';
 
 export default function events({ data }) {
   const [year, setYear] = useState('All');
@@ -52,8 +53,13 @@ export default function events({ data }) {
     });
   }, [year, tag]);
 
+
+
   return (
     <div className='w-full lg:mt-[4.8125em] relative pb-[9.25em]'>
+      <Helmet>
+        <script src='event/halloweenEvent.js' type='text/javascript'/>
+      </Helmet>
       <Head title='Events' />
       <section className=''>
         {selectedEvents.length > 0 && isFeaturedOpen ? (
