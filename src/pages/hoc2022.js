@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Content from '../components/hoc2022/Content';
 import Button from '../components/hoc2022/Button';
 import Card from '../components/hoc2022/Card';
@@ -9,6 +9,7 @@ import HowWell from '../components/hoc2022/content/HowWell';
 import GuessNumber from '../components/hoc2022/content/GuessNumber';
 import OddEvenZero from '../components/hoc2022/content/OddEvenZero';
 import Outro from '../components/hoc2022/content/Outro';
+import Head from '../components/common/Head';
 
 export default function IndexPage() {
   const [page, setPage] = useState(0);
@@ -29,6 +30,13 @@ export default function IndexPage() {
     <Outro />,
   ];
 
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, [page]);
+
   const nextPage = () => {
     if (page + 1 >= cards.length) {
       return;
@@ -45,6 +53,8 @@ export default function IndexPage() {
 
   return (
     <div className='flex flex-col w-full h-full bg-gray-100 min-h-screen'>
+      <Head title='Hour of Code 2022' />
+
       {/** Navigation Bar */}
       <Navigation />
       <div className='flex flex-row grow max-w-6xl w-6xl mx-auto gap-3'>
@@ -73,10 +83,10 @@ export default function IndexPage() {
           </div>
 
           {/** Buttons */}
-          <div className='my-16 bottom-52 flex flex-row w-full px-20'>
+          <div className='my-16 bottom-52 flex flex-row w-full px-8'>
             {page - 1 >= 0 && <Button text='Back' onClick={previousPage} />}
             <div className='grow' />
-            {page + 1 <= cards.length && (
+            {page + 1 < cards.length && (
               <Button text='Next' onClick={nextPage} type='NEXT' />
             )}
             {/** Next */}

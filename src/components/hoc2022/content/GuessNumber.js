@@ -21,6 +21,8 @@ See the sample output and follow the instructions below. No visual demonstration
 
 ### Instructions
 
+**Step 0.** [Click here to open Google Blockly](https://blockly-demo.appspot.com/static/demos/code/index.html) 
+
 **Step 1.** Create a variable for the player’s lives and set the initial value to 3.
 
 **Step 2.** Create a variable for the random number, and assign a random integer from 1 to 10.
@@ -46,7 +48,18 @@ Hint: You can find the “repeat while” block under the Loops category.
 **Step 11.** Run the program, and let your friends play your game!
 `;
   return (
-    <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
+    <ReactMarkdown
+      remarkPlugins={[remarkGfm]}
+      rehypePlugins={[rehypeRaw]}
+      linkTarget='_blank'
+      renderers={{
+        link: (props) => (
+          <a href={props.href} target='_blank' rel='noreferrer'>
+            {props.children}
+          </a>
+        ),
+      }}
+    >
       {content}
     </ReactMarkdown>
   );

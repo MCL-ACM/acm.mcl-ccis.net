@@ -15,6 +15,9 @@ See the sample output and follow the instructions below.
 ![sample output](/hoc2022/activity1.gif)
 
 ### Instructions
+
+**Step 0.** [Click here to open Google Blockly](https://blockly-demo.appspot.com/static/demos/code/index.html) 
+
 **Step 1.** Create a variable for the participant’s name.
 
 ![step 1](/hoc2022/activity1_step1.gif)
@@ -32,7 +35,18 @@ See the sample output and follow the instructions below.
 
 `;
   return (
-    <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
+    <ReactMarkdown
+      remarkPlugins={[remarkGfm]}
+      rehypePlugins={[rehypeRaw]}
+      linkTarget='_blank'
+      renderers={{
+        link: (props) => (
+          <a href={props.href} target='_blank' rel='noreferrer'>
+            {props.children}
+          </a>
+        ),
+      }}
+    >
       {content}
     </ReactMarkdown>
   );
