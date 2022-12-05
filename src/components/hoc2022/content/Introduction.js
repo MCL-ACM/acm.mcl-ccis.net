@@ -15,7 +15,7 @@ Before you continue, here are some resources to help you along the way
 
 [Google Blockly](https://blockly-demo.appspot.com/static/demos/code/index.html)
 
-[Lecture Slides](https://blockly-demo.appspot.com/static/demos/code/index.html)
+[Lecture Slides](https://drive.google.com/file/d/1V5jSkEx16fyVTpCEP2rMOlU-jErlUULv/view?usp=share_link)
 
 
 ### Learning Outcomes:
