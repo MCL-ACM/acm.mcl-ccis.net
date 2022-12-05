@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.8",
     "canvas": "^2.9.3",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^6.2.8",
@@ -40,6 +41,7 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^4.3.1",
     "react-konva": "^17.0.2-5",
+    "react-markdown": "^8.0.4",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.1.2",
     "use-image": "^1.0.12"

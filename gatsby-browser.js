@@ -4,7 +4,10 @@ import React from 'react';
 import Layout from './src/components/Layout';
 
 export const wrapPageElement = ({ element, props }) => {
-  if (props.location.pathname.includes('anniversary')) {
+  if (
+    props.location.pathname.includes('anniversary') ||
+    props.location.pathname.includes('hoc2022')
+  ) {
     return element;
   }
 
