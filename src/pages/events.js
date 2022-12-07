@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { graphql } from 'gatsby';
 import { useCycle } from 'framer-motion';
+import { Helmet } from 'react-helmet';
 import EventDropdown from '../components/events/EventDropdown';
 import CarouselEventCard from '../components/events/CarouselEventCard';
 import FeaturedEventCard from '../components/events/FeaturedEventCard';
@@ -10,9 +11,8 @@ import Head from '../components/common/Head';
 import Divider from '../components/common/Divider';
 import EventModal from '../components/events/EventModal';
 import TagDropdown from '../components/events/TagDropdown';
-import { Helmet } from 'react-helmet';
 
-export default function events({ data }) {
+export default function events({ data, location }) {
   const [year, setYear] = useState('All');
   const [tag, setTag] = useState('All');
   const [selectedEvents, setSelectedEvents] = useState([]);
@@ -36,29 +36,37 @@ export default function events({ data }) {
   ).sort();
 
   useEffect(() => {
-    setSelectedEvents(() => {
-      const eventsFilteredByYear =
-        year === 'All'
-          ? eventNodes
-          : eventNodes.filter((event) => {
-              const eventYear = new Date(event.year).getFullYear();
-              return eventYear === year;
-            });
-      const eventsFilteredByTags =
-        tag === 'All'
-          ? eventsFilteredByYear
-          : eventsFilteredByYear.filter((event) => event.tags.includes(tag));
-
-      return eventsFilteredByTags;
-    });
+    const eventsFilteredByYear =
+      year === 'All'
+        ? eventNodes
+        : eventNodes.filter((event) => {
+            const eventYear = new Date(event.year).getFullYear();
+            return eventYear === year;
+          });
+    const eventsFilteredByTags =
+      tag === 'All'
+        ? eventsFilteredByYear
+        : eventsFilteredByYear.filter((event) => event.tags.includes(tag));
+    setSelectedEvents(() => eventsFilteredByTags);
+    const params = new URLSearchParams(location.search);
+    const eventName = params.get('name');
+    console.log();
+    if (eventName === 'hoc2022') {
+      toggleOpen();
+      setSelectedEvent(
+        eventsFilteredByTags.findIndex(
+          (e) =>
+            e.title ===
+            'Hello Programming 2022 at Don Jose Integrated High School',
+        ),
+      );
+    }
   }, [year, tag]);
-
-
 
   return (
     <div className='w-full lg:mt-[4.8125em] relative pb-[9.25em]'>
       <Helmet>
-        <script src='event/halloweenEvent.js' type='text/javascript'/>
+        <script src='event/halloweenEvent.js' type='text/javascript' />
       </Helmet>
       <Head title='Events' />
       <section className=''>
