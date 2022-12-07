@@ -19,6 +19,7 @@ export default function events({ data, location }) {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const [isFeaturedOpen, toggleFeaturedOpen] = useCycle(false, true);
   const [selectedEvent, setSelectedEvent] = useState();
+
   const titleCase = (s) =>
     s.replace(
       /\w\S*/g,
@@ -36,6 +37,20 @@ export default function events({ data, location }) {
   ).sort();
 
   useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const eventName = params.get('name');
+    if (eventName === 'hoc2022') {
+      const eventIndex = eventNodes.findIndex(
+        (e) =>
+          e.title ===
+          'Hello Programming 2022 at Don Jose Integrated High School',
+      );
+      setSelectedEvent(eventIndex);
+      toggleOpen();
+    }
+  }, []);
+
+  useEffect(() => {
     const eventsFilteredByYear =
       year === 'All'
         ? eventNodes
@@ -48,19 +63,6 @@ export default function events({ data, location }) {
         ? eventsFilteredByYear
         : eventsFilteredByYear.filter((event) => event.tags.includes(tag));
     setSelectedEvents(() => eventsFilteredByTags);
-    const params = new URLSearchParams(location.search);
-    const eventName = params.get('name');
-    console.log();
-    if (eventName === 'hoc2022') {
-      toggleOpen();
-      setSelectedEvent(
-        eventsFilteredByTags.findIndex(
-          (e) =>
-            e.title ===
-            'Hello Programming 2022 at Don Jose Integrated High School',
-        ),
-      );
-    }
   }, [year, tag]);
 
   return (
@@ -163,7 +165,12 @@ export default function events({ data, location }) {
             tags={tags}
           />
         </div>
-        <CarouselEventCard shadow={false} tagged events={selectedEvents} />
+        <CarouselEventCard
+          shadow={false}
+          tagged
+          events={selectedEvents}
+          location={location.search}
+        />
       </div>
     </div>
   );

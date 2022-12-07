@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useCycle } from 'framer-motion';
 import { wrap } from 'popmotion';
 import CarouselIndicator from './CarouselIndicator';
@@ -27,7 +27,12 @@ const variants = {
 const swipeConfidenceThreshold = 10000;
 const swipePower = (offset, velocity) => Math.abs(offset) * velocity;
 
-export default function CarouselEventCard({ events, tagged, shadow }) {
+export default function CarouselEventCard({
+  events,
+  tagged,
+  shadow,
+  location,
+}) {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const [[page, direction], setPage] = useState([0, 0]);
   const eventIndex = wrap(0, events.length, page);
@@ -36,6 +41,22 @@ export default function CarouselEventCard({ events, tagged, shadow }) {
   const paginate = (newDirection) => {
     setPage([page + newDirection, newDirection]);
   };
+
+  useEffect(() => {
+    if (location !== null) {
+      const params = new URLSearchParams(location);
+      const eventName = params.get('name');
+      if (eventName === 'hoc2022') {
+        const defaultIndex = events.findIndex(
+          (e) =>
+            e.title ===
+            'Hello Programming 2022 at Don Jose Integrated High School',
+        );
+        setPage([defaultIndex, 0]);
+        toggleOpen();
+      }
+    }
+  }, [location]);
 
   return (
     <div className='w-full overflow-hidden'>
