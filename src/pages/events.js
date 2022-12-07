@@ -73,7 +73,7 @@ export default function events({ data, location }) {
         {selectedEvents.length > 0 && isFeaturedOpen ? (
           <EventModal
             tagged
-            event={selectedEvents[11]}
+            event={selectedEvents[15]}
             toggle={() => toggleFeaturedOpen()}
           />
         ) : (
