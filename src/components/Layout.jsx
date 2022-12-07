@@ -6,7 +6,7 @@ export default function Layout({ children }) {
   return (
     <main className='relative min-h-screen '>
       <Navbar />
-      <section className='pt-24 sm:pt-16 pb-[38.5em]'>{children}</section>
+      <section className='pt-32 sm:pt-24 pb-[38.5em]'>{children}</section>
       <Footer />
     </main>
   );
