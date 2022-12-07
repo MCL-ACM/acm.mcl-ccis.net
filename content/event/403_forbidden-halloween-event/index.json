@@ -1,0 +1,54 @@
+{
+  "type": "event",
+  "featured": false,
+  "year": "2022-12-07T10:33:32.274Z",
+  "title": "403_forbidden: Halloween Event",
+  "tags": [
+    "COMPETITION",
+    "HALLOWEEN"
+  ],
+  "images": [
+    {
+      "image": "403halloween_01.png",
+      "imageAlt": "403_forbidden: Halloween Event"
+    },
+    {
+      "image": "403halloween_02.png",
+      "imageAlt": "403_forbidden: Halloween Event"
+    },
+    {
+      "image": "403halloween_03.png",
+      "imageAlt": "403_forbidden: Halloween Event"
+    },
+    {
+      "image": "403halloween_04.png",
+      "imageAlt": "403_forbidden: Halloween Event"
+    },
+    {
+      "image": "403halloween_05.png",
+      "imageAlt": "403_forbidden: Halloween Event"
+    },
+    {
+      "image": "403halloween_06.png",
+      "imageAlt": "403_forbidden: Halloween Event"
+    },
+    {
+      "image": "403halloween_07.png",
+      "imageAlt": "403_forbidden: Halloween Event"
+    },
+    {
+      "image": "403halloween_08.png",
+      "imageAlt": "403_forbidden: Halloween Event"
+    },
+    {
+      "image": "403halloween_09.png",
+      "imageAlt": "403_forbidden: Halloween Event"
+    },
+    {
+      "image": "403halloween_10.png",
+      "imageAlt": "403_forbidden: Halloween Event"
+    }
+  ],
+  "description": "October 17, 2022",
+  "summary": "October 17, 2022"
+}
