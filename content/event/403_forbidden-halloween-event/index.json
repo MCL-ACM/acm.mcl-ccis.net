@@ -2,7 +2,7 @@
   "type": "event",
   "featured": false,
   "year": "2022-12-07T10:33:32.274Z",
-  "title": "403_forbidden: Halloween Event",
+  "title": "403_forbidden: MCL-ACM Horror Event",
   "tags": [
     "COMPETITION",
     "HALLOWEEN"
@@ -49,6 +49,6 @@
       "imageAlt": "403_forbidden: Halloween Event"
     }
   ],
-  "description": "October 17, 2022",
-  "summary": "October 17, 2022"
+  "description": "October 17, 2022 - In celebration of Halloween, MCL-ACM organized an online horror event called \"403 forbidden.\" The event was open to all MCL students and took place on the MCL-ACM Discord server. The students formed teams to solve the escape room’s puzzles, which tested their critical thinking and problem-solving skills. Prizes were given to the top two teams with the most points.",
+  "summary": "In celebration of Halloween, MCL-ACM organized an online horror event called \"403 forbidden.\""
 }
