@@ -1,0 +1,57 @@
+{
+  "type": "event",
+  "featured": false,
+  "year": "2022-12-07T10:38:24.000Z",
+  "title": "Hello Programming 2022 at Don Jose Integrated High School",
+  "tags": [
+    "HOUR OF CODE"
+  ],
+  "summary": "MCL ACM Student Chapter hosted “Hello Programming 2022: An Hour of Code™ with MCL-ACM” at Don Jose Integrated High School.",
+  "description": "December 6, 2022 - MCL ACM Student Chapter hosted “Hello Programming 2022: An Hour of Code™ with MCL-ACM” at Don Jose Integrated High School. This Hour of Code™ event was participated by 43 grade 7 students. \n\nIn the event, the students were given an interactive introduction to the basics of coding using Google Blockly and were shown the possibilities in programming. They also did a coding activity in which the students who came up with the most creative solutions won prizes. At the end of the event, Don Jose Integrated High School awarded MCL-ACM with a certificate of recognition.",
+  "images": [
+    {
+      "image": "hourofcode2022_01.png",
+      "imageAlt": "Hello Programming 2022 at Don Jose Integrated High School"
+    },
+    {
+      "image": "hourofcode2022_02.png",
+      "imageAlt": "Hello Programming 2022 at Don Jose Integrated High School"
+    },
+    {
+      "image": "hourofcode2022_03.png",
+      "imageAlt": "Hello Programming 2022 at Don Jose Integrated High School"
+    },
+    {
+      "image": "hourofcode2022_04.png",
+      "imageAlt": "Hello Programming 2022 at Don Jose Integrated High School"
+    },
+    {
+      "image": "hourofcode2022_05.png",
+      "imageAlt": "Hello Programming 2022 at Don Jose Integrated High School"
+    },
+    {
+      "image": "hourofcode2022_06.png",
+      "imageAlt": "Hello Programming 2022 at Don Jose Integrated High School"
+    },
+    {
+      "image": "hourofcode2022_07.png",
+      "imageAlt": "Hello Programming 2022 at Don Jose Integrated High School"
+    },
+    {
+      "image": "hourofcode2022_08.png",
+      "imageAlt": "Hello Programming 2022 at Don Jose Integrated High School"
+    },
+    {
+      "image": "hourofcode2022_09.png",
+      "imageAlt": "Hello Programming 2022 at Don Jose Integrated High School"
+    },
+    {
+      "image": "hourofcode2022_10.png",
+      "imageAlt": "Hello Programming 2022 at Don Jose Integrated High School"
+    },
+    {
+      "image": "hourofcode2022_11.png",
+      "imageAlt": "Hello Programming 2022 at Don Jose Integrated High School"
+    }
+  ]
+}
