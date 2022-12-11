@@ -18,7 +18,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#ffffff`,
         display: `minimal-ui`,
-        icon: `src/images/navbar/acm_chapter_logo.png`, // This path is relative to the root of the site.
+        icon: `src/images/navbar/mcl-acm_logo.png`, // This path is relative to the root of the site.
       },
     },
     {
