@@ -4,9 +4,9 @@ import React from 'react';
 export default function Logo() {
   return (
     <StaticImage
-      src='../../../images/navbar/acm_logo.png'
+      src='../../../images/navbar/acm_chapter_logo.png'
       alt='MCL-ACM logo'
-      className='w-[78px] h-[40px] sm:w-[150px] sm:h-[76px]'
+      className='w-[40px] h-[40px] sm:w-[76px] sm:h-[76px]'
     />
   );
 }
