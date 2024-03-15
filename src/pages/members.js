@@ -8,6 +8,7 @@ import Head from '../components/common/Head';
 import FormerOfficersSection from '../components/members/FormerOfficersSection';
 
 export default function members({ data }) {
+  console.log(data);
   const executiveCommittee = data.executive.member;
   const committees = data.committees.edges.map(({ node }) => ({
     ...node,
@@ -61,7 +62,7 @@ export const query = graphql`
         }
       }
     }
-    former: allFormer(sort: {order: DESC, fields: name}) {
+    former: allFormer(sort: { order: DESC, fields: name }) {
       edges {
         node {
           year: name
