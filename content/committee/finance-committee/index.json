@@ -2,13 +2,14 @@
   "type": "committee",
   "name": "Finance Committee",
   "chair": {
-    "name": "Christian Cedrick Alon",
-    "position": "Treasurer",
-    "photo": "christian-cedrick-alon.jpg"
+    "name": "Keithly Padoan",
+    "position": "Committee Chair",
+    "photo": "keithlypadoan.jpg"
   },
-  "members": [
-    "Carlos Lorenzo Melchor",
-    "Sherald Ryoj Gurion",
-    "Patrick Mediodia"
-  ]
+  "cochair": {
+    "name": "Emman Torrecampo",
+    "position": "Committee Co-chair",
+    "photo": "emmantorecampo.jpg"
+  },
+  "members": ["Arabella Taguines", "Ryan Anthony Torio", "Arish Marcin Vinluan"]
 }

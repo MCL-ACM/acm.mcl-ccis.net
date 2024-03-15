@@ -2,7 +2,7 @@ import React from 'react';
 import MemberSection from './MemberSection';
 import MemberInfo from './MemberInfo';
 
-export default function CommitteeSection({ name, chair, members }) {
+export default function CommitteeSection({ name, chair, cochair, members }) {
   return (
     <MemberSection header={name}>
       <div className='flex flex-row flex-wrap justify-center gap-y-8 lg:gap-y-10'>
@@ -10,6 +10,12 @@ export default function CommitteeSection({ name, chair, members }) {
           name={chair.name}
           position={chair.position}
           photo={chair.photo}
+          className='w-full'
+        />
+        <MemberInfo
+          name={cochair.name}
+          position={cochair.position}
+          photo={cochair.photo}
           className='w-full'
         />
 

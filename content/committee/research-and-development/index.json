@@ -2,17 +2,24 @@
   "type": "committee",
   "name": "Research and Development",
   "chair": {
-    "name": "Karlo Miguel Palisoc",
-    "position": "RND Chair",
-    "photo": "karlo.jpg"
+    "name": "Joachim Elijah Cobar",
+    "position": "Commitee Chair",
+    "photo": "joachimcobar.jpg"
+  },
+  "cochair": {
+    "name": "Georgette Cadiz",
+    "position": "Commitee Co-chair",
+    "photo": "georgettecadiz.jpg"
   },
   "members": [
-    "Job Lipat",
-    "Joachim Elijah Cobar",
-    "Elijah Raphael Garcia",
-    "John Arsenio Lumtao",
-    "Borge Joaquinne Paguirigan",
-    "John Matthew Tolentino",
-    "James Michael Paz"
+    "Andrea Arellano",
+    "Kenneth Roi Balilihan",
+    "Aaron Lance Cabueñas",
+    "Lorenzo Dio",
+    "Jherwin Ronce Indaya",
+    "Lloyd Raphael Perez",
+    "Reese Anwyl Ramos",
+    "Raumel Lawrence Salurio",
+    "Gabriel Tanabe"
   ]
 }

@@ -118,6 +118,17 @@ collections:
             ],
         }
       - {
+          label: 'coChair',
+          name: 'cochair',
+          widget: 'object',
+          fields:
+            [
+              { label: 'Name', name: 'name', widget: 'string' },
+              { label: 'Position', name: 'position', widget: 'string' },
+              { label: 'Photo', name: 'photo', widget: 'image' },
+            ],
+        }
+      - {
           label: 'Members',
           name: 'members',
           widget: 'list',

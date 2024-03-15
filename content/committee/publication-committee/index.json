@@ -2,12 +2,21 @@
   "type": "committee",
   "name": "Publication Committee",
   "chair": {
-    "name": "Roigene Marc Bautista",
-    "position": "Publication Committee Chair",
-    "photo": "roigene-marc-j.-bautista.jpg"
+    "name": "Vivien Ericca Hermoso",
+    "position": "Committee Chair",
+    "photo": "vivien.jpg"
+  },
+  "cochair": {
+    "name": "Celynne Angelica Advincula",
+    "position": "Committee Co-chair",
+    "photo": "celynneadvincula.jpg"
   },
   "members": [
-    "Vivien Erica Hermoso",
-    "Charmaine Eunice Rabano"
+    "Shamelle Fhate Climaco",
+    "Anne Nicole Corpuz",
+    "Ma. Christina Factura",
+    "Vince Ronan Garceniego",
+    "Sofia Loren Lacanilao",
+    "Daniel Mark Sarabusing"
   ]
 }

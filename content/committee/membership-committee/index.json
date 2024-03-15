@@ -2,14 +2,24 @@
   "type": "committee",
   "name": "Membership Committee",
   "chair": {
-    "name": "Domingo Ortega III",
-    "position": "Membership Committee Chair",
-    "photo": "ortega-domingo-iii-j..jpg"
+    "name": "Carlos Lorenzo Melchor",
+    "position": "Committee Chair",
+    "photo": "carlosmelchor.jpg"
+  },
+  "cochair": {
+    "name": "Raphael Jose Marquez",
+    "position": "Committee Co-Chair",
+    "photo": "raphaelmarquez.jpg"
   },
   "members": [
-    "John Rieven Adante",
-    "Alain Moses Manrique",
+    "Charles Basti Almonte",
+    "Vince Joseph Arbutante",
+    "Nicole Emmanuelle Doña",
+    "Ross Enrick Garcia",
+    "Vince Laude",
+    "Gabriel Manjares",
+    "James Gabrielle Oñate",
     "John Arthur Panti",
-    "Jon Peter Pomperada"
+    "Jian Caine Panzo"
   ]
 }
