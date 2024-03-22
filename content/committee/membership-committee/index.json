@@ -4,12 +4,12 @@
   "chair": {
     "name": "Carlos Lorenzo Melchor",
     "position": "Committee Chair",
-    "photo": "carlosmelchor.jpg"
+    "photo": "MELCHOR.png"
   },
   "cochair": {
     "name": "Raphael Jose Marquez",
     "position": "Committee Co-Chair",
-    "photo": "raphaelmarquez.jpg"
+    "photo": "MARQUEZ.jpg"
   },
   "members": [
     "Charles Basti Almonte",
@@ -21,5 +21,16 @@
     "James Gabrielle Oñate",
     "John Arthur Panti",
     "Jian Caine Panzo"
+  ],
+  "memberspic": [
+    "ALMONTE.jpg",
+    "ARBUTANTE.jpg",
+    "DOÑA.jpeg",
+    "GARCIA.jpg",
+    "LAUDE.jpg",
+    "MANJARES.jpg",
+    "OÑATE.JPG",
+    "PANTI.png",
+    "PANZO.jpg"
   ]
 }

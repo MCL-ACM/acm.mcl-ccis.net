@@ -2,7 +2,7 @@ import React from 'react';
 import MemberSection from './MemberSection';
 import MemberInfo from './MemberInfo';
 
-export default function CommitteeSection({ name, chair, cochair, members }) {
+export default function CommitteeSection({ name, chair, cochair, members, memberspic }) {
   return (
     <MemberSection header={name}>
       <div className='flex flex-row flex-wrap justify-center gap-y-8 lg:gap-y-10'>
@@ -19,10 +19,12 @@ export default function CommitteeSection({ name, chair, cochair, members }) {
           className='w-full'
         />
 
-        {members.map((memberName) => (
+        {members.map((memberName,index) => (
           <MemberInfo
+            key={index}
             name={memberName}
             position='Member'
+            photo={memberspic[index]}
             className='w-[50%] lg:w-[33%] '
           />
         ))}

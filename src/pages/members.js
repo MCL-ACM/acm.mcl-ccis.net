@@ -71,7 +71,15 @@ export const query = graphql`
               }
             }
           }
-          members
+          members {
+            name
+            position
+            photo {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED)
+              }
+            }
+          }
         }
       }
     }

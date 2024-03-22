@@ -4,12 +4,12 @@
   "chair": {
     "name": "Joachim Elijah Cobar",
     "position": "Commitee Chair",
-    "photo": "joachimcobar.jpg"
+    "photo": "COBAR.png"
   },
   "cochair": {
     "name": "Georgette Cadiz",
     "position": "Commitee Co-chair",
-    "photo": "georgettecadiz.jpg"
+    "photo": "CADIZ.jpeg"
   },
   "members": [
     "Andrea Arellano",
@@ -21,5 +21,16 @@
     "Reese Anwyl Ramos",
     "Raumel Lawrence Salurio",
     "Gabriel Tanabe"
+  ],
+  "memberspic": [
+    "ARELLANO.jpg",
+    "BALILIHAN.png",
+    "Cabuieñas.jpg",
+    "DIO.png",
+    "INDAYA.jpg",
+    "PEREZ.jpg",
+    "RAMOS.jpg",
+    "SALURIO.jpg",
+    "TANABE.jpg"
   ]
 }

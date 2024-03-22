@@ -4,12 +4,17 @@
   "chair": {
     "name": "Keithly Padaoan",
     "position": "Committee Chair",
-    "photo": "keithlypadoan.jpg"
+    "photo": "PADAOAN.jpg"
   },
   "cochair": {
     "name": "Emman Torrecampo",
     "position": "Committee Co-chair",
-    "photo": "emmantorecampo.jpg"
+    "photo": "TORRECAMPO.jpg"
   },
-  "members": ["Arabella Taguines", "Ryan Anthony Torio", "Arish Marcin Vinluan"]
+  "members": ["Arabella Taguines", "Ryan Anthony Torio", "Arish Marcin Vinluan"],
+  "memberspic": [
+    "TAGUINES.JPG",
+    "TORIO.jpg",
+    "VINLUAN.png"
+  ]
 }
