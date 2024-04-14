@@ -19,6 +19,7 @@ export default function ContributionsPage() {
   return (
     <div className='w-full lg:mt-[4.8125em] relative pb-[9.25em]'>
       <Head title='Contribution Manager' />
+
       <h1>Hello World</h1>
     </div>
   );
