@@ -12,19 +12,11 @@
     "photo": "ADVINCULA.png"
   },
   "members": [
-    "Shamelle Fhate Climaco",
-    "Anne Nicole Corpuz",
-    "Ma. Christina Factura",
-    "Vince Ronan Garceniego",
-    "Sofia Loren Lacanilao",
-    "Daniel Mark Sarabusing"
-  ],
-  "memberspic": [
-    "CLIMACO.png",
-    "CORPUZ.jpg",
-    "FACTURA.png",
-    "GARCENIEGO.png",
-    "LACANILAO.jpg",
-    "SARABUSING.jpg"
+    { "name": "Shamelle Fhate Climaco", "photo": "CLIMACO.png" },
+    { "name": "Anne Nicole Corpuz", "photo": "CORPUZ.jpg" },
+    { "name": "Ma. Christina Factura", "photo": "FACTURA.png" },
+    { "name": "Vince Ronan Garceniego", "photo": "GARCENIEGO.png" },
+    { "name": "Sofia Loren Lacanilao", "photo": "LACANILAO.jpg" },
+    { "name": "Daniel Mark Sarabusing", "photo": "SARABUSING.jpg" }
   ]
 }

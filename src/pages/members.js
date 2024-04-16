@@ -15,6 +15,8 @@ export default function members({ data }) {
   }));
   const formerOfficers = data.former.edges;
 
+  console.log(committees);
+
   return (
     <div>
       <Head title='Members' />
@@ -22,14 +24,16 @@ export default function members({ data }) {
       <Divider className='lg:my-24 mx-5 lg:mx-0 lg:w-11/12 lg:h-[2px] hidden lg:block' />
       <div className='flex flex-col gap-20 px-5 mb-24 lg:gap-28 fixed-width'>
         <ExecutiveSection officers={executiveCommittee} />
-        {committees.map(({ name, chair, cochair, members: _members }) => (
-          <CommitteeSection
-            name={name}
-            cochair={cochair}
-            chair={chair}
-            members={_members}
-          />
-        ))}
+        {committees.map(
+          ({ name, chair, cochair, members: committeeMembers }) => (
+            <CommitteeSection
+              name={name}
+              cochair={cochair}
+              chair={chair}
+              members={committeeMembers}
+            />
+          ),
+        )}
         <FormerOfficersSection formerOfficers={formerOfficers} />
       </div>
     </div>
@@ -73,7 +77,6 @@ export const query = graphql`
           }
           members {
             name
-            position
             photo {
               childImageSharp {
                 gatsbyImageData(placeholder: BLURRED)

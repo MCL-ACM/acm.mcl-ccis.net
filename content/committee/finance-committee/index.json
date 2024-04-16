@@ -11,10 +11,9 @@
     "position": "Committee Co-chair",
     "photo": "TORRECAMPO.jpg"
   },
-  "members": ["Arabella Taguines", "Ryan Anthony Torio", "Arish Marcin Vinluan"],
-  "memberspic": [
-    "TAGUINES.JPG",
-    "TORIO.jpg",
-    "VINLUAN.png"
+  "members": [
+    { "name": "Arabella Taguines", "photo": "TAGUINES.jpg" },
+    { "name": "Ryan Anthony Torio", "photo": "TORIO.jpg" },
+    { "name": "Arish Marcin Vinluan", "photo": "VINLUAN.png" }
   ]
 }

@@ -12,25 +12,14 @@
     "photo": "CADIZ.jpeg"
   },
   "members": [
-    "Andrea Arellano",
-    "Kenneth Roi Balilihan",
-    "Aaron Lance Cabueñas",
-    "Lorenzo Dio",
-    "Jherwin Ronce Indaya",
-    "Lloyd Raphael Perez",
-    "Reese Anwyl Ramos",
-    "Raumel Lawrence Salurio",
-    "Gabriel Tanabe"
-  ],
-  "memberspic": [
-    "ARELLANO.jpg",
-    "BALILIHAN.png",
-    "Cabuieñas.jpg",
-    "DIO.png",
-    "INDAYA.jpg",
-    "PEREZ.jpg",
-    "RAMOS.jpg",
-    "SALURIO.jpg",
-    "TANABE.jpg"
+    { "name": "Andrea Arellano", "photo": "ARELLANO.jpg" },
+    { "name": "Kenneth Roi Balilihan", "photo": "BALILIHAN.png" },
+    { "name": "Aaron Lance Cabueñas", "photo": "Cabuieñas.jpg" },
+    { "name": "Lorenzo Dio", "photo": "DIO.png" },
+    { "name": "Jherwin Ronce Indaya", "photo": "INDAYA.jpg" },
+    { "name": "Lloyd Raphael Perez", "photo": "PEREZ.jpg" },
+    { "name": "Reese Anwyl Ramos", "photo": "RAMOS.jpg" },
+    { "name": "Raumel Lawrence Salurio", "photo": "SALURIO.jpg" },
+    { "name": "Gabriel Tanabe", "photo": "TANABE.jpg" }
   ]
 }

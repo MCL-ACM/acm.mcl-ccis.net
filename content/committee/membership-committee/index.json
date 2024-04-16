@@ -12,25 +12,14 @@
     "photo": "MARQUEZ.jpg"
   },
   "members": [
-    "Charles Basti Almonte",
-    "Vince Joseph Arbutante",
-    "Nicole Emmanuelle Doña",
-    "Ross Enrick Garcia",
-    "Vince Laude",
-    "Gabriel Manjares",
-    "James Gabrielle Oñate",
-    "John Arthur Panti",
-    "Jian Caine Panzo"
-  ],
-  "memberspic": [
-    "ALMONTE.jpg",
-    "ARBUTANTE.jpg",
-    "DOÑA.jpeg",
-    "GARCIA.jpg",
-    "LAUDE.jpg",
-    "MANJARES.jpg",
-    "OÑATE.JPG",
-    "PANTI.png",
-    "PANZO.jpg"
+    { "name": "Charles Basti Almonte", "photo": "ALMONTE.jpg" },
+    { "name": "Vince Joseph Arbutante", "photo": "ARBUTANTE.jpg" },
+    { "name": "Nicole Emmanuelle Doña", "photo": "DOÑA.jpeg" },
+    { "name": "Ross Enrick Garcia", "photo": "GARCIA.jpg" },
+    { "name": "Vince Laude", "photo": "LAUDE.jpg" },
+    { "name": "Gabriel Manjares", "photo": "MANJARES.jpg" },
+    { "name": "James Gabrielle Oñate", "photo": "OÑATE.JPG" },
+    { "name": "John Arthur Panti", "photo": "PANTI.png" },
+    { "name": "Jian Caine Panzo", "photo": "PANZO.jpg" }
   ]
 }

@@ -131,8 +131,11 @@ collections:
       - {
           label: 'Members',
           name: 'members',
-          widget: 'list',
-          field: { label: 'Member name', name: 'memberName', widget: 'string' },
+          widget: 'object',
+          field: [
+              { label: 'Name', name: 'name', widget: 'string' },
+              { label: 'Photo', name: 'photo', widget: 'image' },
+            ],,
         }
 
   - name: 'former'
