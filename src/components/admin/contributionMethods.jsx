@@ -1,8 +1,8 @@
-import { API_ADD_CONTRIBUTIONS } from './api';
+import { API_ADD_SINGLE_CONTRIBUTIONS } from './api';
 
 export async function addContributionData(memberID, contributionDT) {
   try {
-    const response = await fetch(API_ADD_CONTRIBUTIONS, {
+    const response = await fetch(API_ADD_SINGLE_CONTRIBUTIONS, {
       method: 'POST',
       body: JSON.stringify({
         memberID,
@@ -17,6 +17,6 @@ export async function addContributionData(memberID, contributionDT) {
   }
 }
 
-export async function test() {
+export async function setContributionData() {
   return '';
 }
