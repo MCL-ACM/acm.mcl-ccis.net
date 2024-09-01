@@ -2,24 +2,20 @@
   "type": "committee",
   "name": "Membership Committee",
   "chair": {
-    "name": "Carlos Lorenzo Melchor",
+    "name": "Raphael Jose Marquez",
     "position": "Committee Chair",
-    "photo": "MELCHOR.png"
+    "photo": "MARQUEZ.jpg"
   },
   "cochair": {
-    "name": "Raphael Jose Marquez",
+    "name": "James Gabrielle Oñate",
     "position": "Committee Co-Chair",
-    "photo": "MARQUEZ.jpg"
+    "photo": "OÑATE.JPG"
   },
   "members": [
     { "name": "Charles Basti Almonte", "photo": "ALMONTE.jpg" },
     { "name": "Vince Joseph Arbutante", "photo": "ARBUTANTE.jpg" },
-    { "name": "Nicole Emmanuelle Doña", "photo": "DOÑA.jpeg" },
     { "name": "Ross Enrick Garcia", "photo": "GARCIA.jpg" },
     { "name": "Vince Laude", "photo": "LAUDE.jpg" },
     { "name": "Gabriel Manjares", "photo": "MANJARES.jpg" },
-    { "name": "James Gabrielle Oñate", "photo": "OÑATE.JPG" },
-    { "name": "John Arthur Panti", "photo": "PANTI.png" },
-    { "name": "Jian Caine Panzo", "photo": "PANZO.jpg" }
   ]
 }

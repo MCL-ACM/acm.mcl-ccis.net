@@ -7,13 +7,13 @@
     "photo": "PADAOAN.jpg"
   },
   "cochair": {
-    "name": "Emman Torrecampo",
+    "name": "Arabella Taguines",
     "position": "Committee Co-chair",
-    "photo": "TORRECAMPO.jpg"
+    "photo": "TAGUINES.jpg"
   },
   "members": [
-    { "name": "Arabella Taguines", "photo": "TAGUINES.jpg" },
     { "name": "Ryan Anthony Torio", "photo": "TORIO.jpg" },
+	{ "name": "Emman Torrecampo", "photo": "TORRRECAMPO.jpg" },
     { "name": "Arish Marcin Vinluan", "photo": "VINLUAN.png" }
   ]
 }

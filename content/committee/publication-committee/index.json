@@ -2,21 +2,18 @@
   "type": "committee",
   "name": "Publication Committee",
   "chair": {
-    "name": "Vivien Ericca Hermoso",
+    "name": "Sofia Loren Lacanilao",
     "position": "Committee Chair",
-    "photo": "HERMOSO.png"
+    "photo": "LACANILAO.jpg"
   },
   "cochair": {
-    "name": "Celynne Angelica Advincula",
+    "name": "Ma. Christina Factura",
     "position": "Committee Co-chair",
-    "photo": "ADVINCULA.png"
+    "photo": "FACTURA.png"
   },
   "members": [
     { "name": "Shamelle Fhate Climaco", "photo": "CLIMACO.png" },
     { "name": "Anne Nicole Corpuz", "photo": "CORPUZ.jpg" },
-    { "name": "Ma. Christina Factura", "photo": "FACTURA.png" },
-    { "name": "Vince Ronan Garceniego", "photo": "GARCENIEGO.png" },
-    { "name": "Sofia Loren Lacanilao", "photo": "LACANILAO.jpg" },
     { "name": "Daniel Mark Sarabusing", "photo": "SARABUSING.jpg" }
   ]
 }
