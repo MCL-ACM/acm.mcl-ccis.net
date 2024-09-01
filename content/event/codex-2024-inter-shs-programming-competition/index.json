@@ -1,0 +1,55 @@
+{
+  "type": "event",
+  "year": "2024-04-20T01:00:00.000Z",
+  "title": "3rd CodeX Inter-SHS Programming Competition",
+  "description": "Mapúa MCL ACM Student Chapter hosted the CodeX Inter-SHS Programming Competition on April 20, 2023. Schools such as FEU Alabang, STI College Carmona, Pamantasan ng Cabuyao clashed to display their understanding of Java programming with coding problems that are solved through critical thinking.",
+  "summary": "Mapúa MCL ACM Student Chapter hosted the CodeX Inter-SHS Programming Competition on April 20, 2023.",
+  "featured": false,
+  "tags": ["CODEX", "COMPETITION"],
+  "images": [
+    {
+      "image": "codexcomp_1.png",
+      "imageAlt": "3rd CodeX Inter-SHS Programming Competition"
+    },
+    {
+      "image": "codexcomp_2.png",
+      "imageAlt": "3rd CodeX Inter-SHS Programming Competition"
+    },
+    {
+      "image": "codexcomp_3.png",
+      "imageAlt": "3rd CodeX Inter-SHS Programming Competition"
+    },
+    {
+      "image": "codexcomp_4.png",
+      "imageAlt": "3rd CodeX Inter-SHS Programming Competition"
+    },
+    {
+      "image": "codexcomp_5.png",
+      "imageAlt": "3rd CodeX Inter-SHS Programming Competition"
+    },
+    {
+      "image": "codexcomp_6.png",
+      "imageAlt": "3rd CodeX Inter-SHS Programming Competition"
+    },
+    {
+      "image": "codexcomp_7.png",
+      "imageAlt": "3rd CodeX Inter-SHS Programming Competition"
+    },
+    {
+      "image": "codexcomp_8.png",
+      "imageAlt": "3rd CodeX Inter-SHS Programming Competition"
+    },
+    {
+      "image": "codexcomp_9.png",
+      "imageAlt": "3rd CodeX Inter-SHS Programming Competition"
+    },
+    {
+      "image": "codexcomp_10.png",
+      "imageAlt": "3rd CodeX Inter-SHS Programming Competition"
+    },
+	{
+      "image": "codexcomp_11.png",
+      "imageAlt": "3rd CodeX Inter-SHS Programming Competition"
+    }
+  ]
+}
