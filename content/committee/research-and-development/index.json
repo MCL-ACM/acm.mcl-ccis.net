@@ -2,24 +2,22 @@
   "type": "committee",
   "name": "Research and Development",
   "chair": {
-    "name": "Joachim Elijah Cobar",
+    "name": "Gabriel Tanabe",
     "position": "Commitee Chair",
-    "photo": "COBAR.png"
+    "photo": "TANABE.jpg"
   },
   "cochair": {
-    "name": "Georgette Cadiz",
+    "name": "Lloyd Raphael Perez",
     "position": "Commitee Co-chair",
-    "photo": "CADIZ.jpeg"
+    "photo": "PEREZ.jpg"
   },
   "members": [
     { "name": "Andrea Arellano", "photo": "ARELLANO.jpg" },
-    { "name": "Kenneth Roi Balilihan", "photo": "BALILIHAN.png" },
     { "name": "Aaron Lance Cabueñas", "photo": "Cabuieñas.jpg" },
+	{ "name": "Georgette Dalen Cadiz", "photo": "CADIZ.jpeg" },
     { "name": "Lorenzo Dio", "photo": "DIO.png" },
     { "name": "Jherwin Ronce Indaya", "photo": "INDAYA.jpg" },
-    { "name": "Lloyd Raphael Perez", "photo": "PEREZ.jpg" },
     { "name": "Reese Anwyl Ramos", "photo": "RAMOS.jpg" },
     { "name": "Raumel Lawrence Salurio", "photo": "SALURIO.jpg" },
-    { "name": "Gabriel Tanabe", "photo": "TANABE.jpg" }
   ]
 }
