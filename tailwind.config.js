@@ -8,6 +8,7 @@ module.exports = {
       fontFamily: {
         sans: ['Roboto', ...defaultTheme.fontFamily.sans],
         mono: [`'Exo 2'`, ...defaultTheme.fontFamily.mono],
+        inter: ['Inter', ...defaultTheme.fontFamily.sans],
       },
       boxShadow: {
         'button-glow-white': '0px 0px 20px 0px rgba(255,255,255,1)',
