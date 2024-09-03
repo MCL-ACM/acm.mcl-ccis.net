@@ -4,12 +4,12 @@
   "chair": {
     "name": "Raphael Jose Marquez",
     "position": "Committee Chair",
-    "photo": "MARQUEZ.png"
+    "photo": "MARQUEZ.jpg"
   },
   "cochair": {
     "name": "James Gabrielle Oñate",
     "position": "Committee Co-Chair",
-    "photo": "OÑATE.jpg"
+    "photo": "OÑATE.JPG"
   },
   "members": [
     { "name": "Charles Basti Almonte", "photo": "ALMONTE.jpg" },

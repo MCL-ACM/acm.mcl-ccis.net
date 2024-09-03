@@ -1,0 +1,51 @@
+{
+  "type": "event",
+  "year": "2024-03-16T12:26:07.566Z",
+  "title": "3rd CodeX Inter-SHS Programming Workshop",
+  "description": "March 16 & 23, April 6, 2024 - Mapúa MCL ACM Student Chapter held every Saturday for three consecutive weeks the 3rd CodeX Inter-SHS Workshop. This workshop aimed to equip participants with basic Java syntax and programming problem-solving skills while familiarizing them with the competition platform. The activity featured a 2-hour and 30-minute mentoring session focused on Java programming concepts, followed by a 1-hour and 30-minute programming session where participants practiced these concepts and explored the competition platform in preparation for the upcoming 3rd CodeX Inter-SHS Programming Competition.",
+  "summary": "Mapúa MCL ACM Student Chapter’s CodeX workshop was designed to teach basic Java concepts and prepare participants for the CodeX Inter-SHS Programming Competition.",
+  "featured": false,
+  "tags": ["CODEX", "WORKSHOP"],
+  "images": [
+    {
+      "image": "codex2024workshop_1.jpg",
+      "imageAlt": "3rd CodeX Inter-SHS Programming Workshop"
+    },
+    {
+      "image": "codex2024workshop_2.jpg",
+      "imageAlt": "3rd CodeX Inter-SHS Programming Workshop"
+    },
+    {
+      "image": "codex2024workshop_3.jpg",
+      "imageAlt": "3rd CodeX Inter-SHS Programming Workshop"
+    },
+    {
+      "image": "codex2024workshop_4.jpg",
+      "imageAlt": "3rd CodeX Inter-SHS Programming Workshop"
+    },
+    {
+      "image": "codex2024workshop_5.jpg",
+      "imageAlt": "3rd CodeX Inter-SHS Programming Workshop"
+    },
+    {
+      "image": "codex2024workshop_6.jpg",
+      "imageAlt": "3rd CodeX Inter-SHS Programming Workshop"
+    },
+    {
+      "image": "codex2024workshop_7.jpg",
+      "imageAlt": "3rd CodeX Inter-SHS Programming Workshop"
+    },
+    {
+      "image": "codex2024workshop_8.jpg",
+      "imageAlt": "3rd CodeX Inter-SHS Programming Workshop"
+    },
+    {
+      "image": "codex2024workshop_9.jpg",
+      "imageAlt": "3rd CodeX Inter-SHS Programming Workshop"
+    },
+    {
+      "image": "codex2024workshop_10.jpg",
+      "imageAlt": "3rd CodeX Inter-SHS Programming Workshop"
+    }
+  ]
+}
