@@ -8,8 +8,7 @@ export default function NavBanner() {
     <Link to='/hoc2022'>
       <div className='bg-[#1AADBB] py-2 flex flex-row items-center justify-center'>
         <p className='text-white text-center'>
-          Hello Programming 2022 is here! Click here to view the activities{' '}
-          <FiArrowRight className='inline' />
+          Frosh week is here! <FiArrowRight className='inline' />
         </p>
       </div>
     </Link>
