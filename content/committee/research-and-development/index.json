@@ -14,10 +14,14 @@
   "members": [
     { "name": "Andrea Arellano", "photo": "ARELLANO.jpg" },
     { "name": "Aaron Lance Cabueñas", "photo": "Cabuieñas.jpg" },
+    { "name": "Shamelle Fhate Climaco", "photo": "CLIMACO.png" },
     { "name": "Georgette Dalen Cadiz", "photo": "CADIZ.jpeg" },
-	{ "name": "Lorenzo Dio", "photo": "DIO.png" },
+	  { "name": "Lorenzo Dio", "photo": "DIO.png" },
+    { "name": "Ross Enrick Garcia", "photo": "GARCIA.jpg" },
     { "name": "Jherwin Ronce Indaya", "photo": "INDAYA.jpg" },
+    { "name": "Borge Joaquinne Paguirigan", "photo": "PAGUIRIGAN.png" },
     { "name": "Reese Anwyl Ramos", "photo": "RAMOS.jpg" },
+    { "name": "Charles Louie Sabandal", "photo": "SABANDAL.png" },
     { "name": "Raumel Lawrence Salurio", "photo": "SALURIO.jpg" }
   ]
 }
