@@ -1,0 +1,12 @@
+.member-select-container {
+  position: relative;
+  display: inline-block;
+}
+
+.arrow-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-40%);
+  pointer-events: none;
+}

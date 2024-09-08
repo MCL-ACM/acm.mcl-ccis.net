@@ -4,19 +4,23 @@
   "officers": [
     {
       "name": "James Michael Paz",
-      "position": "President"
+      "position": "President",
+      "photo": "jamespaz.jpg"
     },
     {
       "name": "Karlo Miguel Palisoc",
-      "position": "Vice President"
+      "position": "Vice President",
+      "photo": "karlopalisoc.jpg"
     },
     {
       "name": "Jayvee Mapote",
-      "position": "Secretary"
+      "position": "Secretary",
+      "photo": "jayveemapote.jpg"
     },
     {
       "name": "Patrick Mediodia",
-      "position": "Treasurer"
+      "position": "Treasurer",
+      "photo": "patrickmediodia.jpg"
     }
   ]
 }

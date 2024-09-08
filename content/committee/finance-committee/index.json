@@ -1,19 +1,31 @@
 {
   "type": "committee",
   "name": "Finance Committee",
-  "chair": {
-    "name": "Keithly Padaoan",
-    "position": "Committee Chair",
-    "photo": "PADAOAN.jpg"
-  },
-  "cochair": {
-    "name": "Arabella Taguines",
-    "position": "Committee Co-chair",
-    "photo": "TAGUINES.jpg"
-  },
   "members": [
-    { "name": "Ryan Anthony Torio", "photo": "TORIO.jpg" },
-    { "name": "Emman Torrecampo", "photo": "TORRECAMPO.jpg" },
-    { "name": "Arish Marcin Vinluan", "photo": "VINLUAN.png" }
+    {
+      "name": "Keithly Padaoan",
+      "position": "Chair",
+      "photo": "PADAOAN.jpg"
+    },
+    {
+      "name": "Arabella Taguines",
+      "position": "Co-chair",
+      "photo": "TAGUINES.jpg"
+    },
+    {
+      "name": "Ryan Anthony Torio",
+      "photo": "TORIO.jpg",
+      "position": "Member"
+    },
+    {
+      "name": "Emman Torrecampo",
+      "photo": "TORRECAMPO.jpg",
+      "position": "Member"
+    },
+    {
+      "name": "Arish Marcin Vinluan",
+      "photo": "VINLUAN.png",
+      "position": "Member"
+    }
   ]
 }

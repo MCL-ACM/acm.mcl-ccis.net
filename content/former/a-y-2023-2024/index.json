@@ -4,19 +4,23 @@
   "officers": [
     {
       "name": "Jayvee Mapote",
-      "position": "President"
+      "position": "President",
+      "photo": "jayveemapote.jpg"
     },
     {
       "name": "James Michael Paz",
-      "position": "Vice President"
+      "position": "Vice President",
+      "photo": "jamespaz.jpg"
     },
     {
       "name": "Maxim Davin",
-      "position": "Secretary"
+      "position": "Secretary",
+      "photo": "maximdavin.jpg"
     },
     {
       "name": "Keithly Padaoan",
-      "position": "Treasurer"
+      "position": "Treasurer",
+      "photo": "keithlypadoan.jpg"
     }
   ]
 }

@@ -4,19 +4,23 @@
   "officers": [
     {
       "name": "Jayvee Mapote",
-      "position": "President"
+      "position": "President",
+      "photo": "jayveemapote.jpg"
     },
     {
       "name": "Simon Philip Asiño",
-      "position": "Vice President"
+      "position": "Vice President",
+      "photo": "simonasino.jpg"
     },
     {
       "name": "John Bernard Sahagun",
-      "position": "Secretary"
+      "position": "Secretary",
+      "photo": "johnsahagun.jpg"
     },
     {
       "name": "Christian Cedrick Alon",
-      "position": "Treasurer"
+      "position": "Treasurer",
+      "photo": "cedalon.jpg"
     }
   ]
 }

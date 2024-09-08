@@ -1,23 +1,51 @@
 {
   "type": "committee",
-  "name": "Research and Development",
-  "chair": {
-    "name": "Gabriel Tanabe",
-    "position": "Commitee Chair",
-    "photo": "TANABE.jpg"
-  },
-  "cochair": {
-    "name": "Lloyd Raphael Perez",
-    "position": "Commitee Co-chair",
-    "photo": "PEREZ.jpg"
-  },
+  "name": "Research and Development Committee",
   "members": [
-    { "name": "Andrea Arellano", "photo": "ARELLANO.jpg" },
-    { "name": "Aaron Lance Cabueñas", "photo": "Cabuieñas.jpg" },
-    { "name": "Georgette Dalen Cadiz", "photo": "CADIZ.jpeg" },
-	{ "name": "Lorenzo Dio", "photo": "DIO.png" },
-    { "name": "Jherwin Ronce Indaya", "photo": "INDAYA.jpg" },
-    { "name": "Reese Anwyl Ramos", "photo": "RAMOS.jpg" },
-    { "name": "Raumel Lawrence Salurio", "photo": "SALURIO.jpg" }
+    {
+      "name": "Gabriel Tanabe",
+      "position": "Chair",
+      "photo": "TANABE.jpg"
+    },
+    {
+      "name": "Lloyd Raphael Perez",
+      "position": "Co-chair",
+      "photo": "PEREZ.jpg"
+    },
+    {
+      "name": "Andrea Arellano",
+      "photo": "ARELLANO.jpg",
+      "position": "Member"
+    },
+    {
+      "name": "Aaron Lance Cabueñas",
+      "photo": "Cabuieñas.jpg",
+      "position": "Member"
+    },
+    {
+      "name": "Georgette Dalen Cadiz",
+      "photo": "CADIZ.jpeg",
+      "position": "Member"
+    },
+    {
+      "name": "Lorenzo Dio",
+      "photo": "DIO.png",
+      "position": "Member"
+    },
+    {
+      "name": "Jherwin Ronce Indaya",
+      "photo": "INDAYA.jpg",
+      "position": "Member"
+    },
+    {
+      "name": "Reese Anwyl Ramos",
+      "photo": "RAMOS.jpg",
+      "position": "Member"
+    },
+    {
+      "name": "Raumel Lawrence Salurio",
+      "photo": "SALURIO.jpg",
+      "position": "Member"
+    }
   ]
 }

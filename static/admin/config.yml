@@ -107,35 +107,14 @@ collections:
         }
       - { label: 'Committee Name', name: 'name', widget: 'string' }
       - {
-          label: 'Chair',
-          name: 'chair',
-          widget: 'object',
-          fields:
-            [
-              { label: 'Name', name: 'name', widget: 'string' },
-              { label: 'Position', name: 'position', widget: 'string' },
-              { label: 'Photo', name: 'photo', widget: 'image' },
-            ],
-        }
-      - {
-          label: 'coChair',
-          name: 'cochair',
-          widget: 'object',
-          fields:
-            [
-              { label: 'Name', name: 'name', widget: 'string' },
-              { label: 'Position', name: 'position', widget: 'string' },
-              { label: 'Photo', name: 'photo', widget: 'image' },
-            ],
-        }
-      - {
           label: 'Members',
           name: 'members',
           widget: 'object',
           field: [
               { label: 'Name', name: 'name', widget: 'string' },
+              { label: 'Position', name: 'position', widget: 'string' },
               { label: 'Photo', name: 'photo', widget: 'image' },
-            ],,
+            ],
         }
 
   - name: 'former'
@@ -161,10 +140,11 @@ collections:
       - {
           label: 'Officers',
           name: 'officers',
-          widget: 'list',
+          widget: 'object',
           fields:
             [
               { label: 'Name', name: 'name', widget: 'string' },
               { label: 'Position', name: 'position', widget: 'string' },
+              { label: 'Photo', name: 'photo', widget: 'string' },
             ],
         }

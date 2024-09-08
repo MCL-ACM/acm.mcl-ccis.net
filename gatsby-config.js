@@ -58,6 +58,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: 'formerPhotos',
+        path: `${__dirname}/content/former/photos`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: 'former',
         path: `${__dirname}/content/former`,
       },
