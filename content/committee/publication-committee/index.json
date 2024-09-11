@@ -1,19 +1,31 @@
 {
   "type": "committee",
   "name": "Publication Committee",
-  "chair": {
-    "name": "Sofia Loren Lacanilao",
-    "position": "Committee Chair",
-    "photo": "LACANILAO.jpg"
-  },
-  "cochair": {
-    "name": "Ma. Christina Factura",
-    "position": "Committee Co-chair",
-    "photo": "FACTURA.png"
-  },
   "members": [
-    { "name": "Shamelle Fhate Climaco", "photo": "CLIMACO.png" },
-    { "name": "Anne Nicole Corpuz", "photo": "CORPUZ.jpg" },
-    { "name": "Daniel Mark Sarabusing", "photo": "SARABUSING.jpg" }
+    {
+      "name": "Sofia Loren Lacanilao",
+      "position": "Chair",
+      "photo": "LACANILAO.jpg"
+    },
+    {
+      "name": "Ma. Christina Factura",
+      "position": "Co-chair",
+      "photo": "FACTURA.png"
+    },
+    {
+      "name": "Shamelle Fhate Climaco",
+      "photo": "CLIMACO.png",
+      "position": "Member"
+    },
+    {
+      "name": "Anne Nicole Corpuz",
+      "photo": "CORPUZ.jpg",
+      "position": "Member"
+    },
+    {
+      "name": "Daniel Mark Sarabusing",
+      "photo": "SARABUSING.jpg",
+      "position": "Member"
+    }
   ]
 }

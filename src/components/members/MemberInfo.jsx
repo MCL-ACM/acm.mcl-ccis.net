@@ -8,12 +8,12 @@ export default function MemberInfo({ name, position, photo, alt, className }) {
       {photo && (
         <GatsbyImage
           image={image}
-          alt={alt}
-          className='w-20 h-20 mb-3 rounded-full lg:w-32 lg:h-32'
+          alt={name}
+          className='w-20 h-20 mb-3 lg:w-32 lg:h-32 hexagon-frame '
         />
       )}
-      <p className='text-lg text-oxford-blue lg:text-lg'>{name}</p>
-      <p className='font-light text-oxford-blue'>{position}</p>
+      <p className='text-lg lg:text-lg text-rich-black'>{name}</p>
+      <p className='text-cyan-800 font-normal'>{position}</p>
     </div>
   );
 }

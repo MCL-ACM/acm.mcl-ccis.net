@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="198.921 111.06 74.839 209.534" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="252.795" y1="103.118" x2="252.795" y2="343.118" id="gradient-0" gradientTransform="matrix(0.311829, 0, 0, 0.311829, 157.510755, 78.906779)">
+      <stop offset="0" style="stopColor: rgb(172, 230, 255); stopOpacity: 0.7;"/>
+      <stop offset="1" style="stopColor: rgb(0, 84, 112); stopOpacity: 0.7;"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="252.795" y1="103.118" x2="252.795" y2="343.118" id="gradient-1" gradientTransform="matrix(0.311829, 0, 0, 0.311829, 157.510755, 123.795236)">
+      <stop offset="0" style="stopColor: rgb(172, 230, 255); stopOpacity: 0.7;"/>
+      <stop offset="1" style="stopColor: rgb(0, 84, 112); stopOpacity: 0.7;"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="252.795" y1="103.118" x2="252.795" y2="343.118" id="gradient-2" gradientTransform="matrix(0.311829, 0, 0, 0.311829, 157.510755, 168.698673)">
+      <stop offset="0" style="stopColor: rgb(172, 230, 255); stopOpacity: 0.7;"/>
+      <stop offset="1" style="stopColor: rgb(0, 84, 112); stopOpacity: 0.7;"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="252.795" y1="103.118" x2="252.795" y2="343.118" id="gradient-3" gradientTransform="matrix(0.311829, 0, 0, 0.311829, 157.510755, 213.6021)">
+      <stop offset="0" style="stopColor: rgb(172, 230, 255); stopOpacity: 0.7;"/>
+      <stop offset="1" style="stopColor: rgb(0, 84, 112); stopOpacity: 0.7;"/>
+    </linearGradient>
+  </defs>
+  <path d="M 236.341 111.06 L 273.76 185.899 L 198.921 185.899 L 236.341 111.06 Z" style="stroke-opacity: 0; paint-order: stroke; fill: url('#gradient-0');" bx:shape="triangle 198.921 111.06 74.839 74.839 0.5 0 1@fa052861"/>
+  <path d="M 236.341 155.948 L 273.76 230.787 L 198.921 230.787 L 236.341 155.948 Z" style="stroke-opacity: 0; paint-order: stroke; fill: url('#gradient-1');" bx:shape="triangle 198.921 155.948 74.839 74.839 0.5 0 1@dab7a912"/>
+  <path d="M 236.341 200.852 L 273.76 275.691 L 198.921 275.691 L 236.341 200.852 Z" style="stroke-opacity: 0; paint-order: stroke; fill: url('#gradient-2');" bx:shape="triangle 198.921 200.852 74.839 74.839 0.5 0 1@82ecbbf3"/>
+  <path d="M 236.341 245.755 L 273.76 320.594 L 198.921 320.594 L 236.341 245.755 Z" style="stroke-opacity: 0; paint-order: stroke; fill: url('#gradient-3');" bx:shape="triangle 198.921 245.755 74.839 74.839 0.5 0 1@70c4b0ea"/>
+</svg>

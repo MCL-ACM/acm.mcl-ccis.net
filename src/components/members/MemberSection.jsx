@@ -1,17 +1,56 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-export default function MemberSection({ header, children }) {
+import { motion, AnimatePresence } from 'framer-motion';
+import MemberInfo from './MemberInfo';
+
+export default function MemberSection({
+  itemsToDisplay = [],
+  direction = 'right',
+  className,
+}) {
+  const variants = {
+    enter: (direction) => ({
+      x: direction === 'right' ? '100%' : '-100%',
+      opacity: 0,
+      position: 'absolute',
+    }),
+    center: {
+      x: '0%',
+      opacity: 1,
+      position: 'absolute',
+    },
+    exit: (direction) => ({
+      x: direction === 'right' ? '-100%' : '100%',
+      opacity: 0,
+      position: 'absolute',
+    }),
+  };
+
   return (
-    <div>
-      <hr className='h-1 shadow-lg lg:hidden shadow-blue-500/90 bg-gradient-to-tr from-standard-blue to-cerulean-crayola' />
-      <div className='mt-4 mb-8 lg:mb-12'>
-        <h3 className='text-2xl font-bold text-center lg:mb-4 text-oxford-blue lg:text-4xl lg:text-left'>
-          {header}
-        </h3>
-        <hr className='hidden h-1 shadow-lg lg:block shadow-blue-500/90 bg-gradient-to-tr from-standard-blue to-cerulean-crayola' />
-      </div>
-
-      {children}
+    <div className={`relative overflow-hidden ${className}`}>
+      <AnimatePresence initial={true}>
+        <motion.div
+          key={`${itemsToDisplay.map((item) => item.name).join(', ')}`}
+          custom={direction}
+          variants={variants}
+          initial='enter'
+          animate='center'
+          exit='exit'
+          transition={{ duration: 0.5 }}
+          className='flex flex-row flex-wrap justify-start gap-y-8 lg:gap-y-10'
+          style={{ width: '100%', height: '100%', position: 'absolute' }}
+        >
+          {itemsToDisplay.map((member) => (
+            <MemberInfo
+              key={member.name}
+              name={member.name}
+              position={member.position}
+              photo={member.photo}
+              className='col-span-3 w-[25%]'
+            />
+          ))}
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 }

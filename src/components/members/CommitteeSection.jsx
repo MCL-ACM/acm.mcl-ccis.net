@@ -1,34 +1,61 @@
-import React from 'react';
-import MemberSection from './MemberSection';
+import React, { useEffect, useState } from 'react';
+import CommitteeDropdown from './CommitteeDropdown';
 import MemberInfo from './MemberInfo';
+import MembersPagination from './MembersPagination';
+import ExecutiveSection from './ExecutiveSection';
+import MemberSection from './MemberSection';
 
-export default function CommitteeSection({ name, chair, cochair, members }) {
+export default function CommitteeSection({ allCommittees }) {
+  const [selectedCommittee, setSelectedCommittee] = useState(
+    'Executive Committee',
+  );
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [direction, setDirection] = useState('right');
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedCommittee]);
+
+  const committeeMembers = allCommittees?.[selectedCommittee]?.members;
+
+  const totalPages = committeeMembers
+    ? Math.floor(committeeMembers.length / 8) + 1
+    : 0;
+
+  const startIndex = (currentPage - 1) * 8;
+  const endIndex = startIndex + 8;
+  const itemsToDisplay = committeeMembers?.slice(startIndex, endIndex);
+
   return (
-    <MemberSection header={name}>
-      <div className='flex flex-row flex-wrap justify-center gap-y-8 lg:gap-y-10'>
-        <MemberInfo
-          name={chair.name}
-          position={chair.position}
-          photo={chair.photo}
-          className='w-full'
+    <div>
+      <hr className='h-1 shadow-lg lg:hidden shadow-blue-500/90 bg-gradient-to-tr from-standard-blue to-cerulean-crayola' />
+      <div className='mt-4 mb-8 lg:mb-12 flex flex-col lg:flex-row items-center lg:justify-between '>
+        <h3 className='text-2xl font-bold text-center lg:mb-4 text-oxford-blue lg:text-4xl lg:text-left'>
+          Committees & Members
+        </h3>
+        <CommitteeDropdown
+          selectedCommittee={selectedCommittee}
+          setSelectedCommittee={setSelectedCommittee}
         />
-        <MemberInfo
-          name={cochair.name}
-          position={cochair.position}
-          photo={cochair.photo}
-          className='w-full'
-        />
-
-        {members.map((member, index) => (
-          <MemberInfo
-            key={index}
-            name={member.name}
-            position='Member'
-            photo={member.photo}
-            className='w-[50%] lg:w-[33%] '
-          />
-        ))}
       </div>
-    </MemberSection>
+      {selectedCommittee !== 'Executive Committee' ? (
+        <div>
+          <MemberSection
+            itemsToDisplay={itemsToDisplay}
+            direction={direction}
+            className={'min-h-[450px]'}
+          />
+          <MembersPagination
+            totalPages={totalPages}
+            currentPage={currentPage}
+            onPageChange={setCurrentPage}
+            onpageChangeDirection={setDirection}
+          />
+        </div>
+      ) : (
+        <ExecutiveSection officers={committeeMembers} />
+      )}
+    </div>
   );
 }

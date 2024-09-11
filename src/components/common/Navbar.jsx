@@ -34,8 +34,6 @@ export default function Navbar() {
   const location = useLocation();
   const pathname = location.pathname;
 
-  console.log(pathname);
-
   return (
     <div className='fixed z-10 w-full'>
       <nav className='flex items-center justify-center w-full bg-[#212840]'>

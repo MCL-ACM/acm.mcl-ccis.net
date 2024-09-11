@@ -1,21 +1,41 @@
 {
   "type": "committee",
   "name": "Membership Committee",
-  "chair": {
-    "name": "Raphael Jose Marquez",
-    "position": "Committee Chair",
-    "photo": "MARQUEZ.jpg"
-  },
-  "cochair": {
-    "name": "James Gabrielle Oñate",
-    "position": "Committee Co-Chair",
-    "photo": "OÑATE.JPG"
-  },
   "members": [
-    { "name": "Charles Basti Almonte", "photo": "ALMONTE.jpg" },
-    { "name": "Vince Joseph Arbutante", "photo": "ARBUTANTE.jpg" },
-    { "name": "Ross Enrick Garcia", "photo": "GARCIA.jpg" },
-    { "name": "Vince Laude", "photo": "LAUDE.jpg" },
-    { "name": "Gabriel Manjares", "photo": "MANJARES.jpg" }
+    {
+      "name": "Raphael Jose Marquez",
+      "position": "Chair",
+      "photo": "MARQUEZ.jpg"
+    },
+    {
+      "name": "James Gabrielle Oñate",
+      "position": "Co-Chair",
+      "photo": "OÑATE.JPG"
+    },
+    {
+      "name": "Charles Basti Almonte",
+      "photo": "ALMONTE.jpg",
+      "position": "Member"
+    },
+    {
+      "name": "Vince Joseph Arbutante",
+      "photo": "ARBUTANTE.jpg",
+      "position": "Member"
+    },
+    {
+      "name": "Ross Enrick Garcia",
+      "photo": "GARCIA.jpg",
+      "position": "Member"
+    },
+    {
+      "name": "Vince Laude",
+      "photo": "LAUDE.jpg",
+      "position": "Member"
+    },
+    {
+      "name": "Gabriel Manjares",
+      "photo": "MANJARES.jpg",
+      "position": "Member"
+    }
   ]
 }

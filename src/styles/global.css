@@ -39,3 +39,32 @@ body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+/* Hexagon frame for member image*/
+.hexagon-frame {
+  position: relative;
+  width: 75px; /* Adjust the width to make it narrower */
+  height: 86.6px; /* Maintain the height */
+  background-color: white;
+  clip-path: polygon(
+    50% 0%,
+    93.3% 25%,
+    93.3% 75%,
+    50% 100%,
+    6.7% 75%,
+    6.7% 25%
+  );
+  overflow: hidden;
+}
+
+.hexagon-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Layout image background */
+.layout-img-bg {
+  background-image: url('../images/layout-background.png');
+  background-repeat: repeat;
+}

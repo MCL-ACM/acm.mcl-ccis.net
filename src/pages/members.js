@@ -6,34 +6,42 @@ import MembersHero from '../components/members/MembersHero';
 import Divider from '../components/common/Divider';
 import Head from '../components/common/Head';
 import FormerOfficersSection from '../components/members/FormerOfficersSection';
+import MemberSection from '../components/members/MemberSection';
 
 export default function members({ data }) {
   const executiveCommittee = data.executive.member;
-  const committees = data.committees.edges.map(({ node }) => ({
-    ...node,
-    members: node.members.sort(),
-  }));
-  const formerOfficers = data.former.edges;
+  const allCommittees = data.committees.edges.reduce(
+    (acc, { node }) => {
+      acc[node.name] = {
+        members: node.members.sort(),
+      };
+      return acc;
+    },
+    { 'Executive Committee': { members: executiveCommittee } },
+  );
 
-  console.log(committees);
+  const formerOfficersPhotos = data.photos.edges.reduce((acc, { node }) => {
+    acc[node.relativePath] = node.childImageSharp;
+    return acc;
+  }, {});
+
+  const formerOfficers = data.former.edges
+    .map((edge) => edge.node)
+    .reduce((acc, row) => {
+      const { year, officers } = row;
+      acc[year] = officers.map((officer) => ({
+        ...officer,
+        photo: formerOfficersPhotos[officer.photo],
+      }));
+      return acc;
+    }, {});
 
   return (
     <div>
       <Head title='Members' />
       <MembersHero />
-      <Divider className='lg:my-24 mx-5 lg:mx-0 lg:w-11/12 lg:h-[2px] hidden lg:block' />
-      <div className='flex flex-col gap-20 px-5 mb-24 lg:gap-28 fixed-width'>
-        <ExecutiveSection officers={executiveCommittee} />
-        {committees.map(
-          ({ name, chair, cochair, members: committeeMembers }) => (
-            <CommitteeSection
-              name={name}
-              cochair={cochair}
-              chair={chair}
-              members={committeeMembers}
-            />
-          ),
-        )}
+      <div className='flex flex-col lg:my-24 gap-20 px-5 mb-24 lg:gap-28 fixed-width'>
+        <CommitteeSection allCommittees={allCommittees} />
         <FormerOfficersSection formerOfficers={formerOfficers} />
       </div>
     </div>
@@ -57,26 +65,9 @@ export const query = graphql`
       edges {
         node {
           name
-          chair {
-            name
-            position
-            photo {
-              childImageSharp {
-                gatsbyImageData(placeholder: BLURRED)
-              }
-            }
-          }
-          cochair {
-            name
-            position
-            photo {
-              childImageSharp {
-                gatsbyImageData(placeholder: BLURRED)
-              }
-            }
-          }
           members {
             name
+            position
             photo {
               childImageSharp {
                 gatsbyImageData(placeholder: BLURRED)
@@ -93,6 +84,17 @@ export const query = graphql`
           officers {
             name
             position
+            photo
+          }
+        }
+      }
+    }
+    photos: allFile(filter: { sourceInstanceName: { eq: "formerPhotos" } }) {
+      edges {
+        node {
+          relativePath
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED)
           }
         }
       }
