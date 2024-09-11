@@ -1,30 +1,30 @@
 import React from 'react';
 import { FaTwitter, FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
+import { RiInstagramFill } from 'react-icons/ri';
 import { Link } from 'gatsby';
 
 export default function Footer() {
   const year = new Date().getFullYear();
 
+  let socialIconSize = 60;
+
   const socialLinks = [
     {
-      slug: 'MCL_ACM',
       link: 'https://twitter.com/MCL_ACM',
-      icon: <FaTwitter size={35} />,
+      icon: <FaXTwitter size={socialIconSize} />,
     },
     {
-      slug: 'acmMCL',
       link: 'https://fb.me/acmMCL',
-      icon: <FaFacebook size={35} />,
+      icon: <FaFacebook size={socialIconSize} />,
     },
     {
-      slug: 'mcl_acm',
       link: 'https://www.instagram.com/mcl_acm',
-      icon: <FaInstagram size={35} />,
+      icon: <RiInstagramFill size={socialIconSize} />,
     },
     {
-      slug: 'MCL ACM',
       link: 'https://www.youtube.com/channel/UCuEfYX_hMeS3sSj5M0wHaYQ',
-      icon: <FaYoutube size={35} />,
+      icon: <FaYoutube size={socialIconSize} />,
     },
   ];
   const links = [
@@ -56,25 +56,15 @@ export default function Footer() {
   ];
   return (
     <footer className='absolute bottom-0 w-full h-[34.8125em] z-0'>
-      <svg
-        className='absolute sm:hidden'
-        viewBox='0 0 375 48'
-        preserveAspectRatio='none'
-      >
-        <path
-          d='M0 0H375V47.7998C375 47.7998 317 0.510638 296 0.510638C275 0.510638 0 48 0 48V0Z'
-          fill='#FFFFFF'
-        />
-      </svg>
-      <main className='flex justify-center w-full h-full px-5 pt-24 pb-10 bg-gradient-to-tr from-standard-blue to-cerulean-crayola'>
+      <main className='flex justify-center w-full h-full px-5 pt-24 pb-10 bg-[#212840] font-inter font-light'>
         <section className='flex flex-col justify-between w-full h-full text-white lg:max-w-[69.5em]'>
           <div className='grid grid-cols-1 mb-4 lg:grid-cols-3 gap-y-8'>
             <div className='hidden lg:block'>
-              <p className='mb-4 text-2xl font-bold'>Links</p>
-              <ul className='flex-col lg:flex gap-y-3'>
+              <p className='mb-4 text-4xl font-bold'>Links</p>
+              <ul className='flex-col lg:flex gap-y-3 text-2xl'>
                 {links.map((link) => (
                   <li>
-                    <Link to={link.slug} className='text-lg hover:underline'>
+                    <Link to={link.slug} className='hover:underline'>
                       {link.page}
                     </Link>
                   </li>
@@ -83,35 +73,38 @@ export default function Footer() {
             </div>
 
             <div className='flex flex-col'>
-              <header className='mb-4 text-2xl font-bold'>
+              <header className='mb-4 text-4xl font-extrabold'>
                 Connect with us
               </header>
-              <p className='text-lg'>
+              <p className='text-2xl'>
                 Pulo Diezmo Rd, Pulo, Cabuyao, Laguna 4026, Philippines
               </p>
-              <p className='text-lg'>acm.mclstudchapter@gmail.com</p>
+              <p className='text-2xl'>acm.mclstudchapter@gmail.com</p>
             </div>
 
             <div className='lg:flex lg:justify-end'>
               <div className='flex flex-col'>
-                <header className='mb-4 text-2xl font-bold'>
+                <header className='mb-6 text-4xl font-bold'>
                   Keep in touch
                 </header>
-                <ul className='flex flex-row lg:flex-col gap-y-3 gap-x-4'>
-                  {socialLinks.map(({ link, icon, slug }) => (
-                    <a href={link} key={link} target='_blank' rel='noreferrer'>
-                      <div className='flex flex-row items-center gap-3 hover:underline'>
-                        <div>{icon}</div>
-                        <p className='hidden text-lg sm:block'>{slug}</p>
-                      </div>
+                <ul className='flex flex-wrap gap-y-12'>
+                  {socialLinks.map(({ link, icon }) => (
+                    <a
+                      href={link}
+                      key={link}
+                      target='_blank'
+                      rel='noreferrer'
+                      className='w-1/4 lg:w-1/2 flex flex-row justify-center'
+                    >
+                      {icon}
                     </a>
                   ))}
                 </ul>
               </div>
             </div>
           </div>
-          <p className='text-lg font-light text-center'>
-            © {year} Malayan Colleges Laguna ACM Student Chapter
+          <p className='text-3xl font-light text-center'>
+            © {year} Mapúa Malayan Colleges Laguna ACM Student Chapter
           </p>
         </section>
       </main>
